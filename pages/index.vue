@@ -3,17 +3,23 @@
     <div class="bg-black-dark text-white border-t border-blue md:px-60 md:pt-16 md:pb-20">
       <h1 class="md:mb-8 md:font-semibold md:text-3xl">Instadapp Developers</h1>
       <div class="md:grid md:grid-cols-3 md:gap-x-6">
-        <div class="gradient-box rounded-lg md:text-center md:py-8 md:px-13">
-          <img class="md:mx-auto md:mb-2" src="~/assets/images/rocket.svg" decoding="async" alt="">
-          <div class="capitalize md:font-semibold md:text-2xl">Get started</div>
+        <div class="gradient-box">
+          <div class="rounded-lg md:text-center md:py-8 md:px-13">
+            <img class="md:mx-auto md:mb-2" src="~/assets/images/rocket.svg" decoding="async" alt="">
+            <div class="capitalize md:font-semibold md:text-2xl">Get started</div>
+          </div>
         </div>
-        <div class="gradient-box rounded-lg md:text-center md:py-8 md:px-13">
-          <img class="md:mx-auto md:mb-2" src="~/assets/images/connect.svg" decoding="async" alt="">
-          <div class="capitalize md:font-semibold md:text-2xl">Connectors</div>
+        <div class="gradient-box">
+          <div class="rounded-lg md:text-center md:py-8 md:px-13">
+            <img class="md:mx-auto md:mb-2" src="~/assets/images/connect.svg" decoding="async" alt="">
+            <div class="capitalize md:font-semibold md:text-2xl">Connectors</div>
+          </div>
         </div>
-        <div class="gradient-box rounded-lg md:text-center md:py-8 md:px-13">
-          <img class="md:mx-auto md:mb-2" src="~/assets/images/suitcase.svg" decoding="async" alt="">
-          <div class="capitalize md:font-semibold md:text-2xl">use cases</div>
+        <div class="gradient-box">
+          <div class="rounded-lg md:text-center md:py-8 md:px-13">
+            <img class="md:mx-auto md:mb-2" src="~/assets/images/suitcase.svg" decoding="async" alt="">
+            <div class="capitalize md:font-semibold md:text-2xl">use cases</div>
+          </div>
         </div>
       </div>
     </div>
@@ -127,11 +133,13 @@ export default {}
 
 <style lang="scss">
 .gradient-box {
-  border: 2px solid;
+  background: linear-gradient(180deg, #3F538F 0%, #0C0D35 100%);
+  padding: 2px;
+  border-radius: 8px;
   cursor: pointer;
-  border-image-source: linear-gradient(180deg, #3F538F 0%, #0C0D35 100%);
-  border-image-slice: 1;
-  @apply duration-200;
+  & > div {
+    @apply bg-black-dark h-full;
+  }
   &:hover {
     box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.4);
   }
