@@ -29,101 +29,58 @@
         <div class="text-black md:leading-7 md:font-medium md:text-2xl">Instadapp Developer Platform</div>
       </div>
       <hr class="md:mt-10 md:mb-15">
-      <div class="md:mb-18">
-        <h3 class="text-black md:leading-7 md:font-semibold md:mb-10">Start with your use case</h3>
-        <div id="useCases" class="md:grid md:grid-cols-3 md:gap-6">
-          <div>
-            <div id="useCase1" class="md:rounded-lg md:px-9 md:py-8">
-              <div class="text-black md:font-semibold md:text-2xl md:mb-4">Long ETH</div>
-              <div class="text-black md:font-medium">Tap the upside spike in Ethereum price</div>
+      <UseCases></UseCases>
+      <Protocols></Protocols>
+      <div class="md:text-right">
+        <button class="blue-gradient focus:outline-none">
+          <div class="bg-blue text-white rounded md:text-sm md:pl-5 md:pr-6 md:pt-6 md:pb-5">
+            <div class="md:flex md:items-center md:justify-between md:mb-3.5">
+              <div>Next</div>
+              <img class="inline-block align-middle" src="~/assets/images/right-arrow.svg" decoding="async" alt="">
             </div>
+            <div class="md:font-medium md:text-lg">Getting Started</div>
           </div>
-          <div>
-            <div id="useCase2" class="md:rounded-lg md:px-9 md:py-8">
-              <div class="text-black md:font-semibold md:text-2xl md:mb-4">Short DAI</div>
-              <div class="text-black md:font-medium">Earn instant return & make DAI stable</div>
-            </div>
-          </div>
-          <div>
-            <div id="useCase3" class="md:rounded-lg md:px-9 md:py-8">
-              <div class="text-black md:font-semibold md:text-2xl md:mb-4">Bridging</div>
-              <div class="text-black md:font-medium">Port position b/w Maker & Compound</div>
-            </div>
-          </div>
-          <div>
-            <div id="useCase4" class="md:rounded-lg md:px-9 md:py-8">
-              <div class="text-black md:font-semibold md:text-2xl md:mb-4">Long ETH</div>
-              <div class="text-black md:font-medium">Tap the upside spike in Ethereum price</div>
-            </div>
-          </div>
-          <div>
-            <div id="useCase5" class="md:rounded-lg md:px-9 md:py-8">
-              <div class="text-black md:font-semibold md:text-2xl md:mb-4">Short DAI</div>
-              <div class="text-black md:font-medium">Earn instant return & make DAI stable</div>
-            </div>
-          </div>
-          <div>
-            <div id="useCase6" class="md:rounded-lg md:px-9 md:py-8">
-              <div class="text-black md:font-semibold md:text-2xl md:mb-4">Bridging</div>
-              <div class="text-black md:font-medium">Port position b/w Maker & Compound</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-black md:leading-7 md:font-semibold md:mb-10">Supported Protocols</h3>
-        <div id="protocols" class="md:grid md:grid-cols-3 md:gap-6">
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/makerdao.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">Maker Dao</div>
-            </div>
-          </div>
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/compound.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">Compound</div>
-            </div>
-          </div>
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/uniswap.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">Uniswap</div>
-            </div>
-          </div>
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/kyber.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">Kyber</div>
-            </div>
-          </div>
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/curve.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">Curve</div>
-            </div>
-          </div>
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/gobbler.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">dYdX</div>
-            </div>
-          </div>
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/aave.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">Aave</div>
-            </div>
-          </div>
-          <div class="protocol border border-gray-300 md:rounded-lg md:p-6">
-            <div class="md:flex md:items-center">
-              <img src="~/assets/images/protocols/1inch.svg" alt="">
-              <div class="md:text-2xl md:ml-4 md:font-semibold">1inch</div>
-            </div>
-          </div>
-        </div>
+        </button>
       </div>
     </div>
+    <footer class="bg-black-dark text-white md:pt-14 md:pb-8">
+      <div class="md:text-center md:mx-80 md:mb-28">
+        <div class="md:font-semibold md:text-2xl md:mb-8">If you still can't find something you're looking for</div>
+        <div class="md:font-normal md:mb-8">or have any questions, ask them at our developers community <br> on discord
+          or simply send an email.
+        </div>
+        <div class="md:flex md:items-center md:justify-center md:mb-8">
+          <img src="~/assets/images/discord.svg" decoding="async" alt="">
+          <div class="md:mx-6 md:font-semibold">or</div>
+          <img src="~/assets/images/email.svg" decoding="async" alt="">
+        </div>
+        <div class="md:font-normal">
+          Our team is excited about assisting you to build an application using Instadapp Developer Platform. Your
+          questions and feedback help us make a better development environment for future developers.
+        </div>
+      </div>
+      <div class="md:mx-14 md:flex md:items-center md:justify-between">
+        <NuxtLink class="md:flex md:items-center" to="/">
+          <img class="inline-block" src="~/assets/images/logo.svg" alt="">
+          <span class="uppercase text-white md:font-bold md:text-lg md:ml-1.5">Developers</span>
+        </NuxtLink>
+        <ul class="md:flex md:items-center">
+          <li>
+            <NuxtLink class="md:font-bold md:text-lg" to="/">Website</NuxtLink>
+          </li>
+          <li><span
+            class="bg-blue md:w-1 md:h-1 md:mx-5 md:flex md:items-center md:rounded-full md:justify-center"></span></li>
+          <li>
+            <NuxtLink class="md:font-bold md:text-lg" to="/">Dashboard</NuxtLink>
+          </li>
+          <li><span
+            class="bg-blue md:w-1 md:h-1 md:mx-5 md:flex md:items-center md:rounded-full md:justify-center"></span></li>
+          <li>
+            <NuxtLink class="md:font-bold md:text-lg" to="/">Articles</NuxtLink>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -137,9 +94,11 @@ export default {}
   padding: 2px;
   border-radius: 8px;
   cursor: pointer;
+
   & > div {
     @apply bg-black-dark h-full;
   }
+
   &:hover {
     box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.4);
   }
@@ -181,13 +140,24 @@ h3 {
 
 #protocols {
   .protocol {
-    //border: 1px solid;
-    //border-image-source: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
-    //border-image-slice: 1;
-    @apply duration-200 cursor-pointer;
+    padding: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
+
+    & > div {
+      @apply bg-white;
+    }
+
     &:hover {
       box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.2);
     }
   }
+}
+
+.blue-gradient {
+  padding: 1px;
+  background: linear-gradient(180deg, #50A1FF 0%, #0E18FF 100%);
+  border-radius: 4px;
 }
 </style>
