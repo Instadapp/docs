@@ -208,4 +208,21 @@ export default {
     margin-top: 20px !important;
   }
 }
+
+#protocols {
+  .protocol {
+    padding: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
+
+    & > div {
+      @apply bg-white;
+    }
+
+    &:hover {
+      box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.2);
+    }
+  }
+}
 </style>

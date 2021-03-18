@@ -68,20 +68,6 @@ export default {}
   }
 }
 
-h2 {
-  font-size: 32px;
-  @include sm {
-    font-size: 40px;
-  }
-}
-
-h3 {
-  font-size: 24px;
-  @include sm {
-    font-size: 32px;
-  }
-}
-
 #useCases {
   #useCase1 {
     background: #D6E3F4;
@@ -105,23 +91,6 @@ h3 {
 
   #useCase6 {
     background: #C0E6F2;
-  }
-}
-
-#protocols {
-  .protocol {
-    padding: 1px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
-
-    & > div {
-      @apply bg-white;
-    }
-
-    &:hover {
-      box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.2);
-    }
   }
 }
 

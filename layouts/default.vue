@@ -6,5 +6,20 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "~/assets/scss/mixins.scss";
+
+h2 {
+  font-size: 32px;
+  @include sm {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  @include sm {
+    font-size: 32px;
+  }
+}
 </style>
