@@ -33,7 +33,7 @@
       <Protocols></Protocols>
       <div class="md:text-right">
         <button class="blue-gradient w-full md:w-auto focus:outline-none">
-          <div class="bg-blue text-white rounded text-sm pl-5 pr-6 pt-6 pb-5">
+          <div class="bg-blue text-white rounded text-sm pl-4 pr-6 pt-4 pb-6">
             <div class="flex items-center justify-between mb-3.5">
               <div>Next</div>
               <img class="inline-block align-middle" src="~/assets/images/right-arrow.svg" decoding="async" alt="">

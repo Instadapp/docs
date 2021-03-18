@@ -1,7 +1,7 @@
 <template>
   <div class="md:px-14 md:py-18">
-    <div class="flex space-x-6">
-      <div class="w-2/12">
+    <div class="flex md:space-x-6">
+      <div class="w-2/12 hidden md:block">
         <div class="text-black font-semibold text-lg mb-6">Get Started</div>
         <ul>
           <li class="font-semibold text-lg text-black active">
@@ -29,10 +29,19 @@
           <li class="font-semibold text-lg text-black mt-6">Security</li>
         </ul>
       </div>
-      <div class="w-8/12">
-        <div>
+      <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
+        <div class="mb-10 md:mb-0">
           <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">Authority</h2>
           <div class="text-black font-medium md:leading-7 text-2xl">Manage Authorities to DSA</div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
+          <ul>
+            <li class="text-black font-medium pb-2 border-l-2 border-gray-400 pl-5">Add Authority</li>
+            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">Remove
+              Authority
+            </li>
+          </ul>
         </div>
         <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
         <div id="note" class="flex items-center px-5 py-6 rounded-lg mb-5">
@@ -43,11 +52,11 @@
             and opening up chrome console.
           </div>
         </div>
-        <div class="font-normal mb-18">
+        <div class="font-normal mb-14 md:mb-18">
           Auth connector triggers the methods adding and removing the DSA Authorities. You can view details like source
           code, ABIs on Etherscan.
         </div>
-        <div class="mb-16">
+        <div class="mb-14 md:mb-16">
           <div class="mb-8">
             <h3 class="text-black font-semibold mb-4 md:leading-7">Add Authority</h3>
             <div class="font-normal text-lg">Add Authority to DSA.</div>
@@ -56,13 +65,13 @@
             <img class="absolute right-3 top-5" src="~/assets/images/copy.svg" decoding="async" alt="">
             <pre v-highlightjs="addAuthorityCode"><code class="javascript code"></code></pre>
           </div>
-          <div class="grid grid-cols-3">
-            <div>
+          <div class="grid md:grid-cols-3">
+            <div class="mb-8 md:mb-0">
               <div class="font-medium text-lg text-black capitalize">parameter</div>
               <hr class="my-4">
               <div class="font-normal text-lg text-red-500">authority</div>
             </div>
-            <div>
+            <div class="mb-8 md:mb-0">
               <div class="font-medium text-lg text-black capitalize">type</div>
               <hr class="my-4">
               <div class="font-normal text-lg text-black">address</div>
@@ -74,7 +83,7 @@
             </div>
           </div>
         </div>
-        <div class="mb-16">
+        <div class="mb-14 md:mb-16">
           <div class="mb-8">
             <h3 class="text-black font-semibold mb-4 md:leading-7">Remove Authority</h3>
             <div class="font-normal text-lg">Remove Authority to DSA.</div>
@@ -83,13 +92,13 @@
             <img class="absolute right-3 top-5" src="~/assets/images/copy.svg" decoding="async" alt="">
             <pre v-highlightjs="removeAuthorityCode"><code class="javascript code"></code></pre>
           </div>
-          <div class="grid grid-cols-3">
-            <div>
+          <div class="grid md:grid-cols-3">
+            <div class="mb-8 md:mb-0">
               <div class="font-medium text-lg text-black capitalize">parameter</div>
               <hr class="my-4">
               <div class="font-normal text-lg text-red-500">authority</div>
             </div>
-            <div>
+            <div class="mb-8 md:mb-0">
               <div class="font-medium text-lg text-black capitalize">type</div>
               <hr class="my-4">
               <div class="font-normal text-lg text-black">address</div>
@@ -101,18 +110,18 @@
             </div>
           </div>
         </div>
-        <div class="flex items-center justify-between">
-          <button class="silver-border-gradient focus:outline-none">
-            <div class="text-black bg-white rounded text-sm pl-5 pr-6 pt-6 pb-5">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <button class="silver-border-gradient order-2 md:order-1 w-full md:w-auto focus:outline-none">
+            <div class="text-black bg-white rounded text-sm pl-4 pr-6 pt-4 pb-6">
               <div class="flex items-center justify-between mb-3.5">
                 <img class="inline-block align-middle" src="~/assets/images/left-arrow.svg" decoding="async" alt="">
                 <div>Previous</div>
               </div>
-              <div class="font-medium text-lg text-left">Getting Started</div>
+              <div class="font-medium text-lg text-right md:text-left">Getting Started</div>
             </div>
           </button>
-          <button class="blue-gradient focus:outline-none">
-            <div class="bg-blue text-white rounded text-sm pl-5 pr-6 pt-6 pb-5">
+          <button class="blue-gradient order-1 mb-6 md:mb-0 md:order-2 w-full md:w-auto focus:outline-none">
+            <div class="bg-blue text-white rounded text-sm pl-4 pr-6 pt-4 pb-6">
               <div class="flex items-center justify-between mb-3.5">
                 <div>Next</div>
                 <img class="inline-block align-middle" src="~/assets/images/right-arrow.svg" decoding="async" alt="">
@@ -122,7 +131,7 @@
           </button>
         </div>
       </div>
-      <div class="w-2/12">
+      <div class="w-2/12 hidden md:block">
         <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
         <ul>
           <li class="text-black font-medium pb-2 border-l-2 border-gray-400 pl-5">Add Authority</li>
