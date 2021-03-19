@@ -33,4 +33,10 @@ h3 {
     font-size: 32px;
   }
 }
+.silver-border-gradient {
+  padding: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
+}
 </style>

@@ -2,7 +2,8 @@
   <div>
     <Header>
       <template #sidebar>
-        <img @click="openSidebar" class="md:hidden mr-4 cursor-pointer" src="~/assets/images/menu.svg" decoding="async" alt="">
+        <img @click="openSidebar" class="md:hidden mr-4 cursor-pointer" src="~/assets/images/menu.svg" decoding="async"
+             alt="">
       </template>
     </Header>
     <div class="md:px-14 md:py-18">
@@ -19,14 +20,16 @@
           <div class="md:hidden">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
             <ul>
-              <li class="text-black font-medium pb-2 border-l-2 border-gray-400 pl-5">Add Authority</li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">Remove
-                Authority
+              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
+                <a @click="scrollToView($event,'addAuthority')" href="#addAuthority">Add Authority</a>
+              </li>
+              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+                <a @click="scrollToView($event,'removeAuthority')" href="#removeAuthority">Remove Authority</a>
               </li>
             </ul>
           </div>
           <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
-          <div id="note" class="flex items-center px-5 py-6 rounded-lg mb-5">
+          <div class="flex items-center px-5 py-6 rounded-lg mb-5 bg-flashWhite text-PalatinatePurple">
             <img src="~/assets/images/clipboard.svg" decoding="async" alt="">
             <div class="text-lg ml-6">
               <span class="font-bold">Note:</span> You can run this guide directly from here by
@@ -138,10 +141,12 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import {createPopper} from '@popperjs/core';
+import sidebarMixin from "@/mixins/sidebarMixin";
+import copyMixin from "@/mixins/copyMixin";
 
 export default {
   name: "Authority",
+  mixins: [sidebarMixin, copyMixin],
   data() {
     return {
       addAuthorityCode: "spells.add({\n" +
@@ -157,16 +162,6 @@ export default {
     }
   },
   methods: {
-    copyCode(e) {
-      const code = e.target.nextElementSibling.firstChild;
-      const temp = document.createElement('textarea')
-      document.body.appendChild(temp)
-      temp.value = code.innerText;
-      temp.select()
-      document.execCommand('copy')
-      document.body.removeChild(temp)
-      this.showToolTip(e.target)
-    },
     scrollToView(e, id) {
       const el = document.getElementById(id);
       const parent = e.target.closest('div')
@@ -174,51 +169,14 @@ export default {
       e.target.parentElement.classList.add('active');
       el.scrollIntoView(true);
     },
-    showToolTip(el) {
-      const tooltip = document.createElement('span');
-      tooltip.setAttribute('class', 'tooltip');
-      tooltip.innerText = 'copied!'
-      document.body.appendChild(tooltip)
-      createPopper(el, tooltip, {
-        placement: "right-start",
-        modifiers: [
-          {
-            name: 'offset',
-            options: {
-              offset: [0, 5],
-            },
-          },
-        ],
-      });
-      setTimeout(() => {
-        document.body.removeChild(tooltip);
-      }, 1000)
-    },
-    openSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.style.width = "80%";
-    }
   }
 }
 </script>
 
 <style scoped lang="scss">
-.silver-border-gradient {
-  padding: 1px;
-  border-radius: 6px;
-  cursor: pointer;
-  background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
-}
-
-#note {
-  background: #E8F4F6;
-  color: #1595A9;
-}
-
 .code {
   background: #F6F8FF;
 }
-
 .active {
   @apply text-black border-opacity-100;
 }
