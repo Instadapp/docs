@@ -34,7 +34,7 @@
           <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">Authority</h2>
           <div class="text-black font-medium md:leading-7 text-2xl">Manage Authorities to DSA</div>
         </div>
-        <div>
+        <div class="md:hidden">
           <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
           <ul>
             <li class="text-black font-medium pb-2 border-l-2 border-gray-400 pl-5">Add Authority</li>
@@ -62,7 +62,9 @@
             <div class="font-normal text-lg">Add Authority to DSA.</div>
           </div>
           <div class="code relative rounded-lg py-12 px-8 mb-8">
-            <img class="absolute right-3 top-5" src="~/assets/images/copy.svg" decoding="async" alt="">
+            <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"
+                 decoding="async"
+                 alt="">
             <pre v-highlightjs="addAuthorityCode"><code class="javascript code"></code></pre>
           </div>
           <div class="grid md:grid-cols-3">
@@ -89,7 +91,9 @@
             <div class="font-normal text-lg">Remove Authority to DSA.</div>
           </div>
           <div class="code relative rounded-lg py-12 px-8 mb-8">
-            <img class="absolute right-3 top-5" src="~/assets/images/copy.svg" decoding="async" alt="">
+            <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"
+                 decoding="async"
+                 alt="">
             <pre v-highlightjs="removeAuthorityCode"><code class="javascript code"></code></pre>
           </div>
           <div class="grid md:grid-cols-3">
@@ -161,6 +165,17 @@ export default {
         "\tmethod: \"remove\",\n" +
         "\targs: [authority]\n" +
         "});",
+    }
+  },
+  methods: {
+    copyCode(e) {
+      const code = e.target.nextElementSibling.firstChild;
+      const temp = document.createElement('textarea')
+      document.body.appendChild(temp)
+      temp.value = code.innerText;
+      temp.select()
+      document.execCommand('copy')
+      document.body.removeChild(temp)
     }
   }
 }
