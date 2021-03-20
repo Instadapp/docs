@@ -30,6 +30,12 @@ module.exports = {
           light: '#E5E9F0',
           DEFAULT: '#B6BCD1',
           dark: '#556D9C'
+        },
+        flashWhite: {
+          DEFAULT: '#E8F4F6'
+        },
+        PalatinatePurple: {
+          DEFAULT: '#1595A9'
         }
       }
     },

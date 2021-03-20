@@ -1,6 +1,6 @@
 <template>
   <div class="mb-16 md:mb-18">
-    <h3 class="text-black font-semibold mb-8 md:leading-7 md:mb-10">Supported Protocols</h3>
+    <h3 class="text-black font-semibold mb-8 md:leading-7 md:mb-8">Supported Protocols</h3>
     <swiper id="protocols" ref="protocolSwiper" :options="swiperOptions">
       <swiper-slide>
         <div class="protocol">
@@ -206,6 +206,25 @@ export default {
   margin-top: 0 !important;
   @include md {
     margin-top: 20px !important;
+  }
+}
+
+#protocols {
+  @include md{
+    overflow: visible !important;
+  }
+  .protocol {
+    padding: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
+
+    & > div {
+      @apply bg-white duration-300 h-full;
+      &:hover {
+        box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.2);
+      }
+    }
   }
 }
 </style>

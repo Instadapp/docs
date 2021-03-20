@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header></Header>
     <div class="bg-black-dark text-white border-t border-blue pt-14 pb-20 px-4 md:px-60 md:pt-16">
       <h1 class="mb-8 font-semibold text-3xl w-1/2 md:w-full">Instadapp Developers</h1>
       <div class="grid gap-y-4 md:gap-y-0 md:grid-cols-3 md:gap-x-6">
@@ -33,7 +34,7 @@
       <Protocols></Protocols>
       <div class="md:text-right">
         <button class="blue-gradient w-full md:w-auto focus:outline-none">
-          <div class="bg-blue text-white rounded text-sm pl-5 pr-6 pt-6 pb-5">
+          <div class="bg-blue text-white rounded text-sm pl-4 pr-6 pt-4 pb-6">
             <div class="flex items-center justify-between mb-3.5">
               <div>Next</div>
               <img class="inline-block align-middle" src="~/assets/images/right-arrow.svg" decoding="async" alt="">
@@ -65,63 +66,6 @@ export default {}
 
   &:hover {
     box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.4);
-  }
-}
-
-h2 {
-  font-size: 32px;
-  @include sm {
-    font-size: 40px;
-  }
-}
-
-h3 {
-  font-size: 24px;
-  @include sm {
-    font-size: 32px;
-  }
-}
-
-#useCases {
-  #useCase1 {
-    background: #D6E3F4;
-  }
-
-  #useCase2 {
-    background: #CEEFE5;
-  }
-
-  #useCase3 {
-    background: #F2E4C0;
-  }
-
-  #useCase4 {
-    background: #E2D6F4;
-  }
-
-  #useCase5 {
-    background: #EFCED8;
-  }
-
-  #useCase6 {
-    background: #C0E6F2;
-  }
-}
-
-#protocols {
-  .protocol {
-    padding: 1px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
-
-    & > div {
-      @apply bg-white;
-    }
-
-    &:hover {
-      box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.2);
-    }
   }
 }
 
