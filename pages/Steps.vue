@@ -111,8 +111,8 @@
               <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"
                    decoding="async"
                    alt="">
-              <pre class="hidden md:block" v-highlightjs="code"><code class="javascript code"></code></pre>
-              <pre class="md:hidden" v-highlightjs="mobileCode"><code class="javascript code"></code></pre>
+              <pre v-highlightjs="code"><code class="javascript code"></code></pre>
+<!--              <pre class="md:hidden" v-highlightjs="code"><code class="javascript code"></code></pre>-->
             </div>
           </div>
           <div class="flex flex-col md:flex-row items-center justify-between">
@@ -298,6 +298,8 @@ h3 {
 
 .code {
   background: #F6F8FF;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .active {
