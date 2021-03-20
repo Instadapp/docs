@@ -19,20 +19,6 @@ html, body {
   border-radius: 4px;
   font-size: 13px;
 }
-
-h2 {
-  font-size: 32px;
-  @include sm {
-    font-size: 40px;
-  }
-}
-
-h3 {
-  font-size: 24px;
-  @include sm {
-    font-size: 32px;
-  }
-}
 .silver-border-gradient {
   padding: 1px;
   border-radius: 6px;
