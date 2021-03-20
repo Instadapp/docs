@@ -27,11 +27,11 @@
                 <a @click="scrollToView($event,'step2')" href="#step2">Step 2</a>
               </li>
               <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step3')" href="#step2">Step 3</a>
+                <a @click="scrollToView($event,'step3')" href="#step3">Step 3</a>
               </li>
             </ul>
           </div>
-          <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
+          <hr class="mt-6 mb-6 md:mt-10 md:mb-15">
           <div class="flex items-center px-5 py-6 rounded-lg mb-16 bg-flashWhite text-PalatinatePurple">
             <img src="~/assets/images/clipboard.svg" decoding="async" alt="">
             <div class="text-lg ml-6">
@@ -53,23 +53,25 @@
               <h3 class="text-blue underline font-semibold md:leading-7">Setup Account</h3>
             </div>
           </div>
-          <div id="step3" class="mb-14 md:mb-8">
+          <div id="step3" class="mb-8 md:mb-8">
             <div class="py-2 px-4 text-blue rounded text-lg font-semibold bg-flashWhite inline-block mb-4">step 3</div>
             <h3 class="text-black font-semibold md:leading-7 mb-4">Fulfill use case</h3>
             <div class="text-lg font-normal">
-              Trigger the following uniquely designed spells to fulfill this use case. Check
-              <NuxtLink class="text-blue font-semibold" to="/">this section</NuxtLink>
-              for generic
-              details around casting spells. <br> <br>
-
-              The DSA will cast the spells across the
-              <NuxtLink class="text-blue font-semibold" to="/">MakerDAO</NuxtLink>
-              ,
-              <NuxtLink class="text-blue font-semibold" to="/">OasisDEX</NuxtLink>
-              and
-              <NuxtLink class="text-blue font-semibold" to="/">Instapool</NuxtLink>
-              connectors in the following
-              sequence.
+              <p class="mb-8">
+                Trigger the following uniquely designed spells to fulfill this use case. Check
+                <NuxtLink class="text-blue font-semibold" to="/">this section</NuxtLink>
+                for generic
+                details around casting spells.
+              </p>
+              <p> The DSA will cast the spells across the
+                <NuxtLink class="text-blue font-semibold" to="/">MakerDAO</NuxtLink>
+                ,
+                <NuxtLink class="text-blue font-semibold" to="/">OasisDEX</NuxtLink>
+                and
+                <NuxtLink class="text-blue font-semibold" to="/">Instapool</NuxtLink>
+                connectors in the following
+                sequence.
+              </p>
             </div>
           </div>
           <div class="mb-14 md:mb-16">
@@ -110,6 +112,7 @@
                    decoding="async"
                    alt="">
               <pre v-highlightjs="code"><code class="javascript code"></code></pre>
+<!--              <pre class="md:hidden" v-highlightjs="code"><code class="javascript code"></code></pre>-->
             </div>
           </div>
           <div class="flex flex-col md:flex-row items-center justify-between">
@@ -144,7 +147,7 @@
                 <a @click="scrollToView($event,'step2')" href="#step2">Step 2</a>
               </li>
               <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step3')" href="#step2">Step 3</a>
+                <a @click="scrollToView($event,'step3')" href="#step3">Step 3</a>
               </li>
             </ul>
           </div>
@@ -212,7 +215,56 @@ export default {
         "    args: [dai_address, 0, 0]\n" +
         "});\n" +
         "\n" +
-        "dsa.cast(spells).then(console.log)"
+        "dsa.cast(spells).then(console.log)",
+      mobileCode: "let borrowAmount = 20; \n// 20 DAI\n" +
+        "let borrowAmtInWei = \ndsa.tokens.fromDecimal(borrow\nAmount, \"dai\"); \n// borrow flash loan \nand swap via OasisDEX\n" +
+        "\n" +
+        "let slippage = 2; \n// 2% slippage.\n" +
+        "let dai_address = \ndsa.tokens.info.dai.address\n" +
+        "let usdc_address = \ndsa.tokens.info.usdc.address\n" +
+        "\n" +
+        "let buyAmount = await \ndsa.oasis.getBuyAmount(\"USDC\",\n\"DAI\", \nborrowAmount, slippage);\n" +
+        "\n" +
+        "let spells = dsa.Spell();\n" +
+        "\n" +
+        " \n" +
+        "spells.add({\n" +
+        "    connector: \"instapool\",\n" +
+        "    method: \"flashBorrow\",\n" +
+        "    args: [dai_address,\nborrowAmtInWei, 0, 0]\n" +
+        "});\n" +
+        "\n" +
+        "spells.add({\n" +
+        "    connector: \"oasis\",\n" +
+        "    method: \"sell\",\n" +
+        "    args: [usdc_address,\ndai_address, borrowAmtInWei,\nbuyAmount.unitAmt, 0, 0]\n" +
+        "});\n" +
+        "\n" +
+        "spells.add({\n" +
+        "    connector: \"maker\",\n" +
+        "    method: \"open\",\n" +
+        "    args: [\"USDC-A\"]\n" +
+        "});\n" +
+        "\n" +
+        "spells.add({\n" +
+        "    connector: \"maker\",\n" +
+        "    method: \"deposit\",\n" +
+        "    args: [0, -1, 0, 0] \n// deposit all USDC\n" +
+        "});\n" +
+        "\n" +
+        "spells.add({\n" +
+        "    connector: \"maker\",\n" +
+        "    method: \"borrow\",\n" +
+        "    args: [0, borrowAmtInWei, \n0, 0]\n" +
+        "});\n" +
+        "\n" +
+        "spells.add({\n" +
+        "    connector: \"instapool\",\n" +
+        "    method: \"flashPayback\",\n" +
+        "    args: [dai_address, 0, 0]\n" +
+        "});\n" +
+        "\n" +
+        "dsa.cast(spells)\n\t.then(console.log)"
     }
   },
   methods: {
@@ -228,8 +280,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "~/assets/scss/mixins.scss";
+
+h2 {
+  font-size: 32px;
+  @include sm {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  @include sm {
+    font-size: 32px;
+  }
+}
+
 .code {
   background: #F6F8FF;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .active {

@@ -51,7 +51,7 @@
 export default {}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~/assets/scss/mixins.scss";
 
 .gradient-box {
@@ -73,5 +73,19 @@ export default {}
   padding: 1px;
   background: linear-gradient(180deg, #50A1FF 0%, #0E18FF 100%);
   border-radius: 4px;
+}
+
+h2 {
+  font-size: 32px;
+  @include sm {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  @include sm {
+    font-size: 32px;
+  }
 }
 </style>
