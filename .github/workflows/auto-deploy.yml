@@ -1,0 +1,26 @@
+name: staging-deployment-automation
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: 22
+          script: |
+            cd ${{ secrets.REMOTE_TARGET }} && \
+            git checkout -- . && \
+            git pull && \
+            npm i && \
+            npm run build --if-present && \
+            pm2 restart docs-nuxt --update-env
