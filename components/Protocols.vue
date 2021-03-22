@@ -154,7 +154,7 @@
 
 <script>
 import {Swiper, SwiperSlide, directive} from "vue-awesome-swiper";
-import 'swiper/swiper-bundle.css'
+import 'swiper/swiper.scss'
 
 export default {
   name: "Protocols",
