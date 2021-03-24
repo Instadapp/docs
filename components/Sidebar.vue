@@ -13,15 +13,20 @@
 </template>
 
 <script>
-export default {
+import {defineComponent} from "@nuxtjs/composition-api";
+
+export default defineComponent({
   name: "Sidebar",
-  methods: {
-    closeSidebar() {
+  setup() {
+    const closeSidebar = () => {
       const sidebar = document.getElementById('sidebar');
       sidebar.style.width = '0'
     }
+    return {
+      closeSidebar
+    }
   }
-}
+})
 </script>
 
 <style scoped>

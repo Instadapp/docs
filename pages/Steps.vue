@@ -112,7 +112,7 @@
                    decoding="async"
                    alt="">
               <pre v-highlightjs="code"><code class="javascript code"></code></pre>
-<!--              <pre class="md:hidden" v-highlightjs="code"><code class="javascript code"></code></pre>-->
+              <!--              <pre class="md:hidden" v-highlightjs="code"><code class="javascript code"></code></pre>-->
             </div>
           </div>
           <div class="flex flex-col md:flex-row items-center justify-between">
@@ -158,125 +158,72 @@
 </template>
 
 <script>
-import sidebarMixin from "@/mixins/sidebarMixin";
-import copyMixin from "@/mixins/copyMixin";
 import 'highlight.js/styles/vs.css'
+import {defineComponent} from '@nuxtjs/composition-api'
+import {copyCode} from "@/composables/copy";
+import {openSidebar} from "@/composables/openSidebar";
+import {scrollToView} from "@/composables/scrollToView";
 
-export default {
-  name: "Steps",
-  mixins: [sidebarMixin, copyMixin],
-  data() {
+export default defineComponent({
+  setup() {
+    const code = "let borrowAmount = 20; // 20 DAI\n" +
+      "let borrowAmtInWei = dsa.tokens.fromDecimal(borrowAmount, \"dai\"); \n// borrow flash loan and swap via OasisDEX\n" +
+      "\n" +
+      "let slippage = 2; // 2% slippage.\n" +
+      "let dai_address = dsa.tokens.info.dai.address\n" +
+      "let usdc_address = dsa.tokens.info.usdc.address\n" +
+      "\n" +
+      "let buyAmount = await dsa.oasis.getBuyAmount(\"USDC\", \"DAI\", borrowAmount, slippage);\n" +
+      "\n" +
+      "let spells = dsa.Spell();\n" +
+      "\n" +
+      " \n" +
+      "spells.add({\n" +
+      "    connector: \"instapool\",\n" +
+      "    method: \"flashBorrow\",\n" +
+      "    args: [dai_address, borrowAmtInWei, 0, 0]\n" +
+      "});\n" +
+      "\n" +
+      "spells.add({\n" +
+      "    connector: \"oasis\",\n" +
+      "    method: \"sell\",\n" +
+      "    args: [usdc_address, dai_address, borrowAmtInWei, buyAmount.unitAmt, 0, 0]\n" +
+      "});\n" +
+      "\n" +
+      "spells.add({\n" +
+      "    connector: \"maker\",\n" +
+      "    method: \"open\",\n" +
+      "    args: [\"USDC-A\"]\n" +
+      "});\n" +
+      "\n" +
+      "spells.add({\n" +
+      "    connector: \"maker\",\n" +
+      "    method: \"deposit\",\n" +
+      "    args: [0, -1, 0, 0] // deposit all USDC\n" +
+      "});\n" +
+      "\n" +
+      "spells.add({\n" +
+      "    connector: \"maker\",\n" +
+      "    method: \"borrow\",\n" +
+      "    args: [0, borrowAmtInWei, 0, 0]\n" +
+      "});\n" +
+      "\n" +
+      "spells.add({\n" +
+      "    connector: \"instapool\",\n" +
+      "    method: \"flashPayback\",\n" +
+      "    args: [dai_address, 0, 0]\n" +
+      "});\n" +
+      "\n" +
+      "dsa.cast(spells).then(console.log)";
+
     return {
-      code: "let borrowAmount = 20; // 20 DAI\n" +
-        "let borrowAmtInWei = dsa.tokens.fromDecimal(borrowAmount, \"dai\"); \n// borrow flash loan and swap via OasisDEX\n" +
-        "\n" +
-        "let slippage = 2; // 2% slippage.\n" +
-        "let dai_address = dsa.tokens.info.dai.address\n" +
-        "let usdc_address = dsa.tokens.info.usdc.address\n" +
-        "\n" +
-        "let buyAmount = await dsa.oasis.getBuyAmount(\"USDC\", \"DAI\", borrowAmount, slippage);\n" +
-        "\n" +
-        "let spells = dsa.Spell();\n" +
-        "\n" +
-        " \n" +
-        "spells.add({\n" +
-        "    connector: \"instapool\",\n" +
-        "    method: \"flashBorrow\",\n" +
-        "    args: [dai_address, borrowAmtInWei, 0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"oasis\",\n" +
-        "    method: \"sell\",\n" +
-        "    args: [usdc_address, dai_address, borrowAmtInWei, buyAmount.unitAmt, 0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"maker\",\n" +
-        "    method: \"open\",\n" +
-        "    args: [\"USDC-A\"]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"maker\",\n" +
-        "    method: \"deposit\",\n" +
-        "    args: [0, -1, 0, 0] // deposit all USDC\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"maker\",\n" +
-        "    method: \"borrow\",\n" +
-        "    args: [0, borrowAmtInWei, 0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"instapool\",\n" +
-        "    method: \"flashPayback\",\n" +
-        "    args: [dai_address, 0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "dsa.cast(spells).then(console.log)",
-      mobileCode: "let borrowAmount = 20; \n// 20 DAI\n" +
-        "let borrowAmtInWei = \ndsa.tokens.fromDecimal(borrow\nAmount, \"dai\"); \n// borrow flash loan \nand swap via OasisDEX\n" +
-        "\n" +
-        "let slippage = 2; \n// 2% slippage.\n" +
-        "let dai_address = \ndsa.tokens.info.dai.address\n" +
-        "let usdc_address = \ndsa.tokens.info.usdc.address\n" +
-        "\n" +
-        "let buyAmount = await \ndsa.oasis.getBuyAmount(\"USDC\",\n\"DAI\", \nborrowAmount, slippage);\n" +
-        "\n" +
-        "let spells = dsa.Spell();\n" +
-        "\n" +
-        " \n" +
-        "spells.add({\n" +
-        "    connector: \"instapool\",\n" +
-        "    method: \"flashBorrow\",\n" +
-        "    args: [dai_address,\nborrowAmtInWei, 0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"oasis\",\n" +
-        "    method: \"sell\",\n" +
-        "    args: [usdc_address,\ndai_address, borrowAmtInWei,\nbuyAmount.unitAmt, 0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"maker\",\n" +
-        "    method: \"open\",\n" +
-        "    args: [\"USDC-A\"]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"maker\",\n" +
-        "    method: \"deposit\",\n" +
-        "    args: [0, -1, 0, 0] \n// deposit all USDC\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"maker\",\n" +
-        "    method: \"borrow\",\n" +
-        "    args: [0, borrowAmtInWei, \n0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "spells.add({\n" +
-        "    connector: \"instapool\",\n" +
-        "    method: \"flashPayback\",\n" +
-        "    args: [dai_address, 0, 0]\n" +
-        "});\n" +
-        "\n" +
-        "dsa.cast(spells)\n\t.then(console.log)"
+      code,
+      copyCode,
+      openSidebar,
+      scrollToView
     }
-  },
-  methods: {
-    scrollToView(e, id) {
-      const el = document.getElementById(id);
-      const parent = e.target.closest('div')
-      parent.querySelector('.active').classList.remove('active')
-      e.target.parentElement.classList.add('active');
-      el.scrollIntoView(true);
-    },
   }
-}
+})
 </script>
 
 <style scoped lang="scss">
