@@ -147,8 +147,8 @@ import {scrollToView} from "@/composables/scrollToView";
 import {openSidebar} from "@/composables/openSidebar";
 
 export default defineComponent({
+  name: 'Connectors',
   setup() {
-
     const addAuthorityCode = "spells.add({\n" +
       "\tconnector: \"authority\",\n" +
       "\tmethod: \"add\",\n" +

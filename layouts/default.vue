@@ -1,9 +1,22 @@
 <template>
-  <div class="font-montserrat">
+  <div class="font-montserrat tracking-tighter">
     <Nuxt/>
     <Footer></Footer>
   </div>
 </template>
+
+<script>
+import {defineComponent, useMeta} from "@nuxtjs/composition-api";
+
+export default defineComponent({
+  name: 'DefaultLayout',
+  head: {},
+  setup() {
+    const {title} = useMeta()
+    title.value = 'Instadapp Docs'
+  }
+})
+</script>
 
 <style lang="scss">
 @import "~/assets/scss/mixins.scss";
@@ -19,6 +32,7 @@ html, body {
   border-radius: 4px;
   font-size: 13px;
 }
+
 .silver-border-gradient {
   padding: 1px;
   border-radius: 6px;
