@@ -40,6 +40,9 @@
               and opening up chrome console.
             </div>
           </div>
+          <div class="mb-14">
+            <UseCasesSlider/>
+          </div>
           <div id="step1" class="mb-14 md:mb-16">
             <div class="py-2 px-4 text-blue rounded text-lg font-semibold bg-flashWhite inline-block mb-4">step 1</div>
             <div class="mb-8">
@@ -77,7 +80,7 @@
           <div class="mb-14 md:mb-16">
             <div class="mb-8">
               <h4 class="text-black font-semibold mb-6 text-2xl">Benefits</h4>
-              <ul class="list-disc ml-7">
+              <ul class="list-disc ml-7 tracking-normal">
                 <li class="font-normal mb-4 pl-5">When DAI > $1. Arbitrage benefit due to price difference of DAI &
                   USDC.
                 </li>
@@ -86,7 +89,7 @@
             </div>
             <div class="mb-8">
               <h4 class="text-black font-semibold mb-6 text-2xl">Recipe</h4>
-              <ol class="list-decimal ml-7">
+              <ol class="list-decimal ml-7 tracking-normal">
                 <li class="font-semibold mb-4 pl-5">Instapool: <span class="font-normal">borrow DAI</span></li>
                 <li class="font-semibold mb-4 pl-5">OasisDEX: <span class="font-normal">swap DAI with USDC</span></li>
                 <li class="font-semibold mb-4 pl-5">MakerDAO: <span class="font-normal">open USDC vault</span></li>
@@ -99,7 +102,7 @@
             </div>
             <div class="mb-8">
               <h4 class="text-black font-semibold mb-6 text-2xl">Requirements</h4>
-              <ul class="list-disc ml-7">
+              <ul class="list-disc ml-7 tracking-normal">
                 <li class="font-normal mb-4 pl-5">User should have base amount of USDC to perform the leverage.
                   Liquidation on Compound is 83.33% which means for 1 DAI borrowed, user needs to have the balance of
                   0.25 USDC for collateral to perform this spell.
@@ -111,7 +114,7 @@
               <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"
                    decoding="async"
                    alt="">
-              <pre v-highlightjs="code"><code class="javascript code"></code></pre>
+              <pre v-highlightjs="code"><code class="javascript code tracking-normal"></code></pre>
               <!--              <pre class="md:hidden" v-highlightjs="code"><code class="javascript code"></code></pre>-->
             </div>
           </div>

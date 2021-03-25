@@ -1,86 +1,108 @@
 <template>
   <div class="mb-16 md:mb-18">
-    <h3 class="text-black font-semibold mb-8 md:leading-7 md:mb-8">Supported Protocols</h3>
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 md:mb-10">
+      <h3 class="text-black font-semibold md:leading-7">Supported Protocols</h3>
+      <NuxtLink to="/connectors"
+                class="self-start md:self-auto mt-4 md:mt-0 bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm">
+        explore more
+      </NuxtLink>
+    </div>
     <swiper id="protocols" :options="swiperOptions">
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/makerdao.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">Maker Dao</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/makerdao.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">Maker Dao</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/compound.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">Compound</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/compound.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">Compound</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/uniswap.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">Uniswap</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/uniswap.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">Uniswap</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/kyber.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">Kyber</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/kyber.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">Kyber</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/curve.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">Curve</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/curve.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">Curve</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/gobbler.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">dYdX</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/gobbler.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">dYdX</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/aave.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">Aave</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/aave.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">Aave</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div class="protocol">
-          <div class="rounded-lg p-6">
-            <div class="flex items-center">
-              <img src="~/assets/images/protocols/1inch.svg" alt="">
-              <div class="text-2xl ml-4 font-semibold">1inch</div>
+        <NuxtLink to="/connectors/authority">
+          <div class="protocol">
+            <div class="rounded-lg p-6">
+              <div class="flex items-center">
+                <img src="~/assets/images/protocols/1inch.svg" alt="">
+                <div class="text-2xl ml-4 font-semibold">1inch</div>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </swiper-slide>
     </swiper>
   </div>
@@ -89,7 +111,7 @@
 <script>
 import {Swiper, SwiperSlide, directive} from "vue-awesome-swiper";
 import 'swiper/swiper.scss'
-import {defineComponent, computed, ref,onMounted} from "@nuxtjs/composition-api";
+import {defineComponent, computed, ref, onMounted} from "@nuxtjs/composition-api";
 
 export default defineComponent({
   components: {Swiper, SwiperSlide},
