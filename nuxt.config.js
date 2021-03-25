@@ -28,6 +28,7 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/composition-api'
   ],
   googleFonts: {
     display: 'swap',

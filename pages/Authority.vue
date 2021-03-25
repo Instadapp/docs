@@ -141,40 +141,35 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import sidebarMixin from "@/mixins/sidebarMixin";
-import copyMixin from "@/mixins/copyMixin";
+import {defineComponent} from '@nuxtjs/composition-api'
+import {copyCode} from "@/composables/copy";
+import {scrollToView} from "@/composables/scrollToView";
+import {openSidebar} from "@/composables/openSidebar";
 
-export default {
-  name: "Authority",
-  mixins: [sidebarMixin, copyMixin],
-  data() {
+export default defineComponent({
+  setup() {
+
+    const addAuthorityCode = "spells.add({\n" +
+      "\tconnector: \"authority\",\n" +
+      "\tmethod: \"add\",\n" +
+      "\targs: [authority]\n" +
+      "});"
+    const removeAuthorityCode = "spells.add({\n" +
+      "\tconnector: \"authority\",\n" +
+      "\tmethod: \"remove\",\n" +
+      "\targs: [authority]\n" +
+      "});"
+
     return {
-      addAuthorityCode: "spells.add({\n" +
-        "\tconnector: \"authority\",\n" +
-        "\tmethod: \"add\",\n" +
-        "\targs: [authority]\n" +
-        "});",
-      removeAuthorityCode: "spells.add({\n" +
-        "\tconnector: \"authority\",\n" +
-        "\tmethod: \"remove\",\n" +
-        "\targs: [authority]\n" +
-        "});",
+      copyCode, scrollToView, openSidebar, addAuthorityCode, removeAuthorityCode
     }
-  },
-  methods: {
-    scrollToView(e, id) {
-      const el = document.getElementById(id);
-      const parent = e.target.closest('div')
-      parent.querySelector('.active').classList.remove('active')
-      e.target.parentElement.classList.add('active');
-      el.scrollIntoView(true);
-    },
   }
-}
+})
 </script>
 
 <style scoped lang="scss">
 @import "~/assets/scss/mixins.scss";
+
 h2 {
   font-size: 32px;
   @include sm {
@@ -188,9 +183,11 @@ h3 {
     font-size: 32px;
   }
 }
+
 .code {
   background: #F6F8FF;
 }
+
 .active {
   @apply text-black border-opacity-100;
 }
