@@ -1,4 +1,4 @@
-# instadapp
+# Instadapp docs
 
 ## Build Setup
 
