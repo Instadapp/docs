@@ -3,40 +3,52 @@
     <h3 class="text-black font-semibold mb-8 md:leading-7 md:mb-10">Start with your use case</h3>
     <swiper id="useCases" ref="mySwiper" :options="swiperOptions">
       <swiper-slide>
-        <div id="useCase1" class="rounded-lg px-9 py-8">
-          <div class="text-black font-semibold text-2xl mb-4">Long ETH</div>
-          <div class="text-black font-medium">Tap the upside spike in Ethereum price</div>
-        </div>
+        <NuxtLink to="/steps">
+          <div id="useCase1" class="rounded-lg px-9 py-8">
+            <div class="text-black font-semibold text-2xl mb-4">Long ETH</div>
+            <div class="text-black font-medium">Tap the upside spike in Ethereum price</div>
+          </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div id="useCase2" class="rounded-lg px-9 py-8">
-          <div class="text-black font-semibold text-2xl mb-4">Short DAI</div>
-          <div class="text-black font-medium">Earn instant return & make DAI stable</div>
-        </div>
+        <NuxtLink to="/steps">
+          <div id="useCase2" class="rounded-lg px-9 py-8">
+            <div class="text-black font-semibold text-2xl mb-4">Short DAI</div>
+            <div class="text-black font-medium">Earn instant return & make DAI stable</div>
+          </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div id="useCase3" class="rounded-lg px-9 py-8">
-          <div class="text-black font-semibold text-2xl mb-4">Bridging</div>
-          <div class="text-black font-medium">Port position b/w Maker & Compound</div>
-        </div>
+        <NuxtLink to="/steps">
+          <div id="useCase3" class="rounded-lg px-9 py-8">
+            <div class="text-black font-semibold text-2xl mb-4">Bridging</div>
+            <div class="text-black font-medium">Port position b/w Maker & Compound</div>
+          </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div id="useCase4" class="rounded-lg px-9 py-8">
-          <div class="text-black font-semibold text-2xl mb-4">Long ETH</div>
-          <div class="text-black font-medium">Tap the upside spike in Ethereum price</div>
-        </div>
+        <NuxtLink to="/steps">
+          <div id="useCase4" class="rounded-lg px-9 py-8">
+            <div class="text-black font-semibold text-2xl mb-4">Long ETH</div>
+            <div class="text-black font-medium">Tap the upside spike in Ethereum price</div>
+          </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div id="useCase5" class="rounded-lg px-9 py-8">
-          <div class="text-black font-semibold text-2xl mb-4">Short DAI</div>
-          <div class="text-black font-medium">Earn instant return & make DAI stable</div>
-        </div>
+        <NuxtLink to="/steps">
+          <div id="useCase5" class="rounded-lg px-9 py-8">
+            <div class="text-black font-semibold text-2xl mb-4">Short DAI</div>
+            <div class="text-black font-medium">Earn instant return & make DAI stable</div>
+          </div>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
-        <div id="useCase6" class="rounded-lg px-9 py-8">
-          <div class="text-black font-semibold text-2xl mb-4">Bridging</div>
-          <div class="text-black font-medium">Port position b/w Maker & Compound</div>
-        </div>
+        <NuxtLink to="/steps">
+          <div id="useCase6" class="rounded-lg px-9 py-8">
+            <div class="text-black font-semibold text-2xl mb-4">Bridging</div>
+            <div class="text-black font-medium">Port position b/w Maker & Compound</div>
+          </div>
+        </NuxtLink>
       </swiper-slide>
     </swiper>
   </div>

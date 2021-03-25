@@ -137,10 +137,6 @@ export default defineComponent({
 }
 
 #protocols {
-  @include md {
-    overflow: visible !important;
-  }
-
   .protocol {
     padding: 1px;
     border-radius: 8px;
@@ -149,9 +145,9 @@ export default defineComponent({
 
     & > div {
       @apply bg-white duration-300 h-full;
-      &:hover {
-        box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.2);
-      }
+      //&:hover {
+      //  box-shadow: 0px 16px 24px rgba(4, 2, 33, 0.2);
+      //}
     }
   }
 }
