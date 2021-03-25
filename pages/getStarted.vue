@@ -29,7 +29,7 @@
               </li>
             </ul>
           </div>
-          <hr class="mt-6 mb-6 md:mt-10 md:mb-15">
+          <hr class="mt-6 mb-6 md:hidden">
           <nuxt-content :document="docs"/>
         </div>
         <div class="w-2/12 hidden md:block">
