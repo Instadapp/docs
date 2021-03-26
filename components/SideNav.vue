@@ -1,32 +1,73 @@
 <template>
   <div>
-    <div class="text-black font-semibold text-lg mb-6">Get Started</div>
     <ul>
-      <li :class="{'active': $route.path==='/connectors'}" class="font-semibold text-lg text-black leading-none">
-        Connectors
-        <ul class="mt-5 pl-6">
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Basic</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Instapool</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none text-blue">Authority</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Comp</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Curve sUSD</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Compound</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">MakerDAO</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Aave</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">OasisDEX</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Kyber</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Curve sBTC</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Curve Y</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">dYdX</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">1inch</li>
-          <li class="text-gray-400 text-sm font-medium mb-4 leading-none">Uniswap</li>
+      <li class="mb-6">
+        <NuxtLink :class="{'active': $route.path==='/getstarted'}" to="/getstarted" class="text-black font-semibold text-lg leading-none">Get Started</NuxtLink>
+      </li>
+      <li class="mb-6">
+        <NuxtLink :class="{'active': $route.path==='/connectors'}" to="/connectors"
+                  class="font-semibold text-lg text-black leading-none">
+          Connectors
+        </NuxtLink>
+        <ul v-if="$route.path==='/connectors'" class="mt-5 pl-6 leading-none">
+          <li class="mb-2">
+            <NuxtLink class="text-gray-400 text-sm font-medium" to="/">Basic</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink class="text-gray-400 text-sm font-medium" to="/">Instapool</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Authority</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Comp</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Curve sUSD</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Compound</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">MakerDAO</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Aave</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">OasisDEX</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Kyber</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Curve sBTC</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Curve Y</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">dYdX</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">1inch</NuxtLink>
+          </li>
+          <li class="mb-2">
+            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Uniswap</NuxtLink>
+          </li>
         </ul>
       </li>
-      <li :class="{'active': $route.path==='/usecases'}" class="font-semibold text-lg text-black mt-6 leading-none">Use
-        Cases
+      <li class="mb-6">
+        <NuxtLink to="/usecases" :class="{'active': $route.path==='/usecases'}"
+                  class="font-semibold text-lg text-black mb-6 leading-none">Use Cases
+        </NuxtLink>
       </li>
-      <li class="font-semibold text-lg text-black mt-6 leading-none">Resolvers</li>
-      <li class="font-semibold text-lg text-black mt-6 leading-none">Security</li>
+      <li class="mb-6">
+        <NuxtLink class="font-semibold text-lg text-black leading-none" to="/">Resolvers</NuxtLink>
+      </li>
+      <li class="mb-6">
+        <NuxtLink class="font-semibold text-lg text-black leading-none" to="/">Security</NuxtLink>
+      </li>
     </ul>
   </div>
 </template>

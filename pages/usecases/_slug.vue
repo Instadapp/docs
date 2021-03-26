@@ -159,13 +159,13 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import {defineComponent} from '@nuxtjs/composition-api'
+import {defineComponent, useContext, useAsync, useFetch} from '@nuxtjs/composition-api'
 import {copyCode} from "@/composables/copy";
 import {openSidebar} from "@/composables/openSidebar";
 import {scrollToView} from "@/composables/scrollToView";
 
 export default defineComponent({
-  name: '_slug',
+  name: 'UseCase',
   setup() {
     const code = "let borrowAmount = 20; // 20 DAI\n" +
       "let borrowAmtInWei = dsa.tokens.fromDecimal(borrowAmount, \"dai\"); \n// borrow flash loan and swap via OasisDEX\n" +
@@ -216,19 +216,26 @@ export default defineComponent({
       "});\n" +
       "\n" +
       "dsa.cast(spells).then(console.log)";
-
+    const {$axios, params} = useContext();
+    const {slug} = params.value
+    // const useCase2 = useFetch(async () => $axios.$get(`usecases?slug=${slug}`))
+    const useCase = {
+      title: '',
+      description: ''
+    }
     return {
       code,
       copyCode,
       openSidebar,
-      scrollToView
+      scrollToView,
+      useCase: useCase
     }
   }
 })
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/scss/mixins.scss";
+@import "~@/assets/scss/mixins.scss";
 
 h2 {
   font-size: 32px;
