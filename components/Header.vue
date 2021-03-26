@@ -7,7 +7,7 @@
         <span class="uppercase text-white hidden md:block md:font-extrabold md:text-xl md:ml-1.5">Developers</span>
       </NuxtLink>
     </div>
-    <button class="bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm md:">start now
+    <button class="bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm">start now
       <img class="inline-block align-middle" src="~/assets/images/right-arrow.svg" decoding="async" alt=""></button>
   </div>
 </template>
