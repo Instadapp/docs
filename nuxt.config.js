@@ -40,8 +40,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/axios'
   ],
+  axios: {},
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: 'https://my-json-server.typicode.com/waleed1892/instadata',
+      baseUrl: 'https://my-json-server.typicode.com/waleed1892/instadata'
+    }
+  },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}

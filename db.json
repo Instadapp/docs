@@ -1,0 +1,138 @@
+{
+  "usecases": [
+    {
+      "id": 1,
+      "slug": "long-eth",
+      "title": "long eth",
+      "description": "Tap the upside spike in Ethereum price",
+      "color": "#D6E3F4"
+    },
+    {
+      "id": 2,
+      "slug": "short-dai",
+      "title": "short dai",
+      "description": "Make instant return & make DAI stable",
+      "color": "#CEEFE5"
+    },
+    {
+      "id": 3,
+      "slug": "bridging",
+      "title": "bridging",
+      "description": "Port position b/w Maker & Compound",
+      "color":"#F2E4C0"
+    },
+    {
+      "id": 4,
+      "slug": "long-eth",
+      "title": "long eth",
+      "description": "Tap the upside spike in Ethereum price",
+      "color":"#E2D6F4"
+    },
+    {
+      "id": 5,
+      "slug": "short-dai",
+      "title": "short dai",
+      "description": "Make instant return & make DAI stable",
+      "color":"#EFCED8"
+    },
+    {
+      "id": 6,
+      "slug": "bridging",
+      "title": "bridging",
+      "description": "Port position b/w Maker & Compound",
+      "color":"#C0E6F2"
+    },
+    {
+      "id": 7,
+      "slug": "long-eth",
+      "title": "long eth",
+      "description": "Tap the upside spike in Ethereum price",
+      "color": "#D6E3F4"
+    },
+    {
+      "id": 8,
+      "slug": "short-dai",
+      "title": "short dai",
+      "description": "Make instant return & make DAI stable",
+      "color": "#CEEFE5"
+    },
+    {
+      "id": 9,
+      "slug": "bridging",
+      "title": "bridging",
+      "description": "Port position b/w Maker & Compound",
+      "color":"#F2E4C0"
+    },
+    {
+      "id": 10,
+      "slug": "long-eth",
+      "title": "long eth",
+      "description": "Tap the upside spike in Ethereum price",
+      "color":"#E2D6F4"
+    },
+    {
+      "id": 11,
+      "slug": "short-dai",
+      "title": "short dai",
+      "description": "Make instant return & make DAI stable",
+      "color":"#C0E6F2"
+    },
+    {
+      "id": 12,
+      "slug": "bridging",
+      "title": "bridging",
+      "description": "Port position b/w Maker & Compound",
+      "color":"#C0E6F2"
+    }
+  ],
+  "connectors": [
+    {
+      "id": 1,
+      "slug": "maker-dao",
+      "title": "maker dao",
+      "image": "protocols/makerdao.svg"
+    },
+    {
+      "id": 2,
+      "slug": "compound",
+      "title": "compound",
+      "image": "protocols/compound.svg"
+    },
+    {
+      "id": 3,
+      "slug": "uniswap",
+      "title": "uniswap",
+      "image": "protocols/uniswap.svg"
+    },
+    {
+      "id": 4,
+      "slug": "kyber",
+      "title": "kyber",
+      "image": "protocols/kyber.svg"
+    },
+    {
+      "id": 5,
+      "slug": "curve",
+      "title": "curve",
+      "image": "protocols/curve.svg"
+    },
+    {
+      "id": 6,
+      "slug": "dydx",
+      "title": "dYdX",
+      "image": "protocols/dydx.svg"
+    },
+    {
+      "id": 7,
+      "slug": "aave",
+      "title": "aave",
+      "image": "protocols/aave.svg"
+    },
+    {
+      "id": 8,
+      "slug": "1-inch",
+      "title": "1inch",
+      "image": "protocols/1inch.svg"
+    }
+  ]
+}
