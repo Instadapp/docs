@@ -36,20 +36,25 @@
           <div class="sticky top-0">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
             <ul>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
+              <li :class="{'active': activeLink==='installation'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'installation')" href="#installation">Installation</a>
               </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <li :class="{'active': activeLink==='usage'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'usage')" href="#usage">Usage</a>
               </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <li :class="{'active': activeLink==='setting-up-dsa-accounts'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'setting-up-dsa-accounts')" href="#setting-up-dsa-accounts">Setting Up
                   DSA Accounts</a>
               </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <li :class="{'active': activeLink==='casting-spells'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'casting-spells')" href="#casting-spells">Casting Spells</a>
               </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <li :class="{'active': activeLink==='connectors'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'connectors')" href="#connectors">Connectors</a>
               </li>
             </ul>
@@ -61,19 +66,31 @@
 </template>
 
 <script>
-import {scrollToView} from "@/composables/scrollToView";
-import {defineComponent, useContext, useAsync} from "@nuxtjs/composition-api";
+import {scrollToView, activeLink} from "@/composables/scrollToView";
+import {defineComponent, useContext, useAsync, onMounted} from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup() {
-
+    activeLink.value = 'installation'
     const {$content} = useContext()
     const docs = useAsync(() => {
       return $content('home').only(['body']).fetch();
     })
+    const scrolledIntoView = (steps) => {
+      steps.forEach(el => {
+        if ((window.scrollY > el.offsetTop) && ((el.offsetTop + el.offsetHeight) > window.scrollY)) {
+          activeLink.value = el.getAttribute('id');
+        }
+      })
+    }
+    onMounted(() => {
+      const steps = document.querySelectorAll("#installation,#usage,#setting-up-dsa-accounts,#casting-spells,#connectors")
+      window.addEventListener('scroll', () => scrolledIntoView(steps))
+    })
     return {
       scrollToView,
-      docs
+      docs,
+      activeLink
     }
   }
 })

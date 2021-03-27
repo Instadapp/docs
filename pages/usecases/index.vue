@@ -42,7 +42,8 @@
           <!--              and opening up chrome console.-->
           <!--            </div>-->
           <!--          </div>-->
-          <UseCasesSlider :show-all="true" :use-cases="useCases"/>
+          <UseCasesSlider v-if="!$fetchState.pending" :show-all="true" :use-cases="useCases"/>
+          <UseCasesPlaceholder v-else/>
           <!--          <div id="step1" class="mb-14 md:mb-16">-->
           <!--            <div class="py-2 px-4 text-blue rounded text-lg font-semibold bg-flashWhite inline-block mb-4">step 1</div>-->
           <!--            <div class="mb-8">-->
@@ -162,71 +163,22 @@
 
 <script>
 // import 'highlight.js/styles/vs.css'
-import {defineComponent, useAsync, useContext} from '@nuxtjs/composition-api'
-import {copyCode} from "@/composables/copy";
+import {defineComponent, ref, useAsync, useContext, useFetch} from '@nuxtjs/composition-api'
+// import {copyCode} from "@/composables/copy";
 import {openSidebar} from "@/composables/openSidebar";
-import {scrollToView} from "@/composables/scrollToView";
+// import {scrollToView} from "@/composables/scrollToView";
 
 export default defineComponent({
   setup() {
     const {$axios} = useContext()
-    const useCases = useAsync(() => $axios.$get('usecases'));
-    // const code = "let borrowAmount = 20; // 20 DAI\n" +
-    //   "let borrowAmtInWei = dsa.tokens.fromDecimal(borrowAmount, \"dai\"); \n// borrow flash loan and swap via OasisDEX\n" +
-    //   "\n" +
-    //   "let slippage = 2; // 2% slippage.\n" +
-    //   "let dai_address = dsa.tokens.info.dai.address\n" +
-    //   "let usdc_address = dsa.tokens.info.usdc.address\n" +
-    //   "\n" +
-    //   "let buyAmount = await dsa.oasis.getBuyAmount(\"USDC\", \"DAI\", borrowAmount, slippage);\n" +
-    //   "\n" +
-    //   "let spells = dsa.Spell();\n" +
-    //   "\n" +
-    //   " \n" +
-    //   "spells.add({\n" +
-    //   "    connector: \"instapool\",\n" +
-    //   "    method: \"flashBorrow\",\n" +
-    //   "    args: [dai_address, borrowAmtInWei, 0, 0]\n" +
-    //   "});\n" +
-    //   "\n" +
-    //   "spells.add({\n" +
-    //   "    connector: \"oasis\",\n" +
-    //   "    method: \"sell\",\n" +
-    //   "    args: [usdc_address, dai_address, borrowAmtInWei, buyAmount.unitAmt, 0, 0]\n" +
-    //   "});\n" +
-    //   "\n" +
-    //   "spells.add({\n" +
-    //   "    connector: \"maker\",\n" +
-    //   "    method: \"open\",\n" +
-    //   "    args: [\"USDC-A\"]\n" +
-    //   "});\n" +
-    //   "\n" +
-    //   "spells.add({\n" +
-    //   "    connector: \"maker\",\n" +
-    //   "    method: \"deposit\",\n" +
-    //   "    args: [0, -1, 0, 0] // deposit all USDC\n" +
-    //   "});\n" +
-    //   "\n" +
-    //   "spells.add({\n" +
-    //   "    connector: \"maker\",\n" +
-    //   "    method: \"borrow\",\n" +
-    //   "    args: [0, borrowAmtInWei, 0, 0]\n" +
-    //   "});\n" +
-    //   "\n" +
-    //   "spells.add({\n" +
-    //   "    connector: \"instapool\",\n" +
-    //   "    method: \"flashPayback\",\n" +
-    //   "    args: [dai_address, 0, 0]\n" +
-    //   "});\n" +
-    //   "\n" +
-    //   "dsa.cast(spells).then(console.log)";
-
+    const useCases = ref([])
+    // const useCases = useAsync(() => $axios.$get('usecases'));
+    const {fetch, fetchState} = useFetch(async () => {
+      useCases.value = await $axios.$get('usecases');
+    })
     return {
-      // code,
-      // copyCode,
       openSidebar,
-      // scrollToView,
-      useCases
+      useCases,
     }
   }
 })
