@@ -1,0 +1,116 @@
+[
+    {
+        "connectorName": "Compound",
+        "functions": [
+            {
+                "functionName": "deposit",
+                "description": "Deposit a token to Compound for lending / collaterization.",
+                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "parameters": [
+                    {
+                        "name": "tokenId",
+                        "type": "string",
+                        "description": "The token id of the token to deposit.(For eg: ETH-A)."
+                    },
+                    {
+                        "name": "amount",
+                        "type": "number",
+                        "description": "The amount of the token to deposit. (For max: `uint256(-1)`)."
+                    },
+                    {
+                        "name": "getId",
+                        "type": "number",
+                        "description": "ID to retrieve amt."
+                    },
+                    {
+                        "name": "setId",
+                        "type": "number",
+                        "description": "ID stores the amount of tokens deposited."
+                    }
+                ]
+            },
+            {
+                "functionName": "borrow",
+                "description": "Borrow a token using Compound.",
+                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "parameters": [
+                    {
+                        "name": "tokenId",
+                        "type": "string",
+                        "description": "The token id of the token to borrow.(For eg: DAI-A)."
+                    },
+                    {
+                        "name": "amount",
+                        "type": "number",
+                        "description": "The amount of the token to borrow."
+                    },
+                    {
+                        "name": "getId",
+                        "type": "number",
+                        "description": "ID to retrieve amt."
+                    },
+                    {
+                        "name": "setId",
+                        "type": "number",
+                        "description": "ID stores the amount of tokens borrowed."
+                    }
+                ]
+            },
+            {
+                "functionName": "withdraw",
+                "description": "Withdraw deposited token from Compound.",
+                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "parameters": [
+                    {
+                        "name": "tokenId",
+                        "type": "string",
+                        "description": "The token id of the token to withdraw.(For eg: ETH-A)."
+                    },
+                    {
+                        "name": "amount",
+                        "type": "number",
+                        "description": "The amount of the token to withdraw."
+                    },
+                    {
+                        "name": "getId",
+                        "type": "number",
+                        "description": "ID to retrieve amt."
+                    },
+                    {
+                        "name": "setId",
+                        "type": "number",
+                        "description": "ID stores the amount of tokens withdrawn."
+                    }
+                ]
+            },
+            {
+                "functionName": "payback",
+                "description": "Payback debt owed.",
+                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "parameters": [
+                    {
+                        "name": "tokenId",
+                        "type": "string",
+                        "description": "The token id of the token to payback.(For eg: COMP-A)."
+                    },
+                    {
+                        "name": "amount",
+                        "type": "number",
+                        "description": "The amount of the token to payback."
+                    },
+                    {
+                        "name": "getId",
+                        "type": "number",
+                        "description": "ID to retrieve amt."
+                    },
+                    {
+                        "name": "setId",
+                        "type": "number",
+                        "description": "ID stores the amount of tokens paid back."
+                    }
+                ]
+            }
+        ]
+
+    }
+]
