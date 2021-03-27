@@ -14,13 +14,20 @@
         </div>
         <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
           <div class="mb-10 md:mb-0">
-            <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">{{ useCase.title }}</h2>
-            <div class="text-black font-medium md:leading-7 text-2xl">{{ useCase.description }}</div>
+            <h2 v-if="!$fetchState.pending" class="text-blue capitalize md:leading-9 font-semibold md:mb-4">
+              {{ useCase.title }}</h2>
+            <h2 v-else
+                class="text-blue bg-gray-300 animate-pulse w-40 h-8 capitalize md:leading-9 font-semibold md:mb-4"></h2>
+            <div v-if="!$fetchState.pending" class="text-black font-medium md:leading-7 text-2xl">{{
+                useCase.description
+              }}
+            </div>
+            <div v-else class="text-black font-medium w-full h-4 bg-gray-300 animate-pulse md:leading-7 text-2xl"></div>
           </div>
           <div class="md:hidden">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
             <ul>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
+              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'step1')" href="#step1">Step 1</a>
               </li>
               <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
@@ -140,13 +147,16 @@
           <div class="sticky top-0">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
             <ul>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
+              <li :class="{'active': activeLink==='step1'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'step1')" href="#step1">Step 1</a>
               </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <li :class="{'active': activeLink==='step2'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'step2')" href="#step2">Step 2</a>
               </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <li :class="{'active': activeLink==='step3'}"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'step3')" href="#step3">Step 3</a>
               </li>
             </ul>
@@ -159,10 +169,10 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import {defineComponent, useContext, ref, useFetch} from '@nuxtjs/composition-api'
+import {defineComponent, useContext, ref, useFetch, onMounted, onActivated, useAsync} from '@nuxtjs/composition-api'
 import {copyCode} from "@/composables/copy";
 import {openSidebar} from "@/composables/openSidebar";
-import {scrollToView} from "@/composables/scrollToView";
+import {scrollToView, activeLink} from "@/composables/scrollToView";
 
 export default defineComponent({
   name: 'UseCase',
@@ -223,13 +233,24 @@ export default defineComponent({
       let data = await $axios.$get(`usecases?slug=${slug}`);
       useCase.value = data[0]
     })
-    fetch()
+    const scrolledIntoView = (steps) => {
+      steps.forEach(el => {
+        if ((window.scrollY > el.offsetTop) && ((el.offsetTop + el.offsetHeight) > window.scrollY)) {
+          activeLink.value = el.getAttribute('id');
+        }
+      })
+    }
+    onMounted(() => {
+      const steps = document.querySelectorAll("#step1,#step2,#step3")
+      window.addEventListener('scroll', () => scrolledIntoView(steps))
+    })
     return {
       code,
       copyCode,
       openSidebar,
       scrollToView,
-      useCase
+      useCase,
+      activeLink
     }
   }
 })

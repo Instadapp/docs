@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="sidenav">
     <ul>
       <li class="mb-6">
         <NuxtLink :class="{'active': $route.path==='/getstarted'}" to="/getstarted"
@@ -13,49 +13,55 @@
         </NuxtLink>
         <ul v-if="$route.path.includes('/connectors')" class="mt-5 pl-6 leading-none">
           <li class="mb-2">
-            <NuxtLink class="text-gray-400 text-sm font-medium" to="/">Basic</NuxtLink>
+            <NuxtLink class="text-gray-400 text-sm font-medium child-link" to="/connectors/basic">Basic</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink class="text-gray-400 text-sm font-medium" to="/">Instapool</NuxtLink>
+            <NuxtLink class="text-gray-400 text-sm font-medium child-link" to="/connectors/instapool">Instapool
+            </NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Authority</NuxtLink>
+            <NuxtLink to="/connectors/authority" class="text-gray-400 text-sm font-medium child-link">Authority
+            </NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Comp</NuxtLink>
+            <NuxtLink to="/connectors/comp" class="text-gray-400 text-sm font-medium child-link">Comp</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Curve sUSD</NuxtLink>
+            <NuxtLink to="/connectors/curve-susd" class="text-gray-400 text-sm font-medium child-link">Curve sUSD
+            </NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Compound</NuxtLink>
+            <NuxtLink to="/connectors/compound" class="text-gray-400 text-sm font-medium child-link">Compound</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">MakerDAO</NuxtLink>
+            <NuxtLink to="/connectors/maker-dao" class="text-gray-400 text-sm font-medium child-link">MakerDAO
+            </NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Aave</NuxtLink>
+            <NuxtLink to="/connectors/aave" class="text-gray-400 text-sm font-medium child-link">Aave</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">OasisDEX</NuxtLink>
+            <NuxtLink to="/connectors/oasis-dex" class="text-gray-400 text-sm font-medium child-link">OasisDEX
+            </NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Kyber</NuxtLink>
+            <NuxtLink to="/connectors/kyber" class="text-gray-400 text-sm font-medium child-link">Kyber</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Curve sBTC</NuxtLink>
+            <NuxtLink to="/connectors/curve-sbtc" class="text-gray-400 text-sm font-medium child-link">Curve sBTC
+            </NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Curve Y</NuxtLink>
+            <NuxtLink to="/connectors/curve-y" class="text-gray-400 text-sm font-medium child-link">Curve Y</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">dYdX</NuxtLink>
+            <NuxtLink to="/connectors/dydx" class="text-gray-400 text-sm font-medium child-link">dYdX</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">1inch</NuxtLink>
+            <NuxtLink to="/connectors/1-inch" class="text-gray-400 text-sm font-medium child-link">1inch</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/" class="text-gray-400 text-sm font-medium">Uniswap</NuxtLink>
+            <NuxtLink to="/connectors/uniswap" class="text-gray-400 text-sm font-medium child-link">Uniswap</NuxtLink>
           </li>
         </ul>
       </li>
@@ -64,12 +70,12 @@
                   class="font-semibold text-lg text-black mb-6 leading-none">Use Cases
         </NuxtLink>
       </li>
-      <li class="mb-6">
-        <NuxtLink class="font-semibold text-lg text-black leading-none" to="/">Resolvers</NuxtLink>
-      </li>
-      <li class="mb-6">
-        <NuxtLink class="font-semibold text-lg text-black leading-none" to="/">Security</NuxtLink>
-      </li>
+      <!--      <li class="mb-6">-->
+      <!--        <NuxtLink class="font-semibold text-lg text-black leading-none" to="/">Resolvers</NuxtLink>-->
+      <!--      </li>-->
+      <!--      <li class="mb-6">-->
+      <!--        <NuxtLink class="font-semibold text-lg text-black leading-none" to="/">Security</NuxtLink>-->
+      <!--      </li>-->
     </ul>
   </div>
 </template>
@@ -90,6 +96,13 @@ export default defineComponent({
     content: '';
     @apply text-blue absolute h-1.5 w-1.5 flex items-center justify-center rounded-full top-1.5 -left-7 bg-blue;
   }
+}
 
+#sidenav {
+  .child-link {
+    &.nuxt-link-exact-active {
+      @apply text-blue;
+    }
+  }
 }
 </style>
