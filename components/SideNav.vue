@@ -2,14 +2,16 @@
   <div>
     <ul>
       <li class="mb-6">
-        <NuxtLink :class="{'active': $route.path==='/getstarted'}" to="/getstarted" class="text-black font-semibold text-lg leading-none">Get Started</NuxtLink>
+        <NuxtLink :class="{'active': $route.path==='/getstarted'}" to="/getstarted"
+                  class="text-black font-semibold text-lg leading-none">Get Started
+        </NuxtLink>
       </li>
       <li class="mb-6">
-        <NuxtLink :class="{'active': $route.path==='/connectors'}" to="/connectors"
+        <NuxtLink :class="{'active': $route.path.includes('/connectors')}" to="/connectors"
                   class="font-semibold text-lg text-black leading-none">
           Connectors
         </NuxtLink>
-        <ul v-if="$route.path==='/connectors'" class="mt-5 pl-6 leading-none">
+        <ul v-if="$route.path.includes('/connectors')" class="mt-5 pl-6 leading-none">
           <li class="mb-2">
             <NuxtLink class="text-gray-400 text-sm font-medium" to="/">Basic</NuxtLink>
           </li>
@@ -58,7 +60,7 @@
         </ul>
       </li>
       <li class="mb-6">
-        <NuxtLink to="/usecases" :class="{'active': $route.path==='/usecases'}"
+        <NuxtLink to="/usecases" :class="{'active': $route.path.includes('/usecases')}"
                   class="font-semibold text-lg text-black mb-6 leading-none">Use Cases
         </NuxtLink>
       </li>
@@ -73,9 +75,11 @@
 </template>
 
 <script>
-export default {
-  name: "SideNav"
-}
+import {defineComponent} from "@nuxtjs/composition-api";
+
+export default defineComponent({
+  name: 'SideNav',
+})
 </script>
 
 <style scoped lang="scss">

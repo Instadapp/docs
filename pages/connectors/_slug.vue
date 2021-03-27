@@ -14,8 +14,10 @@
         </div>
         <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
           <div class="mb-10 md:mb-0">
-            <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">Authority</h2>
-            <div class="text-black font-medium md:leading-7 text-2xl">Manage Authorities to DSA</div>
+            <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">{{ connector.title }}</h2>
+            <div class="text-black font-medium md:leading-7 text-2xl">Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit.
+            </div>
           </div>
           <div class="md:hidden">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
@@ -141,13 +143,13 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import {defineComponent} from '@nuxtjs/composition-api'
+import {defineComponent, useFetch, ref, useContext} from '@nuxtjs/composition-api'
 import {copyCode} from "@/composables/copy";
 import {scrollToView} from "@/composables/scrollToView";
 import {openSidebar} from "@/composables/openSidebar";
 
 export default defineComponent({
-  name: '_slug',
+  name: 'Connector',
   setup() {
     const addAuthorityCode = "spells.add({\n" +
       "\tconnector: \"authority\",\n" +
@@ -160,15 +162,23 @@ export default defineComponent({
       "\targs: [authority]\n" +
       "});"
 
+    const connector = ref({});
+    const {$axios, params} = useContext();
+    const {slug} = params.value
+    const {fetch, fetchState} = useFetch(async () => {
+      let data = await $axios.$get(`connectors?slug=${slug}`);
+      connector.value = data[0]
+    })
+    fetch()
     return {
-      copyCode, scrollToView, openSidebar, addAuthorityCode, removeAuthorityCode
+      copyCode, scrollToView, openSidebar, addAuthorityCode, removeAuthorityCode, connector
     }
   }
 })
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/scss/mixins.scss";
+@import "~@/assets/scss/mixins.scss";
 
 h2 {
   font-size: 32px;
