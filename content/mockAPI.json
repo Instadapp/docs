@@ -15,7 +15,7 @@
                     {
                         "name": "amount",
                         "type": "number",
-                        "description": "The amount of the token to deposit. (For max: `uint256(-1)`)."
+                        "description": "The amount of the token to deposit.(For max: `uint256(-1)`)."
                     },
                     {
                         "name": "getId",
@@ -69,7 +69,7 @@
                     {
                         "name": "amount",
                         "type": "number",
-                        "description": "The amount of the token to withdraw."
+                        "description": "The amount of the token to withdraw.(For max: `uint256(-1)`)"
                     },
                     {
                         "name": "getId",
@@ -96,7 +96,7 @@
                     {
                         "name": "amount",
                         "type": "number",
-                        "description": "The amount of the token to payback."
+                        "description": "The amount of the token to payback.(For max: `uint256(-1)`)"
                     },
                     {
                         "name": "getId",
