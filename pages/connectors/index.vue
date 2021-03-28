@@ -38,7 +38,7 @@ export default defineComponent({
     const {$axios} = useContext()
     const connectors = ref([]);
     const {fetch, fetchState} = useFetch(async () => {
-      connectors.value = await $axios.$get('connectors')
+      connectors.value = await $axios.$get('/api/connectors')
     });
     return {
       openSidebar,

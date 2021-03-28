@@ -26,7 +26,7 @@ export default defineComponent({
   directives: {
     swiper: directive
   },
-  setup(props) {
+  setup() {
     const swiperOptions = {
       breakpoints: {
         0: {

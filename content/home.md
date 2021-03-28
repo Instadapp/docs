@@ -144,7 +144,7 @@ The method returns an array of objects with all the DSA accounts where `address`
 
 ## Casting Spells
 
-**Spells** denotes a sequence of connector functions that will achieve a given use case. Spells can comprise of any number of functions across any number of connectors.
+**Spells** denotes a sequence of connector functions that will achieve a given use case. Spells can comprise of any number of functions across any number of index.
 
 With this SDK, performing DeFi operations on your dapp consists of creating a `spells` instance to add transactions. Here is where you can initiate complex transactions amongst different protocols.
 
@@ -227,4 +227,4 @@ This will send the transaction to blockchain in node implementation (or ask user
 
 ## Connectors
 
-You can see the list of connectors [here](src/data/addresses.ts#L-12) & [here](https://github.com/InstaDApp/dsa-connectors-new/blob/main/README.md)
+You can see the list of index [here](src/data/addresses.ts#L-12) & [here](https://github.com/InstaDApp/dsa-index-new/blob/main/README.md)

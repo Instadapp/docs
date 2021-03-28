@@ -25,7 +25,7 @@
                 <a @click="scrollToView($event,'casting-spells')" href="#casting-spells">Casting Spells</a>
               </li>
               <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'connectors')" href="#connectors">Connectors</a>
+                <a @click="scrollToView($event,'index')" href="#index">Connectors</a>
               </li>
             </ul>
           </div>
@@ -53,9 +53,9 @@
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
                 <a @click="scrollToView($event,'casting-spells')" href="#casting-spells">Casting Spells</a>
               </li>
-              <li :class="{'active': activeLink==='connectors'}"
+              <li :class="{'active': activeLink==='index'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'connectors')" href="#connectors">Connectors</a>
+                <a @click="scrollToView($event,'index')" href="#index">Connectors</a>
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ export default defineComponent({
       })
     }
     onMounted(() => {
-      const steps = document.querySelectorAll("#installation,#usage,#setting-up-dsa-accounts,#casting-spells,#connectors")
+      const steps = document.querySelectorAll("#installation,#usage,#setting-up-dsa-accounts,#casting-spells,#index")
       window.addEventListener('scroll', () => scrolledIntoView(steps))
     })
     return {

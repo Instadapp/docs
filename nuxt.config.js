@@ -43,13 +43,17 @@ export default {
     '@nuxt/content',
     '@nuxtjs/axios'
   ],
-  axios: {},
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: 'https://my-json-server.typicode.com/waleed1892/instadata',
-      baseUrl: 'https://my-json-server.typicode.com/waleed1892/instadata'
-    }
-  },
+  // axios: {},
+  // publicRuntimeConfig: {
+  //   axios: {
+  //     browserBaseURL: '/api/',
+  //     baseUrl: '/api/'
+  //   }
+  // },
+
+  serverMiddleware: [
+    {path: '/api', handler: '~/api/index.js'}
+  ],
 
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
