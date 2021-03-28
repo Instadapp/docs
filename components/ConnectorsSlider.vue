@@ -6,7 +6,7 @@
           <div class="rounded-lg p-6">
             <div class="flex items-center">
               <img :src="require(`/assets/images/${connector.image}`)" alt="">
-              <div class="text-2xl ml-4 font-semibold">{{ connector.title }}</div>
+              <div class="text-2xl ml-4 font-semibold">{{ connector.name }}</div>
             </div>
           </div>
         </div>
