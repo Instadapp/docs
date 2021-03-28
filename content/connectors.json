@@ -1,11 +1,11 @@
 [
     {
-        "connectorName": "Compound",
+        "name": "Compound",
         "functions": [
             {
-                "functionName": "deposit",
+                "name": "deposit",
                 "description": "Deposit a token to Compound for lending / collaterization.",
-                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
                 "parameters": [
                     {
                         "name": "tokenId",
@@ -30,9 +30,9 @@
                 ]
             },
             {
-                "functionName": "borrow",
+                "name": "borrow",
                 "description": "Borrow a token using Compound.",
-                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
                 "parameters": [
                     {
                         "name": "tokenId",
@@ -57,9 +57,9 @@
                 ]
             },
             {
-                "functionName": "withdraw",
+                "name": "withdraw",
                 "description": "Withdraw deposited token from Compound.",
-                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
                 "parameters": [
                     {
                         "name": "tokenId",
@@ -84,9 +84,9 @@
                 ]
             },
             {
-                "functionName": "payback",
+                "name": "payback",
                 "description": "Payback debt owed.",
-                "spell": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+                "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
                 "parameters": [
                     {
                         "name": "tokenId",
