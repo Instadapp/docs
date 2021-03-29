@@ -49,7 +49,7 @@
       <div class="mb-16 md:mb-18">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 md:mb-10">
           <h3 class="text-black font-semibold md:leading-7">Supported Protocols</h3>
-          <NuxtLink to="/connectors"
+          <NuxtLink to="/index"
                     class="self-start md:self-auto mt-4 md:mt-0 bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm">
             explore more
           </NuxtLink>
@@ -77,8 +77,8 @@ import {defineComponent, useAsync, useContext, ref} from "@nuxtjs/composition-ap
 export default defineComponent({
   setup() {
     const {$axios} = useContext();
-    const useCases = useAsync(() => $axios.$get('usecases'))
-    const connectors = useAsync(() => $axios.$get('connectors?_limit=6'))
+    const useCases = useAsync(() => $axios.$get('/api/usecases'))
+    const connectors = useAsync(() => $axios.$get('/api/connectors?limit=6'))
     return {
       useCases,
       connectors

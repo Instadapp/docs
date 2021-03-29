@@ -73,7 +73,7 @@
           <!--                <NuxtLink class="text-blue font-semibold" to="/">OasisDEX</NuxtLink>-->
           <!--                and-->
           <!--                <NuxtLink class="text-blue font-semibold" to="/">Instapool</NuxtLink>-->
-          <!--                connectors in the following-->
+          <!--                index in the following-->
           <!--                sequence.-->
           <!--              </p>-->
           <!--            </div>-->
@@ -174,7 +174,7 @@ export default defineComponent({
     const useCases = ref([])
     // const useCases = useAsync(() => $axios.$get('usecases'));
     const {fetch, fetchState} = useFetch(async () => {
-      useCases.value = await $axios.$get('usecases');
+      useCases.value = await $axios.$get('/api/usecases');
     })
     return {
       openSidebar,

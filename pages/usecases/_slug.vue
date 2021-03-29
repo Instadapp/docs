@@ -76,7 +76,7 @@
                 <NuxtLink class="text-blue font-semibold" to="/">OasisDEX</NuxtLink>
                 and
                 <NuxtLink class="text-blue font-semibold" to="/">Instapool</NuxtLink>
-                connectors in the following
+                index in the following
                 sequence.
               </p>
             </div>
@@ -226,12 +226,14 @@ export default defineComponent({
       "});\n" +
       "\n" +
       "dsa.cast(spells).then(console.log)";
-    const {$axios, params} = useContext();
+    const {$axios, params, error} = useContext();
     const {slug} = params.value
     const useCase = ref({});
     const {fetch, fetchState} = useFetch(async () => {
-      let data = await $axios.$get(`usecases?slug=${slug}`);
-      useCase.value = data[0]
+      useCase.value = await $axios.$get(`/api/usecases/${slug}`);
+      if (!useCase.value) {
+        error('Usecase don\'t exist')
+      }
     })
     const scrolledIntoView = (steps) => {
       steps.forEach(el => {

@@ -14,8 +14,10 @@
         </div>
         <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
           <div class="mb-10 md:mb-0">
-            <h2 v-if="!$fetchState.pending" class="text-blue capitalize md:leading-9 font-semibold md:mb-4">{{ connector.title }}</h2>
-            <h2 v-else class="text-blue bg-gray-300 animate-pulse w-40 h-4 capitalize md:leading-9 font-semibold md:mb-4">{{ connector.title }}</h2>
+            <h2 v-if="!$fetchState.pending" class="text-blue capitalize md:leading-9 font-semibold md:mb-4">
+              {{ connector.name }}</h2>
+            <h2 v-else
+                class="text-blue bg-gray-300 animate-pulse w-40 h-4 capitalize md:leading-9 font-semibold md:mb-4"></h2>
             <div class="text-black font-medium md:leading-7 text-2xl">Lorem ipsum dolor sit amet, consectetur
               adipisicing elit.
             </div>
@@ -166,11 +168,13 @@ export default defineComponent({
       "});"
 
     const connector = ref({});
-    const {$axios, params} = useContext();
+    const {$axios, params,error} = useContext();
     const {slug} = params.value
     const {fetch, fetchState} = useFetch(async () => {
-      let data = await $axios.$get(`connectors?slug=${slug}`);
-      connector.value = data[0]
+      connector.value = await $axios.$get(`/api/connectors/${slug}`);
+      if (!connector.value) {
+        error('Connector don\'t exist');
+      }
     })
 
     activeLink.value = 'addAuthority'
