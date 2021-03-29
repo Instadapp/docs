@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import {Swiper, SwiperSlide, directive} from "vue-awesome-swiper";
+import {directive, Swiper, SwiperSlide} from "vue-awesome-swiper";
 import 'swiper/swiper.scss'
-import {defineComponent, computed, ref, onMounted} from "@nuxtjs/composition-api";
+import {defineComponent} from "@nuxtjs/composition-api";
 
 export default defineComponent({
   props: ['connectors'],

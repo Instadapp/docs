@@ -14,7 +14,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -41,7 +45,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -68,7 +72,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -95,7 +99,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -130,7 +134,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -157,7 +165,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -184,7 +192,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -211,7 +219,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -246,7 +254,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -273,7 +285,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -300,7 +312,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -327,7 +339,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -362,7 +374,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -389,7 +405,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -416,7 +432,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -443,7 +459,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -478,7 +494,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -505,7 +525,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -532,7 +552,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -559,7 +579,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -594,7 +614,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -621,7 +645,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -648,7 +672,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -675,7 +699,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -710,7 +734,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -737,7 +765,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -764,7 +792,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -791,7 +819,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -826,7 +854,11 @@ const connectors = [
       {
         "name": "deposit",
         "description": "Deposit a token to Compound for lending / collaterization.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'deposit',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n" +
+          "\tconnector: 'compound',\n" +
+          "\tmethod: 'deposit',\n" +
+          "\targs: [tokenId, amount, getId, setId]\n" +
+          "});",
         "parameters": [
           {
             "name": "tokenId",
@@ -853,7 +885,7 @@ const connectors = [
       {
         "name": "borrow",
         "description": "Borrow a token using Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'borrow',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'borrow',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -880,7 +912,7 @@ const connectors = [
       {
         "name": "withdraw",
         "description": "Withdraw deposited token from Compound.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'withdraw',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'withdraw',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",
@@ -907,7 +939,7 @@ const connectors = [
       {
         "name": "payback",
         "description": "Payback debt owed.",
-        "snippet": "spells.add({<br/>&nbsp;connector: 'compound',<br/>&nbsp;method: 'payback',<br/>&nbsp;args: [tokenId, amount, getId, setId]<br/>});",
+        "snippet": "spells.add({\n\tconnector: 'compound',\n\tmethod: 'payback',\n\targs: [tokenId, amount, getId, setId]\n});",
         "parameters": [
           {
             "name": "tokenId",

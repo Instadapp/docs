@@ -163,7 +163,7 @@
 
 <script>
 // import 'highlight.js/styles/vs.css'
-import {defineComponent, ref, useAsync, useContext, useFetch} from '@nuxtjs/composition-api'
+import {defineComponent, ref, useContext, useFetch} from '@nuxtjs/composition-api'
 // import {copyCode} from "@/composables/copy";
 import {openSidebar} from "@/composables/openSidebar";
 // import {scrollToView} from "@/composables/scrollToView";
@@ -185,7 +185,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@import "~/assets/scss/mixins.scss";
+@import "~@/assets/scss/mixins.scss";
 
 h2 {
   font-size: 32px;

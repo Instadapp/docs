@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import {defineComponent, useContext, useAsync, useFetch, ref} from '@nuxtjs/composition-api'
+import {defineComponent, ref, useContext, useFetch} from '@nuxtjs/composition-api'
 import {openSidebar} from "@/composables/openSidebar";
 
 export default defineComponent({

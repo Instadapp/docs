@@ -26,15 +26,15 @@
           </div>
           <div class="md:hidden">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-            <ul>
+            <ul class="sectionLinks">
               <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step1')" href="#step1">Step 1</a>
+                <a href="#step1">Step 1</a>
               </li>
               <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step2')" href="#step2">Step 2</a>
+                <a href="#step2">Step 2</a>
               </li>
               <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step3')" href="#step3">Step 3</a>
+                <a href="#step3">Step 3</a>
               </li>
             </ul>
           </div>
@@ -47,20 +47,20 @@
               and opening up chrome console.
             </div>
           </div>
-          <div id="step1" class="mb-14 md:mb-16">
+          <section id="step1" class="mb-14 md:mb-16">
             <div class="py-2 px-4 text-blue rounded text-lg font-semibold bg-flashWhite inline-block mb-4">step 1</div>
             <div class="mb-8">
               <h3 class="text-blue font-semibold mb-4 underline md:leading-7">Installation</h3>
               <div class="font-normal text-lg">or just use your browser console.</div>
             </div>
-          </div>
-          <div id="step2" class="mb-14 md:mb-16">
+          </section>
+          <section id="step2" class="mb-14 md:mb-16">
             <div class="py-2 px-4 text-blue rounded text-lg font-semibold bg-flashWhite inline-block mb-4">step 2</div>
             <div class="">
               <h3 class="text-blue underline font-semibold md:leading-7">Setup Account</h3>
             </div>
-          </div>
-          <div id="step3" class="mb-8 md:mb-8">
+          </section>
+          <section id="step3" class="mb-8 md:mb-8">
             <div class="py-2 px-4 text-blue rounded text-lg font-semibold bg-flashWhite inline-block mb-4">step 3</div>
             <h3 class="text-black font-semibold md:leading-7 mb-4">Fulfill use case</h3>
             <div class="text-lg font-normal">
@@ -80,8 +80,8 @@
                 sequence.
               </p>
             </div>
-          </div>
-          <div class="mb-14 md:mb-16">
+          </section>
+          <section class="mb-14 md:mb-16">
             <div class="mb-8">
               <h4 class="text-black font-semibold mb-6 text-2xl">Benefits</h4>
               <ul class="list-disc ml-7 tracking-normal">
@@ -121,43 +121,43 @@
               <pre v-highlightjs="code"><code class="javascript code tracking-normal"></code></pre>
               <!--              <pre class="md:hidden" v-highlightjs="code"><code class="javascript code"></code></pre>-->
             </div>
-          </div>
-          <div class="flex flex-col md:flex-row items-center justify-between">
-            <button class="silver-border-gradient order-2 md:order-1 w-full md:w-auto focus:outline-none">
-              <div class="text-black bg-white rounded text-sm pl-4 pr-6 pt-4 pb-6">
-                <div class="flex items-center justify-between mb-3.5">
-                  <img class="inline-block align-middle" src="~/assets/images/left-arrow.svg" decoding="async" alt="">
-                  <div>Previous</div>
-                </div>
-                <div class="font-medium text-lg text-right md:text-left">Getting Started</div>
-              </div>
-            </button>
-            <button class="blue-gradient order-1 mb-6 md:mb-0 md:order-2 w-full md:w-auto focus:outline-none">
-              <div class="bg-blue text-white rounded text-sm pl-4 pr-6 pt-4 pb-6">
-                <div class="flex items-center justify-between mb-3.5">
-                  <div>Next</div>
-                  <img class="inline-block align-middle" src="~/assets/images/right-arrow.svg" decoding="async" alt="">
-                </div>
-                <div class="font-medium text-lg text-left">Getting Started</div>
-              </div>
-            </button>
-          </div>
+          </section>
+          <!--          <div class="flex flex-col md:flex-row items-center justify-between">-->
+          <!--            <button class="silver-border-gradient order-2 md:order-1 w-full md:w-auto focus:outline-none">-->
+          <!--              <div class="text-black bg-white rounded text-sm pl-4 pr-6 pt-4 pb-6">-->
+          <!--                <div class="flex items-center justify-between mb-3.5">-->
+          <!--                  <img class="inline-block align-middle" src="~/assets/images/left-arrow.svg" decoding="async" alt="">-->
+          <!--                  <div>Previous</div>-->
+          <!--                </div>-->
+          <!--                <div class="font-medium text-lg text-right md:text-left">Getting Started</div>-->
+          <!--              </div>-->
+          <!--            </button>-->
+          <!--            <button class="blue-gradient order-1 mb-6 md:mb-0 md:order-2 w-full md:w-auto focus:outline-none">-->
+          <!--              <div class="bg-blue text-white rounded text-sm pl-4 pr-6 pt-4 pb-6">-->
+          <!--                <div class="flex items-center justify-between mb-3.5">-->
+          <!--                  <div>Next</div>-->
+          <!--                  <img class="inline-block align-middle" src="~/assets/images/right-arrow.svg" decoding="async" alt="">-->
+          <!--                </div>-->
+          <!--                <div class="font-medium text-lg text-left">Getting Started</div>-->
+          <!--              </div>-->
+          <!--            </button>-->
+          <!--          </div>-->
         </div>
         <div class="w-2/12 hidden md:block">
           <div class="sticky top-0">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-            <ul>
+            <ul class="sectionLinks">
               <li :class="{'active': activeLink==='step1'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step1')" href="#step1">Step 1</a>
+                <a href="#step1">Step 1</a>
               </li>
               <li :class="{'active': activeLink==='step2'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step2')" href="#step2">Step 2</a>
+                <a href="#step2">Step 2</a>
               </li>
               <li :class="{'active': activeLink==='step3'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'step3')" href="#step3">Step 3</a>
+                <a href="#step3">Step 3</a>
               </li>
             </ul>
           </div>
@@ -169,14 +169,14 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import {defineComponent, useContext, ref, useFetch, onMounted, onActivated, useAsync} from '@nuxtjs/composition-api'
+import {defineComponent, onMounted, onUnmounted, ref, useContext, useFetch} from '@nuxtjs/composition-api'
 import {copyCode} from "@/composables/copy";
 import {openSidebar} from "@/composables/openSidebar";
-import {scrollToView, activeLink} from "@/composables/scrollToView";
 
 export default defineComponent({
   name: 'UseCase',
   setup() {
+    const activeLink = ref(null);
     const code = "let borrowAmount = 20; // 20 DAI\n" +
       "let borrowAmtInWei = dsa.tokens.fromDecimal(borrowAmount, \"dai\"); \n// borrow flash loan and swap via OasisDEX\n" +
       "\n" +
@@ -235,22 +235,34 @@ export default defineComponent({
         error('Usecase don\'t exist')
       }
     })
-    const scrolledIntoView = (steps) => {
-      steps.forEach(el => {
-        if ((window.scrollY > el.offsetTop) && ((el.offsetTop + el.offsetHeight) > window.scrollY)) {
-          activeLink.value = el.getAttribute('id');
+
+    const changeActiveNav = () => {
+      let sectionLinks = document.querySelectorAll(".sectionLinks a");
+      let fromTop = window.scrollY;
+      sectionLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        if (section) {
+          if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+          ) {
+            activeLink.value = section.getAttribute('id')
+          }
         }
-      })
+      });
     }
+
     onMounted(() => {
-      const steps = document.querySelectorAll("#step1,#step2,#step3")
-      window.addEventListener('scroll', () => scrolledIntoView(steps))
+      activeLink.value = 'step1';
+      window.addEventListener('scroll', changeActiveNav)
+    })
+    onUnmounted(() => {
+      window.removeEventListener('scroll', changeActiveNav);
     })
     return {
       code,
       copyCode,
       openSidebar,
-      scrollToView,
       useCase,
       activeLink
     }
