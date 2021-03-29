@@ -43,13 +43,15 @@ export default {
     '@nuxt/content',
     '@nuxtjs/axios'
   ],
-  // axios: {},
-  // publicRuntimeConfig: {
-  //   axios: {
-  //     browserBaseURL: '/api/',
-  //     baseUrl: '/api/'
-  //   }
-  // },
+  axios: {
+    baseURL: 'http://localhost:3000', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
+    }
+  },
 
   serverMiddleware: [
     {path: '/api', handler: '~/api/index.js'}
