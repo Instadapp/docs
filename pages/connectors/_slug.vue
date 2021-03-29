@@ -47,64 +47,93 @@
             source
             code, ABIs on Etherscan.
           </div>
-          <div id="addAuthority" class="mb-14 md:mb-16">
+          <div v-for="item in connector.functions" :id="item.name" class="mb-14 md:mb-16">
             <div class="mb-8">
-              <h3 class="text-black font-semibold mb-4 md:leading-7">Add Authority</h3>
-              <div class="font-normal text-lg">Add Authority to DSA.</div>
+              <h3 class="text-black font-semibold capitalize mb-4 md:leading-7">{{ item.name }}</h3>
+              <div class="font-normal text-lg">{{ item.description }}</div>
             </div>
             <div class="code relative rounded-lg py-12 px-8 mb-8">
               <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"
                    decoding="async"
                    alt="">
-              <pre v-highlightjs="addAuthorityCode"><code class="javascript code"></code></pre>
+              <pre v-highlightjs="item.snippet"><code class="javascript code"></code></pre>
             </div>
-            <div class="grid md:grid-cols-3">
+            <div v-for="parameter in item.parameters" class="grid md:grid-cols-3 mb-8">
               <div class="mb-8 md:mb-0">
                 <div class="font-medium text-lg text-black capitalize">parameter</div>
                 <hr class="my-4">
-                <div class="font-normal text-lg text-red-500">authority</div>
+                <div class="font-normal text-lg text-red-500">{{ parameter.name }}</div>
               </div>
               <div class="mb-8 md:mb-0">
                 <div class="font-medium text-lg text-black capitalize">type</div>
                 <hr class="my-4">
-                <div class="font-normal text-lg text-black">address</div>
+                <div class="font-normal text-lg text-black">{{ parameter.type }}</div>
               </div>
               <div>
                 <div class="font-medium text-lg text-black capitalize">Description</div>
                 <hr class="my-4">
-                <div class="font-normal text-lg text-black">The authority address.</div>
+                <div class="font-normal text-lg text-black">{{ parameter.description }}</div>
               </div>
             </div>
           </div>
-          <div id="removeAuthority" class="mb-14 md:mb-16">
-            <div class="mb-8">
-              <h3 class="text-black font-semibold mb-4 md:leading-7">Remove Authority</h3>
-              <div class="font-normal text-lg">Remove Authority to DSA.</div>
-            </div>
-            <div class="code relative rounded-lg py-12 px-8 mb-8">
-              <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"
-                   decoding="async"
-                   alt="">
-              <pre v-highlightjs="removeAuthorityCode"><code class="javascript code"></code></pre>
-            </div>
-            <div class="grid md:grid-cols-3">
-              <div class="mb-8 md:mb-0">
-                <div class="font-medium text-lg text-black capitalize">parameter</div>
-                <hr class="my-4">
-                <div class="font-normal text-lg text-red-500">authority</div>
-              </div>
-              <div class="mb-8 md:mb-0">
-                <div class="font-medium text-lg text-black capitalize">type</div>
-                <hr class="my-4">
-                <div class="font-normal text-lg text-black">address</div>
-              </div>
-              <div>
-                <div class="font-medium text-lg text-black capitalize">Description</div>
-                <hr class="my-4">
-                <div class="font-normal text-lg text-black">The authority address.</div>
-              </div>
-            </div>
-          </div>
+          <!--          <div id="addAuthority" class="mb-14 md:mb-16">-->
+          <!--            <div class="mb-8">-->
+          <!--              <h3 class="text-black font-semibold mb-4 md:leading-7">Add Authority</h3>-->
+          <!--              <div class="font-normal text-lg">Add Authority to DSA.</div>-->
+          <!--            </div>-->
+          <!--            <div class="code relative rounded-lg py-12 px-8 mb-8">-->
+          <!--              <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"-->
+          <!--                   decoding="async"-->
+          <!--                   alt="">-->
+          <!--              <pre v-highlightjs="addAuthorityCode"><code class="javascript code"></code></pre>-->
+          <!--            </div>-->
+          <!--            <div class="grid md:grid-cols-3">-->
+          <!--              <div class="mb-8 md:mb-0">-->
+          <!--                <div class="font-medium text-lg text-black capitalize">parameter</div>-->
+          <!--                <hr class="my-4">-->
+          <!--                <div class="font-normal text-lg text-red-500">authority</div>-->
+          <!--              </div>-->
+          <!--              <div class="mb-8 md:mb-0">-->
+          <!--                <div class="font-medium text-lg text-black capitalize">type</div>-->
+          <!--                <hr class="my-4">-->
+          <!--                <div class="font-normal text-lg text-black">address</div>-->
+          <!--              </div>-->
+          <!--              <div>-->
+          <!--                <div class="font-medium text-lg text-black capitalize">Description</div>-->
+          <!--                <hr class="my-4">-->
+          <!--                <div class="font-normal text-lg text-black">The authority address.</div>-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--          <div id="removeAuthority" class="mb-14 md:mb-16">-->
+          <!--            <div class="mb-8">-->
+          <!--              <h3 class="text-black font-semibold mb-4 md:leading-7">Remove Authority</h3>-->
+          <!--              <div class="font-normal text-lg">Remove Authority to DSA.</div>-->
+          <!--            </div>-->
+          <!--            <div class="code relative rounded-lg py-12 px-8 mb-8">-->
+          <!--              <img @click="copyCode" class="absolute right-3 top-5 cursor-pointer" src="~/assets/images/copy.svg"-->
+          <!--                   decoding="async"-->
+          <!--                   alt="">-->
+          <!--              <pre v-highlightjs="removeAuthorityCode"><code class="javascript code"></code></pre>-->
+          <!--            </div>-->
+          <!--            <div class="grid md:grid-cols-3">-->
+          <!--              <div class="mb-8 md:mb-0">-->
+          <!--                <div class="font-medium text-lg text-black capitalize">parameter</div>-->
+          <!--                <hr class="my-4">-->
+          <!--                <div class="font-normal text-lg text-red-500">authority</div>-->
+          <!--              </div>-->
+          <!--              <div class="mb-8 md:mb-0">-->
+          <!--                <div class="font-medium text-lg text-black capitalize">type</div>-->
+          <!--                <hr class="my-4">-->
+          <!--                <div class="font-normal text-lg text-black">address</div>-->
+          <!--              </div>-->
+          <!--              <div>-->
+          <!--                <div class="font-medium text-lg text-black capitalize">Description</div>-->
+          <!--                <hr class="my-4">-->
+          <!--                <div class="font-normal text-lg text-black">The authority address.</div>-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--          </div>-->
           <!--          <div class="flex flex-col md:flex-row items-center justify-between">-->
           <!--            <button class="silver-border-gradient order-2 md:order-1 w-full md:w-auto focus:outline-none">-->
           <!--              <div class="text-black bg-white rounded text-sm pl-4 pr-6 pt-4 pb-6">-->
@@ -130,14 +159,18 @@
           <div class="sticky top-0">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
             <ul>
-              <li :class="{'active': activeLink==='addAuthority'}"
+              <li v-for="item in connector.functions" :class="{'active': activeLink===item.name}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'addAuthority')" href="#addAuthority">Add Authority</a>
+                <a @click="scrollToView($event,item.name)" class="capitalize" :href="item.name">{{ item.name }}</a>
               </li>
-              <li :class="{'active': activeLink==='removeAuthority'}"
-                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'removeAuthority')" href="#removeAuthority">Remove Authority</a>
-              </li>
+              <!--              <li :class="{'active': activeLink==='addAuthority'}"-->
+              <!--                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
+              <!--                <a @click="scrollToView($event,'addAuthority')" href="#addAuthority">Add Authority</a>-->
+              <!--              </li>-->
+              <!--              <li :class="{'active': activeLink==='removeAuthority'}"-->
+              <!--                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
+              <!--                <a @click="scrollToView($event,'removeAuthority')" href="#removeAuthority">Remove Authority</a>-->
+              <!--              </li>-->
             </ul>
           </div>
         </div>
@@ -168,7 +201,7 @@ export default defineComponent({
       "});"
 
     const connector = ref({});
-    const {$axios, params,error} = useContext();
+    const {$axios, params, error} = useContext();
     const {slug} = params.value
     const {fetch, fetchState} = useFetch(async () => {
       connector.value = await $axios.$get(`/api/connectors/${slug}`);
@@ -177,7 +210,6 @@ export default defineComponent({
       }
     })
 
-    activeLink.value = 'addAuthority'
     const scrolledIntoView = (steps) => {
       steps.forEach(el => {
         if ((window.scrollY > el.offsetTop) && ((el.offsetTop + el.offsetHeight) > window.scrollY)) {
@@ -187,6 +219,9 @@ export default defineComponent({
     }
     onMounted(() => {
       const steps = document.querySelectorAll("#addAuthority,#removeAuthority")
+      if (connector.value.functions.length) {
+        activeLink.value = connector.value.functions[0].name
+      }
       window.addEventListener('scroll', () => scrolledIntoView(steps))
     })
     return {
