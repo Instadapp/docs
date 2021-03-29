@@ -35,27 +35,27 @@
         <div class="w-2/12 hidden md:block">
           <div class="sticky top-0">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-            <ul>
+            <ul class="sectionLinks">
               <li :class="{'active': activeLink==='installation'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'installation')" href="#installation">Installation</a>
+                <a href="#installation">Installation</a>
               </li>
               <li :class="{'active': activeLink==='usage'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'usage')" href="#usage">Usage</a>
+                <a href="#usage">Usage</a>
               </li>
               <li :class="{'active': activeLink==='setting-up-dsa-accounts'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'setting-up-dsa-accounts')" href="#setting-up-dsa-accounts">Setting Up
+                <a href="#setting-up-dsa-accounts">Setting Up
                   DSA Accounts</a>
               </li>
               <li :class="{'active': activeLink==='casting-spells'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'casting-spells')" href="#casting-spells">Casting Spells</a>
+                <a href="#casting-spells">Casting Spells</a>
               </li>
-              <li :class="{'active': activeLink==='index'}"
+              <li :class="{'active': activeLink==='connectors'}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'index')" href="#index">Connectors</a>
+                <a href="#connectors">Connectors</a>
               </li>
             </ul>
           </div>
@@ -66,29 +66,39 @@
 </template>
 
 <script>
-import {scrollToView, activeLink} from "@/composables/scrollToView";
-import {defineComponent, useContext, useAsync, onMounted} from "@nuxtjs/composition-api";
+// import {scrollToView, activeLink} from "@/composables/scrollToView";
+import {defineComponent, onMounted, onUnmounted, ref, useAsync, useContext} from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup() {
-    activeLink.value = 'installation'
+    const activeLink = ref('installation');
     const {$content} = useContext()
     const docs = useAsync(() => {
       return $content('home').only(['body']).fetch();
     })
-    const scrolledIntoView = (steps) => {
-      steps.forEach(el => {
-        if ((window.scrollY > el.offsetTop) && ((el.offsetTop + el.offsetHeight) > window.scrollY)) {
-          activeLink.value = el.getAttribute('id');
+
+    const changeActiveNav = () => {
+      let sectionLinks = document.querySelectorAll(".sectionLinks a");
+      let fromTop = window.scrollY;
+      sectionLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        if (section) {
+          if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+          ) {
+            activeLink.value = section.getAttribute('id')
+          }
         }
-      })
+      });
     }
     onMounted(() => {
-      const steps = document.querySelectorAll("#installation,#usage,#setting-up-dsa-accounts,#casting-spells,#index")
-      window.addEventListener('scroll', () => scrolledIntoView(steps))
+      window.addEventListener('scroll', changeActiveNav)
+    })
+    onUnmounted(() => {
+      window.removeEventListener('scroll', changeActiveNav)
     })
     return {
-      scrollToView,
       docs,
       activeLink
     }

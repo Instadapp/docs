@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import {Swiper, SwiperSlide, directive} from "vue-awesome-swiper";
+import {directive, Swiper, SwiperSlide} from "vue-awesome-swiper";
 import 'swiper/swiper.scss'
-import {defineComponent, onMounted} from "@nuxtjs/composition-api";
+import {defineComponent} from "@nuxtjs/composition-api";
 
 export default defineComponent({
   name: 'UseCasesSlider',

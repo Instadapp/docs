@@ -49,7 +49,7 @@
       <div class="mb-16 md:mb-18">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 md:mb-10">
           <h3 class="text-black font-semibold md:leading-7">Supported Protocols</h3>
-          <NuxtLink to="/index"
+          <NuxtLink to="/connectors"
                     class="self-start md:self-auto mt-4 md:mt-0 bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm">
             explore more
           </NuxtLink>
@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import {defineComponent, useAsync, useContext, ref} from "@nuxtjs/composition-api";
+import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup() {

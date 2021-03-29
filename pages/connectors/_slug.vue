@@ -24,13 +24,17 @@
           </div>
           <div class="md:hidden">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-            <ul>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
-                <a @click="scrollToView($event,'addAuthority')" href="#addAuthority">Add Authority</a>
+            <ul class="sectionLinks">
+              <li v-for="item in connector.functions"
+                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
+                <a :href="`#${item.name}`">{{ item.name }}</a>
               </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'removeAuthority')" href="#removeAuthority">Remove Authority</a>
-              </li>
+              <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">-->
+              <!--                <a @click="scrollToView($event,'addAuthority')" href="#addAuthority">Add Authority</a>-->
+              <!--              </li>-->
+              <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
+              <!--                <a @click="scrollToView($event,'removeAuthority')" href="#removeAuthority">Remove Authority</a>-->
+              <!--              </li>-->
             </ul>
           </div>
           <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
@@ -47,7 +51,7 @@
             source
             code, ABIs on Etherscan.
           </div>
-          <div v-for="item in connector.functions" :id="item.name" class="mb-14 md:mb-16">
+          <section v-for="item in connector.functions" :id="item.name" class="mb-14 md:mb-16">
             <div class="mb-8">
               <h3 class="text-black font-semibold capitalize mb-4 md:leading-7">{{ item.name }}</h3>
               <div class="font-normal text-lg">{{ item.description }}</div>
@@ -75,7 +79,7 @@
                 <div class="font-normal text-lg text-black">{{ parameter.description }}</div>
               </div>
             </div>
-          </div>
+          </section>
           <!--          <div id="addAuthority" class="mb-14 md:mb-16">-->
           <!--            <div class="mb-8">-->
           <!--              <h3 class="text-black font-semibold mb-4 md:leading-7">Add Authority</h3>-->
@@ -158,10 +162,12 @@
         <div class="w-2/12 hidden md:block">
           <div class="sticky top-0">
             <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-            <ul>
+            <ul class="sectionLinks">
               <li v-for="item in connector.functions" :class="{'active': activeLink===item.name}"
                   class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,item.name)" class="capitalize" :href="item.name">{{ item.name }}</a>
+                <a class="capitalize" :href="`#${item.name}`">{{
+                    item.name
+                  }}</a>
               </li>
               <!--              <li :class="{'active': activeLink==='addAuthority'}"-->
               <!--                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
@@ -181,26 +187,15 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import {defineComponent, useFetch, ref, useContext, onMounted, useAsync} from '@nuxtjs/composition-api'
+import {defineComponent, onMounted, onUnmounted, ref, useContext, useFetch} from '@nuxtjs/composition-api'
 import {copyCode} from "@/composables/copy";
-import {scrollToView, activeLink} from "@/composables/scrollToView";
 import {openSidebar} from "@/composables/openSidebar";
 
 export default defineComponent({
   name: 'Connector',
   setup() {
-    const addAuthorityCode = "spells.add({\n" +
-      "\tconnector: \"authority\",\n" +
-      "\tmethod: \"add\",\n" +
-      "\targs: [authority]\n" +
-      "});"
-    const removeAuthorityCode = "spells.add({\n" +
-      "\tconnector: \"authority\",\n" +
-      "\tmethod: \"remove\",\n" +
-      "\targs: [authority]\n" +
-      "});"
-
     const connector = ref({});
+    const activeLink = ref(null);
     const {$axios, params, error} = useContext();
     const {slug} = params.value
     const {fetch, fetchState} = useFetch(async () => {
@@ -208,24 +203,37 @@ export default defineComponent({
       if (!connector.value) {
         error('Connector don\'t exist');
       }
+      if ('functions' in connector.value) {
+        if (connector.value.functions.length) {
+          activeLink.value = connector.value.functions[0].name
+        }
+      }
     })
 
-    const scrolledIntoView = (steps) => {
-      steps.forEach(el => {
-        if ((window.scrollY > el.offsetTop) && ((el.offsetTop + el.offsetHeight) > window.scrollY)) {
-          activeLink.value = el.getAttribute('id');
+    const changeActiveNav = () => {
+      let sectionLinks = document.querySelectorAll(".sectionLinks a");
+      let fromTop = window.scrollY;
+      sectionLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        if (section) {
+          if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+          ) {
+            activeLink.value = section.getAttribute('id')
+          }
         }
-      })
+      });
     }
+
     onMounted(() => {
-      const steps = document.querySelectorAll("#addAuthority,#removeAuthority")
-      if (connector.value.functions.length) {
-        activeLink.value = connector.value.functions[0].name
-      }
-      window.addEventListener('scroll', () => scrolledIntoView(steps))
+      window.addEventListener('scroll', changeActiveNav)
+    })
+    onUnmounted(() => {
+      window.removeEventListener('scroll', changeActiveNav);
     })
     return {
-      copyCode, scrollToView, openSidebar, addAuthorityCode, removeAuthorityCode, connector, activeLink
+      copyCode, openSidebar, connector, activeLink
     }
   }
 })
