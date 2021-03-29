@@ -49,7 +49,7 @@ export default {
 
   publicRuntimeConfig: {
     axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL
+      baseURL: process.env.NODE_ENV === 'production' ? 'https://docsv2.instadapp.io' : 'http://localhost:3000'
     }
   },
 
