@@ -31,10 +31,10 @@
               <a :href="`#${item.name}`">{{ item.name }}</a>
             </li>
             <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">-->
-            <!--                <a @click="scrollToView($event,'addAuthority')" href="#addAuthority">Add Authority</a>-->
+            <!--                <a href="#addAuthority">Add Authority</a>-->
             <!--              </li>-->
             <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-            <!--                <a @click="scrollToView($event,'removeAuthority')" href="#removeAuthority">Remove Authority</a>-->
+            <!--                <a href="#removeAuthority">Remove Authority</a>-->
             <!--              </li>-->
           </ul>
         </div>
@@ -199,11 +199,11 @@
             </li>
             <!--              <li :class="{'active': activeLink==='addAuthority'}"-->
             <!--                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-            <!--                <a @click="scrollToView($event,'addAuthority')" href="#addAuthority">Add Authority</a>-->
+            <!--                <a href="#addAuthority">Add Authority</a>-->
             <!--              </li>-->
             <!--              <li :class="{'active': activeLink==='removeAuthority'}"-->
             <!--                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-            <!--                <a @click="scrollToView($event,'removeAuthority')" href="#removeAuthority">Remove Authority</a>-->
+            <!--                <a href="#removeAuthority">Remove Authority</a>-->
             <!--              </li>-->
           </ul>
         </div>

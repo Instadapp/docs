@@ -17,13 +17,13 @@
           <!--            <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>-->
           <!--            <ul>-->
           <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">-->
-          <!--                <a @click="scrollToView($event,'step1')" href="#step1">Step 1</a>-->
+          <!--                <a href="#step1">Step 1</a>-->
           <!--              </li>-->
           <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-          <!--                <a @click="scrollToView($event,'step2')" href="#step2">Step 2</a>-->
+          <!--                <a href="#step2">Step 2</a>-->
           <!--              </li>-->
           <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-          <!--                <a @click="scrollToView($event,'step3')" href="#step3">Step 3</a>-->
+          <!--                <a href="#step3">Step 3</a>-->
           <!--              </li>-->
           <!--            </ul>-->
           <!--          </div>-->
@@ -139,13 +139,13 @@
         <!--            <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>-->
         <!--            <ul>-->
         <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">-->
-        <!--                <a @click="scrollToView($event,'step1')" href="#step1">Step 1</a>-->
+        <!--                <a href="#step1">Step 1</a>-->
         <!--              </li>-->
         <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-        <!--                <a @click="scrollToView($event,'step2')" href="#step2">Step 2</a>-->
+        <!--                <a href="#step2">Step 2</a>-->
         <!--              </li>-->
         <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-        <!--                <a @click="scrollToView($event,'step3')" href="#step3">Step 3</a>-->
+        <!--                <a href="#step3">Step 3</a>-->
         <!--              </li>-->
         <!--            </ul>-->
         <!--          </div>-->
@@ -159,7 +159,6 @@
 // import 'highlight.js/styles/vs.css'
 import {defineComponent, ref, useContext, useFetch} from '@nuxtjs/composition-api'
 // import {copyCode} from "@/composables/copy";
-// import {scrollToView} from "@/composables/scrollToView";
 
 export default defineComponent({
   setup() {

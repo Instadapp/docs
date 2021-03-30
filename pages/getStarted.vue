@@ -11,32 +11,27 @@
           <ul>
             <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
               <a
-                @click="scrollToView($event,'installation')"
                 href="#installation"
               >Installation</a>
             </li>
             <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
               <a
-                @click="scrollToView($event,'usage')"
                 href="#usage"
               >Usage</a>
             </li>
             <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
               <a
-                @click="scrollToView($event,'setting-up-dsa-accounts')"
                 href="#setting-up-dsa-accounts"
               >Setting Up
                 DSA Accounts</a>
             </li>
             <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
               <a
-                @click="scrollToView($event,'casting-spells')"
                 href="#casting-spells"
               >Casting Spells</a>
             </li>
             <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
               <a
-                @click="scrollToView($event,'index')"
                 href="#index"
               >Connectors</a>
             </li>
@@ -88,7 +83,6 @@
 </template>
 
 <script>
-// import {scrollToView, activeLink} from "@/composables/scrollToView";
 import { defineComponent, onMounted, onUnmounted, ref, useAsync, useContext } from "@nuxtjs/composition-api";
 
 export default defineComponent({
