@@ -63,31 +63,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-//#useCases {
-//  #useCase1 {
-//    background: #D6E3F4;
-//  }
-//
-//  #useCase2 {
-//    background: #CEEFE5;
-//  }
-//
-//  #useCase3 {
-//    background: #F2E4C0;
-//  }
-//
-//  #useCase4 {
-//    background: #E2D6F4;
-//  }
-//
-//  #useCase5 {
-//    background: #EFCED8;
-//  }
-//
-//  #useCase6 {
-//    background: #C0E6F2;
-//  }
-//}
-</style>

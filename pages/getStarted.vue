@@ -6,77 +6,18 @@
         <SideNav></SideNav>
       </div>
       <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
-        <div class="md:hidden">
-          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-          <ul>
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
-              <a
-                href="#installation"
-              >Installation</a>
-            </li>
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-              <a
-                href="#usage"
-              >Usage</a>
-            </li>
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-              <a
-                href="#setting-up-dsa-accounts"
-              >Setting Up
-                DSA Accounts</a>
-            </li>
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-              <a
-                href="#casting-spells"
-              >Casting Spells</a>
-            </li>
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-              <a
-                href="#index"
-              >Connectors</a>
-            </li>
-          </ul>
-        </div>
+        <toc
+          class="md:hidden"
+          :toc="toc"
+        />
         <hr class="mt-6 mb-6 md:hidden">
         <nuxt-content :document="docs" />
       </div>
       <div class="w-2/12 hidden md:block">
-        <div class="sticky top-0">
-          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-          <ul class="sectionLinks">
-            <li
-              :class="{'active': activeLink==='installation'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#installation">Installation</a>
-            </li>
-            <li
-              :class="{'active': activeLink==='usage'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#usage">Usage</a>
-            </li>
-            <li
-              :class="{'active': activeLink==='setting-up-dsa-accounts'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#setting-up-dsa-accounts">Setting Up
-                DSA Accounts</a>
-            </li>
-            <li
-              :class="{'active': activeLink==='casting-spells'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#casting-spells">Casting Spells</a>
-            </li>
-            <li
-              :class="{'active': activeLink==='connectors'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#connectors">Connectors</a>
-            </li>
-          </ul>
-        </div>
+        <toc
+          class="sticky top-0"
+          :toc="toc"
+        />
       </div>
     </div>
   </div>
@@ -84,8 +25,10 @@
 
 <script>
 import { defineComponent, onMounted, onUnmounted, ref, useAsync, useContext } from "@nuxtjs/composition-api";
+import Toc from "~/components/Toc.vue";
 
 export default defineComponent({
+  components: { Toc },
   setup() {
     const activeLink = ref('installation');
     const { $content } = useContext()
@@ -93,30 +36,32 @@ export default defineComponent({
       return $content('home').only(['body']).fetch();
     })
 
-    const changeActiveNav = () => {
-      let sectionLinks = document.querySelectorAll(".sectionLinks a");
-      let fromTop = window.scrollY;
-      sectionLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-        if (section) {
-          if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-          ) {
-            activeLink.value = section.getAttribute('id')
-          }
-        }
-      });
-    }
-    onMounted(() => {
-      window.addEventListener('scroll', changeActiveNav)
-    })
-    onUnmounted(() => {
-      window.removeEventListener('scroll', changeActiveNav)
-    })
+    const toc = [
+      {
+        id: 'installation',
+        text: 'Installation'
+      },
+      {
+        id: 'usage',
+        text: 'Usage'
+      },
+      {
+        id: 'setting-up-dsa-accounts',
+        text: 'Setting Up DSA Accounts'
+      },
+      {
+        id: 'casting-spells',
+        text: 'Casting Spells'
+      },
+      {
+        id: 'connectors',
+        text: 'Connectors'
+      },
+    ]
+
     return {
       docs,
-      activeLink
+      toc
     }
   }
 })

@@ -28,20 +28,10 @@
             class="text-black font-medium w-full h-4 bg-gray-300 animate-pulse md:leading-7 text-2xl"
           ></div>
         </div>
-        <div class="md:hidden">
-          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-          <ul class="sectionLinks">
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-              <a href="#step1">Step 1</a>
-            </li>
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-              <a href="#step2">Step 2</a>
-            </li>
-            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-              <a href="#step3">Step 3</a>
-            </li>
-          </ul>
-        </div>
+        <toc
+          class="md:hidden"
+          :toc="toc"
+        />
         <hr class="mt-6 mb-6 md:mt-10 md:mb-15">
         <div class="flex items-center px-5 py-6 rounded-lg mb-16 bg-flashWhite text-PalatinatePurple">
           <img
@@ -180,29 +170,10 @@
         <!--          </div>-->
       </div>
       <div class="w-2/12 hidden md:block">
-        <div class="sticky top-0">
-          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-          <ul class="sectionLinks">
-            <li
-              :class="{'active': activeLink==='step1'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#step1">Step 1</a>
-            </li>
-            <li
-              :class="{'active': activeLink==='step2'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#step2">Step 2</a>
-            </li>
-            <li
-              :class="{'active': activeLink==='step3'}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a href="#step3">Step 3</a>
-            </li>
-          </ul>
-        </div>
+        <toc
+          class="sticky top-0"
+          :toc="toc"
+        />
       </div>
     </div>
   </div>
@@ -216,7 +187,6 @@ import { copyCode } from "@/composables/copy";
 export default defineComponent({
   name: 'UseCase',
   setup() {
-    const activeLink = ref(null);
     const code = "let borrowAmount = 20; // 20 DAI\n" +
       "let borrowAmtInWei = dsa.tokens.fromDecimal(borrowAmount, \"dai\"); \n// borrow flash loan and swap via OasisDEX\n" +
       "\n" +
@@ -276,34 +246,25 @@ export default defineComponent({
       }
     })
 
-    const changeActiveNav = () => {
-      let sectionLinks = document.querySelectorAll(".sectionLinks a");
-      let fromTop = window.scrollY;
-      sectionLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-        if (section) {
-          if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-          ) {
-            activeLink.value = section.getAttribute('id')
-          }
-        }
-      });
-    }
-
-    onMounted(() => {
-      activeLink.value = 'step1';
-      window.addEventListener('scroll', changeActiveNav)
-    })
-    onUnmounted(() => {
-      window.removeEventListener('scroll', changeActiveNav);
-    })
+    const toc = [
+      {
+        id: 'step1',
+        text: 'Step 1'
+      },
+      {
+        id: 'step2',
+        text: 'Step 2'
+      },
+      {
+        id: 'step3',
+        text: 'Step 3'
+      },
+    ]
     return {
       code,
       copyCode,
       useCase,
-      activeLink
+      toc
     }
   }
 })

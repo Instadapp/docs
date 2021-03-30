@@ -20,24 +20,10 @@
             adipisicing elit.
           </div>
         </div>
-        <div class="md:hidden">
-          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-          <ul class="sectionLinks">
-            <li
-              v-for="item in connector.functions"
-              :key="item.name"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active"
-            >
-              <a :href="`#${item.name}`">{{ item.name }}</a>
-            </li>
-            <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">-->
-            <!--                <a href="#addAuthority">Add Authority</a>-->
-            <!--              </li>-->
-            <!--              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-            <!--                <a href="#removeAuthority">Remove Authority</a>-->
-            <!--              </li>-->
-          </ul>
-        </div>
+        <toc
+          class="md:hidden"
+          :toc="toc"
+        />
         <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
         <div class="flex items-center px-5 py-6 rounded-lg mb-5 bg-flashWhite text-PalatinatePurple">
           <img
@@ -181,32 +167,10 @@
         <!--          </div>-->
       </div>
       <div class="w-2/12 hidden md:block">
-        <div class="sticky top-0">
-          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-          <ul class="sectionLinks">
-            <li
-              v-for="item in connector.functions"
-              :key="item.name"
-              :class="{'active': activeLink===item.name}"
-              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
-            >
-              <a
-                class="capitalize"
-                :href="`#${item.name}`"
-              >{{
-                    item.name
-                  }}</a>
-            </li>
-            <!--              <li :class="{'active': activeLink==='addAuthority'}"-->
-            <!--                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-            <!--                <a href="#addAuthority">Add Authority</a>-->
-            <!--              </li>-->
-            <!--              <li :class="{'active': activeLink==='removeAuthority'}"-->
-            <!--                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">-->
-            <!--                <a href="#removeAuthority">Remove Authority</a>-->
-            <!--              </li>-->
-          </ul>
-        </div>
+          <toc
+          class="sticky top-0"
+          :toc="toc"
+        />
       </div>
     </div>
   </div>
@@ -214,14 +178,15 @@
 
 <script>
 import 'highlight.js/styles/vs.css'
-import { defineComponent, onMounted, onUnmounted, ref, useContext, useFetch } from '@nuxtjs/composition-api'
+import { computed, defineComponent, onMounted, onUnmounted, ref, useContext, useFetch } from '@nuxtjs/composition-api'
 import { copyCode } from "@/composables/copy";
 
 export default defineComponent({
   name: 'Connector',
   setup() {
-    const connector = ref({});
-    const activeLink = ref(null);
+    const connector = ref({
+      functions : []
+    });
     const { $axios, params, error } = useContext();
     const { slug } = params.value
     const { fetch, fetchState } = useFetch(async () => {
@@ -236,30 +201,12 @@ export default defineComponent({
       }
     })
 
-    const changeActiveNav = () => {
-      let sectionLinks = document.querySelectorAll(".sectionLinks a");
-      let fromTop = window.scrollY;
-      sectionLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-        if (section) {
-          if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-          ) {
-            activeLink.value = section.getAttribute('id')
-          }
-        }
-      });
-    }
+    const toc = computed(() => {
+      return connector.value.functions.map((fn) => ({ id: fn.name , text : fn.name }))
+    })
 
-    onMounted(() => {
-      window.addEventListener('scroll', changeActiveNav)
-    })
-    onUnmounted(() => {
-      window.removeEventListener('scroll', changeActiveNav);
-    })
     return {
-      copyCode, connector, activeLink
+      copyCode, connector, toc
     }
   }
 })
