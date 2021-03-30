@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import { defineComponent, ref, getCurrentInstance, onMounted, onUnmounted, nextTick } from '@vue/composition-api'
+import { defineComponent, ref, getCurrentInstance, onMounted, onUnmounted, nextTick, watch } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
@@ -54,16 +54,17 @@ export default defineComponent({
 
     onMounted(() => {
       window.addEventListener('scroll', onScroll)
-
-      if (!activeLink.value && props.toc.length > 0) {
-        activeLink.value = props.toc[0].id
-      }
-
     })
 
     onUnmounted(() => {
       window.removeEventListener('scroll', onScroll, true)
     })
+
+    watch(() => props.toc, () => {
+      if (!activeLink.value && props.toc.length > 0) {
+        activeLink.value = props.toc[0].id
+      }
+    }, { immediate: true })
 
     return {
       activeLink

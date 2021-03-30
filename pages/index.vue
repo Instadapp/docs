@@ -6,7 +6,12 @@
         <NuxtLink to="/getstarted">
           <div class="gradient-box">
             <div class="rounded-lg text-center py-8 px-13">
-              <img class="mx-auto mb-4 md:mb-2" src="~/assets/images/rocket.svg" decoding="async" alt="">
+              <img
+                class="mx-auto mb-4 md:mb-2"
+                src="~/assets/images/rocket.svg"
+                decoding="async"
+                alt=""
+              >
               <div class="capitalize font-semibold text-2xl">Get started</div>
             </div>
           </div>
@@ -14,7 +19,12 @@
         <NuxtLink to="/connectors">
           <div class="gradient-box">
             <div class="rounded-lg text-center py-8 px-13">
-              <img class="mx-auto mb-4 md:mb-2" src="~/assets/images/connect.svg" decoding="async" alt="">
+              <img
+                class="mx-auto mb-4 md:mb-2"
+                src="~/assets/images/connect.svg"
+                decoding="async"
+                alt=""
+              >
               <div class="capitalize font-semibold text-2xl">Connectors</div>
             </div>
           </div>
@@ -22,7 +32,12 @@
         <NuxtLink to="/usecases">
           <div class="gradient-box">
             <div class="rounded-lg text-center py-8 px-13">
-              <img class="mx-auto mb-4 md:mb-2" src="~/assets/images/suitcase.svg" decoding="async" alt="">
+              <img
+                class="mx-auto mb-4 md:mb-2"
+                src="~/assets/images/suitcase.svg"
+                decoding="async"
+                alt=""
+              >
               <div class="capitalize font-semibold text-2xl">use cases</div>
             </div>
           </div>
@@ -31,29 +46,33 @@
     </div>
     <div class="px-4 py-16 md:mx-60 md:py-18">
       <div>
-        <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">documentation</h2>
+        <h2 class="text-3xl md:text-4xl text-blue capitalize md:leading-9 font-semibold md:mb-4">documentation</h2>
         <div class="text-black font-medium md:leading-7 text-2xl">Instadapp Developer Platform</div>
       </div>
       <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
       <div class="mb-16 md:mb-18">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 md:mb-10">
-          <h3 class="text-black font-semibold md:leading-7">Start with your use case</h3>
-          <NuxtLink to="/usecases"
-                    class="self-start md:self-auto mt-4 md:mt-0 bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm">
+          <h3 class="text-2xl md:text-3xl text-black font-semibold md:leading-7">Start with your use case</h3>
+          <NuxtLink
+            to="/usecases"
+            class="self-start md:self-auto mt-4 md:mt-0 bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm"
+          >
             explore more
           </NuxtLink>
         </div>
-        <UseCasesSlider :use-cases="useCases"/>
+        <UseCasesSlider :use-cases="useCases" />
       </div>
       <div class="mb-16 md:mb-18">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 md:mb-10">
           <h3 class="text-black font-semibold md:leading-7">Supported Protocols</h3>
-          <NuxtLink to="/connectors"
-                    class="self-start md:self-auto mt-4 md:mt-0 bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm">
+          <NuxtLink
+            to="/connectors"
+            class="self-start md:self-auto mt-4 md:mt-0 bg-blue text-white rounded focus:outline-none py-2 px-4 capitalize font-semibold md:text-sm"
+          >
             explore more
           </NuxtLink>
         </div>
-        <ConnectorsSlider :connectors="connectors"/>
+        <ConnectorsSlider :connectors="connectors" />
       </div>
       <!--      <div class="md:text-right">-->
       <!--        <button class="blue-gradient w-full md:w-auto focus:outline-none">-->
@@ -71,12 +90,12 @@
 </template>
 
 <script>
-import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
+import { defineComponent, useAsync, useContext } from "@nuxtjs/composition-api";
 
 export default defineComponent({
-  layout : 'home',
+  layout: 'home',
   setup() {
-    const {$axios} = useContext();
+    const { $axios } = useContext();
     const useCases = useAsync(() => $axios.$get('/api/usecases'))
     const connectors = useAsync(() => $axios.$get('/api/connectors?limit=6'))
     return {
@@ -91,7 +110,7 @@ export default defineComponent({
 @import "~@/assets/scss/mixins.scss";
 
 .gradient-box {
-  background: linear-gradient(180deg, #3F538F 0%, #0C0D35 100%);
+  background: linear-gradient(180deg, #3f538f 0%, #0c0d35 100%);
   padding: 2px;
   border-radius: 8px;
   cursor: pointer;
@@ -107,21 +126,7 @@ export default defineComponent({
 
 .blue-gradient {
   padding: 1px;
-  background: linear-gradient(180deg, #50A1FF 0%, #0E18FF 100%);
+  background: linear-gradient(180deg, #50a1ff 0%, #0e18ff 100%);
   border-radius: 4px;
-}
-
-h2 {
-  font-size: 32px;
-  @include sm {
-    font-size: 40px;
-  }
-}
-
-h3 {
-  font-size: 24px;
-  @include sm {
-    font-size: 32px;
-  }
 }
 </style>
