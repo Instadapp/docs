@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { defineComponent, onMounted, onUnmounted, ref, useAsync, useContext } from "@nuxtjs/composition-api";
+import { defineComponent, useAsync, useContext } from "@nuxtjs/composition-api";
 import Toc from "~/components/Toc.vue";
 
 export default defineComponent({
