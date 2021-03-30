@@ -30,7 +30,6 @@ import Toc from "~/components/Toc.vue";
 export default defineComponent({
   components: { Toc },
   setup() {
-    const activeLink = ref('installation');
     const { $content } = useContext()
     const docs = useAsync(() => {
       return $content('home').only(['body']).fetch();

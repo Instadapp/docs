@@ -194,11 +194,6 @@ export default defineComponent({
       if (!connector.value) {
         error('Connector don\'t exist');
       }
-      if ('functions' in connector.value) {
-        if (connector.value.functions.length) {
-          activeLink.value = connector.value.functions[0].name
-        }
-      }
     })
 
     const toc = computed(() => {
