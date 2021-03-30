@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header></Header>
     <div class="bg-black-dark text-white border-t border-blue-900 pt-14 pb-20 px-4 md:px-60 md:pt-16">
       <h1 class="mb-8 font-semibold text-3xl w-1/2 md:w-full">Instadapp Developers</h1>
       <div class="grid gap-y-4 md:gap-y-0 md:grid-cols-3 md:gap-x-6">
@@ -75,6 +74,7 @@
 import {defineComponent, useAsync, useContext} from "@nuxtjs/composition-api";
 
 export default defineComponent({
+  layout : 'home',
   setup() {
     const {$axios} = useContext();
     const useCases = useAsync(() => $axios.$get('/api/usecases'))

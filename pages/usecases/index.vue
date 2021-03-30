@@ -1,11 +1,5 @@
 <template>
   <div>
-    <Header>
-      <template #sidebar>
-        <img @click="openSidebar" class="md:hidden mr-4 cursor-pointer" src="~/assets/images/menu.svg" decoding="async"
-             alt="">
-      </template>
-    </Header>
     <div class="md:px-14 md:py-18">
       <Sidebar></Sidebar>
       <div class="flex md:space-x-6">
@@ -165,7 +159,6 @@
 // import 'highlight.js/styles/vs.css'
 import {defineComponent, ref, useContext, useFetch} from '@nuxtjs/composition-api'
 // import {copyCode} from "@/composables/copy";
-import {openSidebar} from "@/composables/openSidebar";
 // import {scrollToView} from "@/composables/scrollToView";
 
 export default defineComponent({
@@ -177,7 +170,6 @@ export default defineComponent({
       useCases.value = await $axios.$get('/api/usecases');
     })
     return {
-      openSidebar,
       useCases,
     }
   }

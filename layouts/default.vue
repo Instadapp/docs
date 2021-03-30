@@ -1,19 +1,33 @@
 <template>
   <div class="font-montserrat tracking-tighter">
-    <Nuxt/>
+    <Header>
+      <template #sidebar>
+        <img
+          @click="openSidebar"
+          class="md:hidden mr-4 cursor-pointer"
+          src="~/assets/images/menu.svg"
+          decoding="async"
+          alt=""
+        >
+      </template>
+    </Header>
+    <Nuxt />
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import {defineComponent, useMeta} from "@nuxtjs/composition-api";
+import { defineComponent } from "@nuxtjs/composition-api";
+import { useSidebar } from "~/composables/useSidebar";
 
 export default defineComponent({
   name: 'DefaultLayout',
-  head: {},
   setup() {
-    const {title} = useMeta()
-    title.value = 'Instadapp Docs'
+      const { open : openSidebar } = useSidebar();
+
+    return {
+      openSidebar
+    }
   }
 })
 </script>
@@ -21,7 +35,8 @@ export default defineComponent({
 <style lang="scss">
 @import "~/assets/scss/mixins.scss";
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -37,6 +52,6 @@ html, body {
   padding: 1px;
   border-radius: 6px;
   cursor: pointer;
-  background: linear-gradient(180deg, #DADEF0 0%, #9BA4C4 100%);
+  background: linear-gradient(180deg, #dadef0 0%, #9ba4c4 100%);
 }
 </style>

@@ -1,64 +1,86 @@
 <template>
-  <div>
-    <Header></Header>
-    <div class="md:mx-14 md:my-18">
-      <Sidebar/>
-      <div class="flex md:space-x-6">
-        <div class="w-2/12 hidden md:block">
-          <SideNav></SideNav>
+  <div class="md:mx-14 md:my-18">
+    <Sidebar />
+    <div class="flex md:space-x-6">
+      <div class="w-2/12 hidden md:block">
+        <SideNav></SideNav>
+      </div>
+      <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
+        <div class="md:hidden">
+          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
+          <ul>
+            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
+              <a
+                @click="scrollToView($event,'installation')"
+                href="#installation"
+              >Installation</a>
+            </li>
+            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <a
+                @click="scrollToView($event,'usage')"
+                href="#usage"
+              >Usage</a>
+            </li>
+            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <a
+                @click="scrollToView($event,'setting-up-dsa-accounts')"
+                href="#setting-up-dsa-accounts"
+              >Setting Up
+                DSA Accounts</a>
+            </li>
+            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <a
+                @click="scrollToView($event,'casting-spells')"
+                href="#casting-spells"
+              >Casting Spells</a>
+            </li>
+            <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
+              <a
+                @click="scrollToView($event,'index')"
+                href="#index"
+              >Connectors</a>
+            </li>
+          </ul>
         </div>
-        <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
-          <div class="md:hidden">
-            <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-            <ul>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5 active">
-                <a @click="scrollToView($event,'installation')" href="#installation">Installation</a>
-              </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'usage')" href="#usage">Usage</a>
-              </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'setting-up-dsa-accounts')" href="#setting-up-dsa-accounts">Setting Up
-                  DSA Accounts</a>
-              </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'casting-spells')" href="#casting-spells">Casting Spells</a>
-              </li>
-              <li class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a @click="scrollToView($event,'index')" href="#index">Connectors</a>
-              </li>
-            </ul>
-          </div>
-          <hr class="mt-6 mb-6 md:hidden">
-          <nuxt-content :document="docs"/>
-        </div>
-        <div class="w-2/12 hidden md:block">
-          <div class="sticky top-0">
-            <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
-            <ul class="sectionLinks">
-              <li :class="{'active': activeLink==='installation'}"
-                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a href="#installation">Installation</a>
-              </li>
-              <li :class="{'active': activeLink==='usage'}"
-                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a href="#usage">Usage</a>
-              </li>
-              <li :class="{'active': activeLink==='setting-up-dsa-accounts'}"
-                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a href="#setting-up-dsa-accounts">Setting Up
-                  DSA Accounts</a>
-              </li>
-              <li :class="{'active': activeLink==='casting-spells'}"
-                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a href="#casting-spells">Casting Spells</a>
-              </li>
-              <li :class="{'active': activeLink==='connectors'}"
-                  class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5">
-                <a href="#connectors">Connectors</a>
-              </li>
-            </ul>
-          </div>
+        <hr class="mt-6 mb-6 md:hidden">
+        <nuxt-content :document="docs" />
+      </div>
+      <div class="w-2/12 hidden md:block">
+        <div class="sticky top-0">
+          <h4 class="font-semibold text-gray-400 uppercase mb-4">contents</h4>
+          <ul class="sectionLinks">
+            <li
+              :class="{'active': activeLink==='installation'}"
+              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
+            >
+              <a href="#installation">Installation</a>
+            </li>
+            <li
+              :class="{'active': activeLink==='usage'}"
+              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
+            >
+              <a href="#usage">Usage</a>
+            </li>
+            <li
+              :class="{'active': activeLink==='setting-up-dsa-accounts'}"
+              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
+            >
+              <a href="#setting-up-dsa-accounts">Setting Up
+                DSA Accounts</a>
+            </li>
+            <li
+              :class="{'active': activeLink==='casting-spells'}"
+              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
+            >
+              <a href="#casting-spells">Casting Spells</a>
+            </li>
+            <li
+              :class="{'active': activeLink==='connectors'}"
+              class="text-gray-400 font-medium pb-2 border-l-2 border-gray-400 border-opacity-30 pl-5"
+            >
+              <a href="#connectors">Connectors</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -67,12 +89,12 @@
 
 <script>
 // import {scrollToView, activeLink} from "@/composables/scrollToView";
-import {defineComponent, onMounted, onUnmounted, ref, useAsync, useContext} from "@nuxtjs/composition-api";
+import { defineComponent, onMounted, onUnmounted, ref, useAsync, useContext } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup() {
     const activeLink = ref('installation');
-    const {$content} = useContext()
+    const { $content } = useContext()
     const docs = useAsync(() => {
       return $content('home').only(['body']).fetch();
     })
@@ -144,7 +166,9 @@ export default defineComponent({
     @apply list-disc pl-10;
   }
 
-  li, p, td {
+  li,
+  p,
+  td {
     code {
       @apply bg-gray-100 px-1 py-0.5 rounded text-gray-700;
     }
