@@ -1,25 +1,17 @@
 <template>
-  <div class="md:px-14 md:py-18">
-    <Sidebar></Sidebar>
-    <div class="flex md:space-x-6">
-      <div class="w-2/12 hidden md:block">
-        <SideNav></SideNav>
-      </div>
-      <div class="py-16 px-4 md:px-0 md:py-0 md:w-10/12">
-        <div class="mb-10 md:mb-0">
-          <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">Connectors</h2>
-          <div class="text-black font-medium md:leading-7 text-2xl">Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit.
-          </div>
-        </div>
-        <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
-        <ConnectorsSlider
-          v-if="!$fetchState.pending"
-          :connectors="connectors"
-        />
-        <ConnectorsPlaceholder v-else />
+  <div class="py-16 px-4 md:px-0 md:py-0">
+    <div class="mb-10 md:mb-0">
+      <h2 class="text-blue capitalize md:leading-9 font-semibold md:mb-4">Connectors</h2>
+      <div class="text-black font-medium md:leading-7 text-2xl">Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit.
       </div>
     </div>
+    <hr class="mt-6 mb-10 md:mt-10 md:mb-15">
+    <ConnectorsSlider
+      v-if="!$fetchState.pending"
+      :connectors="connectors"
+    />
+    <ConnectorsPlaceholder v-else />
   </div>
 </template>
 

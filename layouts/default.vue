@@ -11,7 +11,18 @@
         >
       </template>
     </Header>
-    <Nuxt />
+
+    <div class="md:px-14 md:py-18">
+      <Sidebar></Sidebar>
+      <div class="flex md:space-x-4">
+        <div class="w-3/12 hidden md:block">
+          <SideNav></SideNav>
+        </div>
+        <div>
+          <Nuxt />
+        </div>
+      </div>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -23,7 +34,7 @@ import { useSidebar } from "~/composables/useSidebar";
 export default defineComponent({
   name: 'DefaultLayout',
   setup() {
-      const { open : openSidebar } = useSidebar();
+    const { open: openSidebar } = useSidebar();
 
     return {
       openSidebar

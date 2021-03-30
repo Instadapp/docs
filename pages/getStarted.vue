@@ -1,11 +1,6 @@
 <template>
-  <div class="md:mx-14 md:my-18">
-    <Sidebar />
-    <div class="flex md:space-x-6">
-      <div class="w-2/12 hidden md:block">
-        <SideNav></SideNav>
-      </div>
-      <div class="py-16 px-4 md:px-0 md:py-0 md:w-8/12">
+   <div class="flex md:space-x-6">
+     <div class="py-16 px-4 md:px-0 md:py-0 md:w-4/5">
         <toc
           class="md:hidden"
           :toc="toc"
@@ -13,13 +8,12 @@
         <hr class="mt-6 mb-6 md:hidden">
         <nuxt-content :document="docs" />
       </div>
-      <div class="w-2/12 hidden md:block">
+      <div class="w-1/5 hidden md:block">
         <toc
           class="sticky top-0"
           :toc="toc"
         />
       </div>
-    </div>
   </div>
 </template>
 
