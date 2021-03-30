@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'instadapp',
+    title: 'Instadapp Docs',
     htmlAttrs: {
       lang: 'en'
     },
@@ -30,6 +30,11 @@ export default {
     '@nuxtjs/google-fonts',
     '@nuxtjs/composition-api',
   ],
+
+  tailwindcss: {
+    jit: true
+  },
+
   googleFonts: {
     display: 'swap',
     download: true,
