@@ -1,8 +1,16 @@
 diff --git a/node_modules/@nuxt/content-theme-docs/src/pages/_.vue b/node_modules/@nuxt/content-theme-docs/src/pages/_.vue
-index 58bacc6..46aa234 100644
+index 58bacc6..e42a5bc 100644
 --- a/node_modules/@nuxt/content-theme-docs/src/pages/_.vue
 +++ b/node_modules/@nuxt/content-theme-docs/src/pages/_.vue
-@@ -58,7 +58,7 @@ export default {
+@@ -22,6 +22,7 @@
+         </div>
+ 
+         <NuxtContent :document="document" />
++        <Support />
+       </article>
+ 
+       <AppGithubLink :document="document" />
+@@ -58,7 +59,7 @@ export default {
      const [prev, next] = await $content(app.i18n.locale, { deep: true })
        .only(['title', 'slug', 'to'])
        .sortBy('position', 'asc')
