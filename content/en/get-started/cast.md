@@ -37,7 +37,7 @@ spells.add({
 });
 ```
 
-**Note:** Make sure, your smart account have the equivalent ETH balance before executing the above actions. Check [this section](/setup#transfer-tokens) for more details.
+**Note:** Make sure, your smart account have the equivalent ETH balance before executing the above actions. Check [this section](/get-started/setup#transfer-tokens) for more details.
 
 At last, cast your spell using `cast()` method.
 

@@ -22,7 +22,7 @@ DSA platform is designed to allow developers to build extensible products and bu
     </nuxt-link>
   </div>
   <div class="rounded-lg p-5" style="background-color: rgb(206, 239, 229);">
-    <nuxt-link style="text-decoration: none !important;" to="/usecases/short-dai ">
+    <nuxt-link style="text-decoration: none !important;" to="/usecases/short-dai">
         <h5 class="font-bold text-black">Short DAI</h5>
         <span class="text-black font-medium">Earn instant return & make DAI stable</span>
     </nuxt-link>
@@ -62,12 +62,12 @@ DSA platform is designed to allow developers to build extensible products and bu
 				Kyber
 			</div>
 		</nuxt-link>
-		<nuxt-link style="text-decoration: none !important;" class="border border-gray-300 rounded-lg px-3 flex items-center" to="/connectors/curve">
+		<!-- <nuxt-link style="text-decoration: none !important;" class="border border-gray-300 rounded-lg px-3 flex items-center" to="/connectors/curve">
 			<img src="/img/icons/interface/curve-logo.svg" width="48" height="48" />
 			<div class="ml-3 text-xl font-bold text-black dark:text-white no-underline">
 				Curve
 			</div>
-		</nuxt-link>
+		</nuxt-link> -->
 		<nuxt-link style="text-decoration: none !important;" class="border border-gray-300 rounded-lg px-3 flex items-center" to="/connectors/dydx">
 			<img src="/img/icons/interface/dydx.png" width="48" height="48" />
 			<div class="ml-3 text-xl font-bold text-black dark:text-white no-underline">

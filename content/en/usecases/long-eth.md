@@ -16,7 +16,7 @@ category: 'Use Cases'
 
 #### Step 3
 
-Trigger the following uniquely designed spells to fulfill this use case. Check [this section](/cast) for generic details around casting spells.
+Trigger the following uniquely designed spells to fulfill this use case. Check [this section](/get-started/cast) for generic details around casting spells.
 
 The DSA will cast the spells across the [Compound](/connectors/compound), [OasisDEX](/connectors/oasis) and [Instapool](/connectors/instapool/) connectors in the following sequence.
 

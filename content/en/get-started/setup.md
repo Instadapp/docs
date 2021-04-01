@@ -181,7 +181,7 @@ dsa.setOrigin(origin);
 
 ## Transfer Tokens
 
-Now that you have an account setup, transfer assets to your DSA address, which can be eventually used as collateral, liquidity, et cetera in DeFi protocols. Developers can trigger the ETH / Token transfer by calling a SDK method - [dsa.transfer()](/basic/#dsatransfer). Alternatively, call `transfer()` method from the respective ERC20 token contract.
+Now that you have an account setup, transfer assets to your DSA address, which can be eventually used as collateral, liquidity, et cetera in DeFi protocols. Developers can trigger the ETH / Token transfer by calling a SDK method - [dsa.transfer()](/connectors/basic/#dsatransfer). Alternatively, call `transfer()` method from the respective ERC20 token contract.
 
 <!-- To build extensible use cases with maximum security and composability, our platform is designed in a way that discourages the deposit of tokens by allowance as this might manifest [vulnerabilities](https://twitter.com/koeppelmann/status/1230615922311925760) in some cases.
 
