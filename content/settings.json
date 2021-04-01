@@ -6,5 +6,6 @@
     "dark": "/logo-dark.svg"
   },
   "github": "InstaDApp/docs-nuxt",
-  "twitter": "@instadapp"
+  "twitter": "@instadapp",
+  "defaultDir" : ""
 }
