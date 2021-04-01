@@ -1,9 +1,10 @@
 ---
 title: Introduction
-description: ""
+description: "Instadapp Developer Platform"
 position: 1
 category: ""
 ---
+> Instadapp Developer Platform
 
 ##### Our platform is open to all sizes of developers, from solo-coders to a group of hackers to globally-scaled teams.
 

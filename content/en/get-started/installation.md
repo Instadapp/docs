@@ -1,9 +1,10 @@
 ---
 title: Installation
-description: ''
+description: 'Quickly get up and running with DSA platform'
 position: 2
-category: 'get-started'
+category: 'Get Started'
 ---
+> Quickly get up and running with DSA platform
 
 To get started, install the DSA SDK package from NPM:
 

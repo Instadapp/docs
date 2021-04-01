@@ -2,8 +2,9 @@
 title: Instapool
 description: 'Inbuilt Flash Loan in DSA'
 position: 7
-category: 'connectors'
+category: 'Connectors'
 ---
+> Inbuilt Flash Loan in DSA
 
 An Inbuilt Flash Loan mechanism for Smart Accounts powered by Compound Finance.
 

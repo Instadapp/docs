@@ -1,9 +1,10 @@
 ---
 title: Basic
-description: ''
+description: 'Deposit & Withdraw from DSA'
 position: 5
-category: 'connectors'
+category: 'Connectors'
 ---
+> Deposit & Withdraw from DSA
 
 Basic connector triggers the methods like deposit and withdraw of token in DSA. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x9370236a085A99Aa359f4bD2f0424b8c3bf25C99#code).
 

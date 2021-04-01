@@ -1,17 +1,10 @@
 ---
 title: Cast
-description: ""
+description: "Build Money Lego Transactions"
 position: 4
-category: "get-started"
+category: "Get Started"
 ---
-
-<alert>
-        Connected to Web3 (<a href="#" onclick="" class="text-danger font-weight-normal web3disconnect"><u>disconnect</u></a>). You can run commands on this guide on your chrome console. Be sure to <a href="/setup" class="font-weight-normal"><u>setup an account</u></a>.
-</alert>
-
-<alert>
-        <b>Note</b>: You can run this guide directly from here by <a id="web3connect" class="font-weight-normal" href="#"><u>connecting to web3</u></a> and opening up chrome console.
-</alert>
+> Build Money Lego Transactions
 
 **Spells** denotes a sequence of connector functions that will achieve a given use case. Spells can comprise of any number of functions across any number of connectors.
 

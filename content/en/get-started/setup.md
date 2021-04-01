@@ -1,17 +1,10 @@
 ---
 title: Setup Account
-description: ''
+description: 'DeFi Smart Account Setup'
 position: 3
-category: 'get-started'
+category: 'Get Started'
 ---
-
-<alert>
-        Connected to Web3 (<a href="#" onclick="" class="text-danger font-weight-normal web3disconnect"><u>disconnect</u></a>). You can run commands on this guide on your chrome console. Be sure to <a href="/setup" class="font-weight-normal"><u>setup an account</u></a>.
-</alert>
-
-<alert>
-        <b>Note</b>: You can run this guide directly from here by <a id="web3connect" class="font-weight-normal" href="#"><u>connecting to web3</u></a> and opening up chrome console.
-</alert>
+> DeFi Smart Account Setup
 
 Every user needs to create Smart Account to interact with DeFi Protocols seamlessly; this allows developers to build extensible use-cases with maximum security and composability. You can also create multiple account for a single address.
 
@@ -164,8 +157,6 @@ dsa.setInstance(dsaId); // DSA ID
     <td>The address to track the origin of transaction. Used for analytics and affiliates.</td>
   <tr> -->
 </table>
-
---- 
 
 <!-- ### setOrigin()
 
