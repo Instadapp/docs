@@ -87,26 +87,3 @@ dsa.cast({
 </table>
 
 This will send the transaction to blockchain in node implementation (or ask users to confirm the transaction on web3 wallet like Metamask).
-
-### Start with your use case
-
-<div class="grid gap-5 grid-cols-1 md:grid-cols-3 mb-20">
-  <div class="rounded-lg p-5" style="background-color: rgb(214, 227, 244);">
-    <nuxt-link style="text-decoration: none !important;" to="/usecases/long-eth">
-        <h5 class="font-bold text-black">Long ETH</h5>
-        <span class="text-black font-medium">Tap the upside spike in Ethereum price</span>
-    </nuxt-link>
-  </div>
-  <div class="rounded-lg p-5" style="background-color: rgb(206, 239, 229);">
-    <nuxt-link style="text-decoration: none !important;" to="/usecases/short-dai">
-        <h5 class="font-bold text-black">Short DAI</h5>
-        <span class="text-black font-medium">Earn instant return & make DAI stable</span>
-    </nuxt-link>
-  </div>
-  <div class="rounded-lg p-5"  style="background-color: rgb(242, 228, 192);">
-    <nuxt-link style="text-decoration: none !important;" to="/usecases/debt-bridge">
-        <h5 class="font-bold text-black">Bridging</h5>
-        <span class="text-black font-medium">Port positions b/w Maker & Compound</span>
-    </nuxt-link>
-  </div>
-</div>
