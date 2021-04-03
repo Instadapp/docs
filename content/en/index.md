@@ -52,7 +52,7 @@ DSA platform is designed to allow developers to build extensible products and bu
 			</div>
 		</nuxt-link>
 		<nuxt-link style="text-decoration: none !important;" class="border border-gray-300 rounded-lg px-3 flex items-center" to="/connectors/1inch">
-			<img src="https://1inch.exchange/assets/logo.svg" width="48" height="48" />
+			<img src="https://1inch.exchange/assets/images/liquidity-providers-logo/1inch_color.svg" width="48" height="48" />
 			<div class="ml-3 text-xl font-bold text-black dark:text-white no-underline">
 				1inch
 			</div>
