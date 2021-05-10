@@ -1,8 +1,7 @@
 ---
 title: Basic
 description: 'Deposit & Withdraw from DSA'
-position: 5
-category: 'Connectors'
+draft: true
 ---
 > Deposit & Withdraw from DSA
 

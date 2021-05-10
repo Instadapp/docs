@@ -1,12 +1,11 @@
 ---
-title: Curve sBTC
-description: 'Swapping and On-chain Liquidity from sBTC Pool'
-position: 15
-category: 'Connectors'
+title: Curve sUSD
+description: 'Swapping and On-chain Liquidity from sUSD Pool'
+draft: true
 ---
-> Swapping and On-chain Liquidity from sBTC Pool
+> Swapping and On-chain Liquidity from sUSD Pool
 
-Curve connector triggers methods like buy, sell and withdraw. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0xe3bC928D9DAA89A0f08Cf77b227B7080B9a5105d#code).
+Curve connector triggers methods like buy, sell and withdraw. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0xfb1762449983e3a5f5ad5c04a118a6d6dba88963#code).
 
 - use -1 or `dsa.maxValue` for the maximum amount in functions.
 - If not sure about the arguments `getId` and `setId`, pass 0.
@@ -19,7 +18,7 @@ Sell Stable ERC20 Token.
 
 ```javascript
 spells.add({
-    connector: "curve-sbtc",
+    connector: "curve-susd",
     method: "sell",
     args: [buyAddr, sellAddr, sellAmt, unitAmt, getId, setId]
 });
@@ -71,7 +70,7 @@ Deposit Token into the Curve Pool.
 
 ```javascript
 spells.add({
-    connector: "curve-sbtc",
+    connector: "curve-susd",
     method: "deposit",
     args: [token, amt, unitAmt, getId, setId]
 });
@@ -117,7 +116,7 @@ Withdraw Token from the Curve Pool.
 
 ```javascript
 spells.add({
-    connector: "curve-sbtc",
+    connector: "curve-susd",
     method: "withdraw",
     args: [token, amt, unitAmt, getId, setId]
 });

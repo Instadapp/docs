@@ -1,8 +1,7 @@
 ---
 title: Uniswap
 description: 'Decentralized Exchange'
-position: 18
-category: 'Connectors'
+draft: true
 ---
 > Decentralized Exchange
 

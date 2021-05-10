@@ -1,8 +1,7 @@
 ---
 title: Curve Y
 description: 'Swapping and On-chain Liquidity from Y Pool'
-position: 16
-category: 'Connectors'
+draft: true
 ---
 > Swapping and On-chain Liquidity from Y Pool
 

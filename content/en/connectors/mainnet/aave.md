@@ -1,8 +1,7 @@
 ---
 title: Aave
 description: 'Deposit & Borrow'
-position: 11
-category: 'Connectors'
+draft: true
 ---
 > Deposit & Borrow
 

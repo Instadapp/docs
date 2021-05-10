@@ -1,8 +1,7 @@
 ---
 title: OasisDEX
 description: 'Decentralised Exchange'
-position: 12
-category: 'Connectors'
+draft: true
 ---
 > Decentralised Exchange
 

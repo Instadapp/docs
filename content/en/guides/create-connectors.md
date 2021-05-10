@@ -2,7 +2,7 @@
 title: Create Connectors
 description: ""
 position: 5
-category: "Get Started"
+category: "Guides"
 ---
 
 Connectors are standard proxy logics contract that let DeFi Smart Account (DSA) interact with various smart contracts, and make the important actions accessible like cross protocol interoperability.
