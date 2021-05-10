@@ -6,6 +6,8 @@ category: 'Get Started'
 ---
 > Quickly get up and running with DSA platform
 
+Interacting with DeFi shouldn't be hard. That's why this SDK exists.
+
 To get started, install the DSA Connect package from npm:
 
 ```bash
