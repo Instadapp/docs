@@ -11,7 +11,7 @@ category: 'Connectors'
 - [Comp](/connectors/mainnet/comp)
 - [MakerDAO](/connectors/mainnet/makerdao)
 - [Aave](/connectors/mainnet/aave)
-- [OasisDEX](/connectors/mainnet/oasisdex)
+- [OasisDEX](/connectors/mainnet/oasis)
 - [Kyber](/connectors/mainnet/kyber)
 - [Curve sUSD](/connectors/mainnet/curve-susd)
 - [Curve sBTC](/connectors/mainnet/curve-sbtc)
