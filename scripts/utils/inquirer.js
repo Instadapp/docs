@@ -71,35 +71,10 @@ export const askFirstQuestions = async () => {
       message: "Choose output format?",
       choices: ["markdown", "json"],
     },
-    {
-      type: "input",
-      name: "connectorName",
-      message: "Please enter connector name?",
-      validate: async (connectorName) =>
-        !!connectorName || "Connector name is required!",
-      // message: 'Please enter unique connector name?',
-      // validate: async (connectorName) => {
-      //   const count = await ConnectorsModel.countDocuments({ connectorName })
-      //   return !count
-      //     ? (!!connectorName || 'Connector name is required!')
-      //     : 'Connector name is not unique'
-      // }
-    },
   ];
   let answers1 = await inquirer.prompt(questions1);
 
-  let connectorFileName = `${answers1.connectorName
-    .replace(/\s/g, "-")
-    .toLowerCase()}.${answers1.outputFormat === "json" ? "json" : "md"}`;
-
-  let connectorPathAnswer = await inquirer.prompt({
-    type: "input",
-    name: "connectorPath",
-    message: "Please enter full output path?",
-    default: "content/en/connectors/" + connectorFileName,
-  });
-
-  answers1.useEtherscan = answers1.useEtherscan === questions1[1].choices[0];
+  answers1.useEtherscan = answers1.useEtherscan === questions1[0].choices[0];
   if (answers1.outputFormat === "markdown") {
     const questions2 = [
       {
@@ -131,5 +106,21 @@ export const askFirstQuestions = async () => {
       answers3 = { address: hardCodedAddress };
     answers1 = { ...answers1, ...answers3 };
   }
-  return { ...answers1, ...connectorPathAnswer };
+  return { ...answers1 };
+};
+
+export const askOutputPath = async (title, outputFormat) => {
+
+  let connectorFileName = `${title
+    .replace('.', '')
+    .replace(/\s/g, "-")
+    .toLowerCase()}.${outputFormat === "json" ? "json" : "md"}`;
+
+    let { connectorPath } = await inquirer.prompt({
+      type: "input",
+      name: "connectorPath",
+      message: "Please enter full output path?",
+      default: "content/en/connectors/" + connectorFileName,
+    });
+  return connectorPath;
 };

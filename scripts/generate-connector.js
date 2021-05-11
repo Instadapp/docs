@@ -1,7 +1,7 @@
 import axios from "axios";
 import fs from "fs";
 import generateMd from "./utils/generateMd";
-import { askFirstQuestions, requestFilePath } from "./utils/inquirer";
+import { askFirstQuestions, requestFilePath, askOutputPath } from "./utils/inquirer";
 import path from 'path';
 import config from  "./env";
 import { exit } from "process";
@@ -246,8 +246,6 @@ const parseSourceStrings = (sourceStrings) => {
     let sourceCode;
     let chain;
     const {
-      connectorName,
-      connectorPath,
       useEtherscan,
       outputFormat,
       position,
@@ -264,7 +262,7 @@ const parseSourceStrings = (sourceStrings) => {
     }
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings);
-    data = data.map((obj) => ({ connectorName, ...obj }));
+    let connectorPath = await askOutputPath(data[0].title, outputFormat)
     // await ConnectorsModel.insertMany(data)
     // dbDisconnect()
     if (!fs.existsSync("generated")) {
