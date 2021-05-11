@@ -60,6 +60,18 @@ export const askFirstQuestions = async () => {
 
   const questions1 = [
     {
+      type: "list",
+      name: "useEtherscan",
+      message: "How to get Source Code?",
+      choices: ["From Address (Only for Mainnet)", "From url"],
+    },
+    {
+      type: "list",
+      name: "outputFormat",
+      message: "Choose output format?",
+      choices: ["markdown", "json"],
+    },
+    {
       type: "input",
       name: "connectorName",
       message: "Please enter connector name?",
@@ -72,18 +84,6 @@ export const askFirstQuestions = async () => {
       //     ? (!!connectorName || 'Connector name is required!')
       //     : 'Connector name is not unique'
       // }
-    },
-    {
-      type: "list",
-      name: "useEtherscan",
-      message: "How to get Source Code?",
-      choices: ["From Address (Only for Mainnet)", "From url"],
-    },
-    {
-      type: "list",
-      name: "outputFormat",
-      message: "Choose output format?",
-      choices: ["markdown", "json"],
     },
   ];
   let answers1 = await inquirer.prompt(questions1);
