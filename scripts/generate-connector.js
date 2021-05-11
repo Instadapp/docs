@@ -1,7 +1,7 @@
 import axios from "axios";
 import fs from "fs";
 import generateMd from "./utils/generateMd";
-import { askFirstQuestions, requestFilePath } from "./utils/inquirer";
+import { askFirstQuestions, requestFilePath, askOutputPath } from "./utils/inquirer";
 import path from 'path';
 import config from  "./env";
 import { exit } from "process";
@@ -44,11 +44,21 @@ const findSourceStrings = (sourceCode) => {
 const parseCommits = (data) => {
   const namesTypes = ["function"];
   let connectorVersion;
-  const functions = [];
+  let title;
+  let description;
+  let functions = [];
   for (let i1 = 0; i1 < data.content.length; i1++) {
     const content = data.content[i1];
     if (content.parent) {
       connectorVersion = content.parent;
+      continue;
+    }
+    if (content.title) {
+      title = content.title;
+      continue;
+    }
+    if (content.description) {
+      description = content.description;
       continue;
     }
     const resultItem = { description: "" };
@@ -105,7 +115,8 @@ const parseCommits = (data) => {
       functions.push({ ...resultItem, parameters });
     }
   }
-  return { connectorVersion, functions };
+  functions = functions.filter(func => func.functionName)
+  return { connectorVersion, title, description, functions };
 };
 
 const parseContent = (content) => {
@@ -117,6 +128,8 @@ const parseContent = (content) => {
   let commentRaw = {
     data: [],
   };
+  let description
+  let title
   let isComment1type = false;
   let isComment2type = false;
   for (let index = 0; index < contentStrings.length; index++) {
@@ -172,6 +185,14 @@ const parseContent = (content) => {
       str = str.split('"')[1].replace("\\", "");
       allComments.push({ parent: str });
     }
+    if (str.includes("@dev") && !description) {
+      description = str.split("@dev")[1].trim();
+      allComments.push({ description });
+    }
+    if (str.includes("@title") && !title) {
+      title = str.split("@title")[1].trim();
+      allComments.push({ title });
+    }
   }
   return allComments;
 };
@@ -225,11 +246,8 @@ const parseSourceStrings = (sourceStrings) => {
     let sourceCode;
     let chain;
     const {
-      connectorName,
-      connectorPath,
       useEtherscan,
       outputFormat,
-      description,
       position,
       address,
     } = await askFirstQuestions();
@@ -244,7 +262,7 @@ const parseSourceStrings = (sourceStrings) => {
     }
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings);
-    data = data.map((obj) => ({ connectorName, description, ...obj }));
+    let connectorPath = await askOutputPath(data[0].title, outputFormat)
     // await ConnectorsModel.insertMany(data)
     // dbDisconnect()
     if (!fs.existsSync("generated")) {
@@ -253,7 +271,7 @@ const parseSourceStrings = (sourceStrings) => {
     let savePath = path.resolve(connectorPath);
 
     if (outputFormat === "markdown") {
-      const md = await generateMd(data, address, description, position, chain);
+      const md = await generateMd(data, address, position, chain);
       await fs.writeFileSync(savePath, md);
     } else {
       await fs.writeFileSync(savePath, JSON.stringify(data, null, 2));
