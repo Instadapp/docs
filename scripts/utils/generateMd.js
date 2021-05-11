@@ -1,8 +1,8 @@
-export default async function generateMd (data, address, description, position, chain) {
+export default async function generateMd (data, address, position, chain) {
     data = data[0]
     let md = '---'
-    md += `\ntitle: ${data.connectorVersion}`
-    md += `\ndescription: \'${description}\'`
+    md += `\ntitle: ${data.title}`
+    md += `\ndescription: \'${data.description}\'`
     md += `\nposition: ${position}`
     md += '\ncategory: \'Connectors\''
     md += '\n---'
@@ -10,7 +10,7 @@ export default async function generateMd (data, address, description, position, 
     md += `\n${data.connectorVersion} connector triggers methods like ${data.functions.map(o => o.functionName).join(', ')}.`
     if (chain === 'mainnet') md += ` You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/${address}#code).`
     md += '\n'
-    md += '\n- Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.'
+    md += `\n- Use \`0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\` to indicate ${chain === 'mainnet'? 'ETH' : 'MATIC' }.`
     md += '\n- use -1 or `dsa.maxValue` for the maximum amount in function.'
     md += '\n- If not sure about the arguments `getId` and `setId`, pass 0.'
     for (let index = 0; index < data.functions.length; index++) {

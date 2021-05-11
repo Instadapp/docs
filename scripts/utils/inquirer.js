@@ -85,18 +85,6 @@ export const askFirstQuestions = async () => {
       message: "Choose output format?",
       choices: ["markdown", "json"],
     },
-    {
-      type: "input",
-      name: "description",
-      message: "Enter description?",
-      validate: (description) => !!description || "description is required!",
-    },
-    {
-      type: "input",
-      name: "description",
-      message: "Enter description?",
-      validate: (description) => !!description || "description is required!",
-    },
   ];
   let answers1 = await inquirer.prompt(questions1);
 
