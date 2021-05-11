@@ -1,8 +1,7 @@
 ---
 title: Kyber
 description: 'Decentralised Swapping'
-position: 13
-category: 'Connectors'
+draft: true
 ---
 > Decentralised Swapping
 

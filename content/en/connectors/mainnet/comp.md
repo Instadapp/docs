@@ -1,8 +1,7 @@
 ---
 title: Comp
 description: 'Claim Comp'
-position: 9
-category: 'Connectors'
+draft: true
 ---
 > 
 Compound connector triggers methods like deposit, borrow, withdraw, payback, and more. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0xB4a04F1C194bEed64FCE27843B5b3079339cdaD4#code).

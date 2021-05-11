@@ -1,8 +1,7 @@
 ---
 title: MakerDAO
 description: 'Collateralized Borrowing'
-position: 10
-category: 'Connectors'
+draft: true
 ---
 > Collateralized Borrowing
 

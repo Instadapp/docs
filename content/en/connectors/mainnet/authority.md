@@ -1,8 +1,7 @@
 ---
 title: Authority
 description: 'Manage Authorities to DSA'
-position: 6
-category: 'Connectors'
+draft: true
 ---
 > Manage Authorities to DSA
 

@@ -1,8 +1,7 @@
 ---
 title: Instapool
 description: 'Inbuilt Flash Loan in DSA'
-position: 7
-category: 'Connectors'
+draft: true
 ---
 > Inbuilt Flash Loan in DSA
 

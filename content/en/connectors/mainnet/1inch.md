@@ -1,8 +1,7 @@
 ---
 title: 1inch
 description: 'DEX Aggregator'
-position: 18
-category: 'Connectors'
+draft: true
 ---
 > DEX Aggregator
 
