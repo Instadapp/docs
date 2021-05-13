@@ -1,0 +1,26 @@
+{
+    "mainnet": [
+        {
+            "type": "etherscan",
+            "slug": "basic",
+            "title": "Basic",
+            "address": "0x9926955e0Dd681Dc303370C52f4Ad0a4dd061687"
+        },
+        {
+            "type": "github",
+            "path": "authority/main.sol",
+            "slug": "authority",
+            "title": "Authority",
+            "address": "0x6CE3e607C808b4f4C26B7F6aDAeB619e49CAbb25"
+        }
+    ],
+    "polygon": [
+        {
+            "type": "github",
+            "path": "basic/main.sol",
+            "slug": "basic",
+            "title": "Basic",
+            "address": "0x1cAF5EC802ca602E98139AD96A8f2B7BC524264E"
+        }
+    ]
+}
