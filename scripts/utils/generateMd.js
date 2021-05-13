@@ -22,7 +22,7 @@ export default async function generateMd (data, address, chain) {
       md += '\n'
       md += '\n```javascript'
       md += '\nspells.add({'
-      md += `\n  connector: "${data.connectorVersion}",`
+      md += `\n  connector: "${data.connectorName}",`
       md += `\n  method: "${func.functionName}",`
       md += `\n  args: [${func.parameters.map(o => o.name).join(', ')}]`
       md += '\n});'

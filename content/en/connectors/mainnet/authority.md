@@ -18,7 +18,7 @@ Add an address as account authority
 
 ```javascript
 spells.add({
-  connector: "Auth-v1",
+  connector: "AUTHORITY-A",
   method: "add",
   args: [authority]
 });
@@ -45,7 +45,7 @@ Remove an address as account authority
 
 ```javascript
 spells.add({
-  connector: "Auth-v1",
+  connector: "AUTHORITY-A",
   method: "remove",
   args: [authority]
 });

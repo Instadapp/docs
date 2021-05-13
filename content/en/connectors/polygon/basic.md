@@ -18,7 +18,7 @@ Deposit a token to DSA
 
 ```javascript
 spells.add({
-  connector: "Basic-v1",
+  connector: "BASIC-A",
   method: "deposit",
   args: [token, amt, getId, setId]
 });
@@ -60,7 +60,7 @@ Withdraw a token from DSA
 
 ```javascript
 spells.add({
-  connector: "Basic-v1",
+  connector: "BASIC-A",
   method: "withdraw",
   args: [token, amt, to, getId, setId]
 });

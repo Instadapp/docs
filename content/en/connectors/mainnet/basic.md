@@ -18,7 +18,7 @@ Basic-v1 connector triggers methods like deposit, withdraw. You can view details
 
 ```javascript
 spells.add({
-  connector: "Basic-v1",
+  connector: "BASIC-A",
   method: "deposit",
   args: [token, amt, getId, setId]
 });
@@ -60,7 +60,7 @@ spells.add({
 
 ```javascript
 spells.add({
-  connector: "Basic-v1",
+  connector: "BASIC-A",
   method: "withdraw",
   args: [token, amt, to, getId, setId]
 });
