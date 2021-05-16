@@ -7,6 +7,15 @@ import config from "./env";
 import connectors from "./connectors.json";
 import { exit } from "process";
 
+const getDefiConnectors = async () => {
+  try {
+    let responce = await axios.get(config.DEFI_CONNECTORS_URL);
+    return responce.data.data;
+  } catch (error) {
+    Promise.reject(error);
+  }
+};
+
 const getEtherscanSourceCode = async (address) => {
   try {
     const responce = await axios.get(config.ETHERSCAN_API_URL, {
@@ -266,13 +275,15 @@ position: 6
 category: 'Connectors'
 ---
   `;
-
+  let defiConnectors = await getDefiConnectors()
   for (const connector of connectors["mainnet"]) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
     data.title = data.title ?? connector.title;
-    data.connectorName = connector.connectorName
+    data.connectorId = defiConnectors
+      .find(con => con.connectorName === data.connectorVersion)
+      .connectorId
 
     const md = await generateMd(data, connector.address, "mainnet");
 
@@ -305,7 +316,9 @@ category: 'Connectors'
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
     data.title = data.title ?? connector.title;
-    data.connectorName = connector.connectorName
+    data.connectorId = defiConnectors
+      .find(con => con.connectorName === data.connectorVersion)
+      .connectorId
 
     const md = await generateMd(data, connector.address, "polygon");
 
