@@ -1,17 +1,76 @@
 {
     "mainnet": [
         {
-            "type": "etherscan",
+            "type": "github",
+            "path": "basic/main.sol",
             "slug": "basic",
-            "title": "Basic",
-            "address": "0x9926955e0Dd681Dc303370C52f4Ad0a4dd061687"
+            "title": "Basic"
         },
         {
             "type": "github",
             "path": "authority/main.sol",
             "slug": "authority",
-            "title": "Authority",
-            "address": "0x6CE3e607C808b4f4C26B7F6aDAeB619e49CAbb25"
+            "title": "Authority"
+        },
+        {
+            "type": "github",
+            "path": "aave/v1/main.sol",
+            "slug": "aave-v1",
+            "title": "Aave V1"
+        },
+        {
+            "type": "github",
+            "path": "aave/v2/main.sol",
+            "slug": "aave-v2",
+            "title": "Aave V2"
+        },
+        {
+            "type": "github",
+            "path": "1inch/main.sol",
+            "slug": "1inch",
+            "title": "1Inch"
+        },
+        {
+            "type": "github",
+            "path": "compound/main.sol",
+            "slug": "compound",
+            "title": "Authority"
+        },
+        {
+            "type": "github",
+            "path": "COMP/main.sol",
+            "slug": "comp",
+            "title": "Comp"
+        },
+        {
+            "type": "github",
+            "path": "COMP/main.sol",
+            "slug": "comp",
+            "title": "Comp"
+        },
+        {
+            "type": "github",
+            "path": "makerdao/main.sol",
+            "slug": "makerdao",
+            "title": "MakerDAO"
+        },
+        {
+            "type": "github",
+            "path": "uniswap/main.sol",
+            "slug": "uniswap",
+            "title": "Uniswap v2"
+        },
+        {
+            "type": "github",
+            "path": "aave/aave-rewards/main.sol",
+            "slug": "aave-rewards",
+            "title": "Aave Rewards"
+        },
+        {
+            "type": "github",
+            "path": "aave/staked-aave/main.sol",
+            "slug": "aave-stake",
+            "title": "StkAave"
         }
     ],
     "polygon": [
@@ -19,8 +78,37 @@
             "type": "github",
             "path": "basic/main.sol",
             "slug": "basic",
-            "title": "Basic",
-            "address": "0x1cAF5EC802ca602E98139AD96A8f2B7BC524264E"
+            "title": "Basic"
+        },
+        {
+            "type": "github",
+            "path": "authority/main.sol",
+            "slug": "authority",
+            "title": "Authority"
+        },
+        {
+            "type": "github",
+            "path": "aave/v1/main.sol",
+            "slug": "aave-v1",
+            "title": "Aave V1"
+        },
+        {
+            "type": "github",
+            "path": "aave/v2/main.sol",
+            "slug": "aave-v2",
+            "title": "Aave V2"
+        },
+        {
+            "type": "github",
+            "path": "aave/aave-rewards/main.sol",
+            "slug": "aave-rewards",
+            "title": "Aave Rewards"
+        },
+        {
+            "type": "github",
+            "path": "paraswap/main.sol",
+            "slug": "paraswap",
+            "title": "Paraswap"
         }
     ]
 }
