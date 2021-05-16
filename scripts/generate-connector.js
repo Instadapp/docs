@@ -271,7 +271,7 @@ category: 'Connectors'
     const sourceCode = await getSourceCode(connector, "mainnet");
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
-    data.title = data.title ?? connector.title;
+    data.title = data.title || connector.title;
     data.connectorName = connector.connectorName
 
     const md = await generateMd(data, connector.address, "mainnet");
@@ -304,7 +304,7 @@ category: 'Connectors'
     const sourceCode = await getGithubSourceCode(connector.path, "polygon");
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
-    data.title = data.title ?? connector.title;
+    data.title = data.title || connector.title;
     data.connectorName = connector.connectorName
 
     const md = await generateMd(data, connector.address, "polygon");
