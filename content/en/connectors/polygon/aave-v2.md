@@ -4,9 +4,9 @@ description: 'Lending & Borrowing.'
 draft: true
 ---
 > Lending & Borrowing
-AaveV2-v1 connector triggers methods like deposit, withdraw, borrow, payback, enableCollateral, swapBorrowRateMode. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x497bc53507df17e60f731e9534cff74e8bc9dbb8#code).
+AaveV2-v1 connector triggers methods like deposit, withdraw, borrow, payback, enableCollateral, swapBorrowRateMode.
 
-- Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.
+- Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate MATIC.
 - use -1 or `dsa.maxValue` for the maximum amount in function.
 - If not sure about the arguments `getId` and `setId`, pass 0.
 
@@ -33,7 +33,7 @@ spells.add({
    <tr>
      <td><code>token</code></td>
      <td>address</td>
-     <td>The address of the token to deposit.(For ETH: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
+     <td>The address of the token to deposit.(For MATIC: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
    <tr>
    <tr>
      <td><code>amt</code></td>
@@ -75,7 +75,7 @@ spells.add({
    <tr>
      <td><code>token</code></td>
      <td>address</td>
-     <td>The address of the token to withdraw.(For ETH: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
+     <td>The address of the token to withdraw.(For MATIC: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
    <tr>
    <tr>
      <td><code>amt</code></td>
@@ -117,7 +117,7 @@ spells.add({
    <tr>
      <td><code>token</code></td>
      <td>address</td>
-     <td>The address of the token to borrow.(For ETH: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
+     <td>The address of the token to borrow.(For MATIC: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
    <tr>
    <tr>
      <td><code>amt</code></td>
@@ -164,7 +164,7 @@ spells.add({
    <tr>
      <td><code>token</code></td>
      <td>address</td>
-     <td>The address of the token to payback.(For ETH: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
+     <td>The address of the token to payback.(For MATIC: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
    <tr>
    <tr>
      <td><code>amt</code></td>
@@ -238,7 +238,7 @@ spells.add({
    <tr>
      <td><code>token</code></td>
      <td>address</td>
-     <td>The address of the token to swap borrow rate.(For ETH: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
+     <td>The address of the token to swap borrow rate.(For MATIC: 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE)</td>
    <tr>
    <tr>
      <td><code>rateMode</code></td>

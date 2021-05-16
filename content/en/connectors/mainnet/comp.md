@@ -4,7 +4,7 @@ description: 'Claim COMP.'
 draft: true
 ---
 > Lending & Borrowing
-COMP-v1 connector triggers methods like ClaimComp, ClaimCompTwo, ClaimCompThree, delegate. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/undefined#code).
+COMP-v1 connector triggers methods like ClaimComp, ClaimCompTwo, ClaimCompThree, delegate. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0xb446e325d44c52b93ec122bf76301f235f90b9c9#code).
 
 - Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.
 - use -1 or `dsa.maxValue` for the maximum amount in function.

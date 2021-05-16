@@ -4,7 +4,7 @@ description: 'Staked Aave.'
 draft: true
 ---
 > Lending & Borrowing
-Aave-Stake-v1 connector triggers methods like claim, stake, cooldown, redeem, delegate. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/undefined#code).
+Aave-Stake-v1 connector triggers methods like claim, stake, cooldown, redeem, delegate. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0xf73c94402bc24148b744083ed02654eec2c37d5b#code).
 
 - Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.
 - use -1 or `dsa.maxValue` for the maximum amount in function.

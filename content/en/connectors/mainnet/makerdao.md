@@ -4,7 +4,7 @@ description: 'Collateralized Borrowing.'
 draft: true
 ---
 > Lending & Borrowing
-MakerDao-v1 connector triggers methods like open, close, deposit, withdraw, borrow, payback, withdrawLiquidated, depositAndBorrow, exitDai, depositDai, withdrawDai. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/undefined#code).
+MakerDao-v1 connector triggers methods like open, close, deposit, withdraw, borrow, payback, withdrawLiquidated, depositAndBorrow, exitDai, depositDai, withdrawDai. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x839c2d3ade63df5b0b8f3e57d5e145057ab41556#code).
 
 - Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.
 - use -1 or `dsa.maxValue` for the maximum amount in function.

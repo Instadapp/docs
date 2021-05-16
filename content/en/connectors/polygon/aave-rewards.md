@@ -4,9 +4,9 @@ description: 'Claim Aave rewards.'
 draft: true
 ---
 > Lending & Borrowing
-Aave-Incentives-v1 connector triggers methods like claim. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x611c1fa59aa1d6352c4c8bd44882063c6aee85e0#code).
+Aave-Incentives-v1 connector triggers methods like claim.
 
-- Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.
+- Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate MATIC.
 - use -1 or `dsa.maxValue` for the maximum amount in function.
 - If not sure about the arguments `getId` and `setId`, pass 0.
 

@@ -4,7 +4,7 @@ description: 'Manage Authorities to DSA.'
 draft: true
 ---
 > Lending & Borrowing
-Auth-v1 connector triggers methods like add, remove. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/undefined#code).
+Auth-v1 connector triggers methods like add, remove. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x6ce3e607c808b4f4c26b7f6adaeb619e49cabb25#code).
 
 - Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.
 - use -1 or `dsa.maxValue` for the maximum amount in function.

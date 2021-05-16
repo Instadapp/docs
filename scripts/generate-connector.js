@@ -16,22 +16,6 @@ const getDefiConnectors = async () => {
   }
 };
 
-const getEtherscanSourceCode = async (address) => {
-  try {
-    const responce = await axios.get(config.ETHERSCAN_API_URL, {
-      params: {
-        module: "contract",
-        action: "getsourcecode",
-        address,
-        apikey: config.ETHERSCAN_API_KEY,
-      },
-    });
-    return responce.data.result[0].SourceCode;
-  } catch (error) {
-    Promise.reject(error);
-  }
-};
-
 const findSourceStrings = (sourceCode) => {
   try {
     let sourceStrings = sourceCode.split("\r\n");
@@ -249,15 +233,11 @@ const getGithubSourceCode = async (path, network) => {
     );
     return responce.data;
   } catch (error) {
-    Promise.reject(error);
+    return null;
   }
 };
 
 const getSourceCode = async (connector, network) => {
-  if (connector.type == "etherscan") {
-    return await getEtherscanSourceCode(connector.address);
-  }
-
   return await getGithubSourceCode(connector.path, network);
 };
 
@@ -275,17 +255,32 @@ position: 6
 category: 'Connectors'
 ---
   `;
-  let defiConnectors = await getDefiConnectors()
+  let defiConnectors = await getDefiConnectors();
   for (const connector of connectors["mainnet"]) {
     const sourceCode = await getSourceCode(connector, "mainnet");
+    if (!sourceCode) {
+      console.log("[Mainnet] Source not found for " + connector.slug);
+      continue;
+    }
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
     data.title = data.title ?? connector.title;
-    data.connectorId = defiConnectors
-      .find(con => con.connectorName === data.connectorVersion)
-      .connectorId
+    const defiConnector = defiConnectors.find(
+      (con) => con.connectorName === data.connectorVersion
+    );
 
-    const md = await generateMd(data, connector.address, "mainnet");
+    if (!defiConnector) {
+      console.log("[Polygon] Connector not found for " + data.connectorVersion);
+      continue;
+    }
+
+    data.connectorId = defiConnector.connectorId;
+
+    const md = await generateMd(
+      data,
+      connector.address || defiConnector.connectorAddress,
+      "mainnet"
+    );
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/mainnet") +
@@ -313,14 +308,29 @@ category: 'Connectors'
 
   for (const connector of connectors["polygon"]) {
     const sourceCode = await getGithubSourceCode(connector.path, "polygon");
+    if (!sourceCode) {
+      console.log("[Polygon] Source not found for " + connector.slug);
+      continue;
+    }
+
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
     data.title = data.title ?? connector.title;
-    data.connectorId = defiConnectors
-      .find(con => con.connectorName === data.connectorVersion)
-      .connectorId
+    const defiConnector = defiConnectors.find(
+      (con) => con.connectorName === data.connectorVersion
+    );
 
-    const md = await generateMd(data, connector.address, "polygon");
+    if (!defiConnector) {
+      console.log("[Polygon] Connector not found for " + data.connectorVersion);
+      continue;
+    }
+    data.connectorId = defiConnector.connectorId;
+
+    const md = await generateMd(
+      data,
+      connector.address || defiConnector.connectorAddress,
+      "polygon"
+    );
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/polygon") +

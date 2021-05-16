@@ -4,7 +4,7 @@ description: 'On-chain DEX Aggregator.'
 draft: true
 ---
 > Lending & Borrowing
-1Inch-v1 connector triggers methods like sell. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/undefined#code).
+1Inch-v1 connector triggers methods like sell. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x6c7256cf7c003dd85683339f75dde9971f98f2fd#code).
 
 - Use `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee` to indicate ETH.
 - use -1 or `dsa.maxValue` for the maximum amount in function.
