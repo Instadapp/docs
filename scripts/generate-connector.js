@@ -264,7 +264,7 @@ category: 'Connectors'
     }
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
-    data.title = data.title ?? connector.title;
+    data.title = data.title || connector.title;
     const defiConnector = defiConnectors.find(
       (con) => con.connectorName === data.connectorVersion
     );
@@ -315,7 +315,7 @@ category: 'Connectors'
 
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
-    data.title = data.title ?? connector.title;
+    data.title = data.title || connector.title;
     const defiConnector = defiConnectors.find(
       (con) => con.connectorName === data.connectorVersion
     );
