@@ -2,10 +2,10 @@ import { getTree } from "./treeGenerator";
 import inquirer from "inquirer";
 // import ConnectorsModel from '../models/Connectors'
 import Web3 from "web3";
-import config from  "../env";
+import "../env";
 
 const web3 = new Web3(
-  new Web3.providers.HttpProvider(config.ETH_NODE_URL)
+  new Web3.providers.HttpProvider(process.env.ETH_NODE_URL)
 );
 
 export const requestFilePath = async () => {
@@ -94,7 +94,7 @@ export const askFirstQuestions = async () => {
         name: "address",
         message: "Enter address?",
         validate: (address) => {
-          if (config.NODE_ENV === "dev-skip") address = hardCodedAddress;
+          if (process.env.NODE_ENV === "dev-skip") address = hardCodedAddress;
           return address
             ? web3.utils.isAddress(address) || "Enter a valid address!"
             : "address is required!";
@@ -102,7 +102,7 @@ export const askFirstQuestions = async () => {
       },
     ];
     let answers3 = await inquirer.prompt(questions3);
-    if (config.NODE_ENV === "dev-skip")
+    if (process.env.NODE_ENV === "dev-skip")
       answers3 = { address: hardCodedAddress };
     answers1 = { ...answers1, ...answers3 };
   }

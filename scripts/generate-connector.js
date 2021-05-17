@@ -3,13 +3,13 @@ import del from "del";
 import fs from "fs";
 import generateMd from "./utils/generateMd";
 import path from "path";
-import config from "./env";
+import "./env";
 import connectors from "./connectors.json";
 import { exit } from "process";
 
 const getDefiConnectors = async () => {
   try {
-    let responce = await axios.get(config.DEFI_CONNECTORS_URL);
+    let responce = await axios.get(process.env.DEFI_CONNECTORS_URL);
     return responce.data.data;
   } catch (error) {
     Promise.reject(error);
