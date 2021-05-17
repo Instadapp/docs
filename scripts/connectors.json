@@ -36,11 +36,6 @@
             "title": "Comp"
         },
         {
-            "path": "COMP/main.sol",
-            "slug": "comp",
-            "title": "Comp"
-        },
-        {
             "path": "makerdao/main.sol",
             "slug": "makerdao",
             "title": "MakerDAO"
