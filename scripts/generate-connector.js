@@ -9,7 +9,16 @@ import { exit } from "process";
 
 const getDefiConnectors = async () => {
   try {
-    let responce = await axios.get(process.env.DEFI_CONNECTORS_URL);
+    let responce = await axios.get(process.env.DEFI_CONNECTORS_UR || 'https://api.instadapp.io/defi/dsa/v2/connectors');
+    return responce.data.data;
+  } catch (error) {
+    Promise.reject(error);
+  }
+};
+
+const getDefiPolygonConnectors = async () => {
+  try {
+    let responce = await axios.get(process.env.DEFI_POLYGON_CONNECTORS_URL || 'https://api.instadapp.io/defi/polygon/dsa/v2/connectors');
     return responce.data.data;
   } catch (error) {
     Promise.reject(error);
@@ -256,6 +265,7 @@ category: 'Connectors'
 ---
   `;
   let defiConnectors = await getDefiConnectors();
+  let defiPolygonConnectors = await getDefiPolygonConnectors();
   for (const connector of connectors["mainnet"]) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     if (!sourceCode) {
@@ -316,7 +326,7 @@ category: 'Connectors'
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
     data.title = data.title || connector.title;
-    const defiConnector = defiConnectors.find(
+    const defiConnector = defiPolygonConnectors.find(
       (con) => con.connectorName === data.connectorVersion
     );
 
