@@ -1,0 +1,57 @@
+---
+title: Installation
+description: 'Quickly get up and running with DSA platform'
+position: 2
+category: 'Get Started'
+---
+> Quickly get up and running with DSA platform
+
+Interacting with DeFi shouldn't be hard. That's why this SDK exists.
+
+To get started, install the DSA Connect package from npm:
+
+```bash
+npm install dsa-connect
+```
+
+For browsers, via jsDelivr CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/dsa-connect@latest/dist/index.bundle.min.js"></script>
+```
+
+### Usage
+
+To enable web3 calls via SDK, instantiate [web3 library](https://github.com/ChainSafe/web3.js#installation)
+
+```js
+// in browser
+if (window.ethereum) {
+  window.web3 = new Web3(window.ethereum)
+} else if (window.web3) {
+  window.web3 = new Web3(window.web3.currentProvider)
+} else {
+  window.web3 = new Web3(customProvider)
+}
+```
+
+```js
+// in nodejs
+const Web3 = require('web3')
+const DSA = require('dsa-connect');
+const web3 = new Web3(new Web3.providers.HttpProvider(ETH_NODE_URL))
+```
+
+Now instantiate DSA with web3 instance.
+
+```js
+// in browser
+const dsa = new DSA(web3);
+
+// in nodejs
+const dsa = new DSA({
+  web3: web3,
+  mode: "node",
+  privateKey: PRIVATE_KEY
+});
+```
