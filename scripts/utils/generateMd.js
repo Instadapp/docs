@@ -1,10 +1,8 @@
-export default async function generateMd (data, address, position, chain) {
-    data = data[0]
+export default async function generateMd (data, address, chain) {
     let md = '---'
     md += `\ntitle: ${data.title}`
     md += `\ndescription: \'${data.description}\'`
-    md += `\nposition: ${position}`
-    md += '\ncategory: \'Connectors\''
+    md += '\ndraft: true'
     md += '\n---'
     md += '\n> Lending & Borrowing'
     md += `\n${data.connectorVersion} connector triggers methods like ${data.functions.map(o => o.functionName).join(', ')}.`
@@ -24,7 +22,7 @@ export default async function generateMd (data, address, position, chain) {
       md += '\n'
       md += '\n```javascript'
       md += '\nspells.add({'
-      md += `\n  connector: "${data.connectorVersion}",`
+      md += `\n  connector: "${data.connectorId}",`
       md += `\n  method: "${func.functionName}",`
       md += `\n  args: [${func.parameters.map(o => o.name).join(', ')}]`
       md += '\n});'

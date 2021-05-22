@@ -1,0 +1,91 @@
+{
+    "mainnet": [
+        {
+            "path": "basic/main.sol",
+            "slug": "basic",
+            "title": "Basic"
+        },
+        {
+            "path": "authority/main.sol",
+            "slug": "authority",
+            "title": "Authority"
+        },
+        {
+            "path": "aave/v1/main.sol",
+            "slug": "aave-v1",
+            "title": "Aave V1"
+        },
+        {
+            "path": "aave/v2/main.sol",
+            "slug": "aave-v2",
+            "title": "Aave V2"
+        },
+        {
+            "path": "1inch/main.sol",
+            "slug": "1inch",
+            "title": "1Inch"
+        },
+        {
+            "path": "compound/main.sol",
+            "slug": "compound",
+            "title": "Authority"
+        },
+        {
+            "path": "COMP/main.sol",
+            "slug": "comp",
+            "title": "Comp"
+        },
+        {
+            "path": "makerdao/main.sol",
+            "slug": "makerdao",
+            "title": "MakerDAO"
+        },
+        {
+            "path": "uniswap/main.sol",
+            "slug": "uniswap",
+            "title": "Uniswap v2"
+        },
+        {
+            "path": "aave/aave-rewards/main.sol",
+            "slug": "aave-rewards",
+            "title": "Aave Rewards"
+        },
+        {
+            "path": "aave/staked-aave/main.sol",
+            "slug": "aave-stake",
+            "title": "StkAave"
+        }
+    ],
+    "polygon": [
+        {
+            "path": "basic/main.sol",
+            "slug": "basic",
+            "title": "Basic"
+        },
+        {
+            "path": "authority/main.sol",
+            "slug": "authority",
+            "title": "Authority"
+        },
+        {
+            "path": "aave/v1/main.sol",
+            "slug": "aave-v1",
+            "title": "Aave V1"
+        },
+        {
+            "path": "aave/v2/main.sol",
+            "slug": "aave-v2",
+            "title": "Aave V2"
+        },
+        {
+            "path": "aave/aave-rewards/main.sol",
+            "slug": "aave-rewards",
+            "title": "Aave Rewards"
+        },
+        {
+            "path": "paraswap/main.sol",
+            "slug": "paraswap",
+            "title": "Paraswap"
+        }
+    ]
+}
