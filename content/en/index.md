@@ -1,5 +1,5 @@
 ---
-title: Protocol Overview
+title: Overview
 description: 'Welcome to the Instadapp docs!'
 position: 1
 category: ''
