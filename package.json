@@ -8,7 +8,8 @@
     "generate-connector": "node --experimental-modules --es-module-specifier-resolution=node ./scripts/generate-connector.js",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "postinstall" : "echo OK"
   },
   "devDependencies": {
     "axios": "^0.21.1",
