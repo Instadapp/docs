@@ -1,8 +1,6 @@
 ---
 title: Overview
-description: 'Welcome to the Instadapp docs!'
 position: 1
-category: ''
 ---
 
 Welcome to the Instadapp docs!
@@ -13,7 +11,8 @@ The following pages contain a comprehensive guide to Instadapp’s ecosystem, al
 
 ## Introduction
 
-The Instadapp platform is a full feature platform for both users and developers to leverage the full potential of DeFi. The Instadapp protocol ('DSL') acts as the middleware that aggregates multiple DeFi protocols into one upgradable smart contract layer. This structure allows Instadapp to access the full potential of Decentralized Finance.
+The Instadapp platform is a full feature platform for both users and developers to leverage the full potential of DeFi. 
+The Instadapp protocol ('DSL') acts as the middleware that aggregates multiple DeFi protocols into one upgradable smart contract layer. This structure allows Instadapp to access the full potential of Decentralized Finance.
 
 The main functionalities of the DSL are account extensions and upgradability. The unique upgradability means that the upcoming and new extensions will be upgraded, maintained and managed by INST governance. The DSL also includes a new operability layer that acts as a ‘Account Extension.’ These extensions allow the user to access new and unique functionality for their DSL account. These extensions and the evolution of the platform form a DeFi hub through which new use cases and extensions can be created, some examples of possible use cases include: Flash Loan Module, Authority extension, L2 extension, etc.
 

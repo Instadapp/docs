@@ -252,10 +252,10 @@ const getSourceCode = async (connector, network) => {
 
 (async function main() {
   try {
-    await del(path.resolve("./content/en/connectors"));
-    fs.mkdirSync(path.resolve("./content/en/connectors"));
-    fs.mkdirSync(path.resolve("./content/en/connectors/mainnet"));
-    fs.mkdirSync(path.resolve("./content/en/connectors/polygon"));
+    await del(path.resolve("./pages/connectors"));
+    fs.mkdirSync(path.resolve("./pages/connectors"));
+    fs.mkdirSync(path.resolve("./pages/connectors/mainnet"));
+    fs.mkdirSync(path.resolve("./pages/connectors/polygon"));
   } catch (error) {}
 
   let mainnetMd = `---
@@ -293,7 +293,7 @@ category: 'Connectors'
     );
 
     fs.writeFileSync(
-      path.resolve("./content/en/connectors/mainnet") +
+      path.resolve("./pages/connectors/mainnet") +
         "/" +
         connector.slug +
         ".md",
@@ -305,7 +305,7 @@ category: 'Connectors'
   }
 
   fs.writeFileSync(
-    path.resolve("./content/en/connectors/mainnet.md"),
+    path.resolve("./pages/connectors/mainnet.md"),
     mainnetMd
   );
 
@@ -343,7 +343,7 @@ category: 'Connectors'
     );
 
     fs.writeFileSync(
-      path.resolve("./content/en/connectors/polygon") +
+      path.resolve("./pages/connectors/polygon") +
         "/" +
         connector.slug +
         ".md",
@@ -355,7 +355,7 @@ category: 'Connectors'
   }
 
   fs.writeFileSync(
-    path.resolve("./content/en/connectors/polygon.md"),
+    path.resolve("./pages/connectors/polygon.md"),
     polygonMd
   );
 

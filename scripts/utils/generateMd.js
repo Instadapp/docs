@@ -2,7 +2,6 @@ export default async function generateMd (data, address, chain) {
     let md = '---'
     md += `\ntitle: ${data.title}`
     md += `\ndescription: \'${data.description}\'`
-    md += '\ndraft: true'
     md += '\n---'
     md += '\n> Lending & Borrowing'
     md += `\n${data.connectorVersion} connector triggers methods like ${data.functions.map(o => o.functionName).join(', ')}.`
