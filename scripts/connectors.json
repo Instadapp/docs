@@ -51,9 +51,14 @@
             "title": "Aave Rewards"
         },
         {
-            "path": "aave/staked-aave/main.sol",
-            "slug": "aave-stake",
-            "title": "StkAave"
+            "path": "aave/aave-rewards/main.sol",
+            "slug": "aave-rewards",
+            "title": "Aave Rewards"
+        },
+        {
+            "path": "polygon-bridge/main.sol",
+            "slug": "assets-polygon-bridge",
+            "title": "Assets Transfer Polygon Bridge"
         }
     ],
     "polygon": [
@@ -66,11 +71,6 @@
             "path": "authority/main.sol",
             "slug": "authority",
             "title": "Authority"
-        },
-        {
-            "path": "aave/v1/main.sol",
-            "slug": "aave-v1",
-            "title": "Aave V1"
         },
         {
             "path": "aave/v2/main.sol",
