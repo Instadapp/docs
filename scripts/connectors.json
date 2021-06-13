@@ -51,11 +51,6 @@
             "title": "Aave Rewards"
         },
         {
-            "path": "aave/aave-rewards/main.sol",
-            "slug": "aave-rewards",
-            "title": "Aave Rewards"
-        },
-        {
             "path": "polygon-bridge/main.sol",
             "slug": "assets-polygon-bridge",
             "title": "Assets Transfer Polygon Bridge"
