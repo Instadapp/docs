@@ -1,11 +1,10 @@
 {
   "title": "Instadapp Developers",
-  "url": "https://github.com/InstaDApp/docs-nuxt",
+  "url": "https://docs.instadapp.io/",
   "logo": {
     "light": "/logo-light.svg",
     "dark": "/logo-dark.svg"
   },
-  "github": "InstaDApp/docs-nuxt",
   "twitter": "@instadapp",
   "defaultDir" : ""
 }
