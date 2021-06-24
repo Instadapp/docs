@@ -69,12 +69,12 @@
         {
             "path": "weth/main.sol",
             "slug": "weth",
-            "title": "Weth"
+            "title": "WETH"
         },
         {
             "path": "1proto/main.sol",
             "slug": "1proto",
-            "title": "1Proto"
+            "title": "1Inch(on-chain)"
         }
     ],
     "polygon": [
