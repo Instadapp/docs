@@ -9,7 +9,10 @@ import { exit } from "process";
 
 const getDefiConnectors = async () => {
   try {
-    let responce = await axios.get(process.env.DEFI_CONNECTORS_UR || 'https://api.instadapp.io/defi/dsa/v2/connectors');
+    let responce = await axios.get(
+      process.env.DEFI_CONNECTORS_UR ||
+        "https://api.instadapp.io/defi/dsa/v2/connectors"
+    );
     return responce.data.data;
   } catch (error) {
     Promise.reject(error);
@@ -18,7 +21,10 @@ const getDefiConnectors = async () => {
 
 const getDefiPolygonConnectors = async () => {
   try {
-    let responce = await axios.get(process.env.DEFI_POLYGON_CONNECTORS_URL || 'https://api.instadapp.io/defi/polygon/dsa/v2/connectors');
+    let responce = await axios.get(
+      process.env.DEFI_POLYGON_CONNECTORS_URL ||
+        "https://api.instadapp.io/defi/polygon/dsa/v2/connectors"
+    );
     return responce.data.data;
   } catch (error) {
     Promise.reject(error);
@@ -274,13 +280,13 @@ category: 'Connectors'
     }
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
-    data.title = data.title || connector.title;
+    data.title = connector.title || data.title;
     const defiConnector = defiConnectors.find(
       (con) => con.connectorName === data.connectorVersion
     );
 
     if (!defiConnector) {
-      console.log("[Polygon] Connector not found for " + data.connectorVersion);
+      console.log("[Mainnet] Connector not found for " + data.connectorVersion);
       continue;
     }
 
@@ -325,7 +331,8 @@ category: 'Connectors'
 
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
-    data.title = data.title || connector.title;
+    data.title = connector.title || data.title;
+    
     const defiConnector = defiPolygonConnectors.find(
       (con) => con.connectorName === data.connectorVersion
     );

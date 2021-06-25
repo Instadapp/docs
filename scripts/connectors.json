@@ -54,6 +54,27 @@
             "path": "polygon-bridge/main.sol",
             "slug": "assets-polygon-bridge",
             "title": "Assets Transfer Polygon Bridge"
+        },
+        {
+            "path": "INST/main.sol",
+            "slug": "inst",
+            "title": "INST Governance"
+        },
+        {
+            "path": "instapool_v2/main.sol",
+            "slug": "instapool_v2",
+            "title": "Instapool V2"
+            
+        },
+        {
+            "path": "weth/main.sol",
+            "slug": "weth",
+            "title": "WETH"
+        },
+        {
+            "path": "1proto/main.sol",
+            "slug": "1proto",
+            "title": "1Inch (on-chain)"
         }
     ],
     "polygon": [
