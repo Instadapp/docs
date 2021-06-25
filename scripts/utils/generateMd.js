@@ -4,7 +4,7 @@ export default async function generateMd (data, address, chain) {
     md += `\ndescription: \'${data.description}\'`
     md += '\ndraft: true'
     md += '\n---'
-    md += '\n> Lending & Borrowing'
+    md += `\n> ${data.description}`
     md += `\n${data.connectorVersion} connector triggers methods like ${data.functions.map(o => o.functionName).join(', ')}.`
     if (chain === 'mainnet') md += ` You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/${address}#code).`
     md += '\n'
