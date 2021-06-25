@@ -58,7 +58,7 @@
         {
             "path": "INST/main.sol",
             "slug": "inst",
-            "title": "INST"
+            "title": "INST Governance"
         },
         {
             "path": "instapool_v2/main.sol",
@@ -74,7 +74,7 @@
         {
             "path": "1proto/main.sol",
             "slug": "1proto",
-            "title": "1Inch(on-chain)"
+            "title": "1Inch (on-chain)"
         }
     ],
     "polygon": [

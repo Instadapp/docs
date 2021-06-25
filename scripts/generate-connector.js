@@ -286,7 +286,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("[Polygon] Connector not found for " + data.connectorVersion);
+      console.log("[Mainnet] Connector not found for " + data.connectorVersion);
       continue;
     }
 
