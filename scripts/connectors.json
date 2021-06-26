@@ -102,6 +102,11 @@
             "path": "paraswap/main.sol",
             "slug": "paraswap",
             "title": "Paraswap"
+        },
+        {
+            "path": "1inch/main.sol",
+            "slug": "1inch",
+            "title": "1Inch"
         }
     ]
 }
