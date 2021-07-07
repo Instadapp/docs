@@ -64,7 +64,6 @@
             "path": "instapool_v2/main.sol",
             "slug": "instapool_v2",
             "title": "Instapool V2"
-            
         },
         {
             "path": "weth/main.sol",
@@ -75,6 +74,11 @@
             "path": "1proto/main.sol",
             "slug": "1proto",
             "title": "1Inch (on-chain)"
+        },
+        {
+            "path": "guniswap_v3_erc20/main.sol",
+            "slug": "guniswap_v3_erc20",
+            "title": "G-Uniswap V3 ERC20"
         }
     ],
     "polygon": [
