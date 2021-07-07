@@ -79,6 +79,11 @@
             "path": "guniswap_v3_erc20/main.sol",
             "slug": "guniswap_v3_erc20",
             "title": "G-Uniswap V3 ERC20"
+        },
+        {
+            "path": "guniswap_v3_erc20_staking/main.sol",
+            "slug": "guniswap_v3_erc20_staking",
+            "title": "G-UNI Staking"
         }
     ],
     "polygon": [
