@@ -88,5 +88,3 @@ dsa.setInstance(dsaId); // DSA ID
 | **Parameter** | **Type**        | **Description**                                                                                                                                                                |
 |---------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `dsaId`    | *Number* | DSA ID to be used for casting. |
-
-The method returns an array of objects with all the DSA accounts where `address` is authorised:
