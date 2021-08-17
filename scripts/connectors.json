@@ -28,7 +28,7 @@
         {
             "path": "compound/main.sol",
             "slug": "compound",
-            "title": "Authority"
+            "title": "Compound"
         },
         {
             "path": "COMP/main.sol",
