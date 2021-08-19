@@ -272,7 +272,7 @@ category: 'Connectors'
   `;
   let defiConnectors = await getDefiConnectors();
   let defiPolygonConnectors = await getDefiPolygonConnectors();
-  for (const connector of connectors["mainnet"]) {
+  for (const connector of connectors["mainnet"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     if (!sourceCode) {
       console.log("[Mainnet] Source not found for " + connector.slug);
@@ -322,7 +322,7 @@ category: 'Connectors'
 ---
 `;
 
-  for (const connector of connectors["polygon"]) {
+  for (const connector of connectors["polygon"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "polygon");
     if (!sourceCode) {
       console.log("[Polygon] Source not found for " + connector.slug);
