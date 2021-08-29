@@ -94,6 +94,26 @@
             "path": "reflexer/main.sol",
             "slug": "reflexer",
             "title": "Reflexer"
+        },
+        {
+            "path": "uniswapV3/main.sol",
+            "slug": "uniswapV3",
+            "title": "Uniswap V3"
+        },
+        {
+            "path": "b.protocol/compound/main.sol",
+            "slug": "bprotocol-compound",
+            "title": "B.Protocol Compound"
+        },
+        {
+            "path": "b.protocol/liquity/main.sol",
+            "slug": "bprotocol-liquity",
+            "title": "B.Protocol Liquity"
+        },
+        {
+            "path": "b.protocol/makerdao/main.sol",
+            "slug": "bprotocol-makerdao",
+            "title": "B.Protocol MakerDAO"
         }
     ],
     "polygon": [
