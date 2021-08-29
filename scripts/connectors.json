@@ -43,7 +43,7 @@
         {
             "path": "uniswap/main.sol",
             "slug": "uniswap",
-            "title": "Uniswap v2"
+            "title": "Uniswap V2"
         },
         {
             "path": "aave/aave-rewards/main.sol",
