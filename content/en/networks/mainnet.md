@@ -1,11 +1,12 @@
 ---
-title: Mainnet
+title: Instadapp on Mainnet
+menuTitle: Mainnet
 description: ""
 position: 2
 category: "Networks"
 ---
 
-## Networks: Deployed addresses
+## Deployed addresses
 
 Below are all the addresses of Core Contracts of the DSL ecosystem on Main-net:
 
