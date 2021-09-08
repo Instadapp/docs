@@ -266,6 +266,7 @@ const getSourceCode = async (connector, network) => {
 
   let mainnetMd = `---
 title: Mainnet Connectors
+menuTitle: Mainnet
 description: ''
 position: 6
 category: 'Connectors'
@@ -318,6 +319,7 @@ category: 'Connectors'
 
   let polygonMd = `---
 title: Polygon Connectors
+menuTitle: Polygon
 description: ''
 position: 7
 category: 'Connectors'
