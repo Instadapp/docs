@@ -265,7 +265,8 @@ const getSourceCode = async (connector, network) => {
   } catch (error) {}
 
   let mainnetMd = `---
-title: Mainnet
+title: Mainnet Connectors
+description: ''
 position: 6
 category: 'Connectors'
 ---
@@ -316,7 +317,8 @@ category: 'Connectors'
   );
 
   let polygonMd = `---
-title: Polygon
+title: Polygon Connectors
+description: ''
 position: 7
 category: 'Connectors'
 ---
