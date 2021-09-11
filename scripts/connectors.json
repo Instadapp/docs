@@ -3,7 +3,7 @@
         {
             "path": "basic/main.sol",
             "slug": "basic",
-            "title": "Basic"
+            "title": "Basic A (ERC20)"
         },
         {
             "path": "authority/main.sol",
@@ -41,7 +41,7 @@
             "title": "MakerDAO"
         },
         {
-            "path": "uniswap/main.sol",
+            "path": "uniswap/v2/main.sol",
             "slug": "uniswap",
             "title": "Uniswap V2"
         },
@@ -96,7 +96,7 @@
             "title": "Reflexer"
         },
         {
-            "path": "uniswapV3/main.sol",
+            "path": "uniswap/v3/main.sol",
             "slug": "uniswapV3",
             "title": "Uniswap V3"
         },
@@ -114,6 +114,21 @@
             "path": "b.protocol/makerdao/main.sol",
             "slug": "bprotocol-makerdao",
             "title": "B.Protocol MakerDAO"
+        },
+        {
+            "path": "uniswap/v3_staker/main.sol",
+            "slug": "uniswap-v3-staker",
+            "title": "Uniswap V3 Staker"
+        },
+        {
+            "path": "basic-ERC721/main.sol",
+            "slug": "basic-b",
+            "title": "Basic B (ERC721)"
+        },
+        {
+            "path": "basic-ERC1155/main.sol",
+            "slug": "basic-c",
+            "title": "Basic C (ERC1155)"
         }
     ],
     "polygon": [
