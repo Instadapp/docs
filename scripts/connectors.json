@@ -3,7 +3,7 @@
         {
             "path": "basic/main.sol",
             "slug": "basic",
-            "title": "Basic"
+            "title": "Basic A (ERC20)"
         },
         {
             "path": "authority/main.sol",
@@ -123,12 +123,12 @@
         {
             "path": "basic-ERC721/main.sol",
             "slug": "basic-b",
-            "title": "Basic B"
+            "title": "Basic B (ERC721)"
         },
         {
             "path": "basic-ERC1155/main.sol",
             "slug": "basic-c",
-            "title": "Basic C"
+            "title": "Basic C (ERC1155)"
         }
     ],
     "polygon": [
