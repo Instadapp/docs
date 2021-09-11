@@ -129,6 +129,11 @@
             "path": "basic-ERC1155/main.sol",
             "slug": "basic-c",
             "title": "Basic C (ERC1155)"
+        },
+        {
+            "path": "yearn_v2/main.sol",
+            "slug": "yearn-v2",
+            "title": "Yearn V2"
         }
     ],
     "polygon": [
