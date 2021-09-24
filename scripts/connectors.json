@@ -167,5 +167,42 @@
             "slug": "1inch",
             "title": "1Inch"
         }
+    ],
+    "arbitrum": [
+        {
+            "path": "authority/main.sol",
+            "slug": "authority",
+            "title": "Authority"
+        },
+        {
+            "path": "basic/main.sol",
+            "slug": "basic",
+            "title": "Basic A (ERC20)"
+        },
+        {
+            "path": "basic-ERC721/main.sol",
+            "slug": "basic-b",
+            "title": "Basic B (ERC721)"
+        },
+        {
+            "path": "basic-ERC1155/main.sol",
+            "slug": "basic-c",
+            "title": "Basic C (ERC1155)"
+        },
+        {
+            "path": "uniswap/v3/main.sol",
+            "slug": "uniswapV3",
+            "title": "Uniswap V3"
+        },
+        {
+            "path": "1inch/main.sol",
+            "slug": "1inch",
+            "title": "1Inch"
+        },
+        {
+            "path": "weth/main.sol",
+            "slug": "weth",
+            "title": "WETH"
+        }
     ]
 }

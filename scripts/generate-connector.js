@@ -31,6 +31,19 @@ const getDefiPolygonConnectors = async () => {
   }
 };
 
+const getDefiArbitrumConnectors = async () => {
+  try {
+    let responce = await axios.get(
+      process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
+        "https://api.instad.app/defi/arbitrum/dsa/v2/connectors"
+    );
+    return responce.data.data;
+  } catch (error) {
+    // Promise.reject(error);
+    return []
+  }
+};
+
 const findSourceStrings = (sourceCode) => {
   try {
     let sourceStrings = sourceCode.split("\r\n");
@@ -262,6 +275,7 @@ const getSourceCode = async (connector, network) => {
     fs.mkdirSync(path.resolve("./content/en/connectors"));
     fs.mkdirSync(path.resolve("./content/en/connectors/mainnet"));
     fs.mkdirSync(path.resolve("./content/en/connectors/polygon"));
+    fs.mkdirSync(path.resolve("./content/en/connectors/arbitrum"));
   } catch (error) {}
 
   let mainnetMd = `---
@@ -274,6 +288,7 @@ category: 'Connectors'
   `;
   let defiConnectors = await getDefiConnectors();
   let defiPolygonConnectors = await getDefiPolygonConnectors();
+  let defiArbitrumConnectors = await getDefiArbitrumConnectors();
   for (const connector of connectors["mainnet"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     if (!sourceCode) {
@@ -369,6 +384,60 @@ category: 'Connectors'
     path.resolve("./content/en/connectors/polygon.md"),
     polygonMd
   );
+
+  let arbitrumMd = `---
+title: Arbitrum Connectors
+menuTitle: Arbitrum
+description: ''
+position: 8
+category: 'Connectors'
+---
+  `;
+  
+    for (const connector of connectors["arbitrum"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+      const sourceCode = await getGithubSourceCode(connector.path, "arbitrum");
+      if (!sourceCode) {
+        console.log("[Arbitrum] Source not found for " + connector.slug);
+        continue;
+      }
+  
+      const sourceStrings = findSourceStrings(sourceCode);
+      let data = parseSourceStrings(sourceStrings)[0];
+      data.title = connector.title || data.title;
+      
+      const defiConnector = defiArbitrumConnectors.find(
+        (con) => con.connectorName === data.connectorVersion
+      );
+  
+      if (!defiConnector) {
+        console.log("[Arbitrum] Connector not found for " + data.connectorVersion);
+        continue;
+      }
+      data.connectorId = defiConnector.connectorId;
+  
+      const md = await generateMd(
+        data,
+        connector.address || defiConnector.connectorAddress,
+        "arbitrum"
+      );
+  
+      fs.writeFileSync(
+        path.resolve("./content/en/connectors/arbitrum") +
+          "/" +
+          connector.slug +
+          ".md",
+        md
+      );
+  
+      arbitrumMd += `
+  - [${data.title}](/connectors/arbitrum/${connector.slug})`;
+    }
+  
+    fs.writeFileSync(
+      path.resolve("./content/en/connectors/arbitrum.md"),
+      arbitrumMd
+    );
+  
 
   exit(0);
 })();
