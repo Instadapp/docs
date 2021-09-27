@@ -35,7 +35,7 @@ const getDefiArbitrumConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
-        "https://api.instad.app/defi/arbitrum/dsa/v2/connectors"
+        "https://api.instadapp.io/defi/arbitrum/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
