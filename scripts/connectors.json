@@ -214,5 +214,32 @@
             "slug": "weth",
             "title": "WETH"
         }
+    ],
+    "avalanche": [
+        {
+            "path": "authority/main.sol",
+            "slug": "authority",
+            "title": "Authority"
+        },
+        {
+            "path": "basic/main.sol",
+            "slug": "basic",
+            "title": "Basic A (ERC20)"
+        },
+        {
+            "path": "paraswap/main.sol",
+            "slug": "paraswap",
+            "title": "Paraswap"
+        },
+        {
+            "path": "aave/v2/main.sol",
+            "slug": "aave-v2",
+            "title": "Aave V2"
+        },
+        {
+            "path": "wavax/main.sol",
+            "slug": "wavax",
+            "title": "WAVAX"
+        }
     ]
 }
