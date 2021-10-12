@@ -134,6 +134,11 @@
             "path": "yearn_v2/main.sol",
             "slug": "yearn-v2",
             "title": "Yearn V2"
+        },
+        {
+            "path": "gelato/aave-services/protection/main.sol",
+            "slug": "gelato-aave-protection",
+            "title": "Gelato Aave Protection"
         }
     ],
     "polygon": [
@@ -166,6 +171,11 @@
             "path": "1inch/main.sol",
             "slug": "1inch",
             "title": "1Inch"
+        },
+        {
+            "path": "gelato/aave-services/protection/main.sol",
+            "slug": "gelato-aave-protection",
+            "title": "Gelato Aave Protection"
         }
     ],
     "arbitrum": [
@@ -203,6 +213,33 @@
             "path": "weth/main.sol",
             "slug": "weth",
             "title": "WETH"
+        }
+    ],
+    "avalanche": [
+        {
+            "path": "authority/main.sol",
+            "slug": "authority",
+            "title": "Authority"
+        },
+        {
+            "path": "basic/main.sol",
+            "slug": "basic",
+            "title": "Basic A (ERC20)"
+        },
+        {
+            "path": "paraswap/main.sol",
+            "slug": "paraswap",
+            "title": "Paraswap"
+        },
+        {
+            "path": "aave/v2/main.sol",
+            "slug": "aave-v2",
+            "title": "Aave V2"
+        },
+        {
+            "path": "wavax/main.sol",
+            "slug": "wavax",
+            "title": "WAVAX"
         }
     ]
 }
