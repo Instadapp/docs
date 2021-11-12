@@ -240,6 +240,16 @@
             "path": "wavax/main.sol",
             "slug": "wavax",
             "title": "WAVAX"
+        },
+        {
+            "path": "benqi/main.sol",
+            "slug": "benqi-v1",
+            "title": "Benqi"
+        },
+        {
+            "path": "Qi/main.sol",
+            "slug": "qi-v1",
+            "title": "QI"
         }
     ]
 }
