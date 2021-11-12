@@ -244,12 +244,12 @@
         {
             "path": "benqi/main.sol",
             "slug": "benqi-v1",
-            "title": "Benqi v1"
+            "title": "Benqi"
         },
         {
             "path": "Qi/main.sol",
             "slug": "qi-v1",
-            "title": "QI v1"
+            "title": "QI"
         }
     ]
 }
