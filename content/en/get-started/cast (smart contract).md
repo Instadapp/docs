@@ -46,8 +46,8 @@ contract InteractingDSA {
         _targets[0] = "BASIC-A";
         _targets[1] = "COMPOUND-A";
         
-        bytes4 private constant basicDeposit = bytes4(keccak256("deposit(address,uint256,uint256,uint256)"));
-        bytes4 private constant compoundDeposit = bytes4(keccak256("deposit(string,uint256,uint256,uint256)"));
+        bytes4 memory basicDeposit = bytes4(keccak256("deposit(address,uint256,uint256,uint256)"));
+        bytes4 memory compoundDeposit = bytes4(keccak256("deposit(string,uint256,uint256,uint256)"));
         
         address dai = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
         uint amtToDeposit = 1e18; // 1 DAI
