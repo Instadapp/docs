@@ -7,7 +7,7 @@ category: "Get Started"
 > Interact with DSA on smart contract level
 This guide will show you how to interact with DSA on the smart contract level.
 
-### Quick setup:
+### Quick setup
 
 ```js
 pragma solidity ^0.8.3;
@@ -67,23 +67,23 @@ Go to Networks to find each chain-related address.
 
 ### Usage
 
-* [InstaIndex:](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol)
+* [InstaIndex](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol)
 This is the Main Contract for all the Defi Smart Accounts. Used to create a new Defi Smart Account for a user and run a cast function in the new smart account.
 
 
-* [InstaImplementationM1:](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol)
+* [InstaImplementationM1](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol)
 This contract contains most core functions of smart account name cast(). It is only called by owners of smart accounts and has full-fledge access over the smart account. Used also to access all the DSA.
 
-* [build(owner, accountVersion, _origin):](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol#L170)
+* [build(owner, accountVersion, _origin)](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol#L170)
 Create a DSA Account using this function. It returns the address of the DSA account created.
 
-```
-owner: Owner of the Smart Account
-accountVersion: Account Module version
-_origin: Where Smart Account is created.
-```
+|parameter|type|description|
+|---------|----|-----------|
+|owner|address| Owner of the Smart Account|
+|accountversiin|uint256|Account Module version|
+|_origin|address|Where Smart Account is created|
 
-* [cast(_targets, _datas, _origin):](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
+* [cast(_targets, _datas, _origin)](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
 Using cast() user can access the connectors, which allows the smart account to interact with protocols or set up any settings on the smart account.
 
 ```
@@ -106,7 +106,7 @@ Creating DSA account
 address _account = instaIndex.build(_owner, 2, address(0));
 ```
 
-### Casting Spell:
+### Casting Spell
 Spells denote a sequence of connector functions that will achieve a given use case. Spells can comprise any number of tasks across any number of connectors.
 
 
