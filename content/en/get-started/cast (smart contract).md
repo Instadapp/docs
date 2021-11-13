@@ -53,7 +53,7 @@ contract InteractingDSA {
         uint amtToDeposit = 1e18; // 1 DAI
         
         _data[0] = abi.encodeWithSelector(basicDeposit, dai, amtToDeposit, 0, 0);
-        _data[1] = abi.encodeWithSelector(compoundDeposit, dai, amtToDeposit, 0, 0);
+        _data[1] = abi.encodeWithSelector(compoundDeposit, "DAI-A", amtToDeposit, 0, 0);
         
         IDSA(_account).cast(_targets, _data, address(0)); // Magic!!
     }
