@@ -67,29 +67,30 @@ Go to Networks to find each chain-related address.
 
 ### Usage
 
-* [InstaIndex](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol)
+* #### InstaIndex [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol)
 This is the Main Contract for all the Defi Smart Accounts. Used to create a new Defi Smart Account for a user and run a cast function in the new smart account.
 
 
-* [InstaImplementationM1](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol)
+* #### InstaImplementationM1 [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol)
 This contract contains most core functions of smart account name cast(). It is only called by owners of smart accounts and has full-fledge access over the smart account. Used also to access all the DSA.
 
-* [build(owner, accountVersion, _origin)](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol#L170)
+* #### build(owner, accountVersion, _origin) [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol#L170)
 Create a DSA Account using this function. It returns the address of the DSA account created.
 
 |parameter|type|description|
 |---------|----|-----------|
 |owner|address| Owner of the Smart Account|
-|accountversiin|uint256|Account Module version|
+|accountversion|uint256|Account Module version|
 |_origin|address|Where Smart Account is created|
 
 * [cast(_targets, _datas, _origin)](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
 Using cast() user can access the connectors, which allows the smart account to interact with protocols or set up any settings on the smart account.
 
-```
-_target: string array mentioning connectors, encoded data
-_datas: encoded data containing function abi and params
-```
+|parameter|type|description|
+|---------|----|-----------|
+_target|string[]|string array mentioning connectors, encoded data|
+|_datas|bytes[]|encoded data containing function abi and params|
+
  
 ## DSA Setup
 Inside the interactingDSA contract, we will create a DSA account and use that to cast a spell.
