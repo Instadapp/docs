@@ -1,7 +1,7 @@
 ---
 title: Cast (smart contract)
 description: "Interact with DSA on smart contract level"
-position: 5
+position: 4
 category: "Get Started"
 ---
 > Interact with DSA on smart contract level
@@ -83,7 +83,7 @@ Create a DSA Account using this function. It returns the address of the DSA acco
 |accountversion|uint256|Account Module version|
 |_origin|address|Where Smart Account is created|
 
-* [cast(_targets, _datas, _origin)](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
+* #### cast(_targets, _datas, _origin) [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
 Using cast() user can access the connectors, which allows the smart account to interact with protocols or set up any settings on the smart account.
 
 |parameter|type|description|
@@ -92,7 +92,7 @@ _target|string[]|string array mentioning connectors, encoded data|
 |_datas|bytes[]|encoded data containing function abi and params|
 
  
-## DSA Setup
+### DSA Setup
 Inside the interactingDSA contract, we will create a DSA account and use that to cast a spell.
 
 Creating InstaIndex instance

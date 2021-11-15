@@ -1,7 +1,7 @@
 ---
 title: Setup Account
 description: 'DeFi Smart Account Setup'
-position: 3
+position: 2
 category: 'Get Started'
 ---
 > DeFi Smart Account Setup
