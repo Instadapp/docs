@@ -1,7 +1,7 @@
 ---
 title: Cast
 description: "Casting Spells"
-position: 3
+position: 4
 category: "Get Started"
 ---
 > Casting Spells

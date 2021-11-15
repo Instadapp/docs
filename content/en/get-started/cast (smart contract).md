@@ -1,7 +1,7 @@
 ---
 title: Cast (smart contract)
 description: "Interact with DSA on smart contract level"
-position: 4
+position: 5
 category: "Get Started"
 ---
 > Interact with DSA on smart contract level
@@ -9,7 +9,7 @@ This guide will show you how to interact with DSA on the smart contract level.
 
 ### Quick setup
 
-```js
+```solidity
 pragma solidity ^0.8.3;
 
 import "hardhat/console.sol";
@@ -97,13 +97,13 @@ Inside the interactingDSA contract, we will create a DSA account and use that to
 
 Creating InstaIndex instance
 
-```js
+```solidity
 IInstaIndex instaIndex = IInstaIndex(0x2971adfa57b20e5a416ae5a708a8655a9c74f723);
 ```
 
 Creating DSA account
 
-```js
+```solidity
 address _account = instaIndex.build(_owner, 2, address(0));
 ```
 
@@ -111,7 +111,7 @@ address _account = instaIndex.build(_owner, 2, address(0));
 Spells denote a sequence of connector functions that will achieve a given use case. Spells can comprise any number of tasks across any number of connectors.
 
 
-```js
+```solidity
  IDSA(_account).cast(_targets, _data, address(0));
 ```
 We create an InstaIplementationM1 contract instance using our DSA account and then cast function to cast the spell.

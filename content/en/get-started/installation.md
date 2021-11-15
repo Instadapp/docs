@@ -1,7 +1,7 @@
 ---
 title: Installation
 description: 'Quickly get up and running with DSA platform'
-position: 1
+position: 2
 category: 'Get Started'
 ---
 > Quickly get up and running with DSA platform
