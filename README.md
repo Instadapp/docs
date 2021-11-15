@@ -1,4 +1,4 @@
-# instadapp-dcos
+# instadapp-docs
 
 ## Setup
 
