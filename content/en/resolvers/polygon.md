@@ -1,9 +1,17 @@
 ---
-title: Polygon 
+title: Polygon Resolvers
+menuTitle: Polygon
 description: "Polygon resolvers"
 position: 11
 category: "resolvers"
 ---
+
+* [Aave](./polygon/aave) 
+
+* [Instadapp](./polygon/instadapp)
+
+
+<!-- 
 ## Aave
 
 AaveV2-v1.6 resolver triggers methods like getPosition, getConfiguration, getReservesList. You can view details like source code, ABIs on [polygonscan](https://polygonscan.com/address/0x1f5e200493adB54FEB4a7D734E48649143ecE2CA).
@@ -78,4 +86,4 @@ function getAccountAuthorities(address account) public view returns(address[] me
 | ------ | ---- | ----------- | 
 | account | address | Address of the account.|
 
----
+--- -->

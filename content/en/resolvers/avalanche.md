@@ -1,10 +1,16 @@
 ---
-title: Avalanche 
+title: Avalanche Resolvers
+menuTitle: Avalanche
 description: "Avalanche resolvers"
 position: 12
 category: "resolvers"
 ---
 
+* [Aave](./avalanche/aave) 
+
+* [Instadapp](./avalanche/instadapp)
+
+<!-- 
 ## Aave
 
 AaveV2-v1.6 resolver triggers methods like getPosition, getConfiguration, getReservesList. You can view details like source code, ABIs on [avascan](https://avascan.info/blockchain/c/address/0x43c51C24b49f7cF389D043e93533E5179870Eea3).
@@ -79,4 +85,4 @@ function getAccountAuthorities(address account) public view returns(address[] me
 | ------ | ---- | ----------- | 
 | account | address | Address of the account.|
 
----
+--- -->

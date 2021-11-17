@@ -5,7 +5,17 @@ position: 10
 category: "resolvers"
 ---
 
-## Compound
+* [Compound](./mainnet/compound)
+
+* [Aave](.mainnet/Aave)
+
+* [Uniswap v3](.mainnet/uniswap)
+
+* [MakerDAO](./mainnet/makerdao)
+
+*  [Instadapp](./mainnet/instadapp)
+
+<!-- ## Compound
 
 Compound-v1.5 resolver triggers methods like getPriceInEth, getCompoundData, getPosition. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x9fA9f5Ce281a42BbB5D1c9af6D26aF06dd4d964A).
 ### getPriceInEth
@@ -45,12 +55,14 @@ Returns the position of user on compound.
 | ------ | ---- | ----------- | 
 | owner | address | The address of the user whose tokens data you want.|
 | cAddress | address[] | String array of tokens whose data you want. |
---- 
+
+
 ## Aave
 
 AaveV2-v1.6 resolver triggers methods like getPosition, getConfiguration, getReservesList. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0xF0317C5Bc206F2291dd2f3eE9C4cDB5Bbb25418d).
 ### getPosition
 Returns the position of user on compound.
+
 ```solidity
 function getPosition(
         address user, 
@@ -76,7 +88,7 @@ Returns the list of initialized reserves.
 ```solidity
  function getReservesList() public view returns (address[] memory data);
 ```
---- 
+
 ## Uniswap v3
 
 UniswapV3-v1 resolver triggers methods like getPoolDetails, getPositionInfoByTokenId, getPositionsInfo, getMintAmount, getDepositAmount, getSingleDepositAmount, getSingleMintAmount, getWithdrawAmount, getCollectAmount, getUserNFTs. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x9156cd73ba5f792e26e9a1762dfc05162d9408c5).
@@ -326,4 +338,4 @@ function getAccountAuthorities(address account) public view returns(address[] me
 | ------ | ---- | ----------- | 
 | account | address | Address of the account.|
 
---- 
+---  -->

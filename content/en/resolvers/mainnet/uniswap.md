@@ -1,19 +1,6 @@
----
-title: Arbitrum Resolvers
-menuTitle: Arbitrum
-description: "Arbitrum resolvers"
-position: 13
-category: "resolvers"
----
-
-* [Uniswap v3](./arbitrum/uniswap) 
-
-* [Instadapp](./arbitrum/instadapp)
-
-<!-- 
 ## Uniswap v3
 
-UniswapV3-v1 resolver triggers methods like getPoolDetails, getPositionInfoByTokenId, getPositionsInfo, getMintAmount, getDepositAmount, getSingleDepositAmount, getSingleMintAmount, getWithdrawAmount, getCollectAmount, getUserNFTs. You can view details like source code, ABIs on [arbiscan](https://arbiscan.io/address/0x04F8a41be023f839E709eeEaA0725FD766139A4d).
+UniswapV3-v1 resolver triggers methods like getPoolDetails, getPositionInfoByTokenId, getPositionsInfo, getMintAmount, getDepositAmount, getSingleDepositAmount, getSingleMintAmount, getWithdrawAmount, getCollectAmount, getUserNFTs. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x9156cd73ba5f792e26e9a1762dfc05162d9408c5).
 ### getPoolDetails
 Returns the pool details
 ```solidity
@@ -180,47 +167,5 @@ function getUserNFTs(address user) public view returns (uint256[] memory tokenId
 | ------ | ---- | ----------- | 
 | user | address | The address of the user whose token-ids you want.|
 
-## Instadapp
+--- 
 
-Instapoolv2 resolver triggers methods like getAuthorityAccounts, getAuthorityIDs, getAccountAuthorities, getIDAuthorities. You can view details like source code, ABIs on [arbiscan](https://arbiscan.io/address/0xdF19Da523DA64bBE82eE0E4DFf00d676A8386474).
-### getAuthorityAccounts
-Returns all accounts related to an authority
-```solidity
-function getAuthorityAccounts(address authority) public view returns(address[] memory);
-```
-
-| params | type | Description | 
-| ------ | ---- | ----------- | 
-| authority | address | The authority Address.|
-
-### getAuthorityIDs
-Returns all IDs related to authority.
-```solidity
-function getAuthorityIDs(address authority) public view returns(uint64[] memory);
-```
-
-| params | type | Description | 
-| ------ | ---- | ----------- | 
-| authority | address | The authority Address.|
-
-### getAccountAuthorities
-Returns the authoriy (owner) of an account.
-```solidity
-function getAccountAuthorities(address account) public view returns(address[] memory);
-```
-
-| params | type | Description | 
-| ------ | ---- | ----------- | 
-| account | address | 	Address of the account.|
-
-### getAccountAuthorities
-Returns the authoriy (owner) of an account.
-```solidity
-function getAccountAuthorities(address account) public view returns(address[] memory);
-```
-
-| params | type | Description | 
-| ------ | ---- | ----------- | 
-| account | address | Address of the account.|
-
----  -->
