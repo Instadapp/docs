@@ -1,6 +1,7 @@
 ---
 title: Mainnet Resolvers
-description: "Interact with DSA on smart contract level"
+menuTitle: Mainnet
+description: "Avalanche resolvers"
 position: 10
 category: "resolvers"
 ---
@@ -9,9 +10,9 @@ category: "resolvers"
 
 * [Aave](./mainnet/aave)
 
-* [Uniswap v3](./mainnet/uniswap)
+* [MakerDAO](./mainnet/makerDAO)
 
-* [MakerDAO](./mainnet/makerdao)
+* [Uniswap v3](./mainnet/uniswap)
 
 * [Instadapp](./mainnet/instadapp)
 
