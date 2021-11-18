@@ -1,6 +1,7 @@
-## MakerDAO
+# MakerDAO
 
 MakerDAO-v1.2 resolver triggers methods like getColInfo, getVaultById, getVaults. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x84addce4fac0b6ee4b0cd132120d6d4b700e35c0).
+
 ### getColInfo
 Get details around collateral types in maker vault.
 ```solidity
@@ -31,4 +32,3 @@ function getVaults(address owner) external view returns (VaultData[] memory);
 | ------ | ---- | ----------- | 
 | owner | address | 	Address of the owner of the vault.|
 
---- 

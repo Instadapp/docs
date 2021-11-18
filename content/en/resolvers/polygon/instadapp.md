@@ -1,4 +1,4 @@
-## Instadapp
+# Instadapp
 
 Instapoolv2 resolver triggers methods like getAuthorityAccounts, getAuthorityIDs, getAccountAuthorities, getIDAuthorities. You can view details like source code, ABIs on [polygonscan](https://polygonscan.com/address/0xdF19Da523DA64bBE82eE0E4DFf00d676A8386474).
 ### getAuthorityAccounts

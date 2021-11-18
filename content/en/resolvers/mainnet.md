@@ -7,13 +7,13 @@ category: "resolvers"
 
 * [Compound](./mainnet/compound)
 
-* [Aave](.mainnet/Aave)
+* [Aave](./mainnet/aave)
 
-* [Uniswap v3](.mainnet/uniswap)
+* [Uniswap v3](./mainnet/uniswap)
 
 * [MakerDAO](./mainnet/makerdao)
 
-*  [Instadapp](./mainnet/instadapp)
+* [Instadapp](./mainnet/instadapp)
 
 <!-- ## Compound
 
