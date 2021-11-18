@@ -1,5 +1,5 @@
 ---
-title: Mainnet 
+title: Mainnet Resolvers
 description: "Interact with DSA on smart contract level"
 position: 10
 category: "resolvers"
