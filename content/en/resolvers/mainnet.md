@@ -10,7 +10,7 @@ category: "resolvers"
 
 * [Aave](./mainnet/aave)
 
-* [MakerDAO](./mainnet/makerDAO)
+* [MakerDAO](./mainnet/MakerDAO)
 
 * [Uniswap v3](./mainnet/uniswap)
 
