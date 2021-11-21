@@ -83,7 +83,7 @@ Create a DSA Account using this function. It returns the address of the DSA acco
 |accountversion|uint256|Account Module version|
 |_origin|address|Where Smart Account is created|
 
-* #### cast(_targets, _datas, _origin) [#] (https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
+* #### cast(_targets, _datas, _origin) [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
 Using cast() user can access the connectors, which allows the smart account to interact with protocols or set up any settings on the smart account.
 
 |parameter|type|description|
