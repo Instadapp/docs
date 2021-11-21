@@ -74,7 +74,7 @@ This is the Main Contract for all the Defi Smart Accounts. Used to create a new 
 * #### InstaImplementationM1 [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol)
 This contract contains most core functions of smart account name cast(). It is only called by owners of smart accounts and has full-fledge access over the smart account. Used also to access all the DSA.
 
-* #### build(owner, accountVersion, _origin)[#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol#L170)
+* #### build(owner, accountVersion, _origin) [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/registry/index.sol#L170)
 Create a DSA Account using this function. It returns the address of the DSA account created.
 
 |parameter|type|description|
