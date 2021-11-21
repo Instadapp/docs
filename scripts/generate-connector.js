@@ -11,7 +11,7 @@ const getDefiConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_CONNECTORS_UR ||
-        "https://api.instadapp.io/defi/dsa/v2/connectors"
+      "https://api.instadapp.io/defi/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
@@ -23,7 +23,7 @@ const getDefiPolygonConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_POLYGON_CONNECTORS_URL ||
-        "https://api.instadapp.io/defi/polygon/dsa/v2/connectors"
+      "https://api.instadapp.io/defi/polygon/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
@@ -35,7 +35,7 @@ const getDefiArbitrumConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
-        "https://api.instadapp.io/defi/arbitrum/dsa/v2/connectors"
+      "https://api.instadapp.io/defi/arbitrum/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
@@ -48,7 +48,7 @@ const getDefiAvalancheConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
-        "https://api.instadapp.io/defi/avalanche/dsa/v2/connectors"
+      "https://api.instadapp.io/defi/avalanche/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
@@ -285,12 +285,12 @@ const getSourceCode = async (connector, network) => {
 (async function main() {
   try {
     await del(path.resolve("./content/en/connectors"));
-    fs.mkdirSync(path.resolve("./content/en/connectors"));
+    fs.mkdirSync(("./content/en/connectors"));
     fs.mkdirSync(path.resolve("./content/en/connectors/mainnet"));
     fs.mkdirSync(path.resolve("./content/en/connectors/polygon"));
     fs.mkdirSync(path.resolve("./content/en/connectors/arbitrum"));
     fs.mkdirSync(path.resolve("./content/en/connectors/avalanche"));
-  } catch (error) {}
+  } catch (error) { }
 
   let mainnetMd = `---
 title: Mainnet Connectors
@@ -307,7 +307,7 @@ category: 'Connectors'
   for (const connector of connectors["mainnet"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     if (!sourceCode) {
-      console.log("[Mainnet] Source not found for " + connector.slug);
+      console.log("[Mainnext] Source not found for " + connector.slug);
       continue;
     }
     const sourceStrings = findSourceStrings(sourceCode);
@@ -332,9 +332,9 @@ category: 'Connectors'
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/mainnet") +
-        "/" +
-        connector.slug +
-        ".md",
+      "/" +
+      connector.slug +
+      ".md",
       md
     );
 
@@ -366,7 +366,7 @@ category: 'Connectors'
     const sourceStrings = findSourceStrings(sourceCode);
     let data = parseSourceStrings(sourceStrings)[0];
     data.title = connector.title || data.title;
-    
+
     const defiConnector = defiPolygonConnectors.find(
       (con) => con.connectorName === data.connectorVersion
     );
@@ -385,9 +385,9 @@ category: 'Connectors'
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/polygon") +
-        "/" +
-        connector.slug +
-        ".md",
+      "/" +
+      connector.slug +
+      ".md",
       md
     );
 
@@ -408,52 +408,52 @@ position: 8
 category: 'Connectors'
 ---
   `;
-  
-    for (const connector of connectors["arbitrum"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-      const sourceCode = await getGithubSourceCode(connector.path, "arbitrum");
-      if (!sourceCode) {
-        console.log("[Arbitrum] Source not found for " + connector.slug);
-        continue;
-      }
-  
-      const sourceStrings = findSourceStrings(sourceCode);
-      let data = parseSourceStrings(sourceStrings)[0];
-      data.title = connector.title || data.title;
-      
-      const defiConnector = defiArbitrumConnectors.find(
-        (con) => con.connectorName === data.connectorVersion
-      );
-  
-      if (!defiConnector) {
-        console.log("[Arbitrum] Connector not found for " + data.connectorVersion);
-        continue;
-      }
-      data.connectorId = defiConnector.connectorId;
-  
-      const md = await generateMd(
-        data,
-        connector.address || defiConnector.connectorAddress,
-        "arbitrum"
-      );
-  
-      fs.writeFileSync(
-        path.resolve("./content/en/connectors/arbitrum") +
-          "/" +
-          connector.slug +
-          ".md",
-        md
-      );
-  
-      arbitrumMd += `
-  - [${data.title}](/connectors/arbitrum/${connector.slug})`;
+
+  for (const connector of connectors["arbitrum"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+    const sourceCode = await getGithubSourceCode(connector.path, "arbitrum");
+    if (!sourceCode) {
+      console.log("[Arbitrum] Source not found for " + connector.slug);
+      continue;
     }
-  
-    fs.writeFileSync(
-      path.resolve("./content/en/connectors/arbitrum.md"),
-      arbitrumMd
+
+    const sourceStrings = findSourceStrings(sourceCode);
+    let data = parseSourceStrings(sourceStrings)[0];
+    data.title = connector.title || data.title;
+
+    const defiConnector = defiArbitrumConnectors.find(
+      (con) => con.connectorName === data.connectorVersion
     );
 
-    let avalancheMd = `---
+    if (!defiConnector) {
+      console.log("[Arbitrum] Connector not found for " + data.connectorVersion);
+      continue;
+    }
+    data.connectorId = defiConnector.connectorId;
+
+    const md = await generateMd(
+      data,
+      connector.address || defiConnector.connectorAddress,
+      "arbitrum"
+    );
+
+    fs.writeFileSync(
+      path.resolve("./content/en/connectors/arbitrum") +
+      "/" +
+      connector.slug +
+      ".md",
+      md
+    );
+
+    arbitrumMd += `
+  - [${data.title}](/connectors/arbitrum/${connector.slug})`;
+  }
+
+  fs.writeFileSync(
+    path.resolve("./content/en/connectors/arbitrum.md"),
+    arbitrumMd
+  );
+
+  let avalancheMd = `---
 title: Avalanche Connectors
 menuTitle: Avalanche
 description: ''
@@ -461,51 +461,51 @@ position: 9
 category: 'Connectors'
 ---
       `;
-      
-        for (const connector of connectors["avalanche"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-          const sourceCode = await getGithubSourceCode(connector.path, "avalanche");
-          if (!sourceCode) {
-            console.log("[Avalanche] Source not found for " + connector.slug);
-            continue;
-          }
-      
-          const sourceStrings = findSourceStrings(sourceCode);
-          let data = parseSourceStrings(sourceStrings)[0];
-          data.title = connector.title || data.title;
-          
-          const defiConnector = defiAvalancheConnectors.find(
-            (con) => con.connectorName === data.connectorVersion
-          );
-      
-          if (!defiConnector) {
-            console.log("[Avalanche] Connector not found for " + data.connectorVersion);
-            continue;
-          }
-          data.connectorId = defiConnector.connectorId;
-      
-          const md = await generateMd(
-            data,
-            connector.address || defiConnector.connectorAddress,
-            "avalanche"
-          );
-      
-          fs.writeFileSync(
-            path.resolve("./content/en/connectors/avalanche") +
-              "/" +
-              connector.slug +
-              ".md",
-            md
-          );
-      
-          avalancheMd += `
+
+  for (const connector of connectors["avalanche"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+    const sourceCode = await getGithubSourceCode(connector.path, "avalanche");
+    if (!sourceCode) {
+      console.log("[Avalanche] Source not found for " + connector.slug);
+      continue;
+    }
+
+    const sourceStrings = findSourceStrings(sourceCode);
+    let data = parseSourceStrings(sourceStrings)[0];
+    data.title = connector.title || data.title;
+
+    const defiConnector = defiAvalancheConnectors.find(
+      (con) => con.connectorName === data.connectorVersion
+    );
+
+    if (!defiConnector) {
+      console.log("[Avalanche] Connector not found for " + data.connectorVersion);
+      continue;
+    }
+    data.connectorId = defiConnector.connectorId;
+
+    const md = await generateMd(
+      data,
+      connector.address || defiConnector.connectorAddress,
+      "avalanche"
+    );
+
+    fs.writeFileSync(
+      path.resolve("./content/en/connectors/avalanche") +
+      "/" +
+      connector.slug +
+      ".md",
+      md
+    );
+
+    avalancheMd += `
 - [${data.title}](/connectors/avalanche/${connector.slug})`;
-        }
-      
-        fs.writeFileSync(
-          path.resolve("./content/en/connectors/avalanche.md"),
-          avalancheMd
-        );
-  
+  }
+
+  fs.writeFileSync(
+    path.resolve("./content/en/connectors/avalanche.md"),
+    avalancheMd
+  );
+
 
   exit(0);
 })();
