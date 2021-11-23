@@ -1,4 +1,22 @@
 export default async function generateMd (data, address, chain) {
+    let nativeToken
+    let explorerLink
+    if (chain === 'mainnet') {
+        nativeToken = "ETH"
+        explorerLink = `[Etherscan](https://etherscan.io/address/${address}#code)`
+    } else if (chain === 'arbitrum') {
+        nativeToken = "ETH"
+        explorerLink = `[Etherscan](https://arbiscan.io/address/${address}#code)`
+    } else if (chain === 'avalanche') {
+        nativeToken = "AVAX"
+        explorerLink = `[Etherscan](https://snowtrace.io/address/${address}#code)`
+    } else if (chain === 'polygon') {
+        nativeToken = "MATIC"
+        explorerLink = `[Etherscan](https://polygonscan.io/address/${address}#code)`
+    } else {
+        nativeToken = "ETH"
+        explorerLink = `[Etherscan](https://etherscan.io/address/${address}#code)`
+    }
     let md = '---'
     md += `\ntitle: ${data.title}`
     md += `\ndescription: \'${data.description}\'`
@@ -6,9 +24,9 @@ export default async function generateMd (data, address, chain) {
     md += '\n---'
     md += `\n> ${data.description}`
     md += `\n${data.connectorVersion} connector triggers methods like ${data.functions.map(o => o.functionName).join(', ')}.`
-    if (chain === 'mainnet') md += ` You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/${address}#code).`
+    if (chain === 'mainnet') md += ` You can view details like source code, ABIs on ${explorerLink}.`
     md += '\n'
-    md += `\n- Use \`0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\` to indicate ${chain === 'mainnet'? 'ETH' : 'MATIC' }.`
+    md += `\n- Use \`0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\` to indicate ${nativeToken}.`
     md += '\n- use -1 or `dsa.maxValue` for the maximum amount in function.'
     md += '\n- If not sure about the arguments `getId` and `setId`, pass 0.'
     for (let index = 0; index < data.functions.length; index++) {
