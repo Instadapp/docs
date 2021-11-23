@@ -242,12 +242,12 @@
             "title": "WAVAX"
         },
         {
-            "path": "benqi/main.sol",
+            "path": "benqi/v2/main.sol",
             "slug": "benqi-v1",
             "title": "Benqi"
         },
         {
-            "path": "Qi/main.sol",
+            "path": "benqi/benqi-rewards/main.sol",
             "slug": "qi-v1",
             "title": "QI"
         }
