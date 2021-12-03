@@ -46,11 +46,11 @@ For developers, a helpful mental model to consider when developing your solution
 - **Route 7 -** Balancer-Aave route. **Advanced Routing Pair** Balancer - Aave.
 
 | Chains\Routes | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-| ---------- | ---- | ----| ----| ----| ----| ----| ----| 
-| Arbitrum| ✖️ | ✖️ | ✖️  | ✖️ | :heavy_check_mark: | ✖️ | ✖️ |
-| Avalanche | :heavy_check_mark: | ✖️ | ✖️ | ✖️ | ✖️ | ✖️ | ✖️ |
-| Mainnet | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Polygon | :heavy_check_mark: | ✖️ | ✖️ | ✖️ | :heavy_check_mark: | ✖️ | :heavy_check_mark: |
+| ---------- | - | -| -| -| -| -| -| 
+| Arbitrum| ✖️ | ✖️ | ✖️  | ✖️ | + | ✖️ | ✖️ |
+| Avalanche |   | ✖️ | ✖️ | ✖️ | ✖️ | ✖️ | ✖️ |
+| Mainnet | + | + | + | + | + | + | + |
+| Polygon | + | ✖️ | ✖️ | ✖️ | + | ✖️ | + |
 
 ## Functions 
 
