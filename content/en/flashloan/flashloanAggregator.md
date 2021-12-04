@@ -6,8 +6,6 @@ position: 14
 category: "flashloan"
 ---
 
-
-
 ## Flashloans
 
 Flash Loans are special uncollateralized loans that allow the borrowing of an asset, as long as the borrowed amount (and a fee) is returned before the end of the transaction. There is no real-world analogy to Flash Loans, so it requires some basic understanding of how state is managed within blocks in blockchains.
@@ -47,10 +45,10 @@ For developers, a helpful mental model to consider when developing your solution
 
 | Chains\Routes | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 | ---------- | - | -| -| -| -| -| -| 
-| Arbitrum| ✖️ | ✖️ | ✖️  | ✖️ | + | ✖️ | ✖️ |
-| Avalanche |   | ✖️ | ✖️ | ✖️ | ✖️ | ✖️ | ✖️ |
-| Mainnet | + | + | + | + | + | + | + |
-| Polygon | + | ✖️ | ✖️ | ✖️ | + | ✖️ | + |
+| Arbitrum| ❌ | ❌ | ❌  | ❌ | ✔️ | ❌ | ❌ |
+| Avalanche | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Mainnet | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Polygon | ✔️ | ❌ | ❌ | ❌ | ✔️ | ❌ | ✔️ |
 
 ## Functions 
 
@@ -130,3 +128,4 @@ function getBestRoutes(address[] memory tokens, uint256[] memory amounts) public
 | ------ | ---- | ----------- | 
 | tokens | address[] | The addresses of the tokens for which user needs flashloan.|
 | amounts | uint256[] | The amounts of the respective tokens for flashloan. This needs to contain the same number of elements as tokens.|
+
