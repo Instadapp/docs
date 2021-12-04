@@ -73,7 +73,7 @@ interface InstaFlashReceiverInterface {
         uint256[] calldata amounts,
         uint256[] calldata premiums,
         address initiator,
-        bytes calldata _data
+        bytes calldata data
     ) external returns (bool);
 }
 ```
