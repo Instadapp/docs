@@ -7,41 +7,81 @@ category: "flashloan"
 ---
 
 
-## Flashloan Aggregator Core Contracts
+## InstaFlashAggregator 
 
-### Arbitrum
+### flashloan()
+Sends the requested amounts of assets to the contract which called it, passing the included params, using the passed route.
+If the flash loaned amounts + fee is not returned by the end of the transaction, then the transaction will revert.
+```solidity
+function flashLoan(	
+        address[] memory tokens,	
+        uint256[] memory amounts,
+        uint256 route,
+        bytes calldata data,
+        bytes calldata instaData
+    );
+```
 
-| Contract | Address |
-| ---------- | ---------- | 
-| Flashloan Aggregator | [0x1f882522DF99820dF8e586b6df8bAae2b91a782d](https://arbiscan.io/address/0x1f882522DF99820dF8e586b6df8bAae2b91a782d#code) |
-| Flash Resolver | [0x9963F588C905f0D3a49b1810a3dEadd83Ca42143](https://arbiscan.io/address/0x9963F588C905f0D3a49b1810a3dEadd83Ca42143#code) |
+| params | type | Description | 
+| ------ | ---- | ----------- | 
+| tokens | address[] | The addresses of the tokens for which user needs flashloan.|
+| amounts | uint256[] | The amounts of the respective tokens for flashloan. This needs to contain the same number of elements as tokens.|
+| route | uint256 | Route through which user wants flashloan.|
+| data | bytes | bytes-encoded parameters to be used by the receiver contract.|
+| instaData | bytes | bytes-encoded parameters. Kept for future use by instadapp. Currently used nowhere.|
 
-### Avalanche
+### getRoutes()
 
-| Contract | Address |
-| ---------- | ---------- | 
-| Flashloan Aggregator | [0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19](https://snowtrace.io/address/0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19#code) |
-| Flash Resolver | [0x333733DEedd11Ee40D41Df7b0327bBB57397a1CA](https://snowtrace.io/address/0x333733DEedd11Ee40D41Df7b0327bBB57397a1CA#code) |
+Returns an integer list of available routes.
+```solidity
+function getRoutes() public pure returns (uint16[] memory routes);
+```
 
-### Mainnet
+## Receiver Contract Interface
 
-| Contract | Address |
-| ---------- | ---------- | 
-| Flashloan Aggregator | [0x619Ad2D02dBeE6ebA3CDbDA3F98430410e892882](https://etherscan.io/address/0x619Ad2D02dBeE6ebA3CDbDA3F98430410e892882#code) |
-| Flash Resolver | [0x33759cF68a3Ab9e8d582d8A4717104848E0fa8B9](https://etherscan.io/address/0x33759cF68a3Ab9e8d582d8A4717104848E0fa8B9#code) |
+The receiver contract must follow the below interface to use the flashloan aggregator.
 
-### Polygon
+```solidity
+interface InstaFlashReceiverInterface {
+    function executeOperation(
+        address[] calldata assets,
+        uint256[] calldata amounts,
+        uint256[] calldata premiums,
+        address initiator,
+        bytes calldata _data
+    ) external returns (bool);
+}
+```
 
-| Contract | Address |
-| ---------- | ---------- | 
-| Flashloan Aggregator | [0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4](https://polygonscan.com/address/0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4#code) |
-| Flash Resolver | [0xFC6E0651a8D4a54D533b2d26c8f59536557307f3](https://polygonscan.com/address/0xFC6E0651a8D4a54D533b2d26c8f59536557307f3#code) |
+| params | type | Description | 
+| ------ | ---- | ----------- | 
+| assets | address[] | The addresses of the tokens for which user needs flashloan.|
+| amounts | uint256[] | The amounts of the respective tokens for flashloan. This needs to contain the same number of elements as tokens.|
+| premiums | uint256[] | The fee for the respective tokens based on the amounts borrowed. At the end user need to return the amount + premium for all the tokens.|
+| initiator | address | The address which initiated the flashloan transaction.|
+| data | bytes | bytes-encoded parameters to be used by the receiver contract.|
 
-## Treasury Addresses
+## InstaFlashResolver
 
-| Chain | Address |
-| ---------- | ---------- | 
-| Arbitrum | 0xf81AB897E3940E95d749fF2e1F8D38f9b7cBe3cf |
-| Avalanche | 0xE06d0b1752E60687C0EA5ABBe006d3368fdCDCC1 |
-| Mainnet | 0x28849D2b63fA8D361e5fc15cB8aBB13019884d09 |
-| Polygon | 0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22 |
+This contract can be used to get data from the flashloan aggregator which can be helpful in deciding the route through which user wants to take flashloan. The flashResolver has the following functions:-
+
+### getRoutesInfo()
+
+This function returns a list of available routes and a list of respective fee in BPS (1 BPS = 0.01%).
+
+```solidity
+function getRoutesInfo() public view returns (uint16[] memory, uint256[] memory)
+```
+
+### getBestRoutes()
+
+This function returns the best routes(can be more than 1) and a the best fee in BPS (1 BPS = 0.01%). The best routes are found considering the tokens availability, amounts of tokens for flashloan, and the fee.
+
+```solidity
+function getBestRoutes(address[] memory tokens, uint256[] memory amounts) public view returns (uint16[] memory, uint256)
+```
+
+| params | type | Description | 
+| ------ | ---- | ----------- | 
+| tokens | address[] | The addresses of the tokens for which user needs flashloan.|
+| amounts | uint256[] | The amounts of the respective tokens for flashloan. This needs to contain the same number of elements as tokens.|
