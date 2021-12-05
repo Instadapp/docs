@@ -139,6 +139,16 @@
             "path": "gelato/aave-services/protection/main.sol",
             "slug": "gelato-aave-protection",
             "title": "Gelato Aave Protection"
+        },
+        {
+            "path": "universeFinance/main.sol",
+            "slug": "universe-v1",
+            "title": "UNIVERSE-A"
+        },
+        {
+            "path": "instapool_v4/main.sol",
+            "slug": "instapool-v4",
+            "title": "INSTAPOOL-C"
         }
     ],
     "polygon": [
@@ -176,6 +186,11 @@
             "path": "gelato/aave-services/protection/main.sol",
             "slug": "gelato-aave-protection",
             "title": "Gelato Aave Protection"
+        },
+        {
+            "path": "instapool_v4/main.sol",
+            "slug": "instapool-v4",
+            "title": "INSTAPOOL-C"
         }
     ],
     "arbitrum": [
@@ -213,6 +228,11 @@
             "path": "weth/main.sol",
             "slug": "weth",
             "title": "WETH"
+        },
+        {
+            "path": "instapool_v4/main.sol",
+            "slug": "instapool-v4",
+            "title": "INSTAPOOL-C"
         }
     ],
     "avalanche": [
@@ -250,6 +270,11 @@
             "path": "benqi/benqi-rewards/main.sol",
             "slug": "qi-v1",
             "title": "QI"
+        },
+        {
+            "path": "instapool_v4/main.sol",
+            "slug": "instapool-v4",
+            "title": "INSTAPOOL-C"
         }
     ]
 }
