@@ -24,7 +24,7 @@ List of other Instadapp related address (non core to DSAs):
 | ---------- | ---------- | 
 | InstaFlashAggregator | [0x619Ad2D02dBeE6ebA3CDbDA3F98430410e892882](https://etherscan.io/address/0x619Ad2D02dBeE6ebA3CDbDA3F98430410e892882#code) |
 | InstaFlashResolver | [0x33759cF68a3Ab9e8d582d8A4717104848E0fa8B9](https://etherscan.io/address/0x33759cF68a3Ab9e8d582d8A4717104848E0fa8B9#code) |
-| Treasury | 0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22 |
+| Treasury | [0x28849D2b63fA8D361e5fc15cB8aBB13019884d09](https://etherscan.io/address/0x28849D2b63fA8D361e5fc15cB8aBB13019884d09#code) |
 
 ## Networks and Underlying meanings
 

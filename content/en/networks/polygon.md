@@ -24,7 +24,7 @@ List of other Instadapp related address (non core to DSAs):
 | ---------- | ---------- | 
 | InstaFlashAggregator | [0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4](https://polygonscan.com/address/0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4#code) |
 | InstaFlashResolver | [0xFC6E0651a8D4a54D533b2d26c8f59536557307f3](https://polygonscan.com/address/0xFC6E0651a8D4a54D533b2d26c8f59536557307f3#code) |
-| Treasury | 0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22 |
+| Treasury | [0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22](https://polygonscan.com/address/0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22#code) |
 
 ## Networks and Underlying meanings
 

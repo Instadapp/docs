@@ -24,7 +24,7 @@ List of other Instadapp related address (non core to DSAs):
 | ---------- | ---------- | 
 | InstaFlashAggregator | [0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19](https://snowtrace.io/address/0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19#code) |
 | InstaFlashResolver | [0x333733DEedd11Ee40D41Df7b0327bBB57397a1CA](https://snowtrace.io/address/0x333733DEedd11Ee40D41Df7b0327bBB57397a1CA#code) |
-| Treasury | 0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22 |
+| Treasury | [0xE06d0b1752E60687C0EA5ABBe006d3368fdCDCC1](https://snowtrace.io/address/0xe06d0b1752e60687c0ea5abbe006d3368fdcdcc1#contracts) |
 
 ## Networks and Underlying meanings
 
