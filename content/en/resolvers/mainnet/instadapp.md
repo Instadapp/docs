@@ -36,14 +36,6 @@ function getAccountAuthorities(address account) public view returns(address[] me
 | ------ | ---- | ----------- | 
 | account | address | 	Address of the account.|
 
-### getAccountAuthorities
-Returns the authoriy (owner) of an account.
-```solidity
-function getAccountAuthorities(address account) public view returns(address[] memory);
-```
 
-| params | type | Description | 
-| ------ | ---- | ----------- | 
-| account | address | Address of the account.|
 
 

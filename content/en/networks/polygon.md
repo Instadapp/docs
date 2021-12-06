@@ -10,12 +10,21 @@ category: "Networks"
 
 Below are all the addresses of Core Contracts of the DSL ecosystem on Polygon:
 
-1. Index.sol: [0xA9B99766E6C676Cf1975c0D3166F96C0848fF5ad](https://explorer-mainnet.maticvigil.com/address/0xA9B99766E6C676Cf1975c0D3166F96C0848fF5ad/contracts)
-2. InstaList.sol: [0x839c2D3aDe63DF5b0b8F3E57D5e145057Ab41556](https://explorer-mainnet.maticvigil.com/address/0x839c2D3aDe63DF5b0b8F3E57D5e145057Ab41556/contracts)
-3. InstaAccountV2: [0x28846f4051EB05594B3fF9dE76b7B5bf00431155](https://explorer-mainnet.maticvigil.com/address/0x28846f4051EB05594B3fF9dE76b7B5bf00431155/contracts)
-4. InstaConnectorsV2: [0x2A00684bFAb9717C21271E0751BCcb7d2D763c88](https://polygonscan.com/address/0x2A00684bFAb9717C21271E0751BCcb7d2D763c88/contracts)
-5. InstaMemory: [0x6C7256cf7C003dD85683339F75DdE9971f98f2FD](https://explorer-mainnet.maticvigil.com/address/0x6C7256cf7C003dD85683339F75DdE9971f98f2FD/contracts)
-6. InstaImplementations: [0x39d3d5e7c11D61E072511485878dd84711c19d4A](https://explorer-mainnet.maticvigil.com/address/0x39d3d5e7c11D61E072511485878dd84711c19d4A/contracts)
+| Contract | Address |
+| ---------- | ---------- |
+|  Index.sol | [0xA9B99766E6C676Cf1975c0D3166F96C0848fF5ad](https://explorer-mainnet.maticvigil.com/address/0xA9B99766E6C676Cf1975c0D3166F96C0848fF5ad/contracts) |
+|  InstaList.sol | [0x839c2D3aDe63DF5b0b8F3E57D5e145057Ab41556](https://explorer-mainnet.maticvigil.com/address/0x839c2D3aDe63DF5b0b8F3E57D5e145057Ab41556/contracts) |
+|  InstaAccountV2 | [0x28846f4051EB05594B3fF9dE76b7B5bf00431155](https://explorer-mainnet.maticvigil.com/address/0x28846f4051EB05594B3fF9dE76b7B5bf00431155/contracts) |
+|  InstaConnectorsV2 | [0x2A00684bFAb9717C21271E0751BCcb7d2D763c88](https://polygonscan.com/address/0x2A00684bFAb9717C21271E0751BCcb7d2D763c88/contracts) |
+|  InstaMemory | [0x6C7256cf7C003dD85683339F75DdE9971f98f2FD](https://explorer-mainnet.maticvigil.com/address/0x6C7256cf7C003dD85683339F75DdE9971f98f2FD/contracts) |
+|  InstaImplementations | [0x39d3d5e7c11D61E072511485878dd84711c19d4A](https://explorer-mainnet.maticvigil.com/address/0x39d3d5e7c11D61E072511485878dd84711c19d4A/contracts) |
+
+List of other Instadapp related address (non core to DSAs):
+| Contract | Address |
+| ---------- | ---------- | 
+| InstaFlashAggregator | [0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4](https://polygonscan.com/address/0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4#code) |
+| InstaFlashResolver | [0xFC6E0651a8D4a54D533b2d26c8f59536557307f3](https://polygonscan.com/address/0xFC6E0651a8D4a54D533b2d26c8f59536557307f3#code) |
+| Treasury | 0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22 |
 
 ## Networks and Underlying meanings
 
