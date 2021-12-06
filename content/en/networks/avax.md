@@ -10,13 +10,21 @@ category: "Networks"
 
 Below are all the addresses of Core Contracts of the DSL ecosystem on Avalanche:
 
+| Contract | Address |
+| ---------- | ---------- |
+| Index.sol | [0x6CE3e607C808b4f4C26B7F6aDAeB619e49CAbb25](https://cchain.explorer.avax.network/address/0x6CE3e607C808b4f4C26B7F6aDAeB619e49CAbb25/contracts) |
+| InstaList.sol | [0x9926955e0Dd681Dc303370C52f4Ad0a4dd061687](https://cchain.explorer.avax.network/address/0x9926955e0Dd681Dc303370C52f4Ad0a4dd061687/contracts) |
+| InstaAccount.sol | [0x0a0a82D2F86b9E46AE60E22FCE4e8b916F858Ddc](https://cchain.explorer.avax.network/address/0x0a0a82D2F86b9E46AE60E22FCE4e8b916F858Ddc/contracts) |
+| InstaConnectors.sol | [0x127d8cD0E2b2E0366D522DeA53A787bfE9002C14](https://cchain.explorer.avax.network/address/0x127d8cD0E2b2E0366D522DeA53A787bfE9002C14/contracts) |
+| InstaMemory.sol | [0x3254Ce8f5b1c82431B8f21Df01918342215825C2](https://cchain.explorer.avax.network/address/0x3254Ce8f5b1c82431B8f21Df01918342215825C2/contracts) |
+| Implementations | [0x01fEF4d2B513C9F69E34b2f93Ef707FA9Ff60109](https://cchain.explorer.avax.network/address/0x01fEF4d2B513C9F69E34b2f93Ef707FA9Ff60109/contracts) |
 
-1. Index.sol: [0x6CE3e607C808b4f4C26B7F6aDAeB619e49CAbb25](https://cchain.explorer.avax.network/address/0x6CE3e607C808b4f4C26B7F6aDAeB619e49CAbb25/contracts)
-2. InstaList.sol: [0x9926955e0Dd681Dc303370C52f4Ad0a4dd061687](https://cchain.explorer.avax.network/address/0x9926955e0Dd681Dc303370C52f4Ad0a4dd061687/contracts)
-3. InstaAccount.sol: [0x0a0a82D2F86b9E46AE60E22FCE4e8b916F858Ddc](https://cchain.explorer.avax.network/address/0x0a0a82D2F86b9E46AE60E22FCE4e8b916F858Ddc/contracts)
-4. InstaConnectors.sol: [0x127d8cD0E2b2E0366D522DeA53A787bfE9002C14](https://cchain.explorer.avax.network/address/0x127d8cD0E2b2E0366D522DeA53A787bfE9002C14/contracts)
-5. InstaMemory.sol: [0x3254Ce8f5b1c82431B8f21Df01918342215825C2](https://cchain.explorer.avax.network/address/0x3254Ce8f5b1c82431B8f21Df01918342215825C2/contracts)
-6. Implementations: [0x01fEF4d2B513C9F69E34b2f93Ef707FA9Ff60109](https://cchain.explorer.avax.network/address/0x01fEF4d2B513C9F69E34b2f93Ef707FA9Ff60109/contracts)
+List of other Instadapp related address (non core to DSAs):
+| Contract | Address |
+| ---------- | ---------- | 
+| InstaFlashAggregator | [0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19](https://snowtrace.io/address/0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19#code) |
+| InstaFlashResolver | [0x333733DEedd11Ee40D41Df7b0327bBB57397a1CA](https://snowtrace.io/address/0x333733DEedd11Ee40D41Df7b0327bBB57397a1CA#code) |
+| Treasury | 0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22 |
 
 ## Networks and Underlying meanings
 
