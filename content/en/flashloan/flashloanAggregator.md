@@ -29,7 +29,7 @@ For developers, a helpful mental model to consider when developing your solution
 1. Your receiver contract calls the aggregator contract, requesting a Flash Loan of certain amounts using flashloan() mentioning the route.
 2. After some sanity checks, the aggregator routes the transaction to the passed route, gets the requested amounts, transfers the requested amounts to your contract, and calls the executeOperation() of your contract.
 3. Your contract, now holding the flash loaned amounts, executes any arbitrary operation in its code.
-4. When your code has finished, your contract transfer the flash loaned amounts with fees back to the aggregator.
+4. When your code has finished, your contract transfers the flash loaned amounts with fees back to the aggregator.
 5. The aggregator verifies if you have sent the correct amounts, and then sends the amounts back to the respective routes' flashloan provider.
 6. All of the above happens in 1 transaction (hence in a single ethereum block).
 
