@@ -2,7 +2,7 @@
 title: Mainnet Resolvers
 menuTitle: Mainnet
 description: "Avalanche resolvers"
-position: 10
+position: 15
 category: "resolvers"
 ---
 

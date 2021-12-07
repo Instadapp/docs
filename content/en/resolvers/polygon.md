@@ -2,7 +2,7 @@
 title: Polygon Resolvers
 menuTitle: Polygon
 description: "Polygon resolvers"
-position: 11
+position: 16
 category: "resolvers"
 ---
 

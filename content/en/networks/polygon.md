@@ -2,7 +2,7 @@
 title: Instadapp on Polygon
 menuTitle: Polygon
 description: ""
-position: 1
+position: 7
 category: "Networks"
 ---
 

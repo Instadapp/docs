@@ -2,7 +2,7 @@
 title: Arbitrum Resolvers
 menuTitle: Arbitrum
 description: "Arbitrum resolvers"
-position: 13
+position: 17
 category: "resolvers"
 ---
 

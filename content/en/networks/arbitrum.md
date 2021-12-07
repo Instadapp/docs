@@ -2,7 +2,7 @@
 title: Instadapp on Arbitrum
 menuTitle: Arbitrum
 description: ""
-position: 2
+position: 8
 category: "Networks"
 ---
 

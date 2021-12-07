@@ -2,7 +2,7 @@
 title: Avalanche Resolvers
 menuTitle: Avalanche
 description: "Avalanche resolvers"
-position: 12
+position: 18
 category: "resolvers"
 ---
 
