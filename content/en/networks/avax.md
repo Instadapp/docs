@@ -2,7 +2,7 @@
 title: Instadapp on Avalanche
 menuTitle: Avalanche
 description: ""
-position: 2
+position: 3
 category: "Networks"
 ---
 

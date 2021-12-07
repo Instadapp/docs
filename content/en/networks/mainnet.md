@@ -2,7 +2,7 @@
 title: Instadapp on Mainnet
 menuTitle: Mainnet
 description: ""
-position: 2
+position: 0
 category: "Networks"
 ---
 
