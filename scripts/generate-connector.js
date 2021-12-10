@@ -296,7 +296,7 @@ const getSourceCode = async (connector, network) => {
 title: Mainnet Connectors
 menuTitle: Mainnet
 description: ''
-position: 6
+position: 11
 category: 'Connectors'
 ---
   `;
@@ -351,7 +351,7 @@ category: 'Connectors'
 title: Polygon Connectors
 menuTitle: Polygon
 description: ''
-position: 7
+position: 12
 category: 'Connectors'
 ---
 `;
@@ -404,7 +404,7 @@ category: 'Connectors'
 title: Arbitrum Connectors
 menuTitle: Arbitrum
 description: ''
-position: 8
+position: 13
 category: 'Connectors'
 ---
   `;
@@ -457,7 +457,7 @@ category: 'Connectors'
 title: Avalanche Connectors
 menuTitle: Avalanche
 description: ''
-position: 9
+position: 14
 category: 'Connectors'
 ---
       `;
