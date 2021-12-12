@@ -6,9 +6,9 @@ position: 17
 category: "resolvers"
 ---
 
-* [Uniswap v3](./arbitrum/uniswap) 
+* [Uniswap v3](/resolvers/arbitrum/uniswap) 
 
-* [Instadapp](./arbitrum/instadapp)
+* [Instadapp](/resolvers/arbitrum/instadapp)
 
 <!-- 
 ## Uniswap v3
