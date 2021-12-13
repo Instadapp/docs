@@ -16,7 +16,7 @@ draft: true
 2) Then I will use `482` as getId on compound deposit() function and deposit the bought ETH in Compound. In deposit function, I don't need to mention the amount specifically to deposit. It will get the deposit amount from `getId` that is passed. 
 
 **Code Snippet:**
-```
+```js
 spells.add({
   connector: "1INCH-A",
   method: "sell",
