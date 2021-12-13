@@ -6,4 +6,4 @@ position: 21
 category: "faq" 
 ---
 
-* [What's the use of getId and setId?](/faq/connectors/getid-and-setid)
+* [What's the use of getId and setId?](/FAQ/connectors/getid-and-setid)
