@@ -6,4 +6,4 @@ position: 24
 category: "faq"
 ---
 
-* [What's the use of getId and setId?](/faq/terminal/typechain-guide)
+* [Inbuilt functionalities available on terminal?](/faq/terminal/typechain-guide)
