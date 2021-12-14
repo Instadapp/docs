@@ -7,3 +7,5 @@ category: "faq"
 ---
 
 * [What's the use of getId and setId?](/faq/connectors/getid-and-setid)
+
+* [How to calculate UnitAmt?](/faq/connectors/calculate-unitamt)
