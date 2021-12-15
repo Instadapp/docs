@@ -6,9 +6,9 @@ position: 16
 category: "resolvers"
 ---
 
-* [Aave](./polygon/aave) 
+* [Aave](/resolvers/polygon/aave) 
 
-* [Instadapp](./polygon/instadapp)
+* [Instadapp](/resolvers/polygon/instadapp)
 
 
 <!-- 
