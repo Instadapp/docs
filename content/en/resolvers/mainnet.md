@@ -6,15 +6,15 @@ position: 15
 category: "resolvers"
 ---
 
-* [Compound](./mainnet/compound)
+* [Compound](/resolvers/mainnet/compound)
 
-* [Aave](./mainnet/aave)
+* [Aave](/resolvers/mainnet/aave)
 
-* [MakerDAO](./mainnet/makerdao)
+* [MakerDAO](/resolvers/mainnet/makerdao)
 
-* [Uniswap v3](./mainnet/uniswap)
+* [Uniswap v3](/resolvers/mainnet/uniswap)
 
-* [Instadapp](./mainnet/instadapp)
+* [Instadapp](//resolversmainnet/instadapp)
 
 <!-- ## Compound
 
