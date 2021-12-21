@@ -191,6 +191,16 @@
             "path": "instapool_v4/main.sol",
             "slug": "instapool-v4",
             "title": "INSTAPOOL-C"
+        },
+        {
+            "path": "uniswap/v3/main.sol",
+            "slug": "uniswapV3",
+            "title": "Uniswap V3"
+        },
+        {
+            "path": "uniswap/v3_staker/main.sol",
+            "slug": "uniswap-v3-staker",
+            "title": "Uniswap V3 Staker"
         }
     ],
     "arbitrum": [
