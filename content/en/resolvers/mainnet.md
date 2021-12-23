@@ -14,7 +14,9 @@ category: "resolvers"
 
 * [Uniswap v3](/resolvers/mainnet/uniswap)
 
+
 * [Instadapp](/resolvers/mainnet/instadapp)
+
 
 <!-- ## Compound
 
