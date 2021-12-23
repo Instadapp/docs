@@ -15,8 +15,10 @@ Common functions or variables available on terminal :
 **Constants**
 > 1) MAINNET_TOKENS
 > 2) POLYGON_TOKENS
-> 3) USER_ADDRESS
-> 4) ACCOUNT_ADDRESS
+> 3) AVALACHE_TOKENS
+> 4) ARBITRUM_TOKENS
+> 5) USER_ADDRESS
+> 6) ACCOUNT_ADDRESS
 
 **Library Instances**
 > 1) Web3
@@ -36,7 +38,6 @@ run()
 ```
 But we have top level await, no need to any wrapper
 ```js
-const gas = await 
-web3.eth.getGasPrice();
+const gas = await web3.eth.getGasPrice();
 ```
 
