@@ -11,4 +11,4 @@ category: "faq"
 * [How to calculate UnitAmt?](/faq/connectors/calculate-unitamt)
 
 ## Flashloans
-* [How to take and payback flashloan on polygon chain?](/faq/connectors/script-for-flashloan-polygon)
+* [How to borrow and payback flashloan?](/faq/connectors/borrow-and-payback-flashloan)
