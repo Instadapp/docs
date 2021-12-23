@@ -6,4 +6,4 @@ position: 22
 category: "faq"
 ---
 
-* [Inbuilt functionalities available on terminal?](/faq/terminal/typechain-guide)
+* [Inbuilt functionalities available on terminal?](/faq/terminal/typechain-guide) 
