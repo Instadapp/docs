@@ -9,10 +9,10 @@ export default async function generateMd (data, address, chain) {
         explorerLink = `[Etherscan](https://arbiscan.io/address/${address}#code)`
     } else if (chain === 'avalanche') {
         nativeToken = "AVAX"
-        explorerLink = `[Etherscan](https://snowtrace.io/address/${address}#code)`
+        explorerLink = `[Snowtrace](https://snowtrace.io/address/${address}#code)`
     } else if (chain === 'polygon') {
         nativeToken = "MATIC"
-        explorerLink = `[Etherscan](https://polygonscan.io/address/${address}#code)`
+        explorerLink = `[Polygonscan](https://polygonscan.io/address/${address}#code)`
     } else if (chain === 'optimism') {
         nativeToken = "ETH"
         explorerLink = `[Etherscan](https://optimistic.etherscan.io/address/${address}#code)`
