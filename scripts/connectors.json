@@ -1,290 +1,330 @@
 {
-    "mainnet": [
-        {
-            "path": "basic/main.sol",
-            "slug": "basic",
-            "title": "Basic A (ERC20)"
-        },
-        {
-            "path": "authority/main.sol",
-            "slug": "authority",
-            "title": "Authority"
-        },
-        {
-            "path": "aave/v1/main.sol",
-            "slug": "aave-v1",
-            "title": "Aave V1"
-        },
-        {
-            "path": "aave/v2/main.sol",
-            "slug": "aave-v2",
-            "title": "Aave V2"
-        },
-        {
-            "path": "1inch/main.sol",
-            "slug": "1inch",
-            "title": "1Inch"
-        },
-        {
-            "path": "compound/main.sol",
-            "slug": "compound",
-            "title": "Compound"
-        },
-        {
-            "path": "COMP/main.sol",
-            "slug": "comp",
-            "title": "Comp"
-        },
-        {
-            "path": "makerdao/main.sol",
-            "slug": "makerdao",
-            "title": "MakerDAO"
-        },
-        {
-            "path": "uniswap/v2/main.sol",
-            "slug": "uniswap",
-            "title": "Uniswap V2"
-        },
-        {
-            "path": "aave/aave-rewards/main.sol",
-            "slug": "aave-rewards",
-            "title": "Aave Rewards"
-        },
-        {
-            "path": "polygon-bridge/main.sol",
-            "slug": "assets-polygon-bridge",
-            "title": "Assets Transfer Polygon Bridge"
-        },
-        {
-            "path": "INST/main.sol",
-            "slug": "inst",
-            "title": "INST Governance"
-        },
-        {
-            "path": "instapool_v2/main.sol",
-            "slug": "instapool_v2",
-            "title": "Instapool V2"
-        },
-        {
-            "path": "weth/main.sol",
-            "slug": "weth",
-            "title": "WETH"
-        },
-        {
-            "path": "1proto/main.sol",
-            "slug": "1proto",
-            "title": "1Inch (on-chain)"
-        },
-        {
-            "path": "guniswap_v3_erc20/main.sol",
-            "slug": "guniswap_v3_erc20",
-            "title": "G-Uniswap V3 ERC20"
-        },
-        {
-            "path": "guniswap_v3_erc20_staking/main.sol",
-            "slug": "guniswap_v3_erc20_staking",
-            "title": "G-UNI Staking"
-        },
-        {
-            "path": "liquity/main.sol",
-            "slug": "liquity",
-            "title": "Liquity"
-        },
-        {
-            "path": "reflexer/main.sol",
-            "slug": "reflexer",
-            "title": "Reflexer"
-        },
-        {
-            "path": "uniswap/v3/main.sol",
-            "slug": "uniswapV3",
-            "title": "Uniswap V3"
-        },
-        {
-            "path": "b.protocol/compound/main.sol",
-            "slug": "bprotocol-compound",
-            "title": "B.Protocol Compound"
-        },
-        {
-            "path": "b.protocol/liquity/main.sol",
-            "slug": "bprotocol-liquity",
-            "title": "B.Protocol Liquity"
-        },
-        {
-            "path": "b.protocol/makerdao/main.sol",
-            "slug": "bprotocol-makerdao",
-            "title": "B.Protocol MakerDAO"
-        },
-        {
-            "path": "uniswap/v3_staker/main.sol",
-            "slug": "uniswap-v3-staker",
-            "title": "Uniswap V3 Staker"
-        },
-        {
-            "path": "basic-ERC721/main.sol",
-            "slug": "basic-b",
-            "title": "Basic B (ERC721)"
-        },
-        {
-            "path": "basic-ERC1155/main.sol",
-            "slug": "basic-c",
-            "title": "Basic C (ERC1155)"
-        },
-        {
-            "path": "yearn_v2/main.sol",
-            "slug": "yearn-v2",
-            "title": "Yearn V2"
-        },
-        {
-            "path": "gelato/aave-services/protection/main.sol",
-            "slug": "gelato-aave-protection",
-            "title": "Gelato Aave Protection"
-        },
-        {
-            "path": "universeFinance/main.sol",
-            "slug": "universe-v1",
-            "title": "UNIVERSE-A"
-        },
-        {
-            "path": "instapool_v4/main.sol",
-            "slug": "instapool-v4",
-            "title": "INSTAPOOL-C"
-        }
-    ],
-    "polygon": [
-        {
-            "path": "basic/main.sol",
-            "slug": "basic",
-            "title": "Basic"
-        },
-        {
-            "path": "authority/main.sol",
-            "slug": "authority",
-            "title": "Authority"
-        },
-        {
-            "path": "aave/v2/main.sol",
-            "slug": "aave-v2",
-            "title": "Aave V2"
-        },
-        {
-            "path": "aave/aave-rewards/main.sol",
-            "slug": "aave-rewards",
-            "title": "Aave Rewards"
-        },
-        {
-            "path": "paraswap/main.sol",
-            "slug": "paraswap",
-            "title": "Paraswap"
-        },
-        {
-            "path": "1inch/main.sol",
-            "slug": "1inch",
-            "title": "1Inch"
-        },
-        {
-            "path": "gelato/aave-services/protection/main.sol",
-            "slug": "gelato-aave-protection",
-            "title": "Gelato Aave Protection"
-        },
-        {
-            "path": "instapool_v4/main.sol",
-            "slug": "instapool-v4",
-            "title": "INSTAPOOL-C"
-        },
-        {
-            "path": "uniswap/v3/main.sol",
-            "slug": "uniswapV3",
-            "title": "Uniswap V3"
-        },
-        {
-            "path": "uniswap/v3_staker/main.sol",
-            "slug": "uniswap-v3-staker",
-            "title": "Uniswap V3 Staker"
-        }
-    ],
-    "arbitrum": [
-        {
-            "path": "authority/main.sol",
-            "slug": "authority",
-            "title": "Authority"
-        },
-        {
-            "path": "basic/main.sol",
-            "slug": "basic",
-            "title": "Basic A (ERC20)"
-        },
-        {
-            "path": "basic-ERC721/main.sol",
-            "slug": "basic-b",
-            "title": "Basic B (ERC721)"
-        },
-        {
-            "path": "basic-ERC1155/main.sol",
-            "slug": "basic-c",
-            "title": "Basic C (ERC1155)"
-        },
-        {
-            "path": "uniswap/v3/main.sol",
-            "slug": "uniswapV3",
-            "title": "Uniswap V3"
-        },
-        {
-            "path": "1inch/main.sol",
-            "slug": "1inch",
-            "title": "1Inch"
-        },
-        {
-            "path": "weth/main.sol",
-            "slug": "weth",
-            "title": "WETH"
-        },
-        {
-            "path": "instapool_v4/main.sol",
-            "slug": "instapool-v4",
-            "title": "INSTAPOOL-C"
-        }
-    ],
-    "avalanche": [
-        {
-            "path": "authority/main.sol",
-            "slug": "authority",
-            "title": "Authority"
-        },
-        {
-            "path": "basic/main.sol",
-            "slug": "basic",
-            "title": "Basic A (ERC20)"
-        },
-        {
-            "path": "paraswap/main.sol",
-            "slug": "paraswap",
-            "title": "Paraswap"
-        },
-        {
-            "path": "aave/v2/main.sol",
-            "slug": "aave-v2",
-            "title": "Aave V2"
-        },
-        {
-            "path": "wavax/main.sol",
-            "slug": "wavax",
-            "title": "WAVAX"
-        },
-        {
-            "path": "benqi/v2/main.sol",
-            "slug": "benqi-v1",
-            "title": "Benqi"
-        },
-        {
-            "path": "benqi/benqi-rewards/main.sol",
-            "slug": "qi-v1",
-            "title": "QI"
-        },
-        {
-            "path": "instapool_v4/main.sol",
-            "slug": "instapool-v4",
-            "title": "INSTAPOOL-C"
-        }
-    ]
+  "mainnet": [
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic A (ERC20)"
+    },
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "aave/v1/main.sol",
+      "slug": "aave-v1",
+      "title": "Aave V1"
+    },
+    {
+      "path": "aave/v2/main.sol",
+      "slug": "aave-v2",
+      "title": "Aave V2"
+    },
+
+    {
+      "path": "1inch/1inch-v4/main.sol",
+      "slug": "1inch-v4",
+      "title": "1Inch v4"
+    },
+    {
+      "path": "compound/main.sol",
+      "slug": "compound",
+      "title": "Compound"
+    },
+    {
+      "path": "COMP/main.sol",
+      "slug": "comp",
+      "title": "Comp"
+    },
+    {
+      "path": "makerdao/main.sol",
+      "slug": "makerdao",
+      "title": "MakerDAO"
+    },
+    {
+      "path": "uniswap/v2/main.sol",
+      "slug": "uniswap",
+      "title": "Uniswap V2"
+    },
+    {
+      "path": "aave/aave-rewards/main.sol",
+      "slug": "aave-rewards",
+      "title": "Aave Rewards"
+    },
+    {
+      "path": "polygon-bridge/main.sol",
+      "slug": "assets-polygon-bridge",
+      "title": "Assets Transfer Polygon Bridge"
+    },
+    {
+      "path": "INST/main.sol",
+      "slug": "inst",
+      "title": "INST Governance"
+    },
+    {
+      "path": "instapool_v2/main.sol",
+      "slug": "instapool_v2",
+      "title": "Instapool V2"
+    },
+    {
+      "path": "weth/main.sol",
+      "slug": "weth",
+      "title": "WETH"
+    },
+    {
+      "path": "1proto/main.sol",
+      "slug": "1proto",
+      "title": "1Inch (on-chain)"
+    },
+    {
+      "path": "guniswap_v3_erc20/main.sol",
+      "slug": "guniswap_v3_erc20",
+      "title": "G-Uniswap V3 ERC20"
+    },
+    {
+      "path": "guniswap_v3_erc20_staking/main.sol",
+      "slug": "guniswap_v3_erc20_staking",
+      "title": "G-UNI Staking"
+    },
+    {
+      "path": "liquity/main.sol",
+      "slug": "liquity",
+      "title": "Liquity"
+    },
+    {
+      "path": "reflexer/main.sol",
+      "slug": "reflexer",
+      "title": "Reflexer"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswapV3",
+      "title": "Uniswap V3"
+    },
+    {
+      "path": "b.protocol/compound/main.sol",
+      "slug": "bprotocol-compound",
+      "title": "B.Protocol Compound"
+    },
+    {
+      "path": "b.protocol/liquity/main.sol",
+      "slug": "bprotocol-liquity",
+      "title": "B.Protocol Liquity"
+    },
+    {
+      "path": "b.protocol/makerdao/main.sol",
+      "slug": "bprotocol-makerdao",
+      "title": "B.Protocol MakerDAO"
+    },
+    {
+      "path": "uniswap/v3_staker/main.sol",
+      "slug": "uniswap-v3-staker",
+      "title": "Uniswap V3 Staker"
+    },
+    {
+      "path": "basic-ERC721/main.sol",
+      "slug": "basic-b",
+      "title": "Basic B (ERC721)"
+    },
+    {
+      "path": "basic-ERC1155/main.sol",
+      "slug": "basic-c",
+      "title": "Basic C (ERC1155)"
+    },
+    {
+      "path": "yearn_v2/main.sol",
+      "slug": "yearn-v2",
+      "title": "Yearn V2"
+    },
+    {
+      "path": "gelato/aave-services/protection/main.sol",
+      "slug": "gelato-aave-protection",
+      "title": "Gelato Aave Protection"
+    },
+    {
+      "path": "universeFinance/main.sol",
+      "slug": "universe-v1",
+      "title": "UNIVERSE-A"
+    },
+    {
+      "path": "instapool_v4/main.sol",
+      "slug": "instapool-v4",
+      "title": "INSTAPOOL-C"
+    }
+  ],
+  "polygon": [
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic"
+    },
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "aave/v2/main.sol",
+      "slug": "aave-v2",
+      "title": "Aave V2"
+    },
+    {
+      "path": "aave/aave-rewards/main.sol",
+      "slug": "aave-rewards",
+      "title": "Aave Rewards"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "Paraswap"
+    },
+
+    {
+      "path": "1inch/1inch-v4/main.sol",
+      "slug": "1inch-v4",
+      "title": "1Inch v4"
+    },
+    {
+      "path": "gelato/aave-services/protection/main.sol",
+      "slug": "gelato-aave-protection",
+      "title": "Gelato Aave Protection"
+    },
+    {
+      "path": "instapool_v4/main.sol",
+      "slug": "instapool-v4",
+      "title": "INSTAPOOL-C"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswapV3",
+      "title": "Uniswap V3"
+    },
+    {
+      "path": "uniswap/v3_staker/main.sol",
+      "slug": "uniswap-v3-staker",
+      "title": "Uniswap V3 Staker"
+    }
+  ],
+  "arbitrum": [
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic A (ERC20)"
+    },
+    {
+      "path": "basic-ERC721/main.sol",
+      "slug": "basic-b",
+      "title": "Basic B (ERC721)"
+    },
+    {
+      "path": "basic-ERC1155/main.sol",
+      "slug": "basic-c",
+      "title": "Basic C (ERC1155)"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswapV3",
+      "title": "Uniswap V3"
+    },
+
+    {
+      "path": "1inch/1inch-v4/main.sol",
+      "slug": "1inch-v4",
+      "title": "1Inch v4"
+    },
+    {
+      "path": "weth/main.sol",
+      "slug": "weth",
+      "title": "WETH"
+    },
+    {
+      "path": "instapool_v4/main.sol",
+      "slug": "instapool-v4",
+      "title": "INSTAPOOL-C"
+    }
+  ],
+  "avalanche": [
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic A (ERC20)"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "Paraswap"
+    },
+    {
+      "path": "aave/v2/main.sol",
+      "slug": "aave-v2",
+      "title": "Aave V2"
+    },
+    {
+      "path": "wavax/main.sol",
+      "slug": "wavax",
+      "title": "WAVAX"
+    },
+    {
+      "path": "benqi/v2/main.sol",
+      "slug": "benqi-v1",
+      "title": "Benqi"
+    },
+    {
+      "path": "benqi/benqi-rewards/main.sol",
+      "slug": "qi-v1",
+      "title": "QI"
+    },
+    {
+      "path": "instapool_v4/main.sol",
+      "slug": "instapool-v4",
+      "title": "INSTAPOOL-C"
+    }
+  ],
+  "optimism": [
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic A (ERC20)"
+    },
+    {
+      "path": "basic-ERC721/main.sol",
+      "slug": "basic-b",
+      "title": "Basic B (ERC721)"
+    },
+    {
+      "path": "basic-ERC1155/main.sol",
+      "slug": "basic-c",
+      "title": "Basic C (ERC1155)"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswapV3",
+      "title": "Uniswap V3"
+    },
+    {
+      "path": "1inch/1inch-v4/main.sol",
+      "slug": "1inch-v4",
+      "title": "1Inch v4"
+    },
+    {
+      "path": "weth/main.sol",
+      "slug": "weth",
+      "title": "WETH"
+    }
+  ]
 }

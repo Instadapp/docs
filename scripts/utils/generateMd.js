@@ -13,7 +13,10 @@ export default async function generateMd (data, address, chain) {
     } else if (chain === 'polygon') {
         nativeToken = "MATIC"
         explorerLink = `[Etherscan](https://polygonscan.io/address/${address}#code)`
-    } else {
+    } else if (chain === 'optimism') {
+        nativeToken = "ETH"
+        explorerLink = `[Etherscan](https://optimistic.etherscan.io/address/${address}#code)`
+    }  else {
         nativeToken = "ETH"
         explorerLink = `[Etherscan](https://etherscan.io/address/${address}#code)`
     }
