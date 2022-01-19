@@ -9,10 +9,10 @@ export default async function generateMd (data, address, chain) {
         explorerLink = `[Etherscan](https://arbiscan.io/address/${address}#code)`
     } else if (chain === 'avalanche') {
         nativeToken = "AVAX"
-        explorerLink = `[Etherscan](https://snowtrace.io/address/${address}#code)`
+        explorerLink = `[Snowtrace](https://snowtrace.io/address/${address}#code)`
     } else if (chain === 'polygon') {
         nativeToken = "MATIC"
-        explorerLink = `[Etherscan](https://polygonscan.io/address/${address}#code)`
+        explorerLink = `[Polygonscan](https://polygonscan.io/address/${address}#code)`
     } else if (chain === 'optimism') {
         nativeToken = "ETH"
         explorerLink = `[Etherscan](https://optimistic.etherscan.io/address/${address}#code)`
@@ -27,7 +27,7 @@ export default async function generateMd (data, address, chain) {
     md += '\n---'
     md += `\n> ${data.description}`
     md += `\n${data.connectorVersion} connector triggers methods like ${data.functions.map(o => o.functionName).join(', ')}.`
-    if (chain === 'mainnet') md += ` You can view details like source code, ABIs on ${explorerLink}.`
+    md += ` You can view details like source code, ABIs on ${explorerLink}.`
     md += '\n'
     md += `\n- Use \`0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\` to indicate ${nativeToken}.`
     md += '\n- use -1 or `dsa.maxValue` for the maximum amount in function.'
