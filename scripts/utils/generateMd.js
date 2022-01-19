@@ -27,7 +27,7 @@ export default async function generateMd (data, address, chain) {
     md += '\n---'
     md += `\n> ${data.description}`
     md += `\n${data.connectorVersion} connector triggers methods like ${data.functions.map(o => o.functionName).join(', ')}.`
-    if (chain === 'mainnet') md += ` You can view details like source code, ABIs on ${explorerLink}.`
+    md += ` You can view details like source code, ABIs on ${explorerLink}.`
     md += '\n'
     md += `\n- Use \`0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\` to indicate ${nativeToken}.`
     md += '\n- use -1 or `dsa.maxValue` for the maximum amount in function.'
