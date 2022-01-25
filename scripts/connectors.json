@@ -203,6 +203,11 @@
       "path": "uniswap/v3_staker/main.sol",
       "slug": "uniswap-v3-staker",
       "title": "Uniswap V3 Staker"
+    },
+    {
+      "path": "quickswap/main.sol",
+      "slug": "quickswap",
+      "title": "Quickswap"
     }
   ],
   "arbitrum": [
