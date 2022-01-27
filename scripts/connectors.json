@@ -329,6 +329,11 @@
       "path": "paraswap/main.sol",
       "slug": "paraswap",
       "title": "PARASWAP-V5-A"
+    },
+    {
+      "path": "pangolin/exchange/main.sol",
+      "slug": "pangolin",
+      "title": "PANGOLIN-A"
     }
   ],
   "optimism": [
