@@ -150,6 +150,11 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "Sushiswap-A"
     }
   ],
   "polygon": [
