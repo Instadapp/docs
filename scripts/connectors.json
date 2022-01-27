@@ -150,6 +150,11 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "Sushiswap-A"
     }
   ],
   "polygon": [
@@ -208,7 +213,12 @@
       "path": "quickswap/main.sol",
       "slug": "quickswap",
       "title": "Quickswap"
-    }
+    },
+    {
+        "path": "sushiswap/main.sol",
+        "slug": "sushiswap",
+        "title": "Sushiswap-A"
+      }
   ],
   "arbitrum": [
     {
@@ -251,7 +261,12 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
-    }
+    },
+    {
+        "path": "sushiswap/main.sol",
+        "slug": "sushiswap",
+        "title": "Sushiswap-A"
+      }
   ],
   "avalanche": [
     {
@@ -293,7 +308,12 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
-    }
+    },
+    {
+        "path": "sushiswap/main.sol",
+        "slug": "sushiswap",
+        "title": "Sushiswap-A"
+      }
   ],
   "optimism": [
     {
