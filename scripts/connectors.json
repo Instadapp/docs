@@ -150,6 +150,11 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
+    },
+    {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "ZEROX-A"
     }
   ],
   "polygon": [
@@ -208,6 +213,11 @@
       "path": "quickswap/main.sol",
       "slug": "quickswap",
       "title": "Quickswap"
+    },
+    {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "ZEROX-A"
     }
   ],
   "arbitrum": [
@@ -298,6 +308,11 @@
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
       "title": "1INCH-V4-A"
+    },
+    {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "ZEROX-A"
     }
   ],
   "optimism": [
