@@ -24,7 +24,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "compound/main.sol",
@@ -150,11 +150,6 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
-    },
-    {
-      "path": "sushiswap/main.sol",
-      "slug": "sushiswap",
-      "title": "Sushiswap-A"
     }
   ],
   "polygon": [
@@ -187,7 +182,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "gelato/aave-services/protection/main.sol",
@@ -213,12 +208,7 @@
       "path": "quickswap/main.sol",
       "slug": "quickswap",
       "title": "Quickswap"
-    },
-    {
-        "path": "sushiswap/main.sol",
-        "slug": "sushiswap",
-        "title": "Sushiswap-A"
-      }
+    }
   ],
   "arbitrum": [
     {
@@ -250,7 +240,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "weth/main.sol",
@@ -261,12 +251,7 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
-    },
-    {
-        "path": "sushiswap/main.sol",
-        "slug": "sushiswap",
-        "title": "Sushiswap-A"
-      }
+    }
   ],
   "avalanche": [
     {
@@ -310,10 +295,10 @@
       "title": "INSTAPOOL-C"
     },
     {
-        "path": "sushiswap/main.sol",
-        "slug": "sushiswap",
-        "title": "Sushiswap-A"
-      }
+      "path": "1inch/1inch-v4/main.sol",
+      "slug": "1inch-v4",
+      "title": "1INCH-V4-A"
+    }
   ],
   "optimism": [
     {
@@ -344,7 +329,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "weth/main.sol",
