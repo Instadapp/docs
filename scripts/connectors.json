@@ -229,6 +229,11 @@
       "path": "paraswap/main.sol",
       "slug": "paraswap",
       "title": "PARASWAP-V5-A"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswap",
+      "title": "UNISWAP-V3-A"
     }
   ],
   "arbitrum": [
@@ -371,6 +376,11 @@
       "path": "weth/main.sol",
       "slug": "weth",
       "title": "WETH"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswap",
+      "title": "UNISWAP-V3-A"
     }
   ]
 }
