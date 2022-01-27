@@ -155,7 +155,13 @@
       "path": "0x/main.sol",
       "slug": "0x",
       "title": "ZEROX-A"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5-A"
     }
+
   ],
   "polygon": [
     {
@@ -218,6 +224,11 @@
       "path": "0x/main.sol",
       "slug": "0x",
       "title": "ZEROX-A"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5-A"
     }
   ],
   "arbitrum": [
@@ -313,6 +324,11 @@
       "path": "0x/main.sol",
       "slug": "0x",
       "title": "ZEROX-A"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5-A"
     }
   ],
   "optimism": [
