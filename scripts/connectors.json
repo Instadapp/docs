@@ -290,11 +290,7 @@
       "slug": "basic",
       "title": "Basic A (ERC20)"
     },
-    {
-      "path": "paraswap/main.sol",
-      "slug": "paraswap",
-      "title": "Paraswap"
-    },
+    
     {
       "path": "aave/v2/main.sol",
       "slug": "aave-v2",
