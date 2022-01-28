@@ -24,7 +24,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "compound/main.sol",
@@ -152,10 +152,16 @@
       "title": "INSTAPOOL-C"
     },
     {
-      "path": "sushiswap/main.sol",
-      "slug": "sushiswap",
-      "title": "Sushiswap-A"
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "ZEROX-A"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5-A"
     }
+
   ],
   "polygon": [
     {
@@ -187,7 +193,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "gelato/aave-services/protection/main.sol",
@@ -215,10 +221,20 @@
       "title": "Quickswap"
     },
     {
-        "path": "sushiswap/main.sol",
-        "slug": "sushiswap",
-        "title": "Sushiswap-A"
-      }
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "ZEROX-A"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5-A"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswap",
+      "title": "UNISWAP-V3-A"
+    }
   ],
   "arbitrum": [
     {
@@ -250,7 +266,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "weth/main.sol",
@@ -261,12 +277,7 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-C"
-    },
-    {
-        "path": "sushiswap/main.sol",
-        "slug": "sushiswap",
-        "title": "Sushiswap-A"
-      }
+    }
   ],
   "avalanche": [
     {
@@ -279,11 +290,7 @@
       "slug": "basic",
       "title": "Basic A (ERC20)"
     },
-    {
-      "path": "paraswap/main.sol",
-      "slug": "paraswap",
-      "title": "Paraswap"
-    },
+    
     {
       "path": "aave/v2/main.sol",
       "slug": "aave-v2",
@@ -310,10 +317,25 @@
       "title": "INSTAPOOL-C"
     },
     {
-        "path": "sushiswap/main.sol",
-        "slug": "sushiswap",
-        "title": "Sushiswap-A"
-      }
+      "path": "1inch-v4/main.sol",
+      "slug": "1inch-v4",
+      "title": "1INCH-V4-A"
+    },
+    {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "ZEROX-A"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5-A"
+    },
+    {
+      "path": "pangolin/exchange/main.sol",
+      "slug": "pangolin",
+      "title": "PANGOLIN-A"
+    }
   ],
   "optimism": [
     {
@@ -344,12 +366,17 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1Inch v4"
+      "title": "1INCH-V4-A"
     },
     {
       "path": "weth/main.sol",
       "slug": "weth",
       "title": "WETH"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswap",
+      "title": "UNISWAP-V3-A"
     }
   ]
 }
