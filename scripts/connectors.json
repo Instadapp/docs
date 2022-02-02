@@ -160,6 +160,11 @@
       "path": "paraswap/main.sol",
       "slug": "paraswap",
       "title": "PARASWAP-V5-A"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
     }
 
   ],
@@ -229,8 +234,14 @@
     {
       "path": "wmatic/main.sol",
       "slug": "wmatic",
-      "title": "WMATIC"
+      "title": "WMATIC-A"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
     }
+
   ],
   "arbitrum": [
     {
@@ -278,7 +289,13 @@
       "path": "uniswap/v3_staker/main.sol",
       "slug": "uniswap-v3-staker",
       "title": "Uniswap V3 Staker"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
     }
+
   ],
   "avalanche": [
     {
@@ -336,7 +353,13 @@
       "path": "pangolin/exchange/main.sol",
       "slug": "pangolin",
       "title": "PANGOLIN-A"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
     }
+
   ],
   "optimism": [
     {
