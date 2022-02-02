@@ -185,6 +185,11 @@
       "path": "sushi-incentive/main.sol",
       "slug": "sushi-incentive",
       "title": "SUSHISWAP-INCENTIVE-A"
+    },
+    {
+      "path": "ubiquity/main.sol",
+      "slug": "ubiquity",
+      "title": "UBIQUITY-A"
     }
 
   ],
