@@ -170,6 +170,11 @@
       "path": "kyber/main.sol",
       "slug": "kkyber",
       "title": "KYBER-A"
+    },
+    {
+      "path": "oasis/main.sol",
+      "slug": "oasis",
+      "title": "OASIS-A"
     }
 
   ],
