@@ -225,6 +225,11 @@
       "path": "uniswap/v3/main.sol",
       "slug": "uniswap",
       "title": "UNISWAP-V3-A"
+    },
+    {
+      "path": "wmatic/main.sol",
+      "slug": "wmatic",
+      "title": "WMATIC"
     }
   ],
   "arbitrum": [
