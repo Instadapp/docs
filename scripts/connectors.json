@@ -165,6 +165,11 @@
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
       "title": "SUSHISWAP-A"
+    },
+    {
+      "path": "kyber/main.sol",
+      "slug": "kkyber",
+      "title": "KYBER-A"
     }
 
   ],
