@@ -180,6 +180,11 @@
       "path": "pooltogether/main.sol",
       "slug": "pooltogether",
       "title": "POOLTOGETHER-A"
+    },
+    {
+      "path": "sushi-incentive/main.sol",
+      "slug": "sushi-incentive",
+      "title": "SUSHISWAP-INCENTIVE-A"
     }
 
   ],
