@@ -175,6 +175,11 @@
       "path": "oasis/main.sol",
       "slug": "oasis",
       "title": "OASIS-A"
+    },
+    {
+      "path": "pooltogether/main.sol",
+      "slug": "pooltogether",
+      "title": "POOLTOGETHER-A"
     }
 
   ],
@@ -250,6 +255,11 @@
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
       "title": "SUSHISWAP-A"
+    },
+    {
+      "path": "pooltogether/main.sol",
+      "slug": "pooltogether",
+      "title": "POOLTOGETHER-A"
     }
 
   ],
