@@ -168,14 +168,10 @@
     },
     {
       "path": "kyber/main.sol",
-      "slug": "kkyber",
+      "slug": "kyber",
       "title": "KYBER-A"
     },
-    {
-      "path": "oasis/main.sol",
-      "slug": "oasis",
-      "title": "OASIS-A"
-    },
+    
     {
       "path": "pooltogether/main.sol",
       "slug": "pooltogether",
