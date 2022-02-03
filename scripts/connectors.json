@@ -160,6 +160,19 @@
       "path": "paraswap/main.sol",
       "slug": "paraswap",
       "title": "PARASWAP-V5-A"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
+    },
+    
+    
+    
+    {
+      "path": "ubiquity/main.sol",
+      "slug": "ubiquity",
+      "title": "UBIQUITY-A"
     }
 
   ],
@@ -184,12 +197,7 @@
       "slug": "aave-rewards",
       "title": "Aave Rewards"
     },
-    {
-      "path": "paraswap/main.sol",
-      "slug": "paraswap",
-      "title": "Paraswap"
-    },
-
+    
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
@@ -230,7 +238,18 @@
       "path": "uniswap/v3/main.sol",
       "slug": "uniswap",
       "title": "UNISWAP-V3-A"
+    },
+    {
+      "path": "wmatic/main.sol",
+      "slug": "wmatic",
+      "title": "WMATIC-A"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
     }
+   
   ],
   "arbitrum": [
     {
@@ -278,7 +297,13 @@
       "path": "uniswap/v3_staker/main.sol",
       "slug": "uniswap-v3-staker",
       "title": "Uniswap V3 Staker"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
     }
+
   ],
   "avalanche": [
     {
@@ -336,7 +361,13 @@
       "path": "pangolin/exchange/main.sol",
       "slug": "pangolin",
       "title": "PANGOLIN-A"
+    },
+    {
+      "path": "sushiswap/main.sol",
+      "slug": "sushiswap",
+      "title": "SUSHISWAP-A"
     }
+
   ],
   "optimism": [
     {
