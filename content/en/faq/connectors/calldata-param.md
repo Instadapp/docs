@@ -5,7 +5,8 @@ draft: true
 ---
 
 ```js
-const url = "https://api.instadapp.io/defi/polygon/uniswap/v3/swap/router";
+const network = "polygon"
+const url = `https://api.instadapp.io/defi/${network}/uniswap/v3/swap/router`;
 const params = {
     buyToken:<"buy-token">,
     sellToken: <"sell-token">,
@@ -16,4 +17,5 @@ const response = await axios.get(url, {
     params: params
 });
 const calldata = response.data.calldata;
+const unitAmt = response.data.unitAmt;
 ```
