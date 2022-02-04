@@ -10,7 +10,7 @@ category: "faq"
 
 * [How to calculate UnitAmt?](/faq/connectors/calculate-unitamt)
 
-* [How to get calldata param for uniswap v3 swap connector?](/faq/connectors/calldata-param)
+* [How to get calldata and unit for uniswap v3 swap connector](/faq/connectors/calldata-param)
 
 ## Flashloans
 * [How to borrow and payback flashloan?](/faq/connectors/borrow-and-payback-flashloan)
