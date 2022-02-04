@@ -248,6 +248,11 @@
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
       "title": "SUSHISWAP-A"
+    },
+    {
+      "path": "uniswap/v3_auto_router/main.sol",
+      "slug": "uniswap-v3-routera-a",
+      "title": "UNISWAP-V3-ROUTER-A"
     }
    
   ],
