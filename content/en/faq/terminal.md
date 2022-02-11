@@ -2,7 +2,7 @@
 title: FAQ terminal
 menuTitle: Terminal
 description: "frequently asked ques on terminal"
-position: 22
+position: 23
 category: "faq"
 ---
 

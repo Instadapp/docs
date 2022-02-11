@@ -2,7 +2,7 @@
 title: FAQ on connectors
 menuTitle: Connectors 
 description: "frequently asked questions on connectors"
-position: 21
+position: 22
 category: "faq" 
 ---
 ## Miscellaneous
