@@ -4,7 +4,7 @@ description: 'desc'
 draft: true 
 ---
 
-UniswapV3-v1 resolver triggers methods like getPoolDetails, getPositionInfoByTokenId, getPositionsInfo, getMintAmount, getDepositAmount, getSingleDepositAmount, getSingleMintAmount, getWithdrawAmount, getCollectAmount, getUserNFTs. You can view details like source code, ABIs on [Etherscan](https://etherscan.io/address/0x9156cd73ba5f792e26e9a1762dfc05162d9408c5).
+UniswapV3-v1 resolver triggers methods like getPoolDetails, getPositionInfoByTokenId, getPositionsInfo, getMintAmount, getDepositAmount, getSingleDepositAmount, getSingleMintAmount, getWithdrawAmount, getCollectAmount, getUserNFTs. You can view details like source code, ABIs on [Polygonscan](https://polygonscan.com/address/0x8dA60dee0815a08d16C066b07814b10722fA9306).
 ### getPoolDetails
 Returns the pool details
 ```solidity
