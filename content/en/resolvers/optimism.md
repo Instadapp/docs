@@ -1,6 +1,6 @@
 ---
 title: Optimism Resolvers
-menuTitle: optimism
+menuTitle: Optimism
 description: "optimism resolvers"
 position: 19
 category: "resolvers"
