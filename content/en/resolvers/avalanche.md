@@ -10,5 +10,5 @@ category: "resolvers"
 
 * [Instadapp](/resolvers/avalanche/instadapp)
 
-* [Uniswap v3](/resolvers/avalanche/uniswap)
+
 
