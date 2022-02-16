@@ -74,7 +74,7 @@ To transfer ETH from one chain to another.
 - To get all the liquidity available for supporting ERC20 and native tokens for all the chains (mainnet, Avalanche, polygon)
 
 ```js
-const URL = "https://interop.api.instadapp.io/v1/liquidity";
+const URL = "https://movr-interop.api.instadapp.io/v1/liquidity";
 const params = {
   chainId: 1, // optional supported - 1, 137, 43114
   tokenAddress: "0x6B175474E89094C44Da98b954EedeAC495271d0F", // optional
@@ -125,7 +125,7 @@ const data = {
 };
 
 const response = await axios.post(
-  "https://interop.api.instadapp.io/v1/estimate-transfer",
+  "https://movr-interop.api.instadapp.io/v1/estimate-transfer",
   data
 );
 ```
@@ -181,7 +181,7 @@ const response = await axios.post(
 All queries related to transactions.
 
 ```js
-const URL = "https://interop.api.instadapp.io/v1/transactions";
+const URL = "https://movr-interop.api.instadapp.io/v1/transactions";
 const params = {
   status: "pending", // optional supported - pending, failed, success
   type: "balance", // optional supported - asset, balance
