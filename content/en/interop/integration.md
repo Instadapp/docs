@@ -193,5 +193,6 @@ const params = {
 const response = await axios.get(URL, { params: params });
 ```
 
-> note: tx can take ~10sec to register on our system
+> note: tx can take ~10sec to register on our system.
+
 > Movr need to use `search` or `submitEventTransactionHash` to find the tx hash from `transfer` or `transferETH`.
