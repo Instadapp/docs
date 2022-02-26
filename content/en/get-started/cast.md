@@ -97,8 +97,8 @@ Some more important methods that the DSA contract provides include -
 
 This method takes dsaId as input and returns the Auth for the DSA account.
 
-```
-await dsa.getAuthById(dsaId)
+```js
+await dsa.getAuthById(dsaId);
 ```
 
 | Parameter | Type            | Description                |
@@ -109,8 +109,8 @@ await dsa.getAuthById(dsaId)
 
 This method returns the encoded format of spells to be used in the low-level call.
 
-```
-await dsa.encodeCastABI(spells)
+```js
+await dsa.encodeCastABI(spells);
 ```
 
 | Parameter | Type     | Description                                                      |
@@ -121,8 +121,8 @@ await dsa.encodeCastABI(spells)
 
 This method returns the parameters for the cast function.
 
-```
-await dsa.encodeSpells(spells)
+```js
+await dsa.encodeSpells(spells);
 ```
 
 | Parameter | Type     | Description                                                      |
