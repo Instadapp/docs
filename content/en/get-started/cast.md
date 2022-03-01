@@ -58,7 +58,7 @@ spells.add({
 });
 ```
 
-_For more details on the arguments required for various methods in connectors, refer to the connector docs of the respective protocol (Connector docs for mainnet - https://docs.instadapp.io/connectors/mainnet)._
+_For more details on the arguments required for various methods in connectors, refer to the connector docs of the respective protocol (Connector docs - [here](https://docs.instadapp.io/connectors/mainnet))._
 
 **Note**: Make sure your account has enough ETH (and ERC20) balance before executing transactions.
 
