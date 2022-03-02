@@ -257,6 +257,11 @@
       "path": "uniswap/v3_auto_router/main.sol",
       "slug": "uniswap-v3-routera-a",
       "title": "UNISWAP-V3-ROUTER-A"
+    },
+    {
+      "path": "mstable/main.sol",
+      "slug": "mstable",
+      "title": "MSTABLE-A"
     }
    
   ],
