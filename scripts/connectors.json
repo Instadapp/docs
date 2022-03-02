@@ -167,13 +167,17 @@
       "title": "SUSHISWAP-A"
     },
     
-    
-    
     {
       "path": "ubiquity/main.sol",
       "slug": "ubiquity",
       "title": "UBIQUITY-A"
+    },
+    {
+      "path": "mstable/main.sol",
+      "slug": "mstable",
+      "title": "MSTABLE-A"
     }
+
 
   ],
   "polygon": [
