@@ -8,7 +8,7 @@ Some more important methods that the dsa-connect provides include -
 
 ## getAuthById()
 
-This method takes dsaId as input and returns the Auth for the DSA account.
+This method takes dsaId as input and returns the Authority/Authorities for the DSA account.
 
 ```js
 await dsa.getAuthById(dsaId);
