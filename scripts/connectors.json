@@ -24,7 +24,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1INCH-V4-A"
+      "title": "1INCH-V4"
     },
     {
       "path": "compound/main.sol",
@@ -144,38 +144,38 @@
     {
       "path": "universeFinance/main.sol",
       "slug": "universe-v1",
-      "title": "UNIVERSE-A"
+      "title": "UNIVERSE"
     },
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     {
       "path": "0x/main.sol",
       "slug": "0x",
-      "title": "ZEROX-A"
+      "title": "0x"
     },
     {
       "path": "paraswap/main.sol",
       "slug": "paraswap",
-      "title": "PARASWAP-V5-A"
+      "title": "PARASWAP-V5"
     },
     {
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
-      "title": "SUSHISWAP-A"
+      "title": "SUSHISWAP"
     },
     
     {
       "path": "ubiquity/main.sol",
       "slug": "ubiquity",
-      "title": "UBIQUITY-A"
+      "title": "UBIQUITY"
     },
     {
       "path": "mstable/main.sol",
       "slug": "mstable",
-      "title": "MSTABLE-A"
+      "title": "MSTABLE"
     }
 
 
@@ -205,7 +205,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1INCH-V4-A"
+      "title": "1INCH-V4"
     },
     {
       "path": "gelato/aave-services/protection/main.sol",
@@ -215,7 +215,7 @@
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     
     {
@@ -231,37 +231,37 @@
     {
       "path": "0x/main.sol",
       "slug": "0x",
-      "title": "ZEROX-A"
+      "title": "0x"
     },
     {
       "path": "paraswap/main.sol",
       "slug": "paraswap",
-      "title": "PARASWAP-V5-A"
+      "title": "PARASWAP-V5"
     },
     {
       "path": "uniswap/v3/main.sol",
       "slug": "uniswap",
-      "title": "UNISWAP-V3-A"
+      "title": "UNISWAP-V3"
     },
     {
       "path": "wmatic/main.sol",
       "slug": "wmatic",
-      "title": "WMATIC-A"
+      "title": "WMATIC"
     },
     {
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
-      "title": "SUSHISWAP-A"
+      "title": "SUSHISWAP"
     },
     {
       "path": "uniswap/v3_auto_router/main.sol",
       "slug": "uniswap-v3-routera-a",
-      "title": "UNISWAP-V3-ROUTER-A"
+      "title": "UNISWAP-V3-ROUTER"
     },
     {
       "path": "mstable/main.sol",
       "slug": "mstable",
-      "title": "MSTABLE-A"
+      "title": "MSTABLE"
     }
    
   ],
@@ -295,7 +295,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1INCH-V4-A"
+      "title": "1INCH-V4"
     },
     {
       "path": "weth/main.sol",
@@ -305,7 +305,7 @@
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     {
       "path": "uniswap/v3_staker/main.sol",
@@ -315,7 +315,7 @@
     {
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
-      "title": "SUSHISWAP-A"
+      "title": "SUSHISWAP"
     }
 
   ],
@@ -354,32 +354,32 @@
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     {
       "path": "1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1INCH-V4-A"
+      "title": "1INCH-V4"
     },
     {
       "path": "0x/main.sol",
       "slug": "0x",
-      "title": "ZEROX-A"
+      "title": "0x"
     },
     {
       "path": "paraswap/main.sol",
       "slug": "paraswap",
-      "title": "PARASWAP-V5-A"
+      "title": "PARASWAP-V5"
     },
     {
       "path": "pangolin/exchange/main.sol",
       "slug": "pangolin",
-      "title": "PANGOLIN-A"
+      "title": "PANGOLIN"
     },
     {
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
-      "title": "SUSHISWAP-A"
+      "title": "SUSHISWAP"
     }
 
   ],
@@ -412,7 +412,7 @@
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
-      "title": "1INCH-V4-A"
+      "title": "1INCH-V4"
     },
     {
       "path": "weth/main.sol",
