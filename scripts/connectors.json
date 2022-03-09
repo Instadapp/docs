@@ -256,7 +256,7 @@
     {
       "path": "uniswap/v3_auto_router/main.sol",
       "slug": "uniswap-v3-routera-a",
-      "title": "UNISWAP-V3-ROUTER-A"
+      "title": "UNISWAP-V3-ROUTER"
     },
     {
       "path": "mstable/main.sol",
