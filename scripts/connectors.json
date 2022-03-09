@@ -149,7 +149,7 @@
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     {
       "path": "0x/main.sol",
@@ -215,7 +215,7 @@
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     
     {
@@ -305,7 +305,7 @@
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     {
       "path": "uniswap/v3_staker/main.sol",
@@ -354,7 +354,7 @@
     {
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
-      "title": "INSTAPOOL-C"
+      "title": "INSTAPOOL-V4"
     },
     {
       "path": "1inch-v4/main.sol",
