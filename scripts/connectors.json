@@ -159,7 +159,7 @@
     {
       "path": "paraswap/main.sol",
       "slug": "paraswap",
-      "title": "PARASWAP-V5-A"
+      "title": "PARASWAP-V5"
     },
     {
       "path": "sushiswap/main.sol",
@@ -236,7 +236,7 @@
     {
       "path": "paraswap/main.sol",
       "slug": "paraswap",
-      "title": "PARASWAP-V5-A"
+      "title": "PARASWAP-V5"
     },
     {
       "path": "uniswap/v3/main.sol",
@@ -369,7 +369,7 @@
     {
       "path": "paraswap/main.sol",
       "slug": "paraswap",
-      "title": "PARASWAP-V5-A"
+      "title": "PARASWAP-V5"
     },
     {
       "path": "pangolin/exchange/main.sol",
