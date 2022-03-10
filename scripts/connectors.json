@@ -316,6 +316,11 @@
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
       "title": "SUSHISWAP"
+    },
+    {
+      "path": "uniswap/v3_auto_router/main.sol",
+      "slug": "uniswap-v3-auto-router-A",
+      "title": "UNISWAP AUTO ROUTER "
     }
 
   ],
@@ -428,6 +433,11 @@
       "path": "uniswap/v3_staker/main.sol",
       "slug": "uniswap-v3-staker",
       "title": "Uniswap V3 Staker"
+    },
+    {
+      "path": "uniswap/v3_auto_router/main.sol",
+      "slug": "uniswap-v3-auto-router-A",
+      "title": "UNISWAP AUTO ROUTER "
     }
   ]
 }
