@@ -11,7 +11,7 @@ const getDefiConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_CONNECTORS_UR ||
-      "https://api.instadapp.io/defi/dsa/v2/connectors"
+        "https://api.instadapp.io/defi/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
@@ -23,7 +23,7 @@ const getDefiPolygonConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_POLYGON_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/polygon/dsa/v2/connectors"
+        "https://api.instadapp.io/defi/polygon/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
@@ -35,12 +35,12 @@ const getDefiArbitrumConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/arbitrum/dsa/v2/connectors"
+        "https://api.instadapp.io/defi/arbitrum/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
     // Promise.reject(error);
-    return []
+    return [];
   }
 };
 
@@ -48,12 +48,12 @@ const getDefiAvalancheConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/avalanche/dsa/v2/connectors"
+        "https://api.instadapp.io/defi/avalanche/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
     // Promise.reject(error);
-    return []
+    return [];
   }
 };
 
@@ -61,12 +61,25 @@ const getDefiOptimismConnectors = async () => {
   try {
     let responce = await axios.get(
       process.env.DEFI_OPTIMISM_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/optimism/dsa/v2/connectors"
+        "https://api.instadapp.io/defi/optimism/dsa/v2/connectors"
     );
     return responce.data.data;
   } catch (error) {
     // Promise.reject(error);
-    return []
+    return [];
+  }
+};
+
+const getDefiFantomConnectors = async () => {
+  try {
+    let responce = await axios.get(
+      process.env.DEFI_OPTIMISM_CONNECTORS_URL ||
+        "https://api.instadapp.io/defi/fantom/dsa/v2/connectors"
+    );
+    return responce.data.data;
+  } catch (error) {
+    // Promise.reject(error);
+    return [];
   }
 };
 
@@ -258,10 +271,7 @@ const parseCommits = (data) => {
           resultItem.description += str.split("@notice")[1].trim();
         }
         if (str.includes("@param") && parameters.length) {
-          const parameterName = str
-            .split("@param")[1]
-            .trim()
-            .split(" ")[0];
+          const parameterName = str.split("@param")[1].trim().split(" ")[0];
           const parameterI = parameters.findIndex(
             (parameter) => parameter.name === parameterName
           );
@@ -298,13 +308,14 @@ const getSourceCode = async (connector, network) => {
 (async function main() {
   try {
     await del(path.resolve("./content/en/connectors"));
-    fs.mkdirSync(("./content/en/connectors"));
+    fs.mkdirSync("./content/en/connectors");
     fs.mkdirSync(path.resolve("./content/en/connectors/mainnet"));
     fs.mkdirSync(path.resolve("./content/en/connectors/polygon"));
     fs.mkdirSync(path.resolve("./content/en/connectors/arbitrum"));
     fs.mkdirSync(path.resolve("./content/en/connectors/avalanche"));
     fs.mkdirSync(path.resolve("./content/en/connectors/optimism"));
-  } catch (error) { }
+    fs.mkdirSync(path.resolve("./content/en/connectors/fantom"));
+  } catch (error) {}
 
   let mainnetMd = `---
 title: Mainnet Connectors
@@ -319,7 +330,11 @@ category: 'Connectors'
   let defiArbitrumConnectors = await getDefiArbitrumConnectors();
   let defiAvalancheConnectors = await getDefiAvalancheConnectors();
   let defiOptimismConnectors = await getDefiOptimismConnectors();
-  for (const connector of connectors["mainnet"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+  let defiFantomConnectors = await getDefiFantomConnectors();
+
+  for (const connector of connectors["mainnet"].sort((a, b) =>
+    a.slug.localeCompare(b.slug)
+  )) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     if (!sourceCode) {
       console.log("[Mainnet] Source not found for " + connector.slug);
@@ -347,9 +362,9 @@ category: 'Connectors'
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/mainnet") +
-      "/" +
-      connector.slug +
-      ".md",
+        "/" +
+        connector.slug +
+        ".md",
       md
     );
 
@@ -371,7 +386,9 @@ category: 'Connectors'
 ---
 `;
 
-  for (const connector of connectors["polygon"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+  for (const connector of connectors["polygon"].sort((a, b) =>
+    a.slug.localeCompare(b.slug)
+  )) {
     const sourceCode = await getGithubSourceCode(connector.path, "polygon");
     if (!sourceCode) {
       console.log("[Polygon] Source not found for " + connector.slug);
@@ -400,9 +417,9 @@ category: 'Connectors'
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/polygon") +
-      "/" +
-      connector.slug +
-      ".md",
+        "/" +
+        connector.slug +
+        ".md",
       md
     );
 
@@ -424,7 +441,9 @@ category: 'Connectors'
 ---
   `;
 
-  for (const connector of connectors["arbitrum"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+  for (const connector of connectors["arbitrum"].sort((a, b) =>
+    a.slug.localeCompare(b.slug)
+  )) {
     const sourceCode = await getGithubSourceCode(connector.path, "arbitrum");
     if (!sourceCode) {
       console.log("[Arbitrum] Source not found for " + connector.slug);
@@ -440,7 +459,9 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("[Arbitrum] Connector not found for " + data.connectorVersion);
+      console.log(
+        "[Arbitrum] Connector not found for " + data.connectorVersion
+      );
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -453,9 +474,9 @@ category: 'Connectors'
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/arbitrum") +
-      "/" +
-      connector.slug +
-      ".md",
+        "/" +
+        connector.slug +
+        ".md",
       md
     );
 
@@ -477,7 +498,9 @@ category: 'Connectors'
 ---
       `;
 
-  for (const connector of connectors["avalanche"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+  for (const connector of connectors["avalanche"].sort((a, b) =>
+    a.slug.localeCompare(b.slug)
+  )) {
     const sourceCode = await getGithubSourceCode(connector.path, "avalanche");
     if (!sourceCode) {
       console.log("[Avalanche] Source not found for " + connector.slug);
@@ -493,7 +516,9 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("[Avalanche] Connector not found for " + data.connectorVersion);
+      console.log(
+        "[Avalanche] Connector not found for " + data.connectorVersion
+      );
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -506,9 +531,9 @@ category: 'Connectors'
 
     fs.writeFileSync(
       path.resolve("./content/en/connectors/avalanche") +
-      "/" +
-      connector.slug +
-      ".md",
+        "/" +
+        connector.slug +
+        ".md",
       md
     );
 
@@ -529,51 +554,108 @@ position: 15
 category: 'Connectors'
 ---
         `;
-  
-    for (const connector of connectors["optimism"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-      const sourceCode = await getGithubSourceCode(connector.path, "optimism");
-      if (!sourceCode) {
-        console.log("[optimism] Source not found for " + connector.slug);
-        continue;
-      }
-  
-      const sourceStrings = findSourceStrings(sourceCode);
-      let data = parseSourceStrings(sourceStrings)[0];
-      data.title = connector.title || data.title;
-  
-      const defiConnector = defiOptimismConnectors.find(
-        (con) => con.connectorName === data.connectorVersion
+
+  for (const connector of connectors["optimism"].sort((a, b) =>
+    a.slug.localeCompare(b.slug)
+  )) {
+    const sourceCode = await getGithubSourceCode(connector.path, "optimism");
+    if (!sourceCode) {
+      console.log("[optimism] Source not found for " + connector.slug);
+      continue;
+    }
+
+    const sourceStrings = findSourceStrings(sourceCode);
+    let data = parseSourceStrings(sourceStrings)[0];
+    data.title = connector.title || data.title;
+
+    const defiConnector = defiOptimismConnectors.find(
+      (con) => con.connectorName === data.connectorVersion
+    );
+
+    if (!defiConnector) {
+      console.log(
+        "[Optimism] Connector not found for " + data.connectorVersion
       );
-  
-      if (!defiConnector) {
-        console.log("[Optimism] Connector not found for " + data.connectorVersion);
-        continue;
-      }
-      data.connectorId = defiConnector.connectorId;
-  
-      const md = await generateMd(
-        data,
-        connector.address || defiConnector.connectorAddress,
-        "optimism"
-      );
-  
-      fs.writeFileSync(
-        path.resolve("./content/en/connectors/optimism") +
+      continue;
+    }
+    data.connectorId = defiConnector.connectorId;
+
+    const md = await generateMd(
+      data,
+      connector.address || defiConnector.connectorAddress,
+      "optimism"
+    );
+
+    fs.writeFileSync(
+      path.resolve("./content/en/connectors/optimism") +
         "/" +
         connector.slug +
         ".md",
-        md
-      );
-  
-      optimismMd += `
-  - [${data.title}](/connectors/optimism/${connector.slug})`;
-    }
-  
-    fs.writeFileSync(
-      path.resolve("./content/en/connectors/optimism.md"),
-      optimismMd
+      md
     );
 
+    optimismMd += `
+  - [${data.title}](/connectors/optimism/${connector.slug})`;
+  }
+
+  fs.writeFileSync(
+    path.resolve("./content/en/connectors/optimism.md"),
+    optimismMd
+  );
+
+  let fantomMd = `---
+    title: Fantom Connectors
+    menuTitle: Fantom
+    description: ''
+    position: 16
+    category: 'Connectors'
+    ---
+            `;
+
+  for (const connector of connectors["fantom"].sort((a, b) =>
+    a.slug.localeCompare(b.slug)
+  )) {
+    const sourceCode = await getGithubSourceCode(connector.path, "fantom");
+    if (!sourceCode) {
+      console.log("[fantom] Source not found for " + connector.slug);
+      continue;
+    }
+
+    const sourceStrings = findSourceStrings(sourceCode);
+
+    let data = parseSourceStrings(sourceStrings)[0];
+
+    data.title = connector.title || data.title;
+
+    const defiConnector = defiFantomConnectors.find(
+      (con) => con.connectorName === data.connectorVersion
+    );
+
+    if (!defiConnector) {
+      console.log("[Fantom] Connector not found for " + data.connectorVersion);
+      continue;
+    }
+    data.connectorId = defiConnector.connectorId;
+
+    const md = await generateMd(
+      data,
+      connector.address || defiConnector.connectorAddress,
+      "fantom"
+    );
+
+    fs.writeFileSync(
+      path.resolve("./content/en/connectors/fantom") +
+        "/" +
+        connector.slug +
+        ".md",
+      md
+    );
+
+    fantomMd += `
+      - [${data.title}](/connectors/fantom/${connector.slug})`;
+  }
+
+  fs.writeFileSync(path.resolve("./content/en/connectors/fantom.md"), fantomMd);
 
   exit(0);
 })();
