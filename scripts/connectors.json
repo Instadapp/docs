@@ -176,6 +176,11 @@
       "path": "mstable/main.sol",
       "slug": "mstable",
       "title": "MSTABLE"
+    },
+    {
+      "path": "lido_stETH/main.sol",
+      "slug": "lidoStEth",
+      "title": "LidoStETH"
     }
 
 
