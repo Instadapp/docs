@@ -23,7 +23,7 @@ List of other Instadapp related address (non core to DSAs):
 | Contract | Address |
 | ---------- | ---------- | 
 | InstaFlashAggregator | [0x1f882522DF99820dF8e586b6df8bAae2b91a782d](https://arbiscan.io/address/0x1f882522DF99820dF8e586b6df8bAae2b91a782d#code) |
-| InstaFlashResolver | [0x9963F588C905f0D3a49b1810a3dEadd83Ca42143](https://arbiscan.io/address/0x9963F588C905f0D3a49b1810a3dEadd83Ca42143#code) |
+| InstaFlashResolver | [0x9963F588C905f0D3a49b1810a3dEadd83Ca42143](https://arbiscan.io/address/0x33D8F735DD64ceC51d212616BCa5Ad9b7769CD34#code) |
 | Treasury | [0xf81AB897E3940E95d749fF2e1F8D38f9b7cBe3cf](https://arbiscan.io/address/0xf81AB897E3940E95d749fF2e1F8D38f9b7cBe3cf) |
 
 ## Networks and Underlying meanings
