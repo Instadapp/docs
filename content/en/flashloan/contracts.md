@@ -54,7 +54,7 @@ function getRoutes() public view returns (uint16[] memory)
 This function returns the `bestRoutes` (can be more than 1), the best fee in BPS (1 BPS = 0.01%) and the `bestData` . The best routes are found considering the tokens availability, amounts of tokens for flashloan, and the fee.
 
 ```solidity
-function getBestRoutes(address[] memory tokens, uint256[] memory amounts) public view returns (uint16[] memory, uint256)
+function getBestRoutes(address[] memory tokens, uint256[] memory amounts) public view returns (uint16[] memory, uint256, bytes[] memory)
 ```
 
 | params | type | Description | 
@@ -67,7 +67,7 @@ function getBestRoutes(address[] memory tokens, uint256[] memory amounts) public
 This function internally calls `getRoutes()` and `getBestRoutes()` functions and returns the compiled data.
 
 ```solidity
-function getData(address[] memory tokens, uint256[] memory amounts) public view returns (uint16[] memory, uint256)
+function getData(address[] memory tokens, uint256[] memory amounts) public view returns (uint16[] memory, uint16[] memory, uint256, bytes[] memory)
 ```
 
 | params | type | Description | 
