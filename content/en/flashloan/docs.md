@@ -42,12 +42,14 @@ For developers, a helpful mental model to consider when developing your solution
 - **Route 5 -** Balancer route. Flashloan provider is balancer.
 - **Route 6 -** Balancer-Compound route. **Advanced Routing Pair** Balancer - Compound.
 - **Route 7 -** Balancer-Aave route. **Advanced Routing Pair** Balancer - Aave.
+- **Route 8 -** Uniswap route. Flashloan provider is uniswap.
 
-| Chains\Routes | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-| ---------- | - | -| -| -| -| -| -| 
-| Arbitrum| ❌ | ❌ | ❌  | ❌ | ✔️ | ❌ | ❌ |
-| Avalanche | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Mainnet | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| Polygon | ✔️ | ❌ | ❌ | ❌ | ✔️ | ❌ | ✔️ |
+| Chains\Routes | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+| ---------- | - | -| -| -| -| -| -| -|
+| Arbitrum| ❌ | ❌ | ❌  | ❌ | ✔️ | ❌ | ❌ | ✔️ |
+| Avalanche | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Mainnet | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Polygon | ✔️ | ❌ | ❌ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
+| Optimism| ❌ | ❌ | ❌  | ❌ | ❌ | ❌ | ❌ | ✔️ |
 
 
