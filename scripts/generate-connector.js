@@ -326,7 +326,7 @@ category: 'Connectors'
   for (const connector of connectors["mainnet"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     if (!sourceCode) {
-      console.log("-  Source not found for " + connector.slug);
+      console.log(" - Source not found for " + connector.slug);
       continue;
     }
     const sourceStrings = findSourceStrings(sourceCode);
@@ -337,7 +337,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("-  Connector not found for " + data.connectorVersion);
+      console.log(" - Connector not found for " + data.connectorVersion);
       continue;
     }
 
@@ -382,7 +382,7 @@ category: 'Connectors'
   for (const connector of connectors["polygon"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "polygon");
     if (!sourceCode) {
-      console.log("-  Source not found for " + connector.slug);
+      console.log(" - Source not found for " + connector.slug);
       continue;
     }
 
@@ -395,7 +395,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("-  Connector not found for " + data.connectorVersion);
+      console.log(" - Connector not found for " + data.connectorVersion);
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -439,7 +439,7 @@ category: 'Connectors'
   for (const connector of connectors["arbitrum"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "arbitrum");
     if (!sourceCode) {
-      console.log("-  Source not found for " + connector.slug);
+      console.log(" - Source not found for " + connector.slug);
       continue;
     }
 
@@ -452,7 +452,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("-  Connector not found for " + data.connectorVersion);
+      console.log(" - Connector not found for " + data.connectorVersion);
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -496,7 +496,7 @@ category: 'Connectors'
   for (const connector of connectors["avalanche"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "avalanche");
     if (!sourceCode) {
-      console.log("-  Source not found for " + connector.slug);
+      console.log(" - Source not found for " + connector.slug);
       continue;
     }
 
@@ -509,7 +509,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("-  Connector not found for " + data.connectorVersion);
+      console.log(" - Connector not found for " + data.connectorVersion);
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -553,7 +553,7 @@ category: 'Connectors'
   for (const connector of connectors["optimism"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "optimism");
     if (!sourceCode) {
-      console.log("-  Source not found for " + connector.slug);
+      console.log(" - Source not found for " + connector.slug);
       continue;
     }
 
@@ -566,7 +566,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("-  Connector not found for " + data.connectorVersion);
+      console.log(" - Connector not found for " + data.connectorVersion);
       continue;
     }
     data.connectorId = defiConnector.connectorId;
