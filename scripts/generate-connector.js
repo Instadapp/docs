@@ -7,66 +7,15 @@ import "./env";
 import connectors from "./connectors.json";
 import { exit } from "process";
 
-const getDefiConnectors = async () => {
+const getDefiConnectors = async (network) => {
   try {
-    let responce = await axios.get(
-      process.env.DEFI_CONNECTORS_UR ||
-      "https://api.instadapp.io/defi/dsa/v2/connectors"
-    );
+    // TODO: use /defi/mainnet once connectors are ready
+    const prefix = network === 'mainnet' ? 'defi' : `defi/${network}`;
+
+    let responce = await axios.get(`https://api.instadapp.io/${prefix}/dsa/v2/connectors`);
     return responce.data.data;
   } catch (error) {
     Promise.reject(error);
-  }
-};
-
-const getDefiPolygonConnectors = async () => {
-  try {
-    let responce = await axios.get(
-      process.env.DEFI_POLYGON_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/polygon/dsa/v2/connectors"
-    );
-    return responce.data.data;
-  } catch (error) {
-    Promise.reject(error);
-  }
-};
-
-const getDefiArbitrumConnectors = async () => {
-  try {
-    let responce = await axios.get(
-      process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/arbitrum/dsa/v2/connectors"
-    );
-    return responce.data.data;
-  } catch (error) {
-    // Promise.reject(error);
-    return []
-  }
-};
-
-const getDefiAvalancheConnectors = async () => {
-  try {
-    let responce = await axios.get(
-      process.env.DEFI_ARBITRUM_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/avalanche/dsa/v2/connectors"
-    );
-    return responce.data.data;
-  } catch (error) {
-    // Promise.reject(error);
-    return []
-  }
-};
-
-const getDefiOptimismConnectors = async () => {
-  try {
-    let responce = await axios.get(
-      process.env.DEFI_OPTIMISM_CONNECTORS_URL ||
-      "https://api.instadapp.io/defi/optimism/dsa/v2/connectors"
-    );
-    return responce.data.data;
-  } catch (error) {
-    // Promise.reject(error);
-    return []
   }
 };
 
@@ -295,307 +244,108 @@ const getSourceCode = async (connector, network) => {
   return await getGithubSourceCode(connector.path, network);
 };
 
+const titleCase = (str) => {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+  return str.join(' ');
+}
+
 (async function main() {
+
+  const networks = [
+    {
+      name: "mainnet",
+      position: 11,
+    },
+    {
+      name: "polygon",
+      position: 12,
+    },
+    {
+      name: "arbitrum",
+      position: 13,
+    },
+    {
+      name: "avalanche",
+      position: 14,
+    },
+    {
+      name: "optimism",
+      position: 14,
+    }
+  ]
   try {
     await del(path.resolve("./content/en/connectors"));
     fs.mkdirSync(("./content/en/connectors"));
-    fs.mkdirSync(path.resolve("./content/en/connectors/mainnet"));
-    fs.mkdirSync(path.resolve("./content/en/connectors/polygon"));
-    fs.mkdirSync(path.resolve("./content/en/connectors/arbitrum"));
-    fs.mkdirSync(path.resolve("./content/en/connectors/avalanche"));
-    fs.mkdirSync(path.resolve("./content/en/connectors/optimism"));
+
+    for (const network of networks) {
+      fs.mkdirSync(path.resolve(`./content/en/connectors/${network.name}`));
+    }
   } catch (error) { }
 
-  let defiConnectors = await getDefiConnectors();
-  let defiPolygonConnectors = await getDefiPolygonConnectors();
-  let defiArbitrumConnectors = await getDefiArbitrumConnectors();
-  let defiAvalancheConnectors = await getDefiAvalancheConnectors();
-  let defiOptimismConnectors = await getDefiOptimismConnectors();
+  for (const network of networks) {
+    console.log(`Generating ${network.name} connectors...`);
 
-  console.log("Generating mainnet connectors...");
+    let defiConnectors = await getDefiConnectors(network.name);
 
-  let mainnetMd = `---
-title: Mainnet Connectors
-menuTitle: Mainnet
+    const title = titleCase(network.name);
+
+    let mdIndex = `---
+title: ${title} Connectors
+menuTitle: ${title}
 description: ''
-position: 11
+position: ${network.position}
 category: 'Connectors'
 ---
   `;
 
-  for (const connector of connectors["mainnet"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-    const sourceCode = await getSourceCode(connector, "mainnet");
-    if (!sourceCode) {
-      console.log(" - Source not found for " + connector.slug);
-      continue;
+    for (const connector of connectors[network.name].sort((a, b) => a.slug.localeCompare(b.slug))) {
+      const sourceCode = await getSourceCode(connector, network.name);
+      if (!sourceCode) {
+        console.log(" - Source not found for " + connector.slug);
+        continue;
+      }
+      const sourceStrings = findSourceStrings(sourceCode);
+      let data = parseSourceStrings(sourceStrings)[0];
+      data.title = connector.title || data.title;
+      const defiConnector = defiConnectors.find(
+        (con) => con.connectorName === data.connectorVersion
+      );
+
+      if (!defiConnector) {
+        console.log(" - Connector not found for " + data.connectorVersion);
+        continue;
+      }
+
+      data.connectorId = defiConnector.connectorId;
+
+      const md = await generateMd(
+        data,
+        connector.address || defiConnector.connectorAddress,
+        network.name
+      );
+
+      fs.writeFileSync(
+        path.resolve(`./content/en/connectors/${network.name}`) +
+        "/" +
+        connector.slug +
+        ".md",
+        md
+      );
+
+      mdIndex += `
+- [${data.title}](/connectors/${network.name}/${connector.slug})`;
+
+      console.log(" - Generated " + connector.title || connector.slug);
     }
-    const sourceStrings = findSourceStrings(sourceCode);
-    let data = parseSourceStrings(sourceStrings)[0];
-    data.title = connector.title || data.title;
-    const defiConnector = defiConnectors.find(
-      (con) => con.connectorName === data.connectorVersion
-    );
-
-    if (!defiConnector) {
-      console.log(" - Connector not found for " + data.connectorVersion);
-      continue;
-    }
-
-    data.connectorId = defiConnector.connectorId;
-
-    const md = await generateMd(
-      data,
-      connector.address || defiConnector.connectorAddress,
-      "mainnet"
-    );
 
     fs.writeFileSync(
-      path.resolve("./content/en/connectors/mainnet") +
-      "/" +
-      connector.slug +
-      ".md",
-      md
+      path.resolve(`./content/en/connectors/${network.name}.md`),
+      mdIndex
     );
-
-    mainnetMd += `
-- [${data.title}](/connectors/mainnet/${connector.slug})`;
-
-    console.log(" - Generated " + connector.title || connector.slug);
   }
-
-  fs.writeFileSync(
-    path.resolve("./content/en/connectors/mainnet.md"),
-    mainnetMd
-  );
-
-  console.log("Generating polygon connectors...");
-
-  let polygonMd = `---
-title: Polygon Connectors
-menuTitle: Polygon
-description: ''
-position: 12
-category: 'Connectors'
----
-`;
-
-  for (const connector of connectors["polygon"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-    const sourceCode = await getGithubSourceCode(connector.path, "polygon");
-    if (!sourceCode) {
-      console.log(" - Source not found for " + connector.slug);
-      continue;
-    }
-
-    const sourceStrings = findSourceStrings(sourceCode);
-    let data = parseSourceStrings(sourceStrings)[0];
-    data.title = connector.title || data.title;
-
-    const defiConnector = defiPolygonConnectors.find(
-      (con) => con.connectorName === data.connectorVersion
-    );
-
-    if (!defiConnector) {
-      console.log(" - Connector not found for " + data.connectorVersion);
-      continue;
-    }
-    data.connectorId = defiConnector.connectorId;
-
-    const md = await generateMd(
-      data,
-      connector.address || defiConnector.connectorAddress,
-      "polygon"
-    );
-
-    fs.writeFileSync(
-      path.resolve("./content/en/connectors/polygon") +
-      "/" +
-      connector.slug +
-      ".md",
-      md
-    );
-
-    polygonMd += `
-- [${data.title}](/connectors/polygon/${connector.slug})`;
-
-    console.log(" - Generated " + connector.title || connector.slug);
-  }
-
-  fs.writeFileSync(
-    path.resolve("./content/en/connectors/polygon.md"),
-    polygonMd
-  );
-
-  console.log("Generating arbitrum connectors...");
-
-  let arbitrumMd = `---
-title: Arbitrum Connectors
-menuTitle: Arbitrum
-description: ''
-position: 13
-category: 'Connectors'
----
-  `;
-
-  for (const connector of connectors["arbitrum"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-    const sourceCode = await getGithubSourceCode(connector.path, "arbitrum");
-    if (!sourceCode) {
-      console.log(" - Source not found for " + connector.slug);
-      continue;
-    }
-
-    const sourceStrings = findSourceStrings(sourceCode);
-    let data = parseSourceStrings(sourceStrings)[0];
-    data.title = connector.title || data.title;
-
-    const defiConnector = defiArbitrumConnectors.find(
-      (con) => con.connectorName === data.connectorVersion
-    );
-
-    if (!defiConnector) {
-      console.log(" - Connector not found for " + data.connectorVersion);
-      continue;
-    }
-    data.connectorId = defiConnector.connectorId;
-
-    const md = await generateMd(
-      data,
-      connector.address || defiConnector.connectorAddress,
-      "arbitrum"
-    );
-
-    fs.writeFileSync(
-      path.resolve("./content/en/connectors/arbitrum") +
-      "/" +
-      connector.slug +
-      ".md",
-      md
-    );
-
-    arbitrumMd += `
-  - [${data.title}](/connectors/arbitrum/${connector.slug})`;
-
-    console.log(" - Generated " + connector.slug);
-  }
-
-  fs.writeFileSync(
-    path.resolve("./content/en/connectors/arbitrum.md"),
-    arbitrumMd
-  );
-
-  console.log("Generating avalanche connectors...");
-
-  let avalancheMd = `---
-title: Avalanche Connectors
-menuTitle: Avalanche
-description: ''
-position: 14
-category: 'Connectors'
----
-      `;
-
-  for (const connector of connectors["avalanche"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-    const sourceCode = await getGithubSourceCode(connector.path, "avalanche");
-    if (!sourceCode) {
-      console.log(" - Source not found for " + connector.slug);
-      continue;
-    }
-
-    const sourceStrings = findSourceStrings(sourceCode);
-    let data = parseSourceStrings(sourceStrings)[0];
-    data.title = connector.title || data.title;
-
-    const defiConnector = defiAvalancheConnectors.find(
-      (con) => con.connectorName === data.connectorVersion
-    );
-
-    if (!defiConnector) {
-      console.log(" - Connector not found for " + data.connectorVersion);
-      continue;
-    }
-    data.connectorId = defiConnector.connectorId;
-
-    const md = await generateMd(
-      data,
-      connector.address || defiConnector.connectorAddress,
-      "avalanche"
-    );
-
-    fs.writeFileSync(
-      path.resolve("./content/en/connectors/avalanche") +
-      "/" +
-      connector.slug +
-      ".md",
-      md
-    );
-
-    avalancheMd += `
-- [${data.title}](/connectors/avalanche/${connector.slug})`;
-
-    console.log(" - Generated " + connector.title || connector.slug);
-  }
-
-  fs.writeFileSync(
-    path.resolve("./content/en/connectors/avalanche.md"),
-    avalancheMd
-  );
-
-  console.log("Generating optimism connectors...");
-
-  let optimismMd = `---
-title: Optimism Connectors
-menuTitle: Optimism
-description: ''
-position: 15
-category: 'Connectors'
----
-        `;
-
-  for (const connector of connectors["optimism"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-    const sourceCode = await getGithubSourceCode(connector.path, "optimism");
-    if (!sourceCode) {
-      console.log(" - Source not found for " + connector.slug);
-      continue;
-    }
-
-    const sourceStrings = findSourceStrings(sourceCode);
-    let data = parseSourceStrings(sourceStrings)[0];
-    data.title = connector.title || data.title;
-
-    const defiConnector = defiOptimismConnectors.find(
-      (con) => con.connectorName === data.connectorVersion
-    );
-
-    if (!defiConnector) {
-      console.log(" - Connector not found for " + data.connectorVersion);
-      continue;
-    }
-    data.connectorId = defiConnector.connectorId;
-
-    const md = await generateMd(
-      data,
-      connector.address || defiConnector.connectorAddress,
-      "optimism"
-    );
-
-    fs.writeFileSync(
-      path.resolve("./content/en/connectors/optimism") +
-      "/" +
-      connector.slug +
-      ".md",
-      md
-    );
-
-    optimismMd += `
-  - [${data.title}](/connectors/optimism/${connector.slug})`;
-
-    console.log(" - Generated " + connector.title || connector.slug);
-  }
-
-  fs.writeFileSync(
-    path.resolve("./content/en/connectors/optimism.md"),
-    optimismMd
-  );
-
 
   exit(0);
 })();
