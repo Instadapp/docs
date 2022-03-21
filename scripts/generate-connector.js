@@ -306,6 +306,14 @@ const getSourceCode = async (connector, network) => {
     fs.mkdirSync(path.resolve("./content/en/connectors/optimism"));
   } catch (error) { }
 
+  let defiConnectors = await getDefiConnectors();
+  let defiPolygonConnectors = await getDefiPolygonConnectors();
+  let defiArbitrumConnectors = await getDefiArbitrumConnectors();
+  let defiAvalancheConnectors = await getDefiAvalancheConnectors();
+  let defiOptimismConnectors = await getDefiOptimismConnectors();
+
+  console.log("Generating mainnet connectors...");
+
   let mainnetMd = `---
 title: Mainnet Connectors
 menuTitle: Mainnet
@@ -314,15 +322,11 @@ position: 11
 category: 'Connectors'
 ---
   `;
-  let defiConnectors = await getDefiConnectors();
-  let defiPolygonConnectors = await getDefiPolygonConnectors();
-  let defiArbitrumConnectors = await getDefiArbitrumConnectors();
-  let defiAvalancheConnectors = await getDefiAvalancheConnectors();
-  let defiOptimismConnectors = await getDefiOptimismConnectors();
+
   for (const connector of connectors["mainnet"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getSourceCode(connector, "mainnet");
     if (!sourceCode) {
-      console.log("[Mainnet] Source not found for " + connector.slug);
+      console.log("-  Source not found for " + connector.slug);
       continue;
     }
     const sourceStrings = findSourceStrings(sourceCode);
@@ -333,7 +337,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("[Mainnet] Connector not found for " + data.connectorVersion);
+      console.log("-  Connector not found for " + data.connectorVersion);
       continue;
     }
 
@@ -355,12 +359,16 @@ category: 'Connectors'
 
     mainnetMd += `
 - [${data.title}](/connectors/mainnet/${connector.slug})`;
+
+    console.log(" - Generated " + connector.title || connector.slug);
   }
 
   fs.writeFileSync(
     path.resolve("./content/en/connectors/mainnet.md"),
     mainnetMd
   );
+
+  console.log("Generating polygon connectors...");
 
   let polygonMd = `---
 title: Polygon Connectors
@@ -374,7 +382,7 @@ category: 'Connectors'
   for (const connector of connectors["polygon"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "polygon");
     if (!sourceCode) {
-      console.log("[Polygon] Source not found for " + connector.slug);
+      console.log("-  Source not found for " + connector.slug);
       continue;
     }
 
@@ -387,7 +395,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("[Polygon] Connector not found for " + data.connectorVersion);
+      console.log("-  Connector not found for " + data.connectorVersion);
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -408,12 +416,16 @@ category: 'Connectors'
 
     polygonMd += `
 - [${data.title}](/connectors/polygon/${connector.slug})`;
+
+    console.log(" - Generated " + connector.title || connector.slug);
   }
 
   fs.writeFileSync(
     path.resolve("./content/en/connectors/polygon.md"),
     polygonMd
   );
+
+  console.log("Generating arbitrum connectors...");
 
   let arbitrumMd = `---
 title: Arbitrum Connectors
@@ -427,7 +439,7 @@ category: 'Connectors'
   for (const connector of connectors["arbitrum"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "arbitrum");
     if (!sourceCode) {
-      console.log("[Arbitrum] Source not found for " + connector.slug);
+      console.log("-  Source not found for " + connector.slug);
       continue;
     }
 
@@ -440,7 +452,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("[Arbitrum] Connector not found for " + data.connectorVersion);
+      console.log("-  Connector not found for " + data.connectorVersion);
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -461,12 +473,16 @@ category: 'Connectors'
 
     arbitrumMd += `
   - [${data.title}](/connectors/arbitrum/${connector.slug})`;
+
+    console.log(" - Generated " + connector.slug);
   }
 
   fs.writeFileSync(
     path.resolve("./content/en/connectors/arbitrum.md"),
     arbitrumMd
   );
+
+  console.log("Generating avalanche connectors...");
 
   let avalancheMd = `---
 title: Avalanche Connectors
@@ -480,7 +496,7 @@ category: 'Connectors'
   for (const connector of connectors["avalanche"].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const sourceCode = await getGithubSourceCode(connector.path, "avalanche");
     if (!sourceCode) {
-      console.log("[Avalanche] Source not found for " + connector.slug);
+      console.log("-  Source not found for " + connector.slug);
       continue;
     }
 
@@ -493,7 +509,7 @@ category: 'Connectors'
     );
 
     if (!defiConnector) {
-      console.log("[Avalanche] Connector not found for " + data.connectorVersion);
+      console.log("-  Connector not found for " + data.connectorVersion);
       continue;
     }
     data.connectorId = defiConnector.connectorId;
@@ -514,12 +530,16 @@ category: 'Connectors'
 
     avalancheMd += `
 - [${data.title}](/connectors/avalanche/${connector.slug})`;
+
+    console.log(" - Generated " + connector.title || connector.slug);
   }
 
   fs.writeFileSync(
     path.resolve("./content/en/connectors/avalanche.md"),
     avalancheMd
   );
+
+  console.log("Generating optimism connectors...");
 
   let optimismMd = `---
 title: Optimism Connectors
@@ -529,50 +549,52 @@ position: 15
 category: 'Connectors'
 ---
         `;
-  
-    for (const connector of connectors["optimism"].sort((a, b) => a.slug.localeCompare(b.slug))) {
-      const sourceCode = await getGithubSourceCode(connector.path, "optimism");
-      if (!sourceCode) {
-        console.log("[optimism] Source not found for " + connector.slug);
-        continue;
-      }
-  
-      const sourceStrings = findSourceStrings(sourceCode);
-      let data = parseSourceStrings(sourceStrings)[0];
-      data.title = connector.title || data.title;
-  
-      const defiConnector = defiOptimismConnectors.find(
-        (con) => con.connectorName === data.connectorVersion
-      );
-  
-      if (!defiConnector) {
-        console.log("[Optimism] Connector not found for " + data.connectorVersion);
-        continue;
-      }
-      data.connectorId = defiConnector.connectorId;
-  
-      const md = await generateMd(
-        data,
-        connector.address || defiConnector.connectorAddress,
-        "optimism"
-      );
-  
-      fs.writeFileSync(
-        path.resolve("./content/en/connectors/optimism") +
-        "/" +
-        connector.slug +
-        ".md",
-        md
-      );
-  
-      optimismMd += `
-  - [${data.title}](/connectors/optimism/${connector.slug})`;
+
+  for (const connector of connectors["optimism"].sort((a, b) => a.slug.localeCompare(b.slug))) {
+    const sourceCode = await getGithubSourceCode(connector.path, "optimism");
+    if (!sourceCode) {
+      console.log("-  Source not found for " + connector.slug);
+      continue;
     }
-  
-    fs.writeFileSync(
-      path.resolve("./content/en/connectors/optimism.md"),
-      optimismMd
+
+    const sourceStrings = findSourceStrings(sourceCode);
+    let data = parseSourceStrings(sourceStrings)[0];
+    data.title = connector.title || data.title;
+
+    const defiConnector = defiOptimismConnectors.find(
+      (con) => con.connectorName === data.connectorVersion
     );
+
+    if (!defiConnector) {
+      console.log("-  Connector not found for " + data.connectorVersion);
+      continue;
+    }
+    data.connectorId = defiConnector.connectorId;
+
+    const md = await generateMd(
+      data,
+      connector.address || defiConnector.connectorAddress,
+      "optimism"
+    );
+
+    fs.writeFileSync(
+      path.resolve("./content/en/connectors/optimism") +
+      "/" +
+      connector.slug +
+      ".md",
+      md
+    );
+
+    optimismMd += `
+  - [${data.title}](/connectors/optimism/${connector.slug})`;
+
+    console.log(" - Generated " + connector.title || connector.slug);
+  }
+
+  fs.writeFileSync(
+    path.resolve("./content/en/connectors/optimism.md"),
+    optimismMd
+  );
 
 
   exit(0);
