@@ -289,6 +289,7 @@ const titleCase = (str) => {
     console.log(`Generating ${network.name} connectors...`);
 
     let defiConnectors = await getDefiConnectors(network.name);
+    let unusedConnectors = [...defiConnectors];
 
     const title = titleCase(network.name);
 
@@ -319,6 +320,10 @@ category: 'Connectors'
         continue;
       }
 
+      unusedConnectors = unusedConnectors.filter(
+        (con) => con.connectorName !== data.connectorVersion
+      );
+
       data.connectorId = defiConnector.connectorId;
 
       const md = await generateMd(
@@ -345,6 +350,10 @@ category: 'Connectors'
       path.resolve(`./content/en/connectors/${network.name}.md`),
       mdIndex
     );
+
+    for (const connector of unusedConnectors) {
+      console.log(" - Connector not used: " + connector.connectorName + " (" + connector.connectorId + ")");
+    }
   }
 
   exit(0);
