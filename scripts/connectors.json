@@ -485,5 +485,42 @@
       "slug": "uniswap-v3-auto-router-A",
       "title": "UNISWAP V3 AUTO ROUTER "
     }
+  ],
+  "fantom": [
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic A (ERC20)"
+    },
+    {
+      "path": "basic-ERC721/main.sol",
+      "slug": "basic-b",
+      "title": "Basic B (ERC721)"
+    },
+    {
+      "path": "basic-ERC1155/main.sol",
+      "slug": "basic-c",
+      "title": "Basic C (ERC1155)"
+    },
+    {
+      "path": "wftm/main.sol",
+      "slug": "wftm",
+      "title": "WFTM"
+    },
+    {
+      "path": "aave/v3/main.sol",
+      "slug": "aave-v3",
+      "title": "Aave V3"
+    },
+    {
+      "path": "aave/v3-import/main.sol",
+      "slug": "aave-v3-import",
+      "title": "Aave V3 Import"
+    }
   ]
 }

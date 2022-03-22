@@ -274,6 +274,10 @@ const titleCase = (str) => {
     {
       name: "optimism",
       position: 14,
+    },
+    {
+      name: "fantom",
+      position: 15,
     }
   ]
   try {
