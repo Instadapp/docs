@@ -180,7 +180,8 @@
       "path": "lido_stETH/main.sol",
       "slug": "lidoStEth",
       "title": "LidoStETH"
-    }, {
+    },
+    {
       "path": "uniswap/v3_auto_router/main.sol",
       "slug": "uniswap-v3-router",
       "title": "UNISWAP-V3-ROUTER"
@@ -196,8 +197,8 @@
       "path": "basic-ERC721/main.sol",
       "slug": "basic-b",
       "title": "Basic B (ERC721)"
-    }, 
-     {
+    },
+    {
       "path": "basic-ERC1155/main.sol",
       "slug": "basic-c",
       "title": "Basic C (ERC1155)"
@@ -545,6 +546,11 @@
       "path": "aave/v3-import/main.sol",
       "slug": "aave-v3-import",
       "title": "Aave V3 Import"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5"
     }
   ]
 }
