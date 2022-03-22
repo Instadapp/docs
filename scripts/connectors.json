@@ -180,6 +180,10 @@
       "path": "lido_stETH/main.sol",
       "slug": "lidoStEth",
       "title": "LidoStETH"
+    }, {
+      "path": "uniswap/v3_auto_router/main.sol",
+      "slug": "uniswap-v3-router",
+      "title": "UNISWAP-V3-ROUTER"
     }
   ],
   "polygon": [
@@ -271,7 +275,7 @@
     },
     {
       "path": "uniswap/v3_auto_router/main.sol",
-      "slug": "uniswap-v3-routera-a",
+      "slug": "uniswap-v3-router",
       "title": "UNISWAP-V3-ROUTER"
     },
     {
@@ -343,8 +347,8 @@
     },
     {
       "path": "uniswap/v3_auto_router/main.sol",
-      "slug": "uniswap-v3-auto-router-A",
-      "title": "UNISWAP V3 AUTO ROUTER "
+      "slug": "uniswap-v3-router",
+      "title": "UNISWAP-V3-ROUTER "
     }
   ],
   "avalanche": [
@@ -482,8 +486,8 @@
     },
     {
       "path": "uniswap/v3_auto_router/main.sol",
-      "slug": "uniswap-v3-auto-router-A",
-      "title": "UNISWAP V3 AUTO ROUTER "
+      "slug": "uniswap-v3-auto-router",
+      "title": "UNISWAP-V3-ROUTER "
     }
   ]
 }
