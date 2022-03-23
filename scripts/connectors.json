@@ -185,6 +185,11 @@
       "path": "uniswap/v3_auto_router/main.sol",
       "slug": "uniswap-v3-router",
       "title": "UNISWAP-V3-ROUTER"
+    },
+    {
+      "path": "pooltogether/main.sol",
+      "slug": "pooltogether",
+      "title": "PoolTogether"
     }
   ],
   "polygon": [
@@ -293,6 +298,11 @@
       "path": "mstable/main.sol",
       "slug": "mstable",
       "title": "MSTABLE"
+    },
+    {
+      "path": "pooltogether/main.sol",
+      "slug": "pooltogether",
+      "title": "PoolTogether"
     }
   ],
   "arbitrum": [
