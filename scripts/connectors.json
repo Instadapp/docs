@@ -519,6 +519,11 @@
       "path": "uniswap/v3_auto_router/main.sol",
       "slug": "uniswap-v3-auto-router",
       "title": "UNISWAP-V3-ROUTER "
+    },
+    {
+      "path": "instapool_v4/main.sol",
+      "slug": "instapool-v4",
+      "title": "INSTAPOOL-V4"
     }
   ],
   "fantom": [
