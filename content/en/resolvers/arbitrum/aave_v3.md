@@ -11,8 +11,15 @@ Returns the position of user on aave v3.
 function getPosition(
         address user, 
         address[] memory tokens
-        ) public view returns (AaveV3UserData memory,
-        AaveV3UserTokenData[] memory, AaveV3TokenData[] memory, ReserveIncentiveData[] memory);
+        ) 
+        public 
+        view 
+        returns (
+                AaveV3UserData memory,
+                AaveV3UserTokenData[] memory, 
+                AaveV3TokenData[] memory, 
+                ReserveIncentiveData[] memory
+        );
 ```
 | params | type | Description | 
 | ------ | ---- | ----------- | 
