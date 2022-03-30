@@ -6,7 +6,9 @@ position: 18
 category: "resolvers"
 ---
 
-* [Aave](/resolvers/avalanche/aave) 
+* [Aave v2](/resolvers/avalanche/aave_v2) 
+
+* [Aave v3](/resolvers/avalanche/aave_v3) 
 
 * [Instadapp](/resolvers/avalanche/instadapp)
 
