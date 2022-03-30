@@ -22,10 +22,15 @@ function getPosition(
 ### getPositionAll
 Returns the position of user on aave v3 for all reserves of the market.
 ```solidity
-function getPositionAll(
-        address user
-        ) public view returns (AaveV3UserData memory,
-        AaveV3UserTokenData[] memory, AaveV3TokenData[] memory, ReserveIncentiveData[] memory);
+    function getPositionAll(address user)
+        public
+        view
+        returns (
+            AaveV3UserData memory,
+            AaveV3UserTokenData[] memory,
+            AaveV3TokenData[] memory,
+            ReserveIncentiveData[] memory
+        );
 ```
 | params | type | Description | 
 | ------ | ---- | ----------- | 
