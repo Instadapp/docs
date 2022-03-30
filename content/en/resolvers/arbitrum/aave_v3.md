@@ -37,7 +37,7 @@ Returns the position of user on aave v3 for all reserves of the market.
 | user | address | The address of the user whose tokens data you want.|
 
 ### getConfiguration
-Returns the user's configuration across all the reserves, which tokens the user-supplied as collateral and which user borrowed.
+Returns the user's configuration across all the reserves, which tokens the user supplied as collateral and which user borrowed.
 ```solidity
 function getConfiguration(address user) public view returns (uint256[] memory collateral, uint256[] memory borrowed);
 ```
