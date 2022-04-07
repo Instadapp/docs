@@ -16,7 +16,7 @@ Flash Loans are an advanced concept aimed at developers. You must have a good un
 At Instadapp flashloans are used very extensively for many strategies like Protection Automation, Leverage / Max mining, Save / Unwind mining, Collateral swap, Debt swap, etc. Other examples in the wild include:
 
 - Arbitrage between assets, without needing to have the principal amount to execute the arbitrage. Example: [ArbitrageDAO](https://medium.com/@bneiluj/flash-boys-arbitrage-dao-c0b96d094f93).
-- Other examples and ideas are listed on our blog [here](https://medium.com/aave/sneak-peek-at-flash-loans-f2b28a394d62) and [here](https://medium.com/aave/building-the-post-liquidation-era-4e650935fc88).
+- Other examples and ideas are listed in these blogs [here](https://medium.com/aave/sneak-peek-at-flash-loans-f2b28a394d62) and [here](https://medium.com/aave/building-the-post-liquidation-era-4e650935fc88).
 
 ## Flashloan Aggregator
 
