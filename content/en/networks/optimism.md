@@ -22,9 +22,9 @@ Below are all the addresses of Core Contracts of the DSL ecosystem on Optimism:
 List of other Instadapp related address (non core to DSAs):
 | Contract | Address |
 | ---------- | ---------- |
-| InstaFlashAggregator | [0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4](https://optimistic.etherscan.io/address/0x84e6b05a089d5677a702cf61dc14335b4be5b282#code) |
-| InstaFlashResolver | [0xFC6E0651a8D4a54D533b2d26c8f59536557307f3](https://optimistic.etherscan.io/address/0x810D6b2425Dc5523525D1F45CC548ae9a085F5Ea#code) |
-| Treasury | [0x6e9d36eaeC63Bc3aD4A47fb0d7826A9922AAfC22](https://optimistic.etherscan.io/address/0xdaf12965b3d5bf60843aa1fb49e2688919e697a0#code) |
+| InstaFlashAggregator | [0x84e6b05a089d5677a702cf61dc14335b4be5b282](https://optimistic.etherscan.io/address/0x84e6b05a089d5677a702cf61dc14335b4be5b282#code) |
+| InstaFlashResolver | [0x810D6b2425Dc5523525D1F45CC548ae9a085F5Ea](https://optimistic.etherscan.io/address/0x810D6b2425Dc5523525D1F45CC548ae9a085F5Ea#code) |
+| Treasury | [0xdaf12965b3d5bf60843aa1fb49e2688919e697a0](https://optimistic.etherscan.io/address/0xdaf12965b3d5bf60843aa1fb49e2688919e697a0#code) |
 
 ## Networks and Underlying meanings
 
