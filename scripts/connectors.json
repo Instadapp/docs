@@ -190,6 +190,11 @@
       "path": "pooltogether/main.sol",
       "slug": "pooltogether",
       "title": "PoolTogether"
+    },
+    {
+      "path": "instalite/main.sol",
+      "slug": "instalite",
+      "title": "InstaLite"
     }
   ],
   "polygon": [
