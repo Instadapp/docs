@@ -234,6 +234,11 @@
       "title": "Aave V3 Import"
     },
     {
+      "path": "aave/v3-import-permit/main.sol",
+      "slug": "aave-v3-import-with-permit",
+      "title": "Aave V3 Import (permit)"
+    },
+    {
       "path": "aave/v2-to-v3-import/main.sol",
       "slug": "aave-v2-to-v3-import",
       "title": "Aave V2 to V3 import"
@@ -342,6 +347,11 @@
       "title": "Aave V3 Import"
     },
     {
+      "path": "aave/v3-import-permit/main.sol",
+      "slug": "aave-v3-import-with-permit",
+      "title": "Aave V3 Import (permit)"
+    },
+    {
       "path": "uniswap/v3/main.sol",
       "slug": "uniswapV3",
       "title": "Uniswap V3"
@@ -412,6 +422,11 @@
       "path": "aave/v3-import/main.sol",
       "slug": "aave-v3-import",
       "title": "Aave V3 Import"
+    },
+    {
+      "path": "aave/v3-import-permit/main.sol",
+      "slug": "aave-v3-import-with-permit",
+      "title": "Aave V3 Import (permit)"
     },
     {
       "path": "aave/v2-to-v3-import/main.sol",
