@@ -2,7 +2,9 @@ import { defineNuxtConfig } from "nuxt";
 import colors from 'tailwindcss/colors.js'
 
 export default defineNuxtConfig({
-  extends: ["./node_modules/@docus/docs-theme"],
+  extends: [
+    (process.env.DOCUS_THEME_PATH || './node_modules/@docus/docs-theme')
+  ],
 
   generate: {
     routes: []
@@ -25,6 +27,6 @@ export default defineNuxtConfig({
   },
 
   theme: {
-    
+
   }
 });
