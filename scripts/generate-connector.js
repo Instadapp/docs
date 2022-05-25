@@ -339,13 +339,13 @@ category: 'Connectors'
       fs.writeFileSync(
         path.resolve(`./content/4.connectors/${network.name}`) +
         "/" +
-        connector.slug +
+        String(connector.slug).toLowerCase() +
         ".md",
         md
       );
 
       mdIndex += `
-- [${data.title}](/connectors/${network.name}/${connector.slug})`;
+- [${data.title}](/connectors/${network.name}/${String(connector.slug).toLowerCase()})`;
 
       console.log(" - Generated " + connector.title || connector.slug);
     }

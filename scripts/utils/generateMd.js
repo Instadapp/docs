@@ -28,6 +28,9 @@ export default async function generateMd(data, address, chain) {
   md += `\ndescription: ${data.description}`;
   md += "\ndraft: true";
   md += "\n---";
+  md += "\n";
+  md += `\n # ${data.title}`;
+  md += "\n";
   md += `\n> ${data.description}`;
   md += `\n${
     data.connectorVersion
