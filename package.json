@@ -8,7 +8,8 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "preview": "nuxi preview",
-    "generate": "nuxi generate"
+    "generate": "nuxi generate",
+    "postinstall": ""
   },
   "devDependencies": {
     "axios": "^0.21.1",
