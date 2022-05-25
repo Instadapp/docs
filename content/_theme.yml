@@ -1,0 +1,24 @@
+title: "Instadapp Developers"
+description: Welcome to the Instadapp docs!
+layout: docs
+url: "https://docs.instadapp.io"
+debug: false
+socials:
+  twitter: "@instadapp"
+  github: "instadapp/docs"
+cover:
+  src: /preview.png
+  alt: "Build compelling use-cases and monetize their models to earn money by serving your users with high reliability."
+aside:
+  level: 1
+  filter:
+    - /interop
+header:
+  title: false
+  logo: true
+footer:
+  credits:
+    icon: IconDocus
+    text: Powered by Docus
+    href: https://docus.com
+  icons:
