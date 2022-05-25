@@ -9,7 +9,7 @@
     "build": "nuxi build",
     "preview": "nuxi preview",
     "generate": "nuxi generate",
-    "postinstall": ""
+    "postinstall": "ls"
   },
   "devDependencies": {
     "@docus/docs-theme": "npm:@docus/docs-theme-edge@latest",
