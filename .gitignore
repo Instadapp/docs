@@ -10,3 +10,4 @@ dist
 sw.*
 .env
 content/en/connectors
+content/4.connectors
