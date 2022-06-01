@@ -195,6 +195,16 @@
       "path": "instaLite/main.sol",
       "slug": "lite",
       "title": "Lite-A"
+    },
+    {
+      "path": "notional/main.sol",
+      "slug": "notional",
+      "title": "NOTIONAL-V2-A"
+    },
+    {
+      "path": "hop/main.sol",
+      "slug": "hop",
+      "title": "HOP-MAINNET-A"
     }
   ],
   "polygon": [
@@ -313,6 +323,11 @@
       "path": "pooltogether/main.sol",
       "slug": "pooltogether",
       "title": "PoolTogether"
+    },
+    {
+      "path": "hop/main.sol",
+      "slug": "hop",
+      "title": "HOP-A"
     }
   ],
   "arbitrum": [
@@ -385,6 +400,11 @@
       "path": "uniswap/v3_auto_router/main.sol",
       "slug": "uniswap-v3-router",
       "title": "UNISWAP-V3-ROUTER "
+    },
+    {
+      "path": "hop/main.sol",
+      "slug": "hop",
+      "title": "HOP-A"
     }
   ],
   "avalanche": [
@@ -544,6 +564,11 @@
       "path": "instapool_v4/main.sol",
       "slug": "instapool-v4",
       "title": "INSTAPOOL-V4"
+    },
+    {
+      "path": "hop/main.sol",
+      "slug": "hop",
+      "title": "HOP-A"
     }
   ],
   "fantom": [
