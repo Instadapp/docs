@@ -205,6 +205,11 @@
       "path": "hop/main.sol",
       "slug": "hop",
       "title": "HOP-MAINNET-A"
+    },
+    {
+      "path": "uniswap/v3_swap/main.sol",
+      "slug": "uniswap-swap",
+      "title": "UNISWAP-V3-SWAP-A"
     }
   ],
   "polygon": [
@@ -328,6 +333,11 @@
       "path": "hop/main.sol",
       "slug": "hop",
       "title": "HOP-A"
+    },
+    {
+      "path": "uniswap/v3_swap/main.sol",
+      "slug": "uniswap-swap",
+      "title": "UNISWAP-V3-SWAP-A"
     }
   ],
   "arbitrum": [
@@ -405,6 +415,11 @@
       "path": "hop/main.sol",
       "slug": "hop",
       "title": "HOP-A"
+    },
+    {
+      "path": "uniswap/v3_swap/main.sol",
+      "slug": "uniswap-swap",
+      "title": "UNISWAP-V3-SWAP-A"
     }
   ],
   "avalanche": [
@@ -569,6 +584,11 @@
       "path": "hop/main.sol",
       "slug": "hop",
       "title": "HOP-A"
+    },
+    {
+      "path": "uniswap/v3_swap/main.sol",
+      "slug": "uniswap-swap",
+      "title": "UNISWAP-V3-SWAP-A"
     }
   ],
   "fantom": [
