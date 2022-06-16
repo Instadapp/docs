@@ -338,6 +338,11 @@
       "path": "uniswap/v3_swap/main.sol",
       "slug": "uniswap-swap",
       "title": "UNISWAP-V3-SWAP-A"
+    },
+    {
+      "path": "swap/main.sol",
+      "slug": "swap-aggregator",
+      "title": "SWAP-AGGREGATOR-A"
     }
   ],
   "arbitrum": [
@@ -420,6 +425,11 @@
       "path": "uniswap/v3_swap/main.sol",
       "slug": "uniswap-swap",
       "title": "UNISWAP-V3-SWAP-A"
+    },
+    {
+      "path": "swap/main.sol",
+      "slug": "swap-aggregator",
+      "title": "SWAP-AGGREGATOR-A"
     }
   ],
   "avalanche": [
@@ -512,6 +522,11 @@
       "path": "sushiswap/main.sol",
       "slug": "sushiswap",
       "title": "SUSHISWAP"
+    },
+    {
+      "path": "swap/main.sol",
+      "slug": "swap-aggregator",
+      "title": "SWAP-AGGREGATOR-A"
     }
   ],
   "optimism": [
@@ -589,6 +604,11 @@
       "path": "uniswap/v3_swap/main.sol",
       "slug": "uniswap-swap",
       "title": "UNISWAP-V3-SWAP-A"
+    },
+    {
+      "path": "swap/main.sol",
+      "slug": "swap-aggregator",
+      "title": "SWAP-AGGREGATOR-A"
     }
   ],
   "fantom": [
@@ -631,6 +651,11 @@
       "path": "paraswap/main.sol",
       "slug": "paraswap",
       "title": "PARASWAP-V5"
+    },
+    {
+      "path": "swap/main.sol",
+      "slug": "swap-aggregator",
+      "title": "SWAP-AGGREGATOR-A"
     }
   ]
 }
