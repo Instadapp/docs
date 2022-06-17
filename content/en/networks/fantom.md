@@ -19,6 +19,11 @@ Below are all the addresses of Core Contracts of the DSL ecosystem on Fantom:
 | InstaMemory     | [0x56439117379A53bE3CC2C55217251e2481B7a1C8](https://ftmscan.com/address/0x56439117379A53bE3CC2C55217251e2481B7a1C8#code) |
 | Implementations | [0xF0b36681C9d3ED74227880646De41c4a979AC191](https://ftmscan.com/address/0xF0b36681C9d3ED74227880646De41c4a979AC191#code) |
 
+List of other Instadapp related address (non core to DSAs):
+| Contract | Address |
+| ---------- | ---------- |
+| Treasury | [0x6C4061A00F8739d528b185CC683B6400E0cd396a](https://ftmscan.com/address/0x6c4061a00f8739d528b185cc683b6400e0cd396a) |
+
 ## Networks and Underlying meanings
 
 - Index: This is the Main Contract for all the DeFi Smart Accounts. Used for creating a new DeFi Smart Account of a user and to run a cast function in the new smart account.
