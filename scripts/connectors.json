@@ -269,6 +269,11 @@
       "title": "1INCH-V4"
     },
     {
+      "path": "dsa-spell/main.sol",
+      "slug": "DSA-spell",
+      "title": "DSA Spell"
+    },
+    {
       "path": "gelato/aave-services/protection/main.sol",
       "slug": "gelato-aave-protection",
       "title": "Gelato Aave Protection"
@@ -382,6 +387,11 @@
       "title": "Aave V3 Import (permit)"
     },
     {
+      "path": "dsa-spell/main.sol",
+      "slug": "DSA-spell",
+      "title": "DSA Spell"
+    },
+    {
       "path": "uniswap/v3/main.sol",
       "slug": "uniswapV3",
       "title": "Uniswap V3"
@@ -479,6 +489,11 @@
       "title": "Aave V2 to V3 import"
     },
     {
+      "path": "dsa-spell/main.sol",
+      "slug": "DSA-spell",
+      "title": "DSA Spell"
+    },
+    {
       "path": "wavax/main.sol",
       "slug": "wavax",
       "title": "WAVAX"
@@ -561,6 +576,16 @@
       "title": "Aave V3 Import"
     },
     {
+      "path": "aave/v3-import-permit/main.sol",
+      "slug": "aave-v3-import-with-permit",
+      "title": "Aave V3 Import (permit)"
+    },
+    {
+      "path": "dsa-spell/main.sol",
+      "slug": "DSA-spell",
+      "title": "DSA Spell"
+    },
+    {
       "path": "uniswap/v3/main.sol",
       "slug": "uniswapV3",
       "title": "Uniswap V3"
@@ -633,6 +658,11 @@
       "title": "Basic C (ERC1155)"
     },
     {
+      "path": "dsa-spell/main.sol",
+      "slug": "DSA-spell",
+      "title": "DSA Spell"
+    },
+    {
       "path": "wftm/main.sol",
       "slug": "wftm",
       "title": "WFTM"
@@ -656,6 +686,11 @@
       "path": "swap/main.sol",
       "slug": "swap-aggregator",
       "title": "SWAP-AGGREGATOR-A"
+    },
+    {
+      "path": "1inch/main.sol",
+      "slug": "1inch-v4",
+      "title": "1INCH-V4"
     }
   ]
 }
