@@ -210,6 +210,11 @@
       "path": "uniswap/v3_swap/main.sol",
       "slug": "uniswap-swap",
       "title": "UNISWAP-V3-SWAP-A"
+    },
+    {
+      "path": "euler/main.sol",
+      "slug": "euler",
+      "title": "Euler"
     }
   ],
   "polygon": [
