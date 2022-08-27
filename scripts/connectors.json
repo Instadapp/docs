@@ -215,6 +215,11 @@
       "path": "euler/main.sol",
       "slug": "euler",
       "title": "Euler"
+    },
+    {
+      "path": "euler/import/main.sol",
+      "slug": "euler-import",
+      "title": "EULER-IMPORT-A"
     }
   ],
   "polygon": [
