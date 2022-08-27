@@ -217,7 +217,7 @@
       "title": "Euler"
     },
     {
-      "path": "euler/euler-import/main.sol",
+      "path": "euler/import/main.sol",
       "slug": "euler-import",
       "title": "EULER-IMPORT-A"
     }
