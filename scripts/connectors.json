@@ -27,9 +27,14 @@
       "title": "1INCH-V4"
     },
     {
-      "path": "compound/main.sol",
-      "slug": "compound",
+      "path": "compound/v2/main.sol",
+      "slug": "compound-v2",
       "title": "Compound"
+    },
+    {
+      "path": "compound/v3/main.sol",
+      "slug": "compound-v3",
+      "title": "Compound-III"
     },
     {
       "path": "COMP/main.sol",
