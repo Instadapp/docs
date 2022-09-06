@@ -225,6 +225,11 @@
       "path": "euler/import/main.sol",
       "slug": "euler-import",
       "title": "EULER-IMPORT-A"
+    },
+    {
+      "path": "wsteth/main.sol",
+      "slug": "wsteth",
+      "title": "WSTETH"
     }
   ],
   "polygon": [
