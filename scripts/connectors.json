@@ -37,6 +37,11 @@
       "title": "Compound-III"
     },
     {
+      "path": "compound/v3-rewards/main.sol",
+      "slug": "compound-v3-rewards",
+      "title": "Compound-III-Rewards"
+    },
+    {
       "path": "COMP/main.sol",
       "slug": "comp",
       "title": "Comp"
