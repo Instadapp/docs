@@ -207,6 +207,11 @@
       "title": "Lite-A"
     },
     {
+      "path": "instaLite_import/main.sol",
+      "slug": "lite-b",
+      "title": "Lite-B"
+    },
+    {
       "path": "notional/main.sol",
       "slug": "notional",
       "title": "NOTIONAL-V2-A"
