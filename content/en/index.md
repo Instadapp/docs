@@ -57,4 +57,4 @@ To get involved and to stay up to date with new updates and launches, please joi
 
 ## Utilizing Protocols through Instadapp
 
-Instadapp is a middle ware protocol your DeFi Smart Account is a non-custodial smart contract wallet and interacts directly with the underlying protocols. The Smart Wallet itself is not vulnerabilities to attacks such as front running, oracle or flash loan related attacks however when interacting with the underlying protocols you assume the same risk as using these protocols directly as with any wallet.
+Instadapp is a middle ware protocol your DeFi Smart Account is a non-custodial smart contract wallet and interacts directly with the underlying protocols. The Smart Wallet itself is not vulnerable to attacks such as front running, oracle or flash loan related attacks however when interacting with the underlying protocols you assume the same risk as using these protocols directly as with any wallet.
