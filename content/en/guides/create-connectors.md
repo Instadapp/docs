@@ -11,7 +11,7 @@ DSAs are powerful because they can easily be extended with connectors. Every new
 
 You can create a PR to request a support for specific protocol or external contracts. The process to add a new connector is explained [here](/guides/create-connectors#how-to-add-a-new-connector). Following is the list of all the supported connectors. Following is the list of all the primary connectors used to cast spells:
 
-[Read this post to learn about getId and setId used in the connectors](https://discuss.instadapp.io/t/how-to-use-getid-setid/104)
+[Read this post to learn about getId and setId used in the connectors](https://docs.instadapp.io/faq/connectors/getid-and-setid)
 
 ### How to add a new connector
 
