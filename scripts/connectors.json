@@ -240,6 +240,16 @@
       "path": "wsteth/main.sol",
       "slug": "wsteth",
       "title": "WSTETH"
+    },
+    {
+      "path": "morpho-compound/main.sol",
+      "slug": "morpho-compound",
+      "title": "MORPHO-COMPOUND-V2-A"
+    },
+    {
+      "path": "morpho-aave/main.sol",
+      "slug": "morpho-aave",
+      "title": "MORPHO-AAVE-V2-A"
     }
   ],
   "polygon": [
