@@ -250,6 +250,11 @@
       "path": "morpho-aave/main.sol",
       "slug": "morpho-aave",
       "title": "MORPHO-AAVE-V2-A"
+    },
+    {
+      "path": "morpho-rewards/main.sol",
+      "slug": "morpho-rewards",
+      "title": "MORPHO-REWARDS-A"
     }
   ],
   "polygon": [
