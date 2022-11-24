@@ -1,7 +1,7 @@
 export default defineAppConfig({
   docus: {
     title: 'Instadapp Docs',
-    description: '',
+    description: 'Welcome to the Instadapp docs! ',
     url: "https://docs.instadapp.io",
     image: '/preview.png',
     socials: {
