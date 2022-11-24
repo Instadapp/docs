@@ -13,4 +13,8 @@ export default defineAppConfig({
     level: 0,
     exclude: []
   },
+
+  footer: {
+    credits: false,
+  }
 })
