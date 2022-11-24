@@ -64,8 +64,8 @@ export default async function generateMd(data, address, chain) {
     for (let index = 0; index < func.parameters.length; index++) {
       const parameter = func.parameters[index];
       md += "\n   <tr>";
-      md += `\n     <td><code>${parameter.name}</code></td>`;
-      md += `\n     <td>${parameter.type}</td>`;
+      md += `\n     <td><Badge>${parameter.name}</Badge></td>`;
+      md += `\n     <td><Badge>${parameter.type}</Badge></td>`;
       md += `\n     <td>${parameter.description}</td>`;
       md += "\n   <tr>";
     }
