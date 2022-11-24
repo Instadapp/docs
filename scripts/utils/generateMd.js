@@ -23,11 +23,7 @@ export default async function generateMd(data, address, chain) {
     nativeToken = "ETH";
     explorerLink = `[Etherscan](https://etherscan.io/address/${address}#code)`;
   }
-  let md = "---";
-  md += `\ntitle: ${data.title}`;
-  md += `\ndescription: ${data.description}`;
-  md += "\ndraft: true";
-  md += "\n---";
+  let md = `# ${data.title}`;
   md += `\n> ${data.description}`;
   md += `\n${
     data.connectorVersion
