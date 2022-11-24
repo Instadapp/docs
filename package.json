@@ -4,20 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt",
     "generate-connector": "node --experimental-modules --es-module-specifier-resolution=node ./scripts/generate-connector.js",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "postinstall": "patch-package"
-  },
-  "dependencies": {
-    "@nuxt/content-theme-docs": "^0.8.0",
-    "del": "^6.0.0",
-    "nuxt": "^2.15.8",
-    "patch-package": "^6.4.7"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
   },
   "devDependencies": {
+    "nuxt": "^3.0.0",
+    "@nuxt-themes/docus": "^1.0.0",
+    "del": "^6.0.0",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "github-trees": "^0.2.0",
