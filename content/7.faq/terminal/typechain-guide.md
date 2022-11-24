@@ -1,8 +1,5 @@
----
-title: Typechain-guide
-description: 'desc'
-draft: true 
----
+# Typechain-guide
+
 Common functions or variables available on terminal :
 
 **Libraries**

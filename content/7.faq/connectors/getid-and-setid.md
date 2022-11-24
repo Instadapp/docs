@@ -1,9 +1,4 @@
----
-title: What's the use of getId and setId?
-description: 'desc'
-draft: true 
----
-
+# What's the use of getId and setId?
 
 
 

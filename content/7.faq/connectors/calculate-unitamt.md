@@ -1,9 +1,4 @@
----
-title: How to calculate UnitAmt?
-description: 'desc'
-draft: true 
----
-
+# How to calculate UnitAmt?
 
 ```js
 function caculateUnitAmt(buyAmount, sellAmount, buyDecimal, sellDecimal, maxSlippage) {

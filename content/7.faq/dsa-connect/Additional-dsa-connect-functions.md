@@ -1,8 +1,4 @@
----
-title: Useful dsa-connect functions
-description: "desc"
-draft: true
----
+# Useful dsa-connect functions
 
 Some more important methods that the dsa-connect provides include -
 
