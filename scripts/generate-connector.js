@@ -298,12 +298,10 @@ const titleCase = (str) => {
     const title = titleCase(network.name);
 
     let mdIndex = `---
-title: ${title} Connectors
-menuTitle: ${title}
-description: ''
-position: ${network.position}
-category: 'Connectors'
+title: ${title}
 ---
+
+# ${title} Connectors
   `;
 
     for (const connector of connectors[network.name].sort((a, b) => a.slug.localeCompare(b.slug))) {
