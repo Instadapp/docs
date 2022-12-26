@@ -591,6 +591,11 @@
   ],
   "optimism": [
     {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "0x"
+    },
+    {
       "path": "authority/main.sol",
       "slug": "authority",
       "title": "Authority"
