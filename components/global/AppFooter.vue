@@ -2,21 +2,38 @@
 const docus = useDocus()
 const socialIcons = ref(null)
 const icons = computed(() => docus.value.footer?.iconLinks || [])
+const textLinks = computed(() => docus.value.footer?.textLinks || [])
 const socialIconsCount = computed(() => Object.entries(docus.value.socials).filter(([_, v]) => v).length)
 const nbSocialIcons = computed(() => (socialIcons.value ? socialIconsCount.value : 0))
 </script>
 
 <template>
   <footer>
-    <AppContainer padded class="footer-container">
+    <Container padded class="footer-container">
       <!-- Left -->
-      <div class="left"></div>
+      <div class="left">
+      
+      </div>
 
-      <!-- Right -->
+      <!-- Center -->
+      <div class="center">
+        <NuxtLink
+          v-for="link in textLinks"
+          :key="link.href"
+          class="text-link"
+          :aria-label="link.text"
+          :href="link.href"
+          :target="link.target || '_self'"
+        >
+          {{ link.text }}
+        </NuxtLink>
+      </div>
+
       <div class="right">
         <a
           v-for="icon in icons.slice(0, 6 - nbSocialIcons)"
           :key="icon.label"
+          class="icon-link"
           rel="noopener"
           :aria-label="icon.label"
           :href="icon.href"
@@ -26,73 +43,120 @@ const nbSocialIcons = computed(() => (socialIcons.value ? socialIconsCount.value
         </a>
         <AppSocialIcons ref="socialIcons" />
       </div>
-    </AppContainer>
+    </Container>
   </footer>
 </template>
 
 <style lang="ts" scoped>
 css({
   footer: {
-    height: '{docus.footer.height}',
-    display: 'flex',
-    alignItems: 'center',
     borderTopWidth: '1px',
     borderTopStyle: 'solid',
-    borderTopColor: '{colors.gray.100}',
-
-    ':deep(.icon)': {
-      width: '{space.4}',
-      height: '{space.4}'
-    },
-
-    a: {
-      color: '{colors.gray.500}',
-      '@dark': {
-        color: '{colors.gray.400}'
-      },
-      '&:hover': {
-        color: '{colors.gray.700}',
-        '@dark': {
-          color: '{colors.gray.200}',
-        }
-      },
-    },
+    borderTopColor: '{color.gray.100}',
+    padding: '{docus.footer.padding}',
 
     '@dark': {
-      borderTopColor: '{colors.gray.900}'
-    },
-
-    '.left': {
-      display: 'flex',
-      alignItems: 'center',
-
-      p: {
-        fontSize: '{fontSizes.xs}',
-        fontWeight: '{fontWeights.bold}'
-      },
-
-      '&-icon': {
-        width: '{space.4}',
-        fill: 'currentcolor',
-        marginRight: '{space.2}',
-      }
-    },
-
-    '.right': {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '{space.4}'
+      borderTopColor: '{color.gray.900}'
     },
 
     '.footer-container': {
-      display: 'flex',
-      flexDirection: 'col',
-      alignItems: 'center',
-      height: '100%',
-      gap: '{space.4}',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    }
+      display: 'grid',
+      gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
+      justifyItems: 'center',
+      gap: '{space.2}',
+      '@sm': {
+        justifyItems: 'legacy',
+
+      },
+
+      ':deep(.icon)': {
+        width: '{space.4}',
+        height: '{space.4}'
+      },
+
+      a: {
+        color: '{color.gray.500}',
+        '@dark': {
+          color: '{color.gray.400}'
+        },
+        '&:hover': {
+          color: '{color.gray.700}',
+          '@dark': {
+            color: '{color.gray.200}',
+          }
+        },
+      },
+
+      '.left': {
+        gridColumn: 'span 12 / span 12',
+        display: 'flex',
+        py: '{space.4}',
+        order: 1,
+
+        '@sm': {
+          gridColumn: 'span 3 / span 3',
+          order: 0,
+        },
+
+        a: {
+          display: 'flex',
+          alignItems: 'center',
+        },
+
+        p: {
+          fontSize: '{text.xs.fontSize}',
+          lineHeight: '{text.xs.lineHeight}',
+          fontWeight: '{fontWeight.medium}'
+        },
+
+        '&-icon': {
+          flexShrink: 0,
+          width: '{space.4}',
+          height: '{space.4}',
+          fill: 'currentcolor',
+          marginRight: '{space.2}',
+        },
+      },
+
+      '.center': {
+        gridColumn: 'span 12 / span 12',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+
+        '@sm': {
+          gridColumn: 'span 6 / span 6',
+          flexDirection: 'row',
+          justifyContent: 'center',
+        },
+
+        '.text-link': {
+          padding: '{space.2}',
+          fontSize: '{text.sm.fontSize}',
+          lineHeight: '{text.sm.lineHeight}',
+          fontWeight: '{fontWeight.medium}'
+        }
+
+      },
+
+      '.right': {
+        gridColumn: 'span 12 / span 12',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        // marginLeft: 'calc(0px - {space.4})',
+
+        '@sm': {
+          gridColumn: 'span 3 / span 3',
+          marginRight: 'calc(0px - {space.4})',
+        },
+
+        '.icon-link': {
+          display: 'flex',
+          padding: '{space.4}'
+        }
+      },
+    },
   }
 })
 </style>
