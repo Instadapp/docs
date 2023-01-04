@@ -3,6 +3,6 @@ body {
 }
 
 html.dark body {
-  background: #1a202c !important;
-  --elements-backdrop-background: #1a202c;
+  background: #171c27 !important;
+  --elements-backdrop-background: #171c27;
 }
