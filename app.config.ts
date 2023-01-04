@@ -8,6 +8,9 @@ export default defineAppConfig({
       twitter: '@Instadapp',
       github: 'Instadapp/dsa-connect',
     },
+    header: {
+      logo: true,
+    }
   },
   aside: {
     level: 0,
