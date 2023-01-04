@@ -1,0 +1,8 @@
+body {
+  background: white !important;
+}
+
+html.dark body {
+  background: #1a202c !important;
+  --elements-backdrop-background: #1a202c;
+}

@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
 
+  css: [
+    "~/assets/css/app.css",
+  ],
+
   content: {
     documentDriven: true,
     highlight: {
