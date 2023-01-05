@@ -9,4 +9,5 @@ coverage
 dist
 sw.*
 .env
-content/en/connectors
+content/*.connectors
+content/connectors

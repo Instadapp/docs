@@ -281,11 +281,11 @@ const titleCase = (str) => {
     }
   ]
   try {
-    await del(path.resolve("./content/en/connectors"));
-    fs.mkdirSync(("./content/en/connectors"));
+    await del(path.resolve("./content/4.connectors"));
+    fs.mkdirSync(("./content/4.connectors"));
 
     for (const network of networks) {
-      fs.mkdirSync(path.resolve(`./content/en/connectors/${network.name}`));
+      fs.mkdirSync(path.resolve(`./content/4.connectors/${network.name}`));
     }
   } catch (error) { }
 
@@ -298,12 +298,10 @@ const titleCase = (str) => {
     const title = titleCase(network.name);
 
     let mdIndex = `---
-title: ${title} Connectors
-menuTitle: ${title}
-description: ''
-position: ${network.position}
-category: 'Connectors'
+title: ${title}
 ---
+
+# ${title} Connectors
   `;
 
     for (const connector of connectors[network.name].sort((a, b) => a.slug.localeCompare(b.slug))) {
@@ -337,7 +335,7 @@ category: 'Connectors'
       );
 
       fs.writeFileSync(
-        path.resolve(`./content/en/connectors/${network.name}`) +
+        path.resolve(`./content/4.connectors/${network.name}`) +
         "/" +
         connector.slug +
         ".md",
@@ -351,7 +349,7 @@ category: 'Connectors'
     }
 
     fs.writeFileSync(
-      path.resolve(`./content/en/connectors/${network.name}.md`),
+      path.resolve(`./content/4.connectors/${network.name}.md`),
       mdIndex
     );
 
