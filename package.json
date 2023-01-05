@@ -8,8 +8,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
-    "preview": "nuxi preview",
-    "postinstall": "ls"
+    "preview": "nuxi preview"
   },
   "devDependencies": {
     "@docsearch/js": "^3.3.1",
