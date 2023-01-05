@@ -684,6 +684,16 @@
       "path": "swap/main.sol",
       "slug": "swap-aggregator",
       "title": "SWAP-AGGREGATOR-A"
+    },
+    {
+      "path": "paraswap/main.sol",
+      "slug": "paraswap",
+      "title": "PARASWAP-V5"
+    },
+    {
+      "path": "aave/aave-rewards/v3/main.sol",
+      "slug": "aave-v3-rewards",
+      "title": "Aave V3 Rewards"
     }
   ],
   "fantom": [
