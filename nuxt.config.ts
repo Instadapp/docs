@@ -7,13 +7,13 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      algolia: {
-        apiKey: "60a01900a4b726d667eab75b6f337592",
-        applicationId: "1V8G7N9GF0",
-        docSearch: {
-          indexName: "nuxtjs",
-        },
-      }
+      // algolia: {
+      //   apiKey: "",
+      //   applicationId: "",
+      //   docSearch: {
+      //     indexName: "instadapp-docs",
+      //   },
+      // }
     }
   },
 
