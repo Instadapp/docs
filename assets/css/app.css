@@ -5,4 +5,5 @@ body {
 html.dark body {
   background: #171c27 !important;
   --elements-backdrop-background: #171c27;
+  --prose-code-block-backgroundColor-dark: #14181f;
 }
