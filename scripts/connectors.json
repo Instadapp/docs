@@ -485,6 +485,11 @@
       "path": "swap/main.sol",
       "slug": "swap-aggregator",
       "title": "SWAP-AGGREGATOR-A"
+    },
+    {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "0x"
     }
   ],
   "avalanche": [
