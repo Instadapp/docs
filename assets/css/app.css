@@ -7,3 +7,15 @@ html.dark body {
   --elements-backdrop-background: #171c27;
   --prose-code-block-backgroundColor-dark: #14181f;
 }
+
+header .section.left {
+  grid-column: span 3 / span 3 !important;
+}
+
+header .section.center {
+  grid-column: span 6 / span 6 !important;
+}
+
+header .section.right {
+  grid-column: span 3 / span 3 !important;
+}

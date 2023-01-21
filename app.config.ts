@@ -10,14 +10,11 @@ export default defineAppConfig({
     },
     header: {
       logo: true,
-    }
-  },
-  aside: {
-    level: 0,
-    exclude: []
-  },
+    },
 
-  footer: {
-    credits: false,
-  }
+    aside: {
+      level: 1,
+      exclude: []
+    },
+  },
 })

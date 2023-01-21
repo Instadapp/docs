@@ -281,11 +281,11 @@ const titleCase = (str) => {
     }
   ]
   try {
-    await del(path.resolve("./content/4.connectors"));
-    fs.mkdirSync(("./content/4.connectors"));
+    await del(path.resolve("./content/4.smart-contracts/1.connectors"));
+    fs.mkdirSync(("./content/4.smart-contracts/1.connectors"));
 
     for (const network of networks) {
-      fs.mkdirSync(path.resolve(`./content/4.connectors/${network.name}`));
+      fs.mkdirSync(path.resolve(`./content/4.smart-contracts/1.connectors/${network.name}`));
     }
   } catch (error) { }
 
@@ -335,7 +335,7 @@ title: ${title}
       );
 
       fs.writeFileSync(
-        path.resolve(`./content/4.connectors/${network.name}`) +
+        path.resolve(`./content/4.smart-contracts/1.connectors/${network.name}`) +
         "/" +
         connector.slug +
         ".md",
@@ -349,7 +349,7 @@ title: ${title}
     }
 
     fs.writeFileSync(
-      path.resolve(`./content/4.connectors/${network.name}.md`),
+      path.resolve(`./content/4.smart-contracts/1.connectors/${network.name}.md`),
       mdIndex
     );
 
