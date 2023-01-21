@@ -11,3 +11,4 @@ sw.*
 .env
 content/*.connectors
 content/connectors
+.output
