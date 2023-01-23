@@ -8,8 +8,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       algolia: {
-        apiKey: "189f2f2def12ddc4d09b3cbb5fc1f8e4",
         applicationId: "6RZ9DX6ZFC",
+        apiKey: "189f2f2def12ddc4d09b3cbb5fc1f8e4",
+        langAttribute: 'lang',
         docSearch: {
           indexName: "instadapp",
         },
