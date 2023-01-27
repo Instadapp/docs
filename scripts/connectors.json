@@ -20,7 +20,11 @@
       "slug": "aave-v2",
       "title": "Aave V2"
     },
-
+    {
+      "path": "aave/v3/main.sol",
+      "slug": "aave-v3",
+      "title": "Aave V3"
+    },
     {
       "path": "1inch/1inch-v4/main.sol",
       "slug": "1inch-v4",
