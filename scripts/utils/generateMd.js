@@ -27,7 +27,7 @@ export default async function generateMd(data, address, chain) {
   md += `\n> ${data.description}`;
   md += `\n${
     data.connectorVersion
-  } connector triggers methods like ${data.functions
+  } connector on ${chain} triggers methods like ${data.functions
     .map((o) => o.functionName)
     .join(", ")}.`;
   md += ` You can view details like source code, ABIs on ${explorerLink}.`;
