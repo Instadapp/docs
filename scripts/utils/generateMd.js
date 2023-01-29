@@ -1,3 +1,11 @@
+function titleCase(str) {
+  var splitStr = str.toLowerCase().split(' ');
+  for (var i = 0; i < splitStr.length; i++) {
+    splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+  }
+  return splitStr.join(' '); 
+}
+
 export default async function generateMd(data, address, chain) {
   let nativeToken;
   let explorerLink;
@@ -23,11 +31,16 @@ export default async function generateMd(data, address, chain) {
     nativeToken = "ETH";
     explorerLink = `[Etherscan](https://etherscan.io/address/${address}#code)`;
   }
-  let md = `# ${data.title}`;
+  let md = `---
+title: ${data.title}
+---
+
+# ${data.title} - ${titleCase(chain)}
+`;
   md += `\n> ${data.description}`;
   md += `\n${
     data.connectorVersion
-  } connector triggers methods like ${data.functions
+  } connector on ${chain} triggers methods like ${data.functions
     .map((o) => o.functionName)
     .join(", ")}.`;
   md += ` You can view details like source code, ABIs on ${explorerLink}.`;

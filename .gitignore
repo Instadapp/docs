@@ -11,3 +11,5 @@ sw.*
 .env
 content/*.connectors
 content/connectors
+ai/faiss_store.pkl
+ai/docs.index
