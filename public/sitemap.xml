@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://docs.instadapp.io/</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/get-started/installation</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/get-started/setup</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/get-started/cast</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/get-started/cast-smart-contract</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/networks/mainnet</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/networks/polygon</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/networks/avax</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/networks/arbitrum</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/networks/fantom</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/networks/optimism</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/guides/create-connectors</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/0x</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/1inch-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/aave-v3-import-with-permit</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/aave-v3-import</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/aave-v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/authority</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/basic-b</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/basic-c</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/basic</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/dsa-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/hop</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/instapool-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/sushiswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/swap-aggregator</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/uniswap-swap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/uniswap-v3-router</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/uniswap-v3-staker</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/uniswapv3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/weth</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/0x</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/1inch-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/aave-v2-to-v3-import</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/aave-v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/aave-v3-import-with-permit</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/aave-v3-import</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/aave-v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/authority</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/basic-b</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/basic-c</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/basic</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/benqi-v1</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/dsa-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/instapool-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/pangolin</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/paraswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/qi-v1</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/sushiswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/swap-aggregator</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/wavax</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/1inch-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/aave-v3-import</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/aave-v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/authority</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/basic-b</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/basic-c</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/basic</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/dsa-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/paraswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/swap-aggregator</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/wftm</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/0x</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/1inch-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/1proto</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/aave-rewards</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/aave-v1</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/aave-v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/aave-v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/assets-polygon-bridge</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/authority</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/basic-b</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/basic-c</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/basic</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/bprotocol-compound</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/bprotocol-liquity</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/bprotocol-makerdao</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/comp</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/compound-v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/compound-v3-rewards</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/compound-v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/euler-import</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/euler</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/gelato-aave-protection</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/guniswap_v3_erc20_staking</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/guniswap_v3_erc20</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/hop</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/inst</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/instapool_v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/instapool-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/lidosteth</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/liquity</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/lite-b</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/lite</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/makerdao</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/morpho-aave</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/morpho-compound</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/morpho-rewards</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/mstable</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/notional</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/paraswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/pooltogether</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/reflexer</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/sushiswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/ubiquity</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/uniswap-swap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/uniswap-v3-router</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/uniswap-v3-staker</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/uniswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/uniswapv3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/universe-v1</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/weth</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/wsteth</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/yearn-v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/0x</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/1inch-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/aave-v3-import-with-permit</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/aave-v3-import</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/aave-v3-rewards</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/aave-v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/authority</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/basic-b</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/basic-c</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/basic</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/dsa-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/hop</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/instapool-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/paraswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/swap-aggregator</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/uniswap-swap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/uniswap-v3-auto-router</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/uniswap-v3-staker</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/uniswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/uniswapv3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/weth</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/0x</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/1inch-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/aave-rewards</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/aave-v2-to-v3-import</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/aave-v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/aave-v3-import-with-permit</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/aave-v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/authority</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/basic-b</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/basic-c</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/basic</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/dsa-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/gelato-aave-protection</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/hop</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/instapool-v4</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/mstable</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/paraswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/pooltogether</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/quickswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/sushiswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/swap-aggregator</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/uniswap-swap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/uniswap-v3-router</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/uniswap-v3-staker</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/uniswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/wmatic</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/mainnet/aave</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/mainnet/compound</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/mainnet/instadapp</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/mainnet/makerdao</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/mainnet/uniswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/polygon/aave_v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/polygon/aave_v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/polygon/instadapp</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/polygon/uniswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/arbitrum/aave_v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/arbitrum/instadapp</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/arbitrum/uniswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/avalanche/aave_v2</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/avalanche/aave_v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/avalanche/instadapp</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/fantom/aave_v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/optimism/aave_v3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/resolvers/optimism/uniswap</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/flashloan/contracts</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/flashloan/docs</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/connectors/borrow-and-payback-flashloan</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/connectors/calculate-unitamt</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/connectors/calldata-param</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/connectors/getid-and-setid</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/dsa-connect/additional-dsa-connect-functions</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/terminal/typechain-guide</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/connectors</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/dsa-connect</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/terminal</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/DSA-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/arbitrum/uniswapV3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/avalanche/DSA-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/fantom/DSA-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/lidoStEth</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/mainnet/uniswapV3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/DSA-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/optimism/uniswapV3</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/connectors/polygon/DSA-spell</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://docs.instadapp.io/faq/dsa-connect/Additional-dsa-connect-functions</loc>
+  <lastmod>2023-02-07T16:49:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
