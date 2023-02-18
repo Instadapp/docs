@@ -13,7 +13,8 @@ const getChain = async () => {
   }
 
   console.log(
-    import.meta
+    import.meta,
+    globalThis,
   )
   const vectorstore = await HNSWLib.load(process.env.VERCEL || process.env.NITRO_PRESET === "vercel" ? 'data' : 'public/data', new OpenAIEmbeddings({
     openAIApiKey: opeanAiKey,
