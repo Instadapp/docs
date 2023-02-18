@@ -35,9 +35,5 @@ export default defineNuxtConfig({
     navigation: {
       fields: ['icon', 'titleTemplate']
     }
-  },
-
-  build: {
-    transpile: ["langchain"]
   }
 })
