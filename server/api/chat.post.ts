@@ -4,12 +4,26 @@ import { makeChain } from "../util";
 
 const { opeanAiKey } = useRuntimeConfig();
 
-export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
+
+let cachedChain: any;
+
+const getChain = async () => {
+  if(cachedChain) {
+    return cachedChain
+  }
   const vectorstore = await HNSWLib.load("ai/data", new OpenAIEmbeddings({
     openAIApiKey: opeanAiKey,
   }))
-  const chain = makeChain(vectorstore);
+  
+  cachedChain =  makeChain(vectorstore);
+
+  return cachedChain
+} 
+
+export default defineEventHandler(async (event) => {
+  const body = await readBody(event);
+
+  const chain = await getChain()
 
   return await chain.call({
     question: body.question,
