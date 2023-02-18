@@ -1,7 +1,7 @@
-import { OpenAI } from "langchain/llms";
-import { LLMChain, ChatVectorDBQAChain, loadQAChain } from "langchain/chains";
-import { HNSWLib } from "langchain/vectorstores";
-import { PromptTemplate } from "langchain/prompts";
+import { OpenAI } from "langchain/llms.js";
+import { LLMChain, ChatVectorDBQAChain, loadQAChain } from "langchain/chains.js";
+import { HNSWLib } from "langchain/vectorstores.js";
+import { PromptTemplate } from "langchain/prompts.js";
 
 const { opeanAiKey } = useRuntimeConfig();
 

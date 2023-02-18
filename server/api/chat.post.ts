@@ -1,5 +1,5 @@
-import { HNSWLib } from "langchain/vectorstores";
-import { OpenAIEmbeddings } from 'langchain/embeddings';
+import { HNSWLib } from "langchain/vectorstores.js";
+import { OpenAIEmbeddings } from 'langchain/embeddings.js';
 import { makeChain } from "../util";
 
 const { opeanAiKey } = useRuntimeConfig();
