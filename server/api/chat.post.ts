@@ -8,18 +8,18 @@ const { opeanAiKey } = useRuntimeConfig();
 let cachedChain: any;
 
 const getChain = async () => {
-  if(cachedChain) {
+  if (cachedChain) {
     return cachedChain
   }
 
-  const vectorstore = await HNSWLib.load('public/data', new OpenAIEmbeddings({
+  const vectorstore = await HNSWLib.load(process.env.VERCEL || process.env.NITRO_PRESET === "vercel" ? 'data' : 'public/data', new OpenAIEmbeddings({
     openAIApiKey: opeanAiKey,
   }))
-  
-  cachedChain =  makeChain(vectorstore);
+
+  cachedChain = makeChain(vectorstore);
 
   return cachedChain
-} 
+}
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
