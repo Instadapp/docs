@@ -14,3 +14,6 @@ content/connectors
 
 ai/ingested_data/
 ai/docs.instadapp.io/
+
+.vercel
+.output
