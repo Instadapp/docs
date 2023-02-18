@@ -5,7 +5,12 @@ export default defineNuxtConfig({
     "~/assets/css/app.css",
   ],
 
+  routeRules: {
+    '/index.html': { redirect: '/' },
+  },
+
   runtimeConfig: {
+    opeanAiKey: process.env.OPENAI_API_KEY || "",
     public: {
       algolia: {
         applicationId: "6RZ9DX6ZFC",
@@ -18,17 +23,17 @@ export default defineNuxtConfig({
     }
   },
 
-  content: {
-    documentDriven: true,
-    highlight: {
-      theme: {
-        dark: 'github-dark',
-        default: 'github-light'
-      },
-      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', "solidity"]
-    },
-    navigation: {
-      fields: ['icon', 'titleTemplate']
-    }
-  },
+  // content: {
+  //   documentDriven: true,
+  //   highlight: {
+  //     theme: {
+  //       dark: 'github-dark',
+  //       default: 'github-light'
+  //     },
+  //     preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', "solidity"]
+  //   },
+  //   navigation: {
+  //     fields: ['icon', 'titleTemplate']
+  //   }
+  // },
 })

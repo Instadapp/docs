@@ -11,5 +11,6 @@ sw.*
 .env
 content/*.connectors
 content/connectors
-ai/faiss_store.pkl
-ai/docs.index
+
+ai/ingested_data/
+ai/docs.instadapp.io/

@@ -8,17 +8,21 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
-    "preview": "nuxi preview"
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare"
   },
   "devDependencies": {
     "@docsearch/js": "^3.3.3",
-    "@nuxt-themes/docus": "^1.8.1",
+    "@nuxt-themes/docus": "^1.8.2",
     "axios": "^0.21.1",
     "del": "^6.0.0",
     "dotenv": "^8.2.0",
     "github-trees": "^0.2.0",
+    "hnswlib-node": "^1.2.0",
     "inquirer": "^8.0.0",
-    "nuxt": "^3.1.2",
+    "langchain": "^0.0.7",
+    "nuxt": "^3.2.2",
+    "openai": "^3.1.0",
     "web3": "^1.8.2"
   }
 }
