@@ -1,6 +1,7 @@
 import { HNSWLib } from "langchain/vectorstores.js";
 import { OpenAIEmbeddings } from 'langchain/embeddings.js';
 import { makeChain } from "../util";
+import { fileURLToPath } from 'node:url'
 
 const { opeanAiKey } = useRuntimeConfig();
 
@@ -11,7 +12,8 @@ const getChain = async () => {
   if(cachedChain) {
     return cachedChain
   }
-  const vectorstore = await HNSWLib.load("ai/data", new OpenAIEmbeddings({
+
+  const vectorstore = await HNSWLib.load('assets/data', new OpenAIEmbeddings({
     openAIApiKey: opeanAiKey,
   }))
   

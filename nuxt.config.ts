@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/index.html': { redirect: '/' },
   },
-
+  
   runtimeConfig: {
     opeanAiKey: process.env.OPENAI_API_KEY || "",
     public: {

@@ -29,5 +29,5 @@ const vectorStore = HNSWLib.fromDocuments(
   new OpenAIEmbeddings()
   );
 vectorStore.then(
-    (value) => (value.save("data"))
+    (value) => (value.save("../assets/data"))
 )
