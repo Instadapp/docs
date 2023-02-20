@@ -6,7 +6,16 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
+    // Static generation
+    '/': { prerender: true },
     '/index.html': { redirect: '/' },
+    '/api/**': { prerender: false },
+  },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+    },
   },
 
   runtimeConfig: {
