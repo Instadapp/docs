@@ -1,29 +1,24 @@
-import { HNSWLib } from "langchain/vectorstores.js";
-import { OpenAIEmbeddings } from 'langchain/embeddings.js';
+import { PineconeStore } from "langchain/vectorstores";
+import { OpenAIEmbeddings } from 'langchain/embeddings';
 import { makeChain } from "../util";
-import fs from 'fs';
+import { PineconeClient } from "pinecone-client";
+import { ChatVectorDBQAChain } from "langchain/chains";
 
-const { opeanAiKey } = useRuntimeConfig();
+const { opeanAiKey, pinceconeApiKey, pinceconeBaseUrl } = useRuntimeConfig();
 
+const client = new PineconeClient({
+  apiKey: pinceconeApiKey,
+  baseUrl: pinceconeBaseUrl,
+});
 
-let cachedChain: any;
-let directory = 'public/data'
-
-if (process.env.VERCEL || process.env.NITRO_PRESET === "vercel") {
-  directory = '/var/task/data'
-
-  console.log(
-    fs.readdirSync("/var/task")
-  )
-
-}
+let cachedChain: ChatVectorDBQAChain;
 
 const getChain = async () => {
   if (cachedChain) {
     return cachedChain
   }
-  
-  const vectorstore = await HNSWLib.load(directory, new OpenAIEmbeddings({
+
+  const vectorstore = await PineconeStore.fromExistingIndex(client, new OpenAIEmbeddings({
     openAIApiKey: opeanAiKey,
   }))
 

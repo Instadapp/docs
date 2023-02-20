@@ -1,7 +1,7 @@
-import { OpenAI } from "langchain/llms.js";
-import { LLMChain, ChatVectorDBQAChain, loadQAChain } from "langchain/chains.js";
-import { HNSWLib } from "langchain/vectorstores.js";
-import { PromptTemplate } from "langchain/prompts.js";
+import { OpenAI } from "langchain/llms";
+import { LLMChain, ChatVectorDBQAChain, loadQAChain } from "langchain/chains";
+import { PromptTemplate } from "langchain/prompts";
+import { VectorStore } from "langchain/dist/vectorstores/base";
 
 const { opeanAiKey } = useRuntimeConfig();
 
@@ -25,7 +25,7 @@ Question: {question}
 =========
 Answer in Markdown:`);
 
-export const makeChain = (vectorstore: HNSWLib, onTokenStream?: (token: string) => void) => {
+export const makeChain = (vectorstore: VectorStore, onTokenStream?: (token: string) => void) => {
   const questionGenerator = new LLMChain({
     llm: new OpenAI({ temperature: 0 }),
     prompt: CONDENSE_PROMPT,

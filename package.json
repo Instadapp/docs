@@ -18,11 +18,11 @@
     "del": "^6.0.0",
     "dotenv": "^8.2.0",
     "github-trees": "^0.2.0",
-    "hnswlib-node": "^1.2.0",
     "inquirer": "^8.0.0",
-    "langchain": "^0.0.7",
+    "langchain": "^0.0.8",
     "nuxt": "^3.1.2",
     "openai": "^3.1.0",
+    "pinecone-client": "^1.0.1",
     "web3": "^1.8.2"
   }
 }

@@ -8,9 +8,11 @@ export default defineNuxtConfig({
   routeRules: {
     '/index.html': { redirect: '/' },
   },
-  
+
   runtimeConfig: {
     opeanAiKey: process.env.OPENAI_API_KEY || "",
+    pinceconeApiKey: process.env.PINECONE_API_KEY || "",
+    pinceconeBaseUrl: process.env.PINECONE_BASE_URL || "",
     public: {
       algolia: {
         applicationId: "6RZ9DX6ZFC",
