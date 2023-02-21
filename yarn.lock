@@ -4899,10 +4899,10 @@ ky@^0.33.1:
   resolved "https://registry.yarnpkg.com/ky/-/ky-0.33.2.tgz#76ad8f0403d1e6531f1a5931c79716ed420492b5"
   integrity sha512-f6oS2rKUcPu5FzdqCDbFpmzis/JlqFZw8uIHm/jf8Kc3vtnW+VDhuashOAKyBZv8bFiZFZUMNxTC0JtahEvujA==
 
-langchain@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/langchain/-/langchain-0.0.8.tgz#db5635a8ebf8b8078c0a21285ea51a9a8da9d3c0"
-  integrity sha512-Hs8s4ayfB/mtyEvBwV4zAnYXKAcfcPtvAX7i4VjOMStma6nCAo9IowdnoAwqib3czLcl1VMbUwE3HLUjk5Gaow==
+langchain@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/langchain/-/langchain-0.0.9.tgz#aebde5be4a417be8ffd4fd300fbae020258313a7"
+  integrity sha512-4jUMucQHaxvNCTNC+kH46svMc2t+K6fqMSC/CXreFP2CwZEeItYupotM62v7vPqzIWjmLNX4CAEUDZEoCkdG5Q==
   dependencies:
     deepcopy "^2.1.0"
     eventsource-parser "^0.1.0"

@@ -79,7 +79,7 @@ const handleSubmit = async (e) => {
         <div class="center">
             <div class="cloudform">
                 <form @submit.prevent="handleSubmit">
-                    <textarea class="textarea" :disabled="loading" ref="textAreaRef" :autoFocus="false" rows="1"
+                    <input class="textarea" :disabled="loading" ref="textAreaRef" :autoFocus="false" rows="1"
                         maxLength="512" type="text"
                         :placeholder="loading ? 'Waiting for response...' : 'Type your question...'"
                         @keyup.enter.prevent="handleSubmit" v-model="userInput" />
