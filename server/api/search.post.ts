@@ -78,5 +78,7 @@ Answer as markdown (including related code snippets if available):
     responseType: "stream",
   })
 
+  setHeader(event,'Content-Type', 'text/event-stream')
+
   return await sendStream(event, response.data)
 })
