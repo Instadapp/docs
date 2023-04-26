@@ -397,6 +397,16 @@
       "path": "swap/main.sol",
       "slug": "swap-aggregator",
       "title": "SWAP-AGGREGATOR-A"
+    },
+    {
+      "path": "compound/v3/main.sol",
+      "slug": "compound-v3-polygon",
+      "title": "COMPOUND-III-POLYGON-A"
+    },
+    {
+      "path": "compound/v3-rewards/main.sol",
+      "slug": "compound-v3-polygon-rewards",
+      "title": "COMPOUND-III-POLYGON-REWARDS-A"
     }
   ],
   "arbitrum": [
