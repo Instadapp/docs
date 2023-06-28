@@ -256,6 +256,11 @@
       "title": "MORPHO-AAVE-V2-A"
     },
     {
+      "path": "morpho-aave-v3/main.sol",
+      "slug": "morpho-aave-v3",
+      "title": "MORPHO-AAVE-V3-A"
+    },
+    {
       "path": "morpho-rewards/main.sol",
       "slug": "morpho-rewards",
       "title": "MORPHO-REWARDS-A"
