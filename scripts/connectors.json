@@ -854,11 +854,6 @@
       "title": "UNISWAP-V3-A"
     },
     {
-      "path": "dexSimulation/main.sol",
-      "slug": "insta-dex-simulation",
-      "title": "INSTA-DEX-SIMULATION"
-    },
-    {
       "path": "weth/main.sol",
       "slug": "weth",
       "title": "WETH"
