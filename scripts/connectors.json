@@ -780,28 +780,13 @@
   "base": [
     {
       "path": "0x/main.sol",
-      "slug": "zero",
-      "title": "ZEROX"
-    },
-    {
-      "path": "0x/main.sol",
-      "slug": "zero-v4",
-      "title": "ZEROX-V4"
-    },
-    {
-      "path": "approve-tokens/main.sol",
-      "slug": "avo-approve",
-      "title": "AVO-APPROVE"
-    },
-    {
-      "path": "approve-tokens/main.sol",
-      "slug": "avo-approve-staging",
-      "title": "AVO-APPROVE-STAGING"
+      "slug": "0x",
+      "title": "0x"
     },
     {
       "path": "authority/main.sol",
       "slug": "authority",
-      "title": "AUTHORITY"
+      "title": "Authority"
     },
     {
       "path": "basic/main.sol",
@@ -845,8 +830,8 @@
     },
     {
       "path": "uniswap/v3_swap/main.sol",
-      "slug": "uniswap-swap",
-      "title": "UNISWAP-V3-SWAP-A"
+      "slug": "uniswapV3",
+      "title": "Uniswap V3"
     },
     {
       "path": "uniswap/v3/main.sol",
