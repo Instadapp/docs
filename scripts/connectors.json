@@ -775,6 +775,11 @@
       "path": "1inch/main.sol",
       "slug": "1inch-v4",
       "title": "1INCH-V4"
+    },
+    {
+      "path": "basic-ERC4626/main.sol",
+      "slug": "basic-d",
+      "title": "Basic D (ERC4626)"
     }
   ]
 }
