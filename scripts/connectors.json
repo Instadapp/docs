@@ -781,5 +781,101 @@
       "slug": "basic-d",
       "title": "Basic D (ERC4626)"
     }
-  ]
+  ],
+  "base": [
+    {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "0x"
+    },
+    {
+      "path": "aave/v3/main.sol",
+      "slug": "aave-v3",
+      "title": "Aave V3"
+    },
+    {
+      "path": "aave/v3-import/main.sol",
+      "slug": "aave-v3-import",
+      "title": "Aave V3 Import"
+    },
+    {
+      "path": "aave/v3-import-permit/main.sol",
+      "slug": "aave-v3-import-with-permit",
+      "title": "Aave V3 Import (permit)"
+    },
+    {
+      "path": "aave/aave-rewards/v3/main.sol",
+      "slug": "aave-v3-rewards",
+      "title": "Aave V3 Rewards"
+    },
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic A (ERC20)"
+    },
+    {
+      "path": "basic-ERC721/main.sol",
+      "slug": "basic-b",
+      "title": "Basic B (ERC721)"
+    },
+    {
+      "path": "basic-ERC1155/main.sol",
+      "slug": "basic-c",
+      "title": "Basic C (ERC1155)"
+    },
+    {
+      "path": "compound/v3/main.sol",
+      "slug": "compound-v3",
+      "title": "Compound-III"
+    },
+    {
+      "path": "compound/v3-rewards/main.sol",
+      "slug": "compound-v3-rewards",
+      "title": "Compound-III-Rewards"
+    },
+    {
+      "path": "dexSimulation/main.sol",
+      "slug": "insta-dex-simulation",
+      "title": "INSTA-DEX-SIMULATION"
+    }, 
+    {
+      "path": "dsa-spell/main.sol",
+      "slug": "DSA-spell",
+      "title": "DSA Spell"
+    },
+    {
+      "path": "instapool_v4/main.sol",
+      "slug": "instapool-v4",
+      "title": "INSTAPOOL-V4"
+    },
+    {
+      "path": "swap/main.sol",
+      "slug": "swap-aggregator",
+      "title": "SWAP-AGGREGATOR-A"
+    },
+    {
+      "path": "uniswap/v3_auto_router/main.sol",
+      "slug": "uniswap-v3-router",
+      "title": "UNISWAP-V3-ROUTER"
+    },
+    {
+      "path": "uniswap/v3_swap/main.sol",
+      "slug": "uniswapV3",
+      "title": "Uniswap V3"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswap",
+      "title": "UNISWAP-V3-A" },
+      {
+        "path": "weth/main.sol",
+        "slug": "weth",
+        "title": "WETH"
+      }
+    ]
 }
