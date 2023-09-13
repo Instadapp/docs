@@ -264,6 +264,11 @@
       "path": "morpho-rewards/main.sol",
       "slug": "morpho-rewards",
       "title": "MORPHO-REWARDS-A"
+    },
+    {
+      "path": "crvusd/main.sol",
+      "slug": "crv-usd",
+      "title": "CRV-USD-A"
     }
   ],
   "polygon": [
