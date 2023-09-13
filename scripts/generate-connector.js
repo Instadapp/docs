@@ -4,7 +4,7 @@ import fs from "fs";
 import generateMd from "./utils/generateMd";
 import path from "path";
 import "./env";
-import connectors from "./connectors.json";
+import connectors from "./connectors.json" assert { type: 'json' };
 import { exit } from "process";
 
 const getDefiConnectors = async (network) => {
