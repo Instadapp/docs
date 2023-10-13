@@ -781,5 +781,72 @@
       "slug": "basic-d",
       "title": "Basic D (ERC4626)"
     }
+  ],
+  "base": [
+    {
+      "path": "0x/main.sol",
+      "slug": "0x",
+      "title": "0x"
+    },
+    {
+      "path": "authority/main.sol",
+      "slug": "authority",
+      "title": "Authority"
+    },
+    {
+      "path": "basic/main.sol",
+      "slug": "basic",
+      "title": "Basic A (ERC20)"
+    },
+    {
+      "path": "basic-ERC721/main.sol",
+      "slug": "basic-b",
+      "title": "Basic B (ERC721)"
+    },
+    {
+      "path": "basic-ERC1155/main.sol",
+      "slug": "basic-c",
+      "title": "Basic C (ERC1155)"
+    },
+    {
+      "path": "compound/v3/main.sol",
+      "slug": "compound-v3",
+      "title": "Compound-III"
+    },
+    {
+      "path": "compound/v3-rewards/main.sol",
+      "slug": "compound-v3-rewards",
+      "title": "Compound-III-Rewards"
+    },
+    {
+      "path": "dexSimulation/main.sol",
+      "slug": "insta-dex-simulation",
+      "title": "INSTA-DEX-SIMULATION"
+    },
+    {
+      "path": "swap/main.sol",
+      "slug": "swap-aggregator",
+      "title": "SWAP-AGGREGATOR-A"
+    },
+    {
+      "path": "uniswap/v3_auto_router/main.sol",
+      "slug": "uniswap-v3-router",
+      "title": "UNISWAP-V3-ROUTER"
+    },
+    {
+      "path": "uniswap/v3_swap/main.sol",
+      "slug": "uniswapV3",
+      "title": "Uniswap V3"
+    },
+    {
+      "path": "uniswap/v3/main.sol",
+      "slug": "uniswap",
+      "title": "UNISWAP-V3-A"
+    },
+    {
+      "path": "weth/main.sol",
+      "slug": "weth",
+      "title": "WETH"
+    }
   ]
 }
