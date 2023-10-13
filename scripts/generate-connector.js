@@ -9,10 +9,7 @@ import { exit } from "process";
 
 const getDefiConnectors = async (network) => {
   try {
-    // TODO: use /defi/mainnet once connectors are ready
-    const prefix = network === 'mainnet' ? 'defi' : `defi/${network}`;
-
-    let responce = await axios.get(`https://api.instadapp.io/${prefix}/dsa/v2/connectors`);
+    let responce = await axios.get(`https://api.instadapp.io/defi/${network}/dsa/v2/connectors`);
     return responce.data.data;
   } catch (error) {
     Promise.reject(error);

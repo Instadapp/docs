@@ -264,6 +264,11 @@
       "path": "morpho-rewards/main.sol",
       "slug": "morpho-rewards",
       "title": "MORPHO-REWARDS-A"
+    },
+    {
+      "path": "spark/main.sol",
+      "slug": "spark",
+      "title": "SPARK-A"
     }
   ],
   "polygon": [
