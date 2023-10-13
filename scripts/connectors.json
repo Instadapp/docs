@@ -264,6 +264,11 @@
       "path": "morpho-rewards/main.sol",
       "slug": "morpho-rewards",
       "title": "MORPHO-REWARDS-A"
+    },
+    {
+      "path": "spark/main.sol",
+      "slug": "spark",
+      "title": "SPARK-A"
     }
   ],
   "polygon": [
@@ -509,6 +514,16 @@
       "path": "0x/main.sol",
       "slug": "0x",
       "title": "0x"
+    },
+    {
+      "path": "compound/v3/main.sol",
+      "slug": "compound-v3",
+      "title": "Compound-III"
+    },
+    {
+      "path": "compound/v3-rewards/main.sol",
+      "slug": "compound-v3-rewards",
+      "title": "Compound-III-Rewards"
     }
   ],
   "avalanche": [
