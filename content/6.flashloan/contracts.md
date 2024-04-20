@@ -2,6 +2,14 @@
 
 > flashloan contract addresses
 
+| Network | Address |
+| ---------- | ---------- |
+| Mainnet | [0x619Ad2D02dBeE6ebA3CDbDA3F98430410e892882](https://etherscan.io/address/0x619Ad2D02dBeE6ebA3CDbDA3F98430410e892882#code) |
+| Polygon | [0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4](https://polygonscan.com/address/0xB2A7F20D10A006B0bEA86Ce42F2524Fde5D6a0F4#code) |
+| Avalanche | [0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19](https://snowtrace.io/address/0x2b65731A085B55DBe6c7DcC8D717Ac36c00F6d19/contract/43114/code) |
+| Arbitrum | [0x1f882522DF99820dF8e586b6df8bAae2b91a782d](https://arbiscan.io/address/0x1f882522DF99820dF8e586b6df8bAae2b91a782d#code) |
+| Optimism | [0x84E6b05A089d5677A702cF61dc14335b4bE5b282](https://optimistic.etherscan.io/address/0x84E6b05A089d5677A702cF61dc14335b4bE5b282#code) |
+
 
 ## InstaFlashAggregator 
 
