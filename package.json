@@ -13,16 +13,23 @@
   "devDependencies": {
     "@docsearch/js": "^3.3.3",
     "@nuxt-themes/docus": "^1.8.1",
+    "@types/common-tags": "^1.8.1",
+    "@types/glob": "^8.1.0",
     "axios": "^0.21.1",
     "cohere-ai": "^5.0.2",
+    "common-tags": "^1.8.2",
     "del": "^6.0.0",
     "dotenv": "^8.2.0",
     "github-trees": "^0.2.0",
+    "glob": "^8.1.0",
+    "gpt3-tokenizer": "^1.1.5",
     "inquirer": "^8.0.0",
     "langchain": "^0.0.9",
     "nuxt": "^3.1.2",
     "openai": "^3.1.0",
     "pinecone-client": "^1.0.1",
+    "postgres": "^3.3.3",
+    "sse.js": "^0.6.1",
     "web3": "^1.8.2"
   }
 }

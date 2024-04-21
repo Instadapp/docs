@@ -20,6 +20,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     opeanAiKey: process.env.OPENAI_API_KEY || "",
+    postgresAiUrl: process.env.POSTGRES_AI_URL || "",
     pinceconeApiKey: process.env.PINECONE_API_KEY || "",
     pinceconeBaseUrl: process.env.PINECONE_BASE_URL || "",
     public: {
