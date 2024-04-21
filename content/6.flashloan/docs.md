@@ -39,13 +39,15 @@ For developers, a helpful mental model to consider when developing your solution
 - **Route 6 -** Balancer-Compound route. **Advanced Routing Pair** Balancer - Compound.
 - **Route 7 -** Balancer-Aave route. **Advanced Routing Pair** Balancer - Aave.
 - **Route 8 -** Uniswap route. Flashloan provider is uniswap.
+- **Route 9 -** Aave V3 route.
 
-| Chains\Routes | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| ---------- | - | -| -| -| -| -| -| -|
-| Arbitrum| ❌ | ❌ | ❌  | ❌ | ✔️ | ❌ | ❌ | ✔️ |
-| Avalanche | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Mainnet | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
-| Polygon | ✔️ | ❌ | ❌ | ❌ | ✔️ | ❌ | ✔️ | ✔️ |
-| Optimism| ❌ | ❌ | ❌  | ❌ | ❌ | ❌ | ❌ | ✔️ |
+| Chains\Routes | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| ---------- | - | -| -| -| -| -| -| -| -|
+| Arbitrum| ❌ | ❌ | ❌  | ❌ | ✔️ | ❌ | ❌ | ✔️ | ❌ |
+| Avalanche | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✔️ |
+| Mainnet | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ | ❌ |
+| Polygon | ✔️ | ❌ | ❌ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| Optimism| ❌ | ❌ | ❌  | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ |
+| Base| ❌ | ❌ | ❌  | ❌ | ❌ | ❌ | ❌ | ✔️ | ✔️ |
 
 
